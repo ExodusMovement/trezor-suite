@@ -1,6 +1,26 @@
+import * as readline from 'readline';
+
 import { UdpTransport } from '@trezor/transport';
 
 import { DeviceManager } from '../../index';
+
+// Helper function to get user input
+const getUserInput = (prompt: string): Promise<string> => {
+    const rl = readline.createInterface({
+        input: process.stdin,
+        output: process.stdout,
+    });
+
+    return new Promise(resolve => {
+        // Add a newline after the prompt to ensure user input appears on the next line
+        process.stdout.write(prompt + '\n> ');
+
+        rl.on('line', answer => {
+            rl.close();
+            resolve(answer.trim());
+        });
+    });
+};
 
 describe('THP UDP Integration', () => {
     let deviceManager: DeviceManager;
@@ -21,11 +41,18 @@ describe('THP UDP Integration', () => {
 
         const devicePaths = await deviceManager.enumerateDevices();
         if (devicePaths.length === 0) {
-            throw new Error('No devices founds');
+            throw new Error('No devices found');
         }
         await deviceManager.acquire(devicePaths[0]);
+
         await deviceManager.establishThpChannel();
-    }, 30000);
+
+        if (!deviceManager.isPaired()) {
+            const code = await getUserInput('Enter the 6-digit code displayed on your device: ');
+
+            await deviceManager.processCodeEntry(code);
+        }
+    }, 60000);
 
     afterAll(() => {
         if (!process.env.RUN_INTEGRATION_TESTS) return;
@@ -97,6 +124,11 @@ describe('THP UDP Integration', () => {
         expect(deviceManager.isPaired()).toBe(false);
 
         await deviceManager.establishThpChannel();
+        if (!deviceManager.isPaired()) {
+            const code = await getUserInput('Enter the 6-digit code displayed on your device: ');
+
+            await deviceManager.processCodeEntry(code);
+        }
 
         expect(deviceManager.getIsInitialized()).toBe(true);
         expect(deviceManager.isSessionAcquired()).toBe(true);
@@ -135,6 +167,11 @@ describe('THP UDP Integration', () => {
         }
         await deviceManager.acquire(devicePaths[0]);
         await deviceManager.establishThpChannel();
+        if (!deviceManager.isPaired()) {
+            const code = await getUserInput('Enter the 6-digit code displayed on your device: ');
+
+            await deviceManager.processCodeEntry(code);
+        }
 
         expect(deviceManager.getIsInitialized()).toBe(true);
         expect(deviceManager.isSessionAcquired()).toBe(true);
