@@ -12339,6 +12339,18 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@trezor/device@workspace:packages/device":
+  version: 0.0.0-use.local
+  resolution: "@trezor/device@workspace:packages/device"
+  dependencies:
+    "@trezor/protobuf": "workspace:*"
+    "@trezor/protocol": "workspace:*"
+    "@trezor/transport": "workspace:*"
+  peerDependencies:
+    tslib: ^2.6.2
+  languageName: unknown
+  linkType: soft
+
 "@trezor/dom-utils@workspace:*, @trezor/dom-utils@workspace:packages/dom-utils":
   version: 0.0.0-use.local
   resolution: "@trezor/dom-utils@workspace:packages/dom-utils"

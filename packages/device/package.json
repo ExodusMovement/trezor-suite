@@ -1,0 +1,23 @@
+{
+    "name": "@trezor/device",
+    "version": "1.0.0",
+    "license": "See LICENSE.md in repo root",
+    "sideEffects": false,
+    "main": "src/index",
+    "scripts": {
+        "depcheck": "yarn g:depcheck",
+        "lint:js": "yarn g:eslint '**/*.{ts,tsx,js}'",
+        "test:unit": "yarn g:jest",
+        "test:integration": "RUN_INTEGRATION_TESTS=1 yarn g:jest -i --detectOpenHandles src/tests/integration/",
+        "test:all": "yarn test:unit && yarn test:integration",
+        "type-check": "yarn g:tsc --build"
+    },
+    "dependencies": {
+        "@trezor/protobuf": "workspace:*",
+        "@trezor/protocol": "workspace:*",
+        "@trezor/transport": "workspace:*"
+    },
+    "peerDependencies": {
+        "tslib": "^2.6.2"
+    }
+}
