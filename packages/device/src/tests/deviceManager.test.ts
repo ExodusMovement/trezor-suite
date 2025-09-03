@@ -99,18 +99,6 @@ describe('DeviceManager', () => {
         expect(deviceManager.isPaired()).toBe(false);
     });
 
-    it('should serialize and deserialize THP state', () => {
-        const serialized = deviceManager.serializeThpState();
-        expect(serialized).toBeDefined();
-
-        // Test deserializing the same state back
-        expect(() => deviceManager.deserializeThpState(serialized)).not.toThrow();
-
-        // Test that we can serialize again after deserializing
-        const reSerialized = deviceManager.serializeThpState();
-        expect(reSerialized).toBeDefined();
-    });
-
     it('should require session before establishing THP channel', async () => {
         await expect(deviceManager.establishThpChannel()).rejects.toThrow('Session not acquired');
     });

@@ -2,12 +2,7 @@ import { randomBytes } from 'crypto';
 
 import { encodeMessage } from '@trezor/protobuf';
 import messages from '@trezor/protobuf/messages.json';
-import {
-    ThpState,
-    ThpStateSerialized,
-    thp as protocolThp,
-    v2 as protocolV2,
-} from '@trezor/protocol';
+import { ThpCredentials, ThpState, thp as protocolThp, v2 as protocolV2 } from '@trezor/protocol';
 import { Session, Transport } from '@trezor/transport';
 import type { PathPublic } from '@trezor/transport/src/types';
 
@@ -114,9 +109,12 @@ export class DeviceManager {
 
     /**
      * Establish THP channel and perform handshake
-     * Note: Currently only supports SkipPairing method
      */
-    async establishThpChannel(): Promise<void> {
+    async establishThpChannel({
+        pairingMethod = protocolThp.ThpPairingMethod.CodeEntry,
+        pairingCredentials,
+        hostInfo,
+    }: Partial<ThpChannelParams> = {}): Promise<void> {
         // Ensure we have a session before establishing THP channel
         if (!this.session) {
             throw new Error('Session not acquired - call acquire() first');
@@ -149,7 +147,9 @@ export class DeviceManager {
                 });
 
                 // Generate static key if not provided
-                const hostStaticKey = randomBytes(32);
+                const hostStaticKey = pairingCredentials
+                    ? Buffer.from(pairingCredentials.staticKey, 'hex')
+                    : randomBytes(32);
                 const hostStaticKeys = protocolThp.getCurve25519KeyPair(hostStaticKey);
 
                 // Generate ephemeral key pair
@@ -166,7 +166,7 @@ export class DeviceManager {
                     thpState: this.thpState,
                     hostStaticKeys,
                     hostEphemeralKeys,
-                    knownCredentials: [], // Empty for now, could be loaded from storage
+                    knownCredentials: pairingCredentials?.knownCredentials ?? [],
                     protobufEncoder: (name, data) =>
                         encodeMessage(this.transport.getMessages(), name, data),
                 });
@@ -196,14 +196,70 @@ export class DeviceManager {
                 this.thpState.setPhase('pairing');
 
                 // If already paired and autoconnect is available, finish pairing
-                if (this.thpState.isPaired && this.thpState.isAutoconnectPaired) {
+                if (this.thpState.isPaired) {
+                    if (!this.thpState.isAutoconnectPaired) {
+                        const credentials = await this.thpCall('ThpCredentialRequest', {
+                            host_static_public_key:
+                                this.thpState.handshakeCredentials!.hostStaticPublicKey.toString(
+                                    'hex',
+                                ),
+                            credential: this.thpState.pairingCredentials[0]?.credential,
+                        });
+                        this.thpState.setPairingCredentials([credentials.message]);
+                    }
+
                     await this.thpCall('ThpEndRequest', {});
                     this.thpState.setPhase('paired');
                 }
             }
 
             if (this.thpState.phase === 'pairing') {
-                await this.performPairing();
+                this.thpState.setPairingMethod(pairingMethod);
+
+                // State HP0
+                // ThpPairingRequest will trigger ButtonRequest.thp_pairing_request flow
+                await this.thpCall('ThpPairingRequest', {
+                    host_name: hostInfo?.name ?? 'Exodus',
+                    app_name: hostInfo?.app ?? 'Integration Test',
+                });
+
+                // State HP1
+                const selectMethod = await this.thpCall('ThpSelectMethod', {
+                    selected_pairing_method: pairingMethod,
+                });
+
+                // Handle different pairing method responses
+                if (selectMethod.type === 'ThpEndResponse') {
+                    // SkipPairing method - device is immediately paired
+                    this.thpState.setIsPaired(true);
+                    this.thpState.setPhase('paired');
+
+                    return;
+                }
+
+                if (selectMethod.type === 'ThpCodeEntryCommitment') {
+                    // State HP2 - Store handshake commitment and challenge
+                    const codeEntryChallenge = randomBytes(32);
+                    const handshakeCommitment = Buffer.from(selectMethod.message.commitment, 'hex');
+
+                    this.thpState.updateHandshakeCredentials({
+                        handshakeCommitment,
+                        codeEntryChallenge,
+                    });
+
+                    // State HP3a - Send challenge to device
+                    const codeEntryCpace = await this.thpCall('ThpCodeEntryChallenge', {
+                        challenge: codeEntryChallenge.toString('hex'),
+                    });
+
+                    // Store Trezor's CPACE public key
+                    this.thpState.updateHandshakeCredentials({
+                        trezorCpacePublicKey: Buffer.from(
+                            codeEntryCpace.message.cpace_trezor_public_key,
+                            'hex',
+                        ),
+                    });
+                }
             }
         } catch (error) {
             this.thpState.resetState();
@@ -212,83 +268,9 @@ export class DeviceManager {
     }
 
     /**
-     * Perform complete THP pairing flow
-     */
-    private async performPairing(
-        pairingMethod: protocolThp.ThpPairingMethod = protocolThp.ThpPairingMethod.CodeEntry,
-    ): Promise<void> {
-        const { thpState } = this;
-
-        thpState.setPairingMethod(pairingMethod);
-
-        // State HP0
-        // ThpPairingRequest will trigger ButtonRequest.thp_pairing_request flow
-        await this.thpCall('ThpPairingRequest', {
-            host_name: 'Exodus',
-            app_name: 'Integration Test',
-        });
-
-        // State HP1
-        const selectMethod = await this.thpCall('ThpSelectMethod', {
-            selected_pairing_method: pairingMethod,
-        });
-
-        // Handle different pairing method responses
-        if (selectMethod.type === 'ThpEndResponse') {
-            // SkipPairing method - device is immediately paired
-            thpState.setIsPaired(true);
-            thpState.setPhase('paired');
-
-            return;
-        }
-
-        if (selectMethod.type === 'ThpCodeEntryCommitment') {
-            // CodeEntry method - handle the code entry flow
-            await this.handleCodeEntryPairing(selectMethod);
-
-            return;
-        }
-
-        // Other pairing methods not yet supported
-        throw new Error(`Unsupported pairing method response: ${selectMethod.type}`);
-    }
-
-    /**
-     * Handle CodeEntry pairing method
-     */
-    private async handleCodeEntryPairing(selectMethodResponse: any): Promise<void> {
-        const { thpState } = this;
-        if (!thpState?.handshakeCredentials) {
-            throw new Error('THP state or handshake credentials missing');
-        }
-
-        // State HP2 - Store handshake commitment and challenge
-        const codeEntryChallenge = randomBytes(32);
-        const handshakeCommitment = Buffer.from(selectMethodResponse.message.commitment, 'hex');
-
-        thpState.updateHandshakeCredentials({
-            handshakeCommitment,
-            codeEntryChallenge,
-        });
-
-        // State HP3a - Send challenge to device
-        const codeEntryCpace = await this.thpCall('ThpCodeEntryChallenge', {
-            challenge: codeEntryChallenge.toString('hex'),
-        });
-
-        // Store Trezor's CPACE public key
-        thpState.updateHandshakeCredentials({
-            trezorCpacePublicKey: Buffer.from(
-                codeEntryCpace.message.cpace_trezor_public_key,
-                'hex',
-            ),
-        });
-    }
-
-    /**
      * Process a 6-digit code entry for CodeEntry pairing
      */
-    async processCodeEntry(code: string): Promise<void> {
+    async processCodeEntry(code: string): Promise<PairingCredentials> {
         if (code.length !== 6) {
             throw new Error('Code must be exactly 6 digits');
         }
@@ -297,9 +279,8 @@ export class DeviceManager {
             throw new Error('Code must contain only digits');
         }
 
-        const { thpState } = this;
-        if (!thpState?.handshakeCredentials) {
-            throw new Error('THP state or handshake credentials missing');
+        if (!this.thpState.handshakeCredentials) {
+            throw new Error('THP handshake credentials missing');
         }
 
         const codeValue = Buffer.from(code, 'ascii');
@@ -307,17 +288,17 @@ export class DeviceManager {
         // Generate host CPACE keys
         const hostKeys = protocolThp.getCpaceHostKeys(
             codeValue,
-            thpState.handshakeCredentials.handshakeHash,
+            this.thpState.handshakeCredentials.handshakeHash,
         );
 
         // Calculate shared secret and tag
-        if (!thpState.handshakeCredentials.trezorCpacePublicKey) {
+        if (!this.thpState.handshakeCredentials.trezorCpacePublicKey) {
             throw new Error('Trezor CPACE public key not available');
         }
 
         const tag = protocolThp
             .getSharedSecret(
-                thpState.handshakeCredentials.trezorCpacePublicKey,
+                this.thpState.handshakeCredentials.trezorCpacePublicKey,
                 hostKeys.privateKey,
             )
             .toString('hex');
@@ -330,7 +311,7 @@ export class DeviceManager {
 
         // Validate the code entry tag
         protocolThp.validateCodeEntryTag(
-            thpState.handshakeCredentials,
+            this.thpState.handshakeCredentials,
             code,
             codeEntrySecret.message.secret,
         );
@@ -338,15 +319,20 @@ export class DeviceManager {
         // Generate and send credentials
         const credentials = await this.thpCall('ThpCredentialRequest', {
             host_static_public_key:
-                thpState.handshakeCredentials.hostStaticPublicKey.toString('hex'),
-            credential: thpState.pairingCredentials[0]?.credential,
+                this.thpState.handshakeCredentials.hostStaticPublicKey.toString('hex'),
+            credential: this.thpState.pairingCredentials[0]?.credential,
         });
-        thpState.setPairingCredentials([credentials.message]);
-        thpState.setIsPaired(true);
+        this.thpState.setPairingCredentials([credentials.message]);
+        this.thpState.setIsPaired(true);
 
         // End pairing process
         await this.thpCall('ThpEndRequest', {});
-        thpState.setPhase('paired');
+        this.thpState.setPhase('paired');
+
+        return {
+            staticKey: this.thpState.handshakeCredentials.staticKey.toString('hex'),
+            knownCredentials: [credentials.message],
+        };
     }
 
     /**
@@ -387,14 +373,6 @@ export class DeviceManager {
         return result.payload;
     }
 
-    serializeThpState(): ThpStateSerialized {
-        return this.thpState.serialize();
-    }
-
-    deserializeThpState(serializedState: ThpStateSerialized): void {
-        this.thpState.deserialize(serializedState);
-    }
-
     async sendMessage(params: { name: string; data: Record<string, unknown> }) {
         if (!this.session) {
             throw new Error('Session not acquired - call acquire() first');
@@ -412,6 +390,22 @@ export class DeviceManager {
         });
     }
 }
+
+interface ThpChannelParams {
+    pairingMethod: protocolThp.ThpPairingMethod;
+    pairingCredentials?: PairingCredentials;
+    hostInfo?: HostInfo;
+}
+
+export type HostInfo = {
+    name: string;
+    app: string;
+};
+
+export type PairingCredentials = {
+    staticKey: string;
+    knownCredentials: ThpCredentials[];
+};
 
 // Type definitions for THP calls (simplified version)
 type ThpTypedCall = {

@@ -2,6 +2,7 @@ import * as readline from 'readline';
 
 import { UdpTransport } from '@trezor/transport';
 
+import { PairingCredentials } from '../../deviceManager';
 import { DeviceManager } from '../../index';
 
 // Helper function to get user input
@@ -25,6 +26,7 @@ const getUserInput = (prompt: string): Promise<string> => {
 describe('THP UDP Integration', () => {
     let deviceManager: DeviceManager;
     let transport: UdpTransport;
+    let pairingCredentials: PairingCredentials;
 
     beforeAll(async () => {
         if (!process.env.RUN_INTEGRATION_TESTS) {
@@ -50,7 +52,7 @@ describe('THP UDP Integration', () => {
         if (!deviceManager.isPaired()) {
             const code = await getUserInput('Enter the 6-digit code displayed on your device: ');
 
-            await deviceManager.processCodeEntry(code);
+            pairingCredentials = await deviceManager.processCodeEntry(code);
         }
     }, 60000);
 
@@ -90,16 +92,41 @@ describe('THP UDP Integration', () => {
         expect(typeof features.major_version).toBe('number');
         expect(typeof features.minor_version).toBe('number');
         expect(typeof features.patch_version).toBe('number');
-
-        const serializedState = deviceManager.serializeThpState();
-        expect(serializedState).toBeDefined();
-        expect(typeof serializedState).toBe('object');
-        expect(serializedState.channel).toBeDefined();
-        expect(typeof serializedState.sendBit).toBe('number');
-        expect(typeof serializedState.recvBit).toBe('number');
     }, 30000);
 
-    it('should release and re-acquire', async () => {
+    it('should release and re-acquire with previous', async () => {
+        if (!process.env.RUN_INTEGRATION_TESTS) {
+            return;
+        }
+
+        expect(deviceManager.getIsInitialized()).toBe(true);
+        expect(deviceManager.isSessionAcquired()).toBe(true);
+        expect(deviceManager.isPaired()).toBe(true);
+
+        await deviceManager.release();
+        expect(deviceManager.getIsInitialized()).toBe(true);
+        expect(deviceManager.isSessionAcquired()).toBe(false);
+        expect(deviceManager.isPaired()).toBe(false);
+
+        const devicePaths = await deviceManager.enumerateDevices();
+        if (devicePaths.length === 0) {
+            throw new Error('No devices founds');
+        }
+        await deviceManager.acquire(devicePaths[0]);
+
+        expect(deviceManager.getIsInitialized()).toBe(true);
+        expect(deviceManager.isSessionAcquired()).toBe(true);
+        expect(deviceManager.isPaired()).toBe(false);
+
+        await deviceManager.establishThpChannel({
+            pairingCredentials,
+        });
+        expect(deviceManager.getIsInitialized()).toBe(true);
+        expect(deviceManager.isSessionAcquired()).toBe(true);
+        expect(deviceManager.isPaired()).toBe(true);
+    }, 30000);
+
+    it('should release and re-acquire without credentials', async () => {
         if (!process.env.RUN_INTEGRATION_TESTS) {
             return;
         }
@@ -127,7 +154,7 @@ describe('THP UDP Integration', () => {
         if (!deviceManager.isPaired()) {
             const code = await getUserInput('Enter the 6-digit code displayed on your device: ');
 
-            await deviceManager.processCodeEntry(code);
+            pairingCredentials = await deviceManager.processCodeEntry(code);
         }
 
         expect(deviceManager.getIsInitialized()).toBe(true);
@@ -166,12 +193,9 @@ describe('THP UDP Integration', () => {
             throw new Error('No devices founds');
         }
         await deviceManager.acquire(devicePaths[0]);
-        await deviceManager.establishThpChannel();
-        if (!deviceManager.isPaired()) {
-            const code = await getUserInput('Enter the 6-digit code displayed on your device: ');
-
-            await deviceManager.processCodeEntry(code);
-        }
+        await deviceManager.establishThpChannel({
+            pairingCredentials,
+        });
 
         expect(deviceManager.getIsInitialized()).toBe(true);
         expect(deviceManager.isSessionAcquired()).toBe(true);
