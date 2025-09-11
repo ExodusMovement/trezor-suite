@@ -3,7 +3,7 @@
 // optimized by
 // https://stackoverflow.com/a/18639975
 
-// we don't want to have dependency in @trezor/protocol package + our implementation is simpler and faster
+// we don't want to have dependency in @exodus/trezor-protocol package + our implementation is simpler and faster
 
 const getCrcTable = () =>
     new Int32Array([

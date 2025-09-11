@@ -15,6 +15,7 @@
         "type-check": "yarn g:tsc --build"
     },
     "dependencies": {
+        "@exodus/trezor-utils": "workspace:*",
         "@reduxjs/toolkit": "2.8.2",
         "@suite-common/geolocation": "workspace:*",
         "@suite-common/redux-utils": "workspace:*",
@@ -23,7 +24,6 @@
         "@trezor/connect": "workspace:*",
         "@trezor/device-utils": "workspace:*",
         "@trezor/env-utils": "workspace:*",
-        "@trezor/utils": "workspace:*",
         "@types/semver": "^7.7.0",
         "fs-extra": "^11.3.1",
         "json-schema-to-typescript": "^15.0.4",

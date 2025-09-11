@@ -9,7 +9,7 @@
  * - we can say we trust the caller but not really thats why we implement auto-unlock
  */
 
-import { Deferred, TypedEmitter, createDeferred, typedObjectKeys } from '@trezor/utils';
+import { Deferred, TypedEmitter, createDeferred, typedObjectKeys } from '@exodus/trezor-utils';
 
 import type {
     AcquireDoneRequest,

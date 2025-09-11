@@ -2,13 +2,13 @@ import { ipcMain } from 'electron';
 
 import { IpcProxyHandlerOptions, createIpcProxyHandler } from '@trezor/ipc-proxy';
 import { getFreePort } from '@trezor/node-utils';
-import { BluetoothIpc, BluetoothIpcApi, BluetoothTransport } from '@trezor/transport-bluetooth';
+import { BluetoothIpc, BluetoothIpcApi, BluetoothTransport } from '@exodus/trezor-transport-bluetooth';
 
 import { BluetoothProcess } from '../libs/processes/BluetoothProcess';
 
 import type { ModuleInit } from './index';
 
-export const SERVICE_NAME = '@trezor/transport-bluetooth';
+export const SERVICE_NAME = '@exodus/trezor-transport-bluetooth';
 
 // Export module state and use it trezor-connect module to override init + setTransports params
 // getTransport function is reassigned in onLoad, onQuit

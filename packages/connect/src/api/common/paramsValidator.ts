@@ -1,6 +1,6 @@
 // origin: https://github.com/trezor/connect/blob/develop/src/js/core/methods/helpers/paramsValidator.js
 import type { DeviceModelInternal } from '@trezor/device-utils';
-import { typedObjectKeys, versionUtils } from '@trezor/utils';
+import { typedObjectKeys, versionUtils } from '@exodus/trezor-utils';
 
 import { ERRORS } from '../../constants';
 import { config } from '../../data/config';

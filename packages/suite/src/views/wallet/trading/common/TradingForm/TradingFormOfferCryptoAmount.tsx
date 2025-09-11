@@ -5,7 +5,7 @@ import { cryptoIdToNetwork, useTradingInfo } from '@suite-common/trading';
 import { TokenAddress } from '@suite-common/wallet-types';
 import { Column, Row, Text } from '@trezor/components';
 import { spacings } from '@trezor/theme';
-import { BigNumber } from '@trezor/utils';
+import { BigNumber } from '@exodus/trezor-utils';
 
 import { BaseCurrencyValue, FormattedCryptoAmount } from 'src/components/suite';
 import { ExperimentWrapper } from 'src/components/suite/Experiment/ExperimentWrapper';

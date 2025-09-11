@@ -3,7 +3,7 @@ import {
     EEACountryCodes,
     countries as countriesRecord,
 } from '@suite-common/geolocation';
-import { isArrayMember, typedObjectValues } from '@trezor/utils';
+import { isArrayMember, typedObjectValues } from '@exodus/trezor-utils';
 
 import { TradingCountryCode } from './types';
 

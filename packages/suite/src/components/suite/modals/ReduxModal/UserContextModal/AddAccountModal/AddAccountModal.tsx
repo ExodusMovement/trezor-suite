@@ -13,7 +13,7 @@ import { prepareNewAccountPayload } from '@suite-common/wallet-utils';
 import { CollapsibleBox, Modal, Tooltip } from '@trezor/components';
 import { hasBitcoinOnlyFirmware } from '@trezor/device-utils';
 import { spacings, spacingsPx } from '@trezor/theme';
-import { arrayPartition } from '@trezor/utils';
+import { arrayPartition } from '@exodus/trezor-utils';
 
 import { goto } from 'src/actions/suite/routerActions';
 import { CoinList, Translation } from 'src/components/suite';

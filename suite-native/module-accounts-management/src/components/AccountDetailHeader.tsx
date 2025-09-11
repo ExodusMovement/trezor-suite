@@ -23,7 +23,7 @@ import {
     selectAccountTokenBalance,
     selectAccountTokenSymbol,
 } from '@suite-native/tokens';
-import { BigNumber } from '@trezor/utils';
+import { BigNumber } from '@exodus/trezor-utils';
 
 import { AccountDetailCryptoValue } from './AccountDetailCryptoValue';
 import {

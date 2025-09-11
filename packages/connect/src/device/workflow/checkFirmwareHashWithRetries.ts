@@ -1,4 +1,4 @@
-import { isArrayMember } from '@trezor/utils';
+import { isArrayMember } from '@exodus/trezor-utils';
 
 import { FIRMWARE } from '../../constants';
 import { Log } from '../../utils/debug';

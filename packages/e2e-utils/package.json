@@ -10,7 +10,7 @@
         "type-check": "yarn g:tsc --build"
     },
     "dependencies": {
-        "@trezor/utils": "workspace:*",
+        "@exodus/trezor-utils": "workspace:*",
         "dotenv": "^16.4.7",
         "express": "^5.1.0",
         "uuid": "^11.1.0",

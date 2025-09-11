@@ -16,7 +16,7 @@ import {
     UNSTAKING_ETH_PERIOD,
 } from '@suite-common/wallet-constants';
 import { Account, PrecomposedLevels, StakingPoolExtended } from '@suite-common/wallet-types';
-import { BigNumber } from '@trezor/utils';
+import { BigNumber } from '@exodus/trezor-utils';
 
 import {
     getAccountEverstakeStakingPool,

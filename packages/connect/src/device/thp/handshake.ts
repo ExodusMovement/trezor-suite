@@ -1,7 +1,7 @@
 import { randomBytes } from 'crypto';
 
-import { encodeMessage } from '@trezor/protobuf';
-import { ThpPairingMethod, thp as protocolThp } from '@trezor/protocol';
+import { encodeMessage } from '@exodus/trezor-protobuf';
+import { ThpPairingMethod, thp as protocolThp } from '@exodus/trezor-protocol';
 
 import { thpCall } from './thpCall';
 import { ERRORS } from '../../constants';

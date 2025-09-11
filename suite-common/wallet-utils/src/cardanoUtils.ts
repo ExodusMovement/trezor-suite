@@ -8,7 +8,7 @@ import {
     StakePool,
 } from '@suite-common/wallet-types';
 import { CARDANO, CardanoCertificate, CardanoOutput, PROTO } from '@trezor/connect';
-import { BigNumber } from '@trezor/utils/src/bigNumber';
+import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
 
 import {
     convertAmountSubunitsToUnits,

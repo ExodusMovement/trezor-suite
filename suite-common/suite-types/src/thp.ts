@@ -1,4 +1,4 @@
-import { ThpCredentials } from '@trezor/protocol';
+import { ThpCredentials } from '@exodus/trezor-protocol';
 
 export type ThpSuiteCredentials = ThpCredentials & {
     connectionCounter: number;

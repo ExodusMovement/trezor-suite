@@ -1,10 +1,10 @@
-import { AbstractTransportParams } from '@trezor/transport/src/transports/abstract';
-import { AbstractApiTransport } from '@trezor/transport/src/transports/abstractApi';
+import { AbstractTransportParams } from '@exodus/trezor-transport/src/transports/abstract';
+import { AbstractApiTransport } from '@exodus/trezor-transport/src/transports/abstractApi';
 
 import { BluetoothApi } from './bluetooth-api';
 import { TrezorBluetoothSettings } from './types';
 
-// implementation of @trezor/transport/src/transports/abstractApi
+// implementation of @exodus/trezor-transport/src/transports/abstractApi
 
 type BluetoothTransportParams = Omit<AbstractTransportParams, 'api'> & TrezorBluetoothSettings;
 

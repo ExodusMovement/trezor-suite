@@ -12,7 +12,7 @@ import { createLogger } from 'redux-logger';
 
 import { addLog } from '@suite-common/logger';
 import { isCodesignBuild } from '@trezor/env-utils';
-import { mergeDeepObject } from '@trezor/utils';
+import { mergeDeepObject } from '@exodus/trezor-utils';
 import { prepareTokenDefinitionsReducer } from '@suite-common/token-definitions';
 import { prepareFirmwareReducer } from '@suite-common/firmware';
 import { prepareThpReducer } from '@suite-common/thp';

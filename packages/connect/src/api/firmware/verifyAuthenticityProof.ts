@@ -1,6 +1,6 @@
 import * as crypto from 'crypto';
 
-import { bufferUtils } from '@trezor/utils';
+import { bufferUtils } from '@exodus/trezor-utils';
 
 import { fixSignature, parseCertificate } from './x509certificate';
 import { PROTO } from '../../constants';

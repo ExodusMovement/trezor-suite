@@ -1,4 +1,4 @@
-import { BigNumber } from '@trezor/utils';
+import { BigNumber } from '@exodus/trezor-utils';
 
 export const BACKUP_CARDANO_APY = 4.5;
 export const ESTIMATED_YEARLY_REWARD_RATE = 2.22;

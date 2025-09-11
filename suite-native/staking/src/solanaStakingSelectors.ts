@@ -12,7 +12,7 @@ import {
     calculateSolanaStakingReward,
     getSolStakingAccountsInfo,
 } from '@suite-common/wallet-utils';
-import { BigNumber } from '@trezor/utils';
+import { BigNumber } from '@exodus/trezor-utils';
 
 import { NativeStakingRootState } from './types';
 

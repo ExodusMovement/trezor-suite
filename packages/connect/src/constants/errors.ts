@@ -1,5 +1,5 @@
-import { Messages } from '@trezor/protobuf';
-import { thp } from '@trezor/protocol';
+import { Messages } from '@exodus/trezor-protobuf';
+import { thp } from '@exodus/trezor-protocol';
 
 export const ERROR_CODES = {
     Init_NotInitialized: 'TrezorConnect not initialized', // race condition: call on not initialized Core (usually hot-reloading)

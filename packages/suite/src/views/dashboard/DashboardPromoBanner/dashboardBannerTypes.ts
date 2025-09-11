@@ -1,4 +1,4 @@
-import { isArrayMember } from '@trezor/utils';
+import { isArrayMember } from '@exodus/trezor-utils';
 
 export const dashboardBannerTypes = ['tex'] as const;
 export type DashboardBannerType = (typeof dashboardBannerTypes)[number] | null;

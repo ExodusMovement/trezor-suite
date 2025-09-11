@@ -1,7 +1,7 @@
 import { createHash, randomBytes } from 'crypto';
 
-import { thp as protocolThp } from '@trezor/protocol';
-import { createDeferred } from '@trezor/utils';
+import { thp as protocolThp } from '@exodus/trezor-protocol';
+import { createDeferred } from '@exodus/trezor-utils';
 
 import { ERRORS } from '../../constants';
 import { DataManager } from '../../data/DataManager';

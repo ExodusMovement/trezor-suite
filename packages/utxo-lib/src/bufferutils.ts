@@ -10,7 +10,7 @@ import { Int64LE } from 'int64-buffer';
 import pushdata from 'pushdata-bitcoin';
 import * as varuint from 'varuint-bitcoin';
 
-import { bufferUtils } from '@trezor/utils';
+import { bufferUtils } from '@exodus/trezor-utils';
 
 import * as types from './types';
 

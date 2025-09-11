@@ -5,7 +5,7 @@ import {
     getWeakRandomInt,
     scheduleAction,
     urlToOnion,
-} from '@trezor/utils';
+} from '@exodus/trezor-utils';
 
 import { FILTERS_REQUEST_TIMEOUT, HTTP_REQUEST_GAP, HTTP_REQUEST_TIMEOUT } from '../constants';
 import type { CoinjoinBackendSettings, Logger } from '../types';

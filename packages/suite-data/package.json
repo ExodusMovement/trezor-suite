@@ -17,12 +17,12 @@
         "type-check": "yarn g:tsc --build tsconfig.json"
     },
     "dependencies": {
+        "@exodus/trezor-utils": "workspace:*",
         "@suite-common/suite-types": "workspace:*",
         "@suite-common/suite-utils": "workspace:*",
         "@trezor/connect": "workspace:*",
         "@trezor/env-utils": "workspace:*",
         "@trezor/urls": "workspace:*",
-        "@trezor/utils": "workspace:*",
         "semver": "^7.7.1"
     },
     "devDependencies": {

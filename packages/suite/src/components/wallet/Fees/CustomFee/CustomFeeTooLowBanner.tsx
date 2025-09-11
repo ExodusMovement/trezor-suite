@@ -2,7 +2,7 @@ import { FeeInfo } from '@suite-common/wallet-types';
 import { getLowestFeeFromLevels } from '@suite-common/wallet-utils';
 import { Banner, Collapsible } from '@trezor/components';
 import { HELP_CENTER_TRANSACTION_FEES_URL } from '@trezor/urls';
-import { BigNumber } from '@trezor/utils';
+import { BigNumber } from '@exodus/trezor-utils';
 
 import { Translation } from 'src/components/suite';
 import { LearnMoreButton } from 'src/components/suite/LearnMoreButton';

@@ -6,7 +6,7 @@ import { Network, NetworkAccount, NetworkSymbol } from '@suite-common/wallet-con
 import { selectSelectedDevice } from '@suite-common/wallet-core';
 import { UnavailableCapabilities } from '@trezor/connect';
 import { isDesktop } from '@trezor/env-utils';
-import { resolveAfter } from '@trezor/utils';
+import { resolveAfter } from '@exodus/trezor-utils';
 
 import { openDeferredModal, openModal } from 'src/actions/suite/modalActions';
 import { toggleTor } from 'src/actions/suite/suiteActions';

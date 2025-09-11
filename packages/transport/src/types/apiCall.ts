@@ -1,10 +1,10 @@
-import { Messages } from '@trezor/protobuf';
+import { Messages } from '@exodus/trezor-protobuf';
 import {
     PROTOCOL_MALFORMED,
     ThpStateSerialized,
     TransportProtocol,
     thp as protocolThp,
-} from '@trezor/protocol';
+} from '@exodus/trezor-protocol';
 
 import * as ERRORS from '../errors';
 

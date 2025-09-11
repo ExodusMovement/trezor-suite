@@ -19,8 +19,8 @@ import {
     getStakingLimitsByNetwork,
     toFiatCurrency,
 } from '@suite-common/wallet-utils';
-import { isChanged } from '@trezor/utils';
-import { BigNumber } from '@trezor/utils/src/bigNumber';
+import { isChanged } from '@exodus/trezor-utils';
+import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
 
 import { signTransaction } from 'src/actions/wallet/stakeActions';
 import { useDispatch, useSelector, useTranslation } from 'src/hooks/suite';

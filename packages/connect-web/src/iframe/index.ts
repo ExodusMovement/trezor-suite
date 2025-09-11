@@ -5,7 +5,7 @@ import { CoreRequestMessage, IFRAME } from '@trezor/connect/src/events';
 import type { ConnectSettings } from '@trezor/connect/src/types';
 import { LogMessage, LogWriter, setLogWriter } from '@trezor/connect/src/utils/debug';
 import { getOrigin } from '@trezor/connect/src/utils/urlUtils';
-import { createDeferred } from '@trezor/utils';
+import { createDeferred } from '@exodus/trezor-utils';
 
 import css from './inlineStyles';
 

@@ -15,7 +15,7 @@ import { ethereumGetCurrentNonceThunk } from '@suite-common/wallet-core/src/send
 import { Account } from '@suite-common/wallet-types';
 import { getAccountIdentity, getMevProtectedTxData, sanitizeHex } from '@suite-common/wallet-utils';
 import TrezorConnect, { CallMethodResponse } from '@trezor/connect';
-import { isAscii, isHex } from '@trezor/utils';
+import { isAscii, isHex } from '@exodus/trezor-utils';
 
 import { WALLETCONNECT_MODULE } from '../walletConnectConstants';
 import { selectSessionByTopic } from '../walletConnectReducer';

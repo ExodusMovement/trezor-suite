@@ -2,7 +2,7 @@ import { systemPreferences } from 'electron';
 
 import { isLinux, isMacOs, isWindows } from '@trezor/env-utils';
 import { createWinHelloManager } from '@trezor/suite-desktop-native';
-import { serializeError } from '@trezor/utils';
+import { serializeError } from '@exodus/trezor-utils';
 
 import { ipcMain } from '../typed-electron';
 

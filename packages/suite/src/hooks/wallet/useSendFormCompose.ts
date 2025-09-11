@@ -18,7 +18,7 @@ import {
 import { findComposeErrors } from '@suite-common/wallet-utils';
 import { FeeLevel } from '@trezor/connect';
 import { useDebounce } from '@trezor/react-utils';
-import { isChanged } from '@trezor/utils';
+import { isChanged } from '@exodus/trezor-utils';
 
 import { TranslationKey } from 'src/components/suite/Translation';
 import { SendContextValues, UseSendFormState } from 'src/types/wallet/sendForm';

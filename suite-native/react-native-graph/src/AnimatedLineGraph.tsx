@@ -30,7 +30,7 @@ import {
     vec,
 } from '@shopify/react-native-skia';
 
-import { hexToRgba } from '@trezor/utils';
+import { hexToRgba } from '@exodus/trezor-utils';
 
 import { BlurOverlay } from './BlurOverlay';
 import {

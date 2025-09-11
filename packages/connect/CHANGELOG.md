@@ -330,10 +330,10 @@ We’ve reverted the default setting for nVersion in Connect back to nVersion=1.
 - npm-release: @trezor/blockchain-link-utils 1.2.4
 - npm-release: @trezor/analytics 1.2.4
 - npm-release: @trezor/connect-common 0.2.5
-- npm-release: @trezor/transport 1.3.5
-- npm-release: @trezor/protobuf 1.2.5
+- npm-release: @exodus/trezor-transport 1.3.5
+- npm-release: @exodus/trezor-protobuf 1.2.5
 - npm-release: @trezor/utxo-lib 2.2.4
-- npm-release: @trezor/utils 9.2.4
+- npm-release: @exodus/trezor-utils 9.2.4
 
 # 9.4.4
 
@@ -359,12 +359,12 @@ This release among other improvements fixes a bug in ethereum serialization of e
 - npm-release: @trezor/analytics 1.2.3
 - npm-release: @trezor/connect-common 0.2.4
 - npm-release: @trezor/env-utils 1.2.1
-- npm-release: @trezor/transport 1.3.4
-- npm-release: @trezor/protobuf 1.2.4
+- npm-release: @exodus/trezor-transport 1.3.4
+- npm-release: @exodus/trezor-protobuf 1.2.4
 - npm-release: @trezor/schema-utils 1.2.3
-- npm-release: @trezor/protocol 1.2.2
+- npm-release: @exodus/trezor-protocol 1.2.2
 - npm-release: @trezor/utxo-lib 2.2.3
-- npm-release: @trezor/utils 9.2.3
+- npm-release: @exodus/trezor-utils 9.2.3
 
 # 9.4.3
 
@@ -433,11 +433,11 @@ This release introduces `@trezor/connect-mobile`, which allows mobile apps to in
 - npm-release: @trezor/connect-analytics 1.2.2
 - npm-release: @trezor/analytics 1.2.2
 - npm-release: @trezor/connect-common 0.2.3
-- npm-release: @trezor/transport 1.3.3
-- npm-release: @trezor/protobuf 1.2.3
+- npm-release: @exodus/trezor-transport 1.3.3
+- npm-release: @exodus/trezor-protobuf 1.2.3
 - npm-release: @trezor/schema-utils 1.2.2
 - npm-release: @trezor/utxo-lib 2.2.2
-- npm-release: @trezor/utils 9.2.2
+- npm-release: @exodus/trezor-utils 9.2.2
 
 # 9.4.2
 
@@ -469,8 +469,8 @@ If you are still seeing issues with USB types, please add `w3c-web-usb` to your 
 ### Dependencies update
 
 - npm-release: @trezor/connect-common 0.2.2
-- npm-release: @trezor/transport 1.3.2
-- npm-release: @trezor/protobuf 1.2.2
+- npm-release: @exodus/trezor-transport 1.3.2
+- npm-release: @exodus/trezor-protobuf 1.2.2
 
 # 9.4.1
 
@@ -553,12 +553,12 @@ NodeBridge new version compatibility fix: Resolved an issue where NodeBridge ver
 - npm-release: @trezor/connect-analytics 1.2.1
 - npm-release: @trezor/analytics 1.2.1
 - npm-release: @trezor/connect-common 0.2.1
-- npm-release: @trezor/transport 1.3.1
-- npm-release: @trezor/protobuf 1.2.1
+- npm-release: @exodus/trezor-transport 1.3.1
+- npm-release: @exodus/trezor-protobuf 1.2.1
 - npm-release: @trezor/schema-utils 1.2.1
-- npm-release: @trezor/protocol 1.2.1
+- npm-release: @exodus/trezor-protocol 1.2.1
 - npm-release: @trezor/utxo-lib 2.2.1
-- npm-release: @trezor/utils 9.2.1
+- npm-release: @exodus/trezor-utils 9.2.1
 
 # 9.4.0
 
@@ -679,12 +679,12 @@ Added support for T3B1.
 - npm-release: @trezor/analytics 1.2.0
 - npm-release: @trezor/connect-common 0.2.0
 - npm-release: @trezor/env-utils 1.2.0
-- npm-release: @trezor/transport 1.3.0
-- npm-release: @trezor/protobuf 1.2.0
+- npm-release: @exodus/trezor-transport 1.3.0
+- npm-release: @exodus/trezor-protobuf 1.2.0
 - npm-release: @trezor/schema-utils 1.2.0
-- npm-release: @trezor/protocol 1.2.0
+- npm-release: @exodus/trezor-protocol 1.2.0
 - npm-release: @trezor/utxo-lib 2.2.0
-- npm-release: @trezor/utils 9.2.0
+- npm-release: @exodus/trezor-utils 9.2.0
 - npm-release: @trezor/connect 9.4.0
 
 # 9.3.0
@@ -777,12 +777,12 @@ Minor fixes in Connect Explorer and documentation.
 - npm-release: @trezor/analytics 1.1.0
 - npm-release: @trezor/connect-common 0.1.0
 - npm-release: @trezor/env-utils 1.1.0
-- npm-release: @trezor/transport 1.2.0
-- npm-release: @trezor/protobuf 1.1.0
+- npm-release: @exodus/trezor-transport 1.2.0
+- npm-release: @exodus/trezor-protobuf 1.1.0
 - npm-release: @trezor/schema-utils 1.1.0
-- npm-release: @trezor/protocol 1.1.0
+- npm-release: @exodus/trezor-protocol 1.1.0
 - npm-release: @trezor/utxo-lib 2.1.0
-- npm-release: @trezor/utils 9.1.0
+- npm-release: @exodus/trezor-utils 9.1.0
 
 # 9.2.4
 
@@ -846,12 +846,12 @@ In general measures to address popup closing unexpectedly were taken. Update of 
 - npm-release: @trezor/analytics 1.0.17
 - npm-release: @trezor/connect-common 0.0.33
 - npm-release: @trezor/env-utils 1.0.17
-- npm-release: @trezor/transport 1.1.29
-- npm-release: @trezor/protobuf 1.0.13
+- npm-release: @exodus/trezor-transport 1.1.29
+- npm-release: @exodus/trezor-protobuf 1.0.13
 - npm-release: @trezor/schema-utils 1.0.4
-- npm-release: @trezor/protocol 1.0.9
+- npm-release: @exodus/trezor-protocol 1.0.9
 - npm-release: @trezor/utxo-lib 2.0.10
-- npm-release: @trezor/utils 9.0.24
+- npm-release: @exodus/trezor-utils 9.0.24
 
 # 9.2.3
 
@@ -905,9 +905,9 @@ In general measures to address popup closing unexpectedly were taken. Update of 
 - npm-release: @trezor/blockchain-link-types 1.0.16
 - npm-release: @trezor/connect-common 0.0.32
 - npm-release: @trezor/env-utils 1.0.16
-- npm-release: @trezor/transport 1.1.28
-- npm-release: @trezor/protobuf 1.0.12
-- npm-release: @trezor/protocol 1.0.8
+- npm-release: @exodus/trezor-transport 1.1.28
+- npm-release: @exodus/trezor-protobuf 1.0.12
+- npm-release: @exodus/trezor-protocol 1.0.8
 - npm-release: @trezor/utxo-lib 2.0.9
 - npm-release: @trezor/connect 9.2.3
 
@@ -923,7 +923,7 @@ Main focus of this release is to allow saving device sessions in webextension, s
 - chore(suite): remove goerli (8eb6b271a5)
 - chore(connect): Add Rainbow Browser Extension to knownHosts (6213f06a58, e648074ec8)
 - chore: crowdin translation update (aa9a0d5bfe)
-- chore(connect): move logs to @trezor/utils (28c2b9fe57)
+- chore(connect): move logs to @exodus/trezor-utils (28c2b9fe57)
 - chore(connect): add new CA pubkeys and update timestamp (9b8f4eeb81)
 - fix(connect): be more defensive in descriptor parsing (7cf1f02dc4)
 - fix(connect): More robust conversion of e.g. 44h to 44' (1ea29b5d6c)
@@ -952,8 +952,8 @@ Main motivation for this release was [issue](https://github.com/trezor/trezor-su
 
 - npm-release: @trezor/blockchain-link 2.1.27
 - npm-release: @trezor/connect-common 0.0.30
-- npm-release: @trezor/transport 1.1.26
-- npm-release: @trezor/protobuf 1.0.10
+- npm-release: @exodus/trezor-transport 1.1.26
+- npm-release: @exodus/trezor-protobuf 1.0.10
 
 # 9.2.0
 
@@ -1003,7 +1003,7 @@ This package is now out of beta.
 - chore: dependencies and monorepo changes (fecd89f, c21d81f, 84bc9b8, 5a6759e, 01e33b7, 00fe229, a7e6879, 004938e, fac6d99, d3f8043, ed1fd3e, 3861846, 9fdccc9, 44fa12a)
 - chore(repo): remove build from protobuf (chore(repo): remove build from protobuf #11288) (11ffd94)
 - chore(repo): remove build:lib for some simple packages (chore(repo): remove build:lib for some simple packages #11276) (7febd10)
-- chore(utils): remove build step requirement from @trezor/utils (chore(utils): remove build step requirement from @trezor/utils #11176) (6cd3d3c)
+- chore(utils): remove build step requirement from @exodus/trezor-utils (chore(utils): remove build step requirement from @exodus/trezor-utils #11176) (6cd3d3c)
 - chore(connect-explorer-webextension): delete package - now in connect-explorer/src-webextension (494afc7)
 
 ## Dependencies update
@@ -1016,12 +1016,12 @@ This package is now out of beta.
 - npm-release: @trezor/analytics 1.0.15
 - npm-release: @trezor/connect-common 0.0.29
 - npm-release: @trezor/env-utils 1.0.14
-- npm-release: @trezor/transport 1.1.25
-- npm-release: @trezor/protobuf 1.0.9
+- npm-release: @exodus/trezor-transport 1.1.25
+- npm-release: @exodus/trezor-protobuf 1.0.9
 - npm-release: @trezor/schema-utils 1.0.2
-- npm-release: @trezor/protocol 1.0.6
+- npm-release: @exodus/trezor-protocol 1.0.6
 - npm-release: @trezor/utxo-lib 2.0.7
-- npm-release: @trezor/utils 9.0.22
+- npm-release: @exodus/trezor-utils 9.0.22
 - npm-release: @trezor/connect 9.2.0
 
 # 9.1.12
@@ -1045,7 +1045,7 @@ This package is now out of beta.
 - chore(connect-ui): ui changes (dcb8e02, 03c6cc6, 936f6b5, 6b7ed69, 8f9f3e2, 4cc0cd6)
 - fix(libs): changes in libs that should allow compiling connect with typescript option skipLibCheck: false
 - chore(connect): split dev and prod builds. (535dd48)
-- dependencies update: @trezor/blockchain-link, @trezor/blockchain-link-types, @trezor/type-utils, @trezor/analytics, @trezor/connect-common, @trezor/env-utils, @trezor/transport, @trezor/protobuf, @trezor/utxo-lib, @trezor/utils
+- dependencies update: @trezor/blockchain-link, @trezor/blockchain-link-types, @trezor/type-utils, @trezor/analytics, @trezor/connect-common, @trezor/env-utils, @exodus/trezor-transport, @exodus/trezor-protobuf, @trezor/utxo-lib, @exodus/trezor-utils
 
 # 9.1.11
 
@@ -1251,8 +1251,8 @@ This package is now out of beta.
 - fixed: `composeTransaction` cases when composing tx with multiple outputs where at least one is above MAX_SAFE_INTEGER
 - updated: @trezor/blockchain-link 2.6.1
 - updated: @trezor/connect-common 0.0.11
-- updated: @trezor/transport 1.1.6
-- updated: @trezor/utils 9.0.4
+- updated: @exodus/trezor-transport 1.1.6
+- updated: @exodus/trezor-utils 9.0.4
 - updated: @trezor/utxo-lib 1.0.2
 
 # 9.0.4

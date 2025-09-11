@@ -1,4 +1,4 @@
-import { BigNumber } from '@trezor/utils/src/bigNumber';
+import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
 
 import { PROTO } from '../../../constants';
 import { TrezorError } from '../../../constants/errors';

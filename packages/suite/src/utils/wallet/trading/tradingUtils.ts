@@ -21,7 +21,7 @@ import {
     substituteBip43Path,
 } from '@suite-common/wallet-utils';
 import TrezorConnect from '@trezor/connect';
-import { BigNumber } from '@trezor/utils';
+import { BigNumber } from '@exodus/trezor-utils';
 
 import { ExtendedMessageDescriptor, Route, TrezorDevice } from 'src/types/suite';
 import {

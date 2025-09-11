@@ -1,4 +1,4 @@
-import { TypedEmitter, resolveAfter } from '@trezor/utils';
+import { TypedEmitter, resolveAfter } from '@exodus/trezor-utils';
 
 import { TrezorBluetooth } from './trezor-bluetooth';
 import type {

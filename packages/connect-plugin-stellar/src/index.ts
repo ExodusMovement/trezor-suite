@@ -10,7 +10,7 @@ import {
     Transaction,
 } from '@stellar/stellar-sdk';
 
-import { BigNumber } from '@trezor/utils/src/bigNumber';
+import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
 
 /**
  * Transforms Signer to TrezorConnect.StellarTransaction.Signer

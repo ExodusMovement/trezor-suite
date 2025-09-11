@@ -202,7 +202,7 @@
 - fix: from g:tsx to local tsx in prepublish script (d21d698b2)
 - chore(suite): replace `selectCoinsLegacy` by fiat rates selectors (4e3ce7367)
 - chore(suite): autofix newlines (c82455e74)
-- chore(utils): remove build step requirement from @trezor/utils (#11176) (6cd3d3c81)
+- chore(utils): remove build step requirement from @exodus/trezor-utils (#11176) (6cd3d3c81)
 - chore(blockchain-link): remove unused error event (4c1b8df7d)
 - refactor(blockchain-link): use `createDeferredManager` (037ecfe68)
 - Fix: add missing keys that eslint was complaining about (#11167) (824c8b18b)
@@ -378,7 +378,7 @@
 
 - Added `proxy` param allowing workers to initialize SocksProxyAgent and use it for proxying communication
 - Added support for `Electrum` backend
-- Using common utilities from new `@trezor/utils` package
+- Using common utilities from new `@exodus/trezor-utils` package
 - Updated dependencies
 
 # 2.0.0

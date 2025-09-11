@@ -3,7 +3,7 @@ import { NetworkSymbol, getNetwork } from '@suite-common/wallet-config';
 import { FeeInfo } from '@suite-common/wallet-types';
 import { isDecimalsValid } from '@suite-common/wallet-utils';
 import type { UseFormReturn } from '@suite-native/forms';
-import { BigNumber } from '@trezor/utils';
+import { BigNumber } from '@exodus/trezor-utils';
 
 import { NativeSupportedFeeLevel } from './types';
 import { getFeeDecimals } from './utils';

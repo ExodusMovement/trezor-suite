@@ -26,7 +26,7 @@ import {
     HELP_CENTER_EVM_ADDRESS_CHECKSUM,
     HELP_CENTER_EVM_SEND_TO_CONTRACT_URL,
 } from '@trezor/urls';
-import { capitalizeFirstLetter } from '@trezor/utils';
+import { capitalizeFirstLetter } from '@exodus/trezor-utils';
 
 import { openDeferredModal } from 'src/actions/suite/modalActions';
 import { AddressLabeling, MetadataLabeling } from 'src/components/suite';

@@ -1,4 +1,4 @@
-import { TypedEmitter, getSynchronize } from '@trezor/utils';
+import { TypedEmitter, getSynchronize } from '@exodus/trezor-utils';
 
 import * as ERRORS from '../errors';
 import type {

@@ -12,7 +12,7 @@ import {
     asTimestamp,
 } from '@suite-common/wallet-types';
 import type { BaseCurrencyCode } from '@trezor/blockchain-link-types';
-import { typedObjectKeys } from '@trezor/utils';
+import { typedObjectKeys } from '@exodus/trezor-utils';
 
 const ONE_HOUR_IN_SECONDS = 60 * 60;
 

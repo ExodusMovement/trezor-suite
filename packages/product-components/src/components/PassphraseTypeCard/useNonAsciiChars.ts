@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 
-import { getNonAsciiChars } from '@trezor/utils';
+import { getNonAsciiChars } from '@exodus/trezor-utils';
 
 export const useNonAsciiChars = (value: string) => {
     const [showAsciiBanner, setShowAsciiBanner] = useState(false);

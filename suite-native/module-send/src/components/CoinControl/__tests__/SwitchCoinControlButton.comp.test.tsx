@@ -4,7 +4,7 @@ import {
     renderWithBasicProvider,
 } from '@suite-native/test-utils';
 import { NativeStyleUtils, useNativeStyles } from '@trezor/styles';
-import { BigNumber } from '@trezor/utils';
+import { BigNumber } from '@exodus/trezor-utils';
 
 import { useUtxoSelection } from '../../../hooks/useUtxoSelection';
 import { SwitchCoinControlButton } from '../SwitchCoinControlButton';

@@ -9,7 +9,7 @@ import {
 } from '@suite-common/wallet-utils';
 import TrezorConnect from '@trezor/connect';
 import { EventType, analytics } from '@trezor/suite-analytics';
-import { Deferred } from '@trezor/utils';
+import { Deferred } from '@exodus/trezor-utils';
 
 import { useSelector } from 'src/hooks/suite';
 import { selectAccountIncludingChosenInTrading } from 'src/reducers/wallet/selectedAccountReducer';

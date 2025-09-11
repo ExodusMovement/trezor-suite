@@ -3,7 +3,7 @@ import { ReactNode } from 'react';
 import styled from 'styled-components';
 
 import { Card, Column, SkeletonRectangle, variables } from '@trezor/components';
-import { BigNumber } from '@trezor/utils/src/bigNumber';
+import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
 
 import { FormattedCryptoAmount, HiddenPlaceholder, Sign } from 'src/components/suite';
 import { Account } from 'src/types/wallet';

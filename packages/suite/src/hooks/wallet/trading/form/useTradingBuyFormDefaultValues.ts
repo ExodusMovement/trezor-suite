@@ -15,7 +15,7 @@ import {
 } from '@suite-common/trading';
 import { networks } from '@suite-common/wallet-config';
 import { selectBaseCurrency } from '@suite-common/wallet-core';
-import { isArrayMember, typedObjectValues } from '@trezor/utils';
+import { isArrayMember, typedObjectValues } from '@exodus/trezor-utils';
 
 import { useSelector } from 'src/hooks/suite';
 import { selectTorState } from 'src/selectors/suite/suiteSelectors';

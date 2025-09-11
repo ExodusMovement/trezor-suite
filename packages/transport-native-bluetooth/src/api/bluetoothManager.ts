@@ -13,7 +13,7 @@ import {
 
 import { EventEmitter } from 'events';
 
-import { readMessageBuffer } from '@trezor/transport/src/utils/readMessageBuffer';
+import { readMessageBuffer } from '@exodus/trezor-transport/src/utils/readMessageBuffer';
 import type { TimerId } from '@trezor/type-utils';
 
 import { BluetoothDevice, DeviceConnectionStatusChangeEvent } from './types';

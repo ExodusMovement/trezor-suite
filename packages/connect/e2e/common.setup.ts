@@ -1,11 +1,11 @@
-import { ApplySettings } from '@trezor/protobuf/src/messages-schema';
+import { ApplySettings } from '@exodus/trezor-protobuf/src/messages-schema';
 import {
     EmuStartOptsType,
     MNEMONICS,
     TrezorUserEnvLink,
     type TrezorUserEnvLinkClass,
 } from '@trezor/trezor-user-env-link';
-import { versionUtils } from '@trezor/utils';
+import { versionUtils } from '@exodus/trezor-utils';
 
 import TrezorConnect from '../src';
 import { UI } from '../src/events';

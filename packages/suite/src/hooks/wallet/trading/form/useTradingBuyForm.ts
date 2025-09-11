@@ -24,7 +24,7 @@ import { networks } from '@suite-common/wallet-config';
 import { Account } from '@suite-common/wallet-types';
 import { isDesktop } from '@trezor/env-utils';
 import { EventType, analytics } from '@trezor/suite-analytics';
-import { isChanged } from '@trezor/utils';
+import { isChanged } from '@exodus/trezor-utils';
 
 import { openDeferredModal } from 'src/actions/suite/modalActions';
 import * as routerActions from 'src/actions/suite/routerActions';

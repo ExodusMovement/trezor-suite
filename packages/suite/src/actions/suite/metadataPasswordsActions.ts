@@ -2,7 +2,7 @@ import crypto from 'crypto';
 
 import { selectSelectedDevice } from '@suite-common/wallet-core';
 import TrezorConnect from '@trezor/connect';
-import { cloneObject } from '@trezor/utils';
+import { cloneObject } from '@exodus/trezor-utils';
 
 import { METADATA, METADATA_PASSWORDS, METADATA_PROVIDER } from 'src/actions/suite/constants';
 import { selectSelectedProviderForPasswords } from 'src/reducers/suite/metadataReducer';

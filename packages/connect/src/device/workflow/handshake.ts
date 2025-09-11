@@ -1,6 +1,6 @@
-import { PROTOCOL_MALFORMED } from '@trezor/protocol';
-import { TRANSPORT_ERROR } from '@trezor/transport';
-import { resolveAfter, versionUtils } from '@trezor/utils';
+import { PROTOCOL_MALFORMED } from '@exodus/trezor-protocol';
+import { TRANSPORT_ERROR } from '@exodus/trezor-transport';
+import { resolveAfter, versionUtils } from '@exodus/trezor-utils';
 
 import { TypedError } from '../../constants/errors';
 import { WorkflowContext } from '../../types/workflow';

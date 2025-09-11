@@ -1,5 +1,5 @@
-import * as messages from '@trezor/protobuf/messages.json';
-import { BridgeTransport } from '@trezor/transport';
+import * as messages from '@exodus/trezor-protobuf/messages.json';
+import { BridgeTransport } from '@exodus/trezor-transport';
 
 import { controller as TrezorUserEnvLink } from './controller';
 import { descriptor as expectedDescriptor } from './expect';

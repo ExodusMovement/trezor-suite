@@ -1,6 +1,6 @@
 import { RESPONSES } from '@trezor/blockchain-link-types/src/constants';
 import type { BlockHeader, ElectrumAPI } from '@trezor/blockchain-link-types/src/electrum';
-import { throwError } from '@trezor/utils';
+import { throwError } from '@exodus/trezor-utils';
 
 import type { BaseWorker } from '../../baseWorker';
 import { blockheaderToBlockhash } from '../utils';

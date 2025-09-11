@@ -1,6 +1,6 @@
 import { localizeNumber } from '@suite-common/wallet-utils';
 import messages from '@trezor/suite/src/support/messages';
-import { capitalizeFirstLetter } from '@trezor/utils';
+import { capitalizeFirstLetter } from '@exodus/trezor-utils';
 
 import {
     getCompanyNameFromList,

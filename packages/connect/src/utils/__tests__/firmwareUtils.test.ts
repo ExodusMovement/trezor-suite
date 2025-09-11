@@ -1,5 +1,5 @@
 import { firmwareAssets } from '@trezor/connect-common/files/firmware';
-import { versionUtils } from '@trezor/utils';
+import { versionUtils } from '@exodus/trezor-utils';
 
 import { findBestCompatibleRelease, isStrictFeatures } from '../firmwareUtils';
 

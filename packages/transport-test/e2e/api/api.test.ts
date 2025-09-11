@@ -1,4 +1,4 @@
-import { UsbApi } from '@trezor/transport/src/api/usb';
+import { UsbApi } from '@exodus/trezor-transport/src/api/usb';
 
 import { debug, error, info, sharedTest, success } from './shared';
 import { assertEquals, assertFailure, assertMessage, assertSuccess, buildMessage } from './utils';

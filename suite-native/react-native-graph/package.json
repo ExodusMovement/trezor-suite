@@ -11,8 +11,8 @@
         "type-check": "yarn g:tsc --build"
     },
     "dependencies": {
+        "@exodus/trezor-utils": "workspace:*",
         "@shopify/react-native-skia": "2.2.3",
-        "@trezor/utils": "workspace:*",
         "@types/react": "^19.0.0",
         "react": "19.0.0",
         "react-native": "0.79.3",

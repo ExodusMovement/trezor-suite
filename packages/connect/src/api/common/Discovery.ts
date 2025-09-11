@@ -1,6 +1,6 @@
 // origin: https://github.com/trezor/connect/blob/develop/src/js/core/methods/helpers/Discovery.js
 
-import { TypedEmitter } from '@trezor/utils';
+import { TypedEmitter } from '@exodus/trezor-utils';
 
 import { Blockchain } from '../../backend/BlockchainLink';
 import { ERRORS } from '../../constants';

@@ -1,4 +1,4 @@
-import { bufferUtils } from '@trezor/utils';
+import { bufferUtils } from '@exodus/trezor-utils';
 import * as BitcoinJs from '@trezor/utxo-lib';
 import type { TxInput, TxOutput } from '@trezor/utxo-lib/src/transaction/base';
 

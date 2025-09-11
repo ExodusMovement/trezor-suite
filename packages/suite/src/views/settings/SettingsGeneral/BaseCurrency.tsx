@@ -8,7 +8,7 @@ import {
     valuablesBaseCurrencies,
 } from '@trezor/blockchain-link-types';
 import { EventType, analytics } from '@trezor/suite-analytics';
-import { typedObjectKeys } from '@trezor/utils';
+import { typedObjectKeys } from '@exodus/trezor-utils';
 
 import { SettingsSectionItem } from 'src/components/settings';
 import { ActionColumn, ActionSelect, TextColumn, Translation } from 'src/components/suite';

@@ -1,6 +1,6 @@
 import tls from 'tls';
 
-import { isWhitelistedHost } from '@trezor/utils';
+import { isWhitelistedHost } from '@exodus/trezor-utils';
 
 import { Interceptor } from './interceptorTypes';
 

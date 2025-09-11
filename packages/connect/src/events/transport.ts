@@ -1,5 +1,5 @@
-import type { Transport } from '@trezor/transport';
-import { TRANSPORT } from '@trezor/transport/src/constants';
+import type { Transport } from '@exodus/trezor-transport';
+import { TRANSPORT } from '@exodus/trezor-transport/src/constants';
 
 import { serializeError } from '../constants/errors';
 import { suggestBridgeInstaller } from '../data/transportInfo';
@@ -7,7 +7,7 @@ import { suggestUdevInstaller } from '../data/udevInfo';
 import { ConnectSettings } from '../exports';
 import type { MessageFactoryFn } from '../types/utils';
 
-export { TRANSPORT } from '@trezor/transport/src/constants';
+export { TRANSPORT } from '@exodus/trezor-transport/src/constants';
 
 export const TRANSPORT_EVENT = 'TRANSPORT_EVENT';
 

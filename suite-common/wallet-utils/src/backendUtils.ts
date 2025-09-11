@@ -10,7 +10,7 @@ import type {
     BlockchainNetworks,
     CustomBackend,
 } from '@suite-common/wallet-types';
-import { parseElectrumUrl } from '@trezor/utils';
+import { parseElectrumUrl } from '@exodus/trezor-utils';
 
 export const getDefaultBackendType = (symbol: NetworkSymbol) => {
     if (symbol === 'ada' || symbol === 'tada') {

@@ -1,4 +1,4 @@
-import { Deferred, createDeferred } from '@trezor/utils';
+import { Deferred, createDeferred } from '@exodus/trezor-utils';
 
 export const createPopupPromiseManager = () => {
     let _popupPromise: Deferred<void> | undefined; // Waiting for popup handshake

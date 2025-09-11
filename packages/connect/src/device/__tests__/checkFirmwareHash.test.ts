@@ -1,7 +1,7 @@
 import { DeviceModelInternal } from '@trezor/device-utils';
-import type { FirmwareHash } from '@trezor/protobuf/src/messages';
-import type { Descriptor } from '@trezor/transport';
-import { Log } from '@trezor/utils';
+import type { FirmwareHash } from '@exodus/trezor-protobuf/src/messages';
+import type { Descriptor } from '@exodus/trezor-transport';
+import { Log } from '@exodus/trezor-utils';
 
 import { DataManager } from '../../data/DataManager';
 import { getReleaseByVersion } from '../../data/firmwareInfo';

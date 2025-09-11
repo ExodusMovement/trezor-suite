@@ -1,5 +1,5 @@
 import { CallMethodAnyResponse } from '@trezor/connect';
-import { Deferred, createDeferred } from '@trezor/utils';
+import { Deferred, createDeferred } from '@exodus/trezor-utils';
 
 // Custom helper, createDeferredManager didn't fit the needs here
 const createDeferredWrapper = <Resolve = void>(id: string) => {

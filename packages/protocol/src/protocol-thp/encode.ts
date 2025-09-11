@@ -13,7 +13,7 @@ import { aesgcm, crc32 } from './crypto';
 import { getIvFromNonce } from './crypto/tools';
 import { addAckBit, addSequenceBit, getControlBit, isThpMessageName } from './utils';
 
-// @trezor/protobuf encodeMessage without direct reference to protobuf root
+// @exodus/trezor-protobuf encodeMessage without direct reference to protobuf root
 type ProtobufEncoder = (
     messageName: string,
     messageData: Record<string, unknown>,

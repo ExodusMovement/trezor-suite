@@ -1,4 +1,4 @@
-# @trezor/protocol
+# @exodus/trezor-protocol
 
 Library for decoding and encoding messages from/to Trezor
 
@@ -45,4 +45,4 @@ Continuation packet format (chunks):
 
 ## protocol-trzd
 
-Decode loaded `@trezor/protobuf` messages
+Decode loaded `@exodus/trezor-protobuf` messages

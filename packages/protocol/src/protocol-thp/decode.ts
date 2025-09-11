@@ -23,7 +23,7 @@ type ThpMessage = ReturnType<TransportProtocolDecode> & {
     thpState: ThpState;
 };
 
-// @trezor/protobuf decodeMessage without direct reference to protobuf root
+// @exodus/trezor-protobuf decodeMessage without direct reference to protobuf root
 type ProtobufDecoder = (
     messageType: string | number,
     payload: Buffer,

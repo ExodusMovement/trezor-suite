@@ -1,5 +1,5 @@
 import { FeaturesNarrowing, FirmwareType } from '@trezor/device-utils';
-import type { ThpStateSerialized } from '@trezor/protocol';
+import type { ThpStateSerialized } from '@exodus/trezor-protocol';
 import { Branded } from '@trezor/type-utils';
 
 import type { PROTO } from '../constants';

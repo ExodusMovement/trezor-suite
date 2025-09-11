@@ -28,7 +28,7 @@ import TrezorConnect, {
     BlockchainNotification,
 } from '@trezor/connect';
 import type { TimerId } from '@trezor/type-utils';
-import { arrayDistinct, arrayToDictionary } from '@trezor/utils';
+import { arrayDistinct, arrayToDictionary } from '@exodus/trezor-utils';
 
 import { BLOCKCHAIN_MODULE_PREFIX, blockchainActions } from './blockchainActions';
 import { selectBlockchainState, selectNetworkBlockchainInfo } from './blockchainReducer';

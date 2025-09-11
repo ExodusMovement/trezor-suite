@@ -1,4 +1,4 @@
-import { thp as protocolThp, v1 as protocolV1 } from '@trezor/protocol';
+import { thp as protocolThp, v1 as protocolV1 } from '@exodus/trezor-protocol';
 
 import { readWithExpectedHeaders } from '../src/utils/readWithExpectedHeaders';
 

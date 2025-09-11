@@ -1,6 +1,6 @@
 import * as yup from 'yup';
 
-import { isAscii, isHex } from '@trezor/utils';
+import { isAscii, isHex } from '@exodus/trezor-utils';
 
 yup.setLocale({
     string: {

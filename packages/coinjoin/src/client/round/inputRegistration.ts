@@ -1,4 +1,4 @@
-import { getWeakRandomNumberInRange } from '@trezor/utils';
+import { getWeakRandomNumberInRange } from '@exodus/trezor-utils';
 
 import * as coordinator from '../coordinator';
 import * as middleware from '../middleware';

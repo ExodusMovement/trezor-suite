@@ -43,8 +43,8 @@ import {
     PROTO,
     TokenInfo,
 } from '@trezor/connect';
-import { typedObjectKeys } from '@trezor/utils';
-import { BigNumber } from '@trezor/utils/src/bigNumber';
+import { typedObjectKeys } from '@exodus/trezor-utils';
+import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
 
 import {
     convertAmountUnitsToSubunits,

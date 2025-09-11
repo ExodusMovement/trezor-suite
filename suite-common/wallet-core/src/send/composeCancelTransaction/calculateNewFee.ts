@@ -1,6 +1,6 @@
 import { ChainedTransactions } from '@suite-common/wallet-types';
 import { calculateChainedTransactionsFeeForRbf } from '@suite-common/wallet-utils';
-import { BigNumber } from '@trezor/utils';
+import { BigNumber } from '@exodus/trezor-utils';
 
 /**
  * The current default value for the minRelayTxFee in Bitcoin Core is 1000 satoshi/kB (= 1 sat/B).

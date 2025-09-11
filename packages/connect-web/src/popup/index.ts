@@ -19,7 +19,7 @@ import {
     Message,
 } from '@trezor/connect-common/src/messageChannel/abstract';
 import type { IntervalId, TimerId } from '@trezor/type-utils';
-import { Deferred, createDeferred, scheduleAction } from '@trezor/utils';
+import { Deferred, createDeferred, scheduleAction } from '@exodus/trezor-utils';
 
 import { showPopupRequest } from './showPopupRequest';
 import { ServiceWorkerWindowChannel } from '../channels/serviceworker-window';

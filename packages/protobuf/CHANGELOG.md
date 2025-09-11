@@ -1,23 +1,23 @@
 # 1.4.2
 
-- npm-prerelease: @trezor/protobuf 1.4.2-beta.1 (6a61f26191)
+- npm-prerelease: @exodus/trezor-protobuf 1.4.2-beta.1 (6a61f26191)
 - feat(protobuf): add build script for `THP` protobuf messages (b13115e870)
 - chore(protobuf): update protobuf messages (161663b6a2)
 
 # 1.4.1
 
-- npm-prerelease: @trezor/protobuf 1.4.1-beta.1 (d232ee31da)
+- npm-prerelease: @exodus/trezor-protobuf 1.4.1-beta.1 (d232ee31da)
 - chore(protobuf): update protobuf messages (8f794d5575)
 
 # 1.4.0
 
-- npm-prerelease: @trezor/protobuf 1.4.0-beta.1 (731bca229d)
+- npm-prerelease: @exodus/trezor-protobuf 1.4.0-beta.1 (731bca229d)
 - feat(protobuf): update protobuf messages (07e13c1f50)
 - chore(protobuf): update protobuf definitions (b97fae5cf5)
 
 # 1.3.5
 
-- npm-prerelease: @trezor/protobuf 1.3.5-beta.1 (884f7764d8)
+- npm-prerelease: @exodus/trezor-protobuf 1.3.5-beta.1 (884f7764d8)
 - chore: apply latest prettier (eb758acea9)
 - fix(protobuf): order of EthereumDefinitions (1cfc6a3e25)
 - chore(protobuf): minor changes in build scripts (7951ed9c76)
@@ -27,16 +27,16 @@
 
 # 1.3.4
 
-- npm-prerelease: @trezor/protobuf 1.3.4-beta.1 (4664dfed22)
+- npm-prerelease: @exodus/trezor-protobuf 1.3.4-beta.1 (4664dfed22)
 - fix(connect): Failure code properly typed (fb14734ac4)
 
 # 1.3.3
 
-- npm-prerelease: @trezor/protobuf 1.3.3-beta.1 (3f079b57d3)
+- npm-prerelease: @exodus/trezor-protobuf 1.3.3-beta.1 (3f079b57d3)
 
 # 1.3.2
 
-- npm-prerelease: @trezor/protobuf 1.3.2-beta.2 (68749e6701)
+- npm-prerelease: @exodus/trezor-protobuf 1.3.2-beta.2 (68749e6701)
 - npm-release: @trezor/connect 9.5.2-beta.1 (#17529) (3d7542843b)
 - fix(protobuf): fix DeviceModelInternal read patch path (3bdcbfc508)
 - chore(protobuf): exclude nostr (b18b8da051)
@@ -45,7 +45,7 @@
 
 # 1.3.1
 
-- npm-prerelease: @trezor/protobuf 1.3.1-beta.1 (6256d4a813)
+- npm-prerelease: @exodus/trezor-protobuf 1.3.1-beta.1 (6256d4a813)
 - fix(repo): fix generate package script (#17300) (a13f269b99)
 
 # 1.3.0
@@ -53,8 +53,8 @@
 - chore(protobuf): update protobuf (fb892d5db8)
 - Revert chore(transport): move long dep to protobuf package and unify its version with protobufjs (4a6b98bcf3)
 - chore(transport): move long dep to protobuf package and unify its version with protobufjs (3ab195cf19)
-- npm-prerelease: @trezor/protobuf 1.3.0-beta.1 (736c4b6620)
-- npm-prerelease: @trezor/protobuf 1.2.7-beta.1 (36972ab0e7)
+- npm-prerelease: @exodus/trezor-protobuf 1.3.0-beta.1 (736c4b6620)
+- npm-prerelease: @exodus/trezor-protobuf 1.2.7-beta.1 (36972ab0e7)
 - chore(packages): autofix for sort-imports eslint rule (b96c899ebb)
 - chore: enable ESLint rule for as-needed | auto-fix (64fcbde4bd)
 - chore(protobuf): update definitions (add `ResetDevice.entropy_check`) (3737c9ea00)
@@ -62,20 +62,20 @@
 
 # 1.2.6
 
-- npm-prerelease: @trezor/protobuf 1.2.6-beta.1 (d2bc8b3b1a)
+- npm-prerelease: @exodus/trezor-protobuf 1.2.6-beta.1 (d2bc8b3b1a)
 
 # 1.2.5
 
-- npm-prerelease: @trezor/protobuf 1.2.5-beta.1 (a3f1b9247e)
+- npm-prerelease: @exodus/trezor-protobuf 1.2.5-beta.1 (a3f1b9247e)
 - chore(protobuf): update protobuf definitions (display type enum added) (3818a30d06)
 
 # 1.2.4
 
-- npm-prerelease: @trezor/protobuf 1.2.4-beta.1 (cf18864248)
+- npm-prerelease: @exodus/trezor-protobuf 1.2.4-beta.1 (cf18864248)
 
 # 1.2.3
 
-- npm-prerelease: @trezor/protobuf 1.2.3-beta.2 (c965336138)
+- npm-prerelease: @exodus/trezor-protobuf 1.2.3-beta.2 (c965336138)
 - chore: add recommanded checks from eslint-plugin-jest (55d663ca2d)
 - chore: add no-empty as it will became part of recommanded (ef2dd42a5e)
 - feat(protobuf): add t3w1 internal_model (1f8a09066a)
@@ -86,7 +86,7 @@
 - chore(protobuf): build types script as module (324ba30921)
 - fix(protobuf): skip benchmark messages (888774fc19)
 - fix(protobuf): repo path in build script (5396d67588)
-- npm-prerelease: @trezor/protobuf 1.2.3-beta.1 (0b4f84fa7d)
+- npm-prerelease: @exodus/trezor-protobuf 1.2.3-beta.1 (0b4f84fa7d)
 - chore(protobuf): remove unused definitions (monero, webauthn) (66ae488690)
 - chore(protobuf): build types scripts and patches `js` > `ts` (326260c73c)
 - feat(protobuf): build definitions using protobufjs package (000870b9ab)
@@ -94,16 +94,16 @@
 
 # 1.2.1
 
-- npm-prerelease: @trezor/protobuf 1.2.1-beta.1 (3cfd038db1)
+- npm-prerelease: @exodus/trezor-protobuf 1.2.1-beta.1 (3cfd038db1)
 - chore(connect): update @sinclair/typebox-codegen 0.8.13=>0.10.4 (6cd1fdc8af)
 - chore(deps): update protobuf-js 7.2.6=>7.4.0 (0b937d6fe7)
 - chore(deps): update various patch versions deps (ed3e9bfda7)
 
 # 1.2.0
 
-- npm-prerelease: @trezor/protobuf 1.1.1-beta.2 (0639cf5bdb)
+- npm-prerelease: @exodus/trezor-protobuf 1.1.1-beta.2 (0639cf5bdb)
 - chore: update txs from 4.7.0 to 4.16.2 (59c856fd0f)
-- npm-prerelease: @trezor/protobuf 1.1.1-beta.1 (8c9f17688c)
+- npm-prerelease: @exodus/trezor-protobuf 1.1.1-beta.1 (8c9f17688c)
 - chore(connect): add basic types support for T3B1 (131c4af73a)
 - feat(protobuf): update protobuf messages for newest version (f8d8a23a85)
 

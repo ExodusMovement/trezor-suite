@@ -35,7 +35,7 @@ import { ERRORS } from '@trezor/connect';
 import { CoinLogo } from '@trezor/product-components';
 import { isCoinSymbol } from '@trezor/product-components/src/components/CoinLogo/coins';
 import { spacings } from '@trezor/theme';
-import { BigNumber } from '@trezor/utils';
+import { BigNumber } from '@exodus/trezor-utils';
 
 import { AccountLabel } from 'src/components/suite/AccountLabel';
 import { ConnectCallSource } from 'src/components/suite/ConnectCallSource';

@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import styled from 'styled-components';
 
 import { H2 } from '@trezor/components/src/components/typography/Heading/Heading';
-import { LogMessage } from '@trezor/utils';
+import { LogMessage } from '@exodus/trezor-utils';
 
 import { Card } from './Card';
 import { Translation } from './Translation';

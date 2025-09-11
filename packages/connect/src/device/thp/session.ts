@@ -1,4 +1,4 @@
-import { thp as protocolThp } from '@trezor/protocol';
+import { thp as protocolThp } from '@exodus/trezor-protocol';
 
 import type { Device } from '../Device';
 import { thpCall } from './thpCall';

@@ -4,7 +4,7 @@ import * as net from 'net';
 import * as url from 'url';
 
 import type { RequiredKey } from '@trezor/type-utils';
-import { Log, TypedEmitter, arrayPartition } from '@trezor/utils';
+import { Log, TypedEmitter, arrayPartition } from '@exodus/trezor-utils';
 
 import { findProcessFromIncomingPort } from './findProcessFromIncomingPort';
 

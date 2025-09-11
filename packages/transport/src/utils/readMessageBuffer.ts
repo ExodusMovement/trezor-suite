@@ -1,4 +1,4 @@
-import { Deferred, createDeferred } from '@trezor/utils';
+import { Deferred, createDeferred } from '@exodus/trezor-utils';
 
 import { error, success } from './result';
 import { ABORTED_BY_SIGNAL, INTERFACE_DATA_TRANSFER } from '../errors';

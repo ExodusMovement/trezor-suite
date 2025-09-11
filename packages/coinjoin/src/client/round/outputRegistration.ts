@@ -1,4 +1,4 @@
-import { arrayShuffle, getWeakRandomId, getWeakRandomInt } from '@trezor/utils';
+import { arrayShuffle, getWeakRandomId, getWeakRandomInt } from '@exodus/trezor-utils';
 
 import { SessionPhase, WabiSabiProtocolErrorCode } from '../../enums';
 import { AccountAddress } from '../../types';

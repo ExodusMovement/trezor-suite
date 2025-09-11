@@ -14,7 +14,7 @@ import {
 } from '@suite-common/wallet-types';
 import { CardanoOutput } from '@trezor/connect';
 import { getFirmwareVersion } from '@trezor/device-utils';
-import { versionUtils } from '@trezor/utils';
+import { versionUtils } from '@exodus/trezor-utils';
 
 import { datetimeToLocktime } from './bitcoinUtils';
 import { getShortFingerprint, isCardanoTx } from './cardanoUtils';

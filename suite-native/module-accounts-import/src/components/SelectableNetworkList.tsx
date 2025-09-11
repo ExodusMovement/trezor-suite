@@ -8,7 +8,7 @@ import { HeaderedCard, VStack } from '@suite-native/atoms';
 import { selectDiscoveryNetworkSymbols } from '@suite-native/discovery';
 import { Translation } from '@suite-native/intl';
 import { selectAreTestnetsEnabled } from '@suite-native/settings';
-import { arrayPartition } from '@trezor/utils';
+import { arrayPartition } from '@exodus/trezor-utils';
 
 type SelectableAssetListProps = {
     onSelectItem: (symbol: NetworkSymbol) => void;

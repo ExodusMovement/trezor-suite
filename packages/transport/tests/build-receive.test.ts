@@ -1,5 +1,5 @@
-import { parseConfigure } from '@trezor/protobuf';
-import { bridge as bridgeProtocol, v1 as v1Protocol } from '@trezor/protocol';
+import { parseConfigure } from '@exodus/trezor-protobuf';
+import { bridge as bridgeProtocol, v1 as v1Protocol } from '@exodus/trezor-protocol';
 
 import { receiveAndParse } from '../src/utils/receive';
 import { buildMessage, createChunks } from '../src/utils/send';

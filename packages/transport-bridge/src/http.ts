@@ -12,11 +12,11 @@ import {
     parseBodyText,
 } from '@trezor/node-utils';
 import { checkOrigin } from '@trezor/node-utils/src/http';
-import { AbstractApi } from '@trezor/transport/src/api/abstract';
-import { UNEXPECTED_ERROR } from '@trezor/transport/src/errors';
-import { Descriptor, PathPublic, Session } from '@trezor/transport/src/types';
-import { validateProtocolMessage } from '@trezor/transport/src/utils/bridgeProtocolMessage';
-import { Log, Throttler, arrayPartition } from '@trezor/utils';
+import { AbstractApi } from '@exodus/trezor-transport/src/api/abstract';
+import { UNEXPECTED_ERROR } from '@exodus/trezor-transport/src/errors';
+import { Descriptor, PathPublic, Session } from '@exodus/trezor-transport/src/types';
+import { validateProtocolMessage } from '@exodus/trezor-transport/src/utils/bridgeProtocolMessage';
+import { Log, Throttler, arrayPartition } from '@exodus/trezor-utils';
 
 import { createCore } from './core';
 

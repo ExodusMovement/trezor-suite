@@ -38,7 +38,7 @@
         "prepublish": "yarn tsx ../../scripts/prepublish.js"
     },
     "dependencies": {
-        "@trezor/utils": "workspace:*",
+        "@exodus/trezor-utils": "workspace:*",
         "bech32": "^2.0.0",
         "bip66": "^2.0.0",
         "bitcoin-ops": "^1.4.1",

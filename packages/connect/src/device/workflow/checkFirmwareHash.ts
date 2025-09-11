@@ -1,6 +1,6 @@
 import { randomBytes } from 'crypto';
 
-import { serializeError } from '@trezor/utils';
+import { serializeError } from '@exodus/trezor-utils';
 
 import { calculateFirmwareHash, getBinaryOptional, stripFwHeaders } from '../../api/firmware';
 import { DataManager } from '../../data/DataManager';

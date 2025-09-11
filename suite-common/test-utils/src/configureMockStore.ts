@@ -8,7 +8,7 @@ import {
 import { ThunkDispatch } from 'redux-thunk';
 
 import { AnyAction, ExtraDependenciesPartial, createMiddleware } from '@suite-common/redux-utils';
-import { mergeDeepObject } from '@trezor/utils';
+import { mergeDeepObject } from '@exodus/trezor-utils';
 
 import { extraDependenciesMock } from './extraDependenciesMock';
 

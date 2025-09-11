@@ -11,6 +11,7 @@
         "type-check": "yarn g:tsc --build"
     },
     "dependencies": {
+        "@exodus/trezor-utils": "workspace:*",
         "@formatjs/intl": "3.1.6",
         "@mobily/ts-belt": "^3.13.1",
         "@suite-common/suite-constants": "workspace:*",
@@ -19,7 +20,6 @@
         "@suite-common/wallet-utils": "workspace:*",
         "@trezor/blockchain-link-types": "workspace:*",
         "@trezor/connect": "workspace:*",
-        "@trezor/utils": "workspace:*",
         "date-fns": "^4.1.0",
         "react": "19.0.0",
         "react-intl": "^7.1.11"

@@ -1,4 +1,4 @@
-import { scheduleAction } from '@trezor/utils';
+import { scheduleAction } from '@exodus/trezor-utils';
 
 import { success } from './result';
 import { AbstractApi } from '../api/abstract';

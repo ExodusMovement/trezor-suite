@@ -3,7 +3,7 @@ import { Analytics } from '../analytics';
 import { encodeDataToQueryString, getRandomId } from '../utils';
 import { fixtures } from './fixtures/encodeDataToQueryString';
 
-jest.mock('@trezor/utils', () => ({
+jest.mock('@exodus/trezor-utils', () => ({
     __esModule: true,
     getWeakRandomId: () => 'random',
 }));

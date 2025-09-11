@@ -3,7 +3,7 @@ import { useMemo } from 'react';
 import { Account } from '@suite-common/wallet-types';
 import { getUtxoOutpoint } from '@suite-common/wallet-utils';
 import { AccountUtxo } from '@trezor/connect';
-import { BigNumber } from '@trezor/utils/src/bigNumber';
+import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
 
 import { useSelector, useTranslation } from 'src/hooks/suite';
 import {

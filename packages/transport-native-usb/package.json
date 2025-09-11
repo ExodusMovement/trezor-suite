@@ -1,5 +1,5 @@
 {
-    "name": "@trezor/transport-native-usb",
+    "name": "@exodus/trezor-transport-native-usb",
     "version": "1.0.0",
     "private": true,
     "license": "See LICENSE.md in repo root",
@@ -10,7 +10,7 @@
         "type-check": "yarn g:tsc --build"
     },
     "dependencies": {
-        "@trezor/react-native-usb": "workspace:*",
-        "@trezor/transport": "workspace:*"
+        "@exodus/trezor-transport": "workspace:*",
+        "@trezor/react-native-usb": "workspace:*"
     }
 }

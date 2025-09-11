@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 // @ts-ignore
-import * as Messages from '@trezor/protobuf/src/messages';
+import * as Messages from '@exodus/trezor-protobuf/src/messages';
 
 import commonFixtures from '../../../../submodules/trezor-common/tests/fixtures/stellar/sign_tx.json';
 

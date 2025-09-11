@@ -1,8 +1,8 @@
 // origin: https://github.com/trezor/connect/blob/develop/src/js/core/methods/ComposeTransaction.js
 
-import { BigNumber } from '@trezor/utils/src/bigNumber';
-import { promiseAllSequence } from '@trezor/utils/src/promiseAllSequence';
-import { resolveAfter } from '@trezor/utils/src/resolveAfter';
+import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
+import { promiseAllSequence } from '@exodus/trezor-utils/src/promiseAllSequence';
+import { resolveAfter } from '@exodus/trezor-utils/src/resolveAfter';
 import type { ComposeOutput, TransactionInputOutputSortingStrategy } from '@trezor/utxo-lib';
 
 import { initBlockchain, isBackendSupported } from '../backend/BlockchainLink';

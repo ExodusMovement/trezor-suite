@@ -24,12 +24,12 @@
         "type-check": "yarn g:tsc --build"
     },
     "dependencies": {
+        "@exodus/trezor-utils": "workspace:*",
         "@suite-common/suite-constants": "workspace:*",
         "@trezor/blockchain-link": "workspace:*",
         "@trezor/blockchain-link-types": "workspace:*",
         "@trezor/blockchain-link-utils": "workspace:*",
         "@trezor/eslint": "workspace:*",
-        "@trezor/utils": "workspace:*",
         "@trezor/utxo-lib": "workspace:*",
         "cross-fetch": "^4.0.0",
         "golomb": "1.2.0",

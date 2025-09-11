@@ -1,6 +1,6 @@
 import { differenceInMilliseconds } from 'date-fns';
 
-import { scheduleAction } from '@trezor/utils';
+import { scheduleAction } from '@exodus/trezor-utils';
 
 export class RateLimiter {
     // Poor man's rate limiter

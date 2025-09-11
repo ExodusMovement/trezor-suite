@@ -1,4 +1,4 @@
-import { arrayPartition, createDeferred } from '@trezor/utils';
+import { arrayPartition, createDeferred } from '@exodus/trezor-utils';
 
 import { AnyUiPromise, DEVICE, UiPromise, UiPromiseCreator, UiPromiseResponse } from '../events';
 import { DeviceUniquePath } from '../types/device';

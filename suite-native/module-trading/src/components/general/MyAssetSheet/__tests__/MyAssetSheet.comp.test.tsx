@@ -3,7 +3,7 @@ import { CryptoId } from 'invity-api';
 import { selectFormattedAccountType } from '@suite-common/wallet-core';
 import { asBaseCurrencyAmount } from '@suite-common/wallet-utils';
 import { fireEvent, renderWithStoreProviderAsync } from '@suite-native/test-utils';
-import { BigNumber } from '@trezor/utils';
+import { BigNumber } from '@exodus/trezor-utils';
 
 import { getBtcAccount, getEthAccount } from '../../../../__fixtures__/account';
 import { getInitializedTradingState } from '../../../../__fixtures__/tradingState';

@@ -1,5 +1,5 @@
 import { DeviceModelInternal } from '@trezor/device-utils';
-import { isArrayMember, versionUtils } from '@trezor/utils';
+import { isArrayMember, versionUtils } from '@exodus/trezor-utils';
 
 import { PROTO } from '../constants';
 import { config } from '../data/config';

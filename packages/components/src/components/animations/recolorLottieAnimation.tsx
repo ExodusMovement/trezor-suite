@@ -1,4 +1,4 @@
-import { hexToRgbaArray } from '@trezor/utils';
+import { hexToRgbaArray } from '@exodus/trezor-utils';
 
 // @ts-expect-error
 type JsonValue = string | number | boolean | null | Record<string, JsonValue> | JsonValue[];

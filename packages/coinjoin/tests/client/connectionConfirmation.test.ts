@@ -8,8 +8,8 @@ import { createServer } from '../mocks/server';
 
 let server: Awaited<ReturnType<typeof createServer>>;
 
-jest.mock('@trezor/utils', () => {
-    const originalModule = jest.requireActual('@trezor/utils');
+jest.mock('@exodus/trezor-utils', () => {
+    const originalModule = jest.requireActual('@exodus/trezor-utils');
 
     return {
         __esModule: true,

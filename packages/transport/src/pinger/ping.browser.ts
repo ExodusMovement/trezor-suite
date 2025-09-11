@@ -1,4 +1,4 @@
-import { createDeferredManager, createLazy } from '@trezor/utils';
+import { createDeferredManager, createLazy } from '@exodus/trezor-utils';
 
 import PingWorker from './pingWorker';
 

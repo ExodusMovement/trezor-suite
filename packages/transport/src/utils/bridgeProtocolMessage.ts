@@ -1,4 +1,4 @@
-import type { ThpStateSerialized, TransportProtocol } from '@trezor/protocol';
+import type { ThpStateSerialized, TransportProtocol } from '@exodus/trezor-protocol';
 
 import type { BridgeProtocolMessage } from '../types';
 

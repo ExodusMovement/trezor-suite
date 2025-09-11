@@ -1,10 +1,10 @@
 // original file https://github.com/trezor/connect/blob/develop/src/js/device/DeviceCommands.js
 
-import { MessagesSchema as Messages } from '@trezor/protobuf';
+import { MessagesSchema as Messages } from '@exodus/trezor-protobuf';
 import { Assert } from '@trezor/schema-utils';
-import { MessageResponse, Session, TRANSPORT, Transport } from '@trezor/transport';
-import { isErrorWithoutDeviceInteraction } from '@trezor/transport/src/errors-groups';
-import { resolveAfter, scheduleAction, versionUtils } from '@trezor/utils';
+import { MessageResponse, Session, TRANSPORT, Transport } from '@exodus/trezor-transport';
+import { isErrorWithoutDeviceInteraction } from '@exodus/trezor-transport/src/errors-groups';
+import { resolveAfter, scheduleAction, versionUtils } from '@exodus/trezor-utils';
 
 import { ERRORS } from '../constants';
 import { Device } from './Device';

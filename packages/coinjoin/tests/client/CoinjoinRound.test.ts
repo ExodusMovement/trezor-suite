@@ -1,4 +1,4 @@
-import * as trezorUtils from '@trezor/utils';
+import * as trezorUtils from '@exodus/trezor-utils';
 
 import * as CONSTANTS from '../../src/constants';
 import { createInput } from '../fixtures/input.fixture';
@@ -6,8 +6,8 @@ import { DEFAULT_ROUND, createCoinjoinRound } from '../fixtures/round.fixture';
 import { createServer } from '../mocks/server';
 
 // mock random delay function
-jest.mock('@trezor/utils', () => {
-    const originalModule = jest.requireActual('@trezor/utils');
+jest.mock('@exodus/trezor-utils', () => {
+    const originalModule = jest.requireActual('@exodus/trezor-utils');
 
     return {
         __esModule: true,

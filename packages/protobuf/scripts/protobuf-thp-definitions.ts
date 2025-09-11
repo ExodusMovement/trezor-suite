@@ -82,7 +82,7 @@ const run = () => {
     buildThpTypes(defs);
 
     const filePath = `${DIST}/protobuf*`;
-    const cmd = `yarn workspace @trezor/protocol`;
+    const cmd = `yarn workspace @exodus/trezor-protocol`;
 
     console.log('Build successful. patching...');
     let out = execSync(`${cmd} g:prettier --write ${filePath}`);

@@ -1,4 +1,4 @@
-import { LogsManager } from '@trezor/utils';
+import { LogsManager } from '@exodus/trezor-utils';
 
 const green = '#bada55';
 const blue = '#20abd8';
@@ -17,7 +17,7 @@ const colors: Record<string, string> = {
     DeviceList: `color: ${green}; background: #000;`,
     Device: `color: ${green}; background: #000;`,
     DeviceCommands: `color: ${green}; background: #000;`,
-    '@trezor/transport': `color: ${green}; background: #000;`,
+    '@exodus/trezor-transport': `color: ${green}; background: #000;`,
     InteractionTimeout: `color: ${green}; background: #000;`,
     // yellow, ui related
     '@trezor/connect-popup': `color: ${yellow}; background: #000;`,
@@ -31,4 +31,4 @@ export const enableLog = logsManager.enableLog.bind(logsManager);
 export const enableLogByPrefix = logsManager.enableLogByPrefix.bind(logsManager);
 export const getLog = logsManager.getLog.bind(logsManager);
 
-export type { LogMessage, LogWriter, Log } from '@trezor/utils';
+export type { LogMessage, LogWriter, Log } from '@exodus/trezor-utils';

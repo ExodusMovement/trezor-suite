@@ -2,15 +2,15 @@ import {
     AbstractApi,
     AbstractApiConstructorParams,
     DEVICE_TYPE,
-} from '@trezor/transport/src/api/abstract';
-import * as ERRORS from '@trezor/transport/src/errors';
-import { PathInternal } from '@trezor/transport/src/types';
-import { readMessageBuffer } from '@trezor/transport/src/utils/readMessageBuffer';
+} from '@exodus/trezor-transport/src/api/abstract';
+import * as ERRORS from '@exodus/trezor-transport/src/errors';
+import { PathInternal } from '@exodus/trezor-transport/src/types';
+import { readMessageBuffer } from '@exodus/trezor-transport/src/utils/readMessageBuffer';
 
 import { TrezorBluetooth } from './trezor-bluetooth';
 import { BluetoothDevice, TrezorBluetoothSettings } from './types';
 
-// implementation of @trezor/transport/src/api/abstract
+// implementation of @exodus/trezor-transport/src/api/abstract
 
 type BluetoothApiParams = AbstractApiConstructorParams & TrezorBluetoothSettings;
 

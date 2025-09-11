@@ -10,11 +10,11 @@
         "type-check": "yarn g:tsc --build"
     },
     "dependencies": {
+        "@exodus/trezor-utils": "workspace:*",
         "@reduxjs/toolkit": "2.8.2",
         "@suite-common/redux-utils": "workspace:*",
         "@trezor/connect": "workspace:*",
         "@trezor/device-utils": "workspace:*",
-        "@trezor/utils": "workspace:*",
         "react": "19.0.0",
         "react-redux": "9.2.0"
     },

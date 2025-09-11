@@ -7,7 +7,7 @@ import { validateIpcMessage } from '@trezor/ipc-proxy';
 import type { HandshakeClient } from '@trezor/suite-desktop-api';
 import { colorVariants } from '@trezor/theme';
 import { TimerId } from '@trezor/type-utils';
-import { createDeferred, resolveAfter } from '@trezor/utils';
+import { createDeferred, resolveAfter } from '@exodus/trezor-utils';
 
 import { hangDetect } from './hang-detect';
 import { processStatePatch, removeElectronAppData, restartApp } from './libs/app-utils';

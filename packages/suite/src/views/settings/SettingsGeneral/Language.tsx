@@ -4,7 +4,7 @@ import { LANGUAGES, Locale, LocaleInfo } from '@suite-common/suite-types';
 import { getPlatformLanguages } from '@trezor/env-utils';
 import { EventType, analytics } from '@trezor/suite-analytics';
 import { CROWDIN_URL } from '@trezor/urls';
-import { typedObjectEntries } from '@trezor/utils';
+import { typedObjectEntries } from '@exodus/trezor-utils';
 
 import { setLanguage } from 'src/actions/settings/languageActions';
 import { setAutodetect } from 'src/actions/suite/suiteActions';

@@ -6,7 +6,7 @@ import { CSSObject } from 'styled-components';
 import { Select } from '@trezor/components';
 import TrezorConnect, { UI } from '@trezor/connect';
 import { bip39 } from '@trezor/crypto-utils';
-import { resolveAfter } from '@trezor/utils';
+import { resolveAfter } from '@exodus/trezor-utils';
 
 import { useTranslation } from 'src/hooks/suite/useTranslation';
 

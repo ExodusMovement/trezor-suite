@@ -20,7 +20,7 @@ import {
 } from '@suite-common/wallet-utils';
 import type { BaseCurrencyCode } from '@trezor/blockchain-link-types';
 import { TimerId, exhaustive } from '@trezor/type-utils';
-import { typedObjectKeys } from '@trezor/utils';
+import { typedObjectKeys } from '@exodus/trezor-utils';
 
 import { FIAT_RATES_MODULE_PREFIX, REFETCH_INTERVAL } from './fiatRatesConstants';
 import { selectTickersToBeUpdated, selectTransactionsWithMissingRates } from './fiatRatesSelectors';

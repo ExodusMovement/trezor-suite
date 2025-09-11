@@ -43,7 +43,7 @@ jobs:
       - name: Install dependencies
         run: |
           echo -e "\nenableScripts: false" >> .yarnrc.yml
-          yarn workspaces focus @trezor/transport-test
+          yarn workspaces focus @exodus/trezor-transport-test
 
       - name: Setup containers
         run: |
@@ -51,10 +51,10 @@ jobs:
           docker compose -f ./docker/docker-compose.transport-test-ci.yml up -d
 
       - name: Run E2E tests (old-bridge:emu)
-        run: yarn workspace @trezor/transport-test test:e2e:old-bridge:emu
+        run: yarn workspace @exodus/trezor-transport-test test:e2e:old-bridge:emu
 
       - name: Run E2E tests (new-bridge:emu)
-        run: yarn workspace @trezor/transport-test test:e2e:new-bridge:emu
+        run: yarn workspace @exodus/trezor-transport-test test:e2e:new-bridge:emu
 
   extract-branch:
     if: github.repository == 'trezor/trezor-suite'
@@ -85,11 +85,11 @@ jobs:
         shell: bash
         run: |
           echo -e "\nenableScripts: false" >> .yarnrc.yml
-          yarn workspaces focus @trezor/transport -A
+          yarn workspaces focus @exodus/trezor-transport -A
 
       - name: Build transport tester
         run: |
-          yarn workspace @trezor/transport-test build:e2e:api:browser
+          yarn workspace @exodus/trezor-transport-test build:e2e:api:browser
 
       - name: Configure aws credentials
         uses: aws-actions/configure-aws-credentials@v4

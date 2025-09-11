@@ -7,7 +7,7 @@ import {
     SUITE_BRIDGE_DEEPLINK,
     SUITE_WALLETCONNECT_DEEPLINK,
 } from '@trezor/urls';
-import { isArrayMember } from '@trezor/utils';
+import { isArrayMember } from '@exodus/trezor-utils';
 
 import * as routerActions from 'src/actions/suite/routerActions';
 import { goto } from 'src/actions/suite/routerActions';

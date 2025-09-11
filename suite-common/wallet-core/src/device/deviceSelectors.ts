@@ -18,7 +18,7 @@ import {
     hasBitcoinOnlyFirmware,
 } from '@trezor/device-utils';
 import { getSuiteVersion } from '@trezor/env-utils';
-import { versionUtils } from '@trezor/utils';
+import { versionUtils } from '@exodus/trezor-utils';
 
 import { PORTFOLIO_TRACKER_DEVICE_ID } from './deviceConstants';
 import { DeviceRootState } from './deviceReducer';

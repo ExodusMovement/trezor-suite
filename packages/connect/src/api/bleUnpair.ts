@@ -1,5 +1,5 @@
 import { Assert } from '@trezor/schema-utils';
-import { TRANSPORT_ERROR } from '@trezor/transport';
+import { TRANSPORT_ERROR } from '@exodus/trezor-transport';
 
 import { ERRORS, PROTO } from '../constants';
 import { AbstractMethod } from '../core/AbstractMethod';

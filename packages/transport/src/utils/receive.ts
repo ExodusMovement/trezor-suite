@@ -1,5 +1,5 @@
-import { decodeMessage } from '@trezor/protobuf';
-import { TransportProtocol } from '@trezor/protocol';
+import { decodeMessage } from '@exodus/trezor-protobuf';
+import { TransportProtocol } from '@exodus/trezor-protocol';
 
 import { success } from './result';
 import { AbstractApi } from '../api/abstract';

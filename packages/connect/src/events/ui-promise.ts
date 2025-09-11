@@ -1,4 +1,4 @@
-import type { Deferred } from '@trezor/utils';
+import type { Deferred } from '@exodus/trezor-utils';
 
 import type { DEVICE } from './device';
 import type { UiResponseEvent } from './ui-response';

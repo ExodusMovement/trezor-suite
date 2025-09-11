@@ -1,4 +1,4 @@
-import { versionUtils } from '@trezor/utils';
+import { versionUtils } from '@exodus/trezor-utils';
 
 import type { Features } from '../../types';
 

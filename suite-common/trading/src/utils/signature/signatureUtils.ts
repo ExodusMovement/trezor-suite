@@ -10,7 +10,7 @@ import {
 import { asAmountUnit, unitsToSubunits } from '@suite-common/wallet-utils';
 import TrezorConnect, { PROTO } from '@trezor/connect';
 import { validatePath } from '@trezor/connect/src/utils/pathUtils';
-import { BigNumber } from '@trezor/utils';
+import { BigNumber } from '@exodus/trezor-utils';
 
 import { cryptoIdToNetwork, cryptoIdToNetworkAndContractAddress } from '../../utils';
 

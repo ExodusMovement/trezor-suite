@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 // @ts-ignore
-import { MessagesSchema } from '@trezor/protobuf';
+import { MessagesSchema } from '@exodus/trezor-protobuf';
 
 import commonFixtures from '../../../../submodules/trezor-common/tests/fixtures/cardano/get_base_address.derivations.json';
 

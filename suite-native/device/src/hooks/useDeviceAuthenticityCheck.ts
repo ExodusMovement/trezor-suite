@@ -15,7 +15,7 @@ import { useTranslate } from '@suite-native/intl';
 import { captureSentryException, withSentryScope } from '@suite-native/sentry';
 import { useToast } from '@suite-native/toasts';
 import TrezorConnect from '@trezor/connect';
-import { isArrayMember } from '@trezor/utils';
+import { isArrayMember } from '@exodus/trezor-utils';
 
 export const useDeviceAuthenticityCheck = () => {
     const navigation = useNavigation();

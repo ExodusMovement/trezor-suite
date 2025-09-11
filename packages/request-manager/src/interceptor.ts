@@ -1,4 +1,4 @@
-import { isWhitelistedHost } from '@trezor/utils';
+import { isWhitelistedHost } from '@exodus/trezor-utils';
 
 import { createRequestPool } from './httpPool';
 import { interceptFetch } from './interceptor/interceptFetch';

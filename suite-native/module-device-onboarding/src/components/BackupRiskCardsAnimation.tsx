@@ -5,7 +5,7 @@ import Lottie from 'lottie-react-native';
 
 import { getScreenWidth } from '@trezor/env-utils';
 import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
-import { hexToRgba } from '@trezor/utils';
+import { hexToRgba } from '@exodus/trezor-utils';
 
 import riskCardsLottie from '../assets/risk-cards-lottie.json';
 

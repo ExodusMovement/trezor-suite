@@ -10,6 +10,6 @@
         "type-check": "yarn g:tsc --build"
     },
     "dependencies": {
-        "@trezor/utils": "workspace:*"
+        "@exodus/trezor-utils": "workspace:*"
     }
 }

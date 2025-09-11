@@ -1,6 +1,6 @@
 import type { SubscriptionAccountInfo } from '@trezor/blockchain-link-types';
 import { CustomError } from '@trezor/blockchain-link-types/src/constants/errors';
-import { Cache } from '@trezor/utils';
+import { Cache } from '@exodus/trezor-utils';
 
 export class WorkerState {
     addresses: string[];

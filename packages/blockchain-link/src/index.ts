@@ -10,7 +10,7 @@ import {
     createDeferred,
     createDeferredManager,
     createLazy,
-} from '@trezor/utils';
+} from '@exodus/trezor-utils';
 
 const workerWrapper = (factory: BlockchainSettings['worker']): Worker | Promise<Worker> => {
     if (typeof factory === 'function') return factory();

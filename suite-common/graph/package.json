@@ -11,6 +11,7 @@
         "type-check": "yarn g:tsc --build"
     },
     "dependencies": {
+        "@exodus/trezor-utils": "workspace:*",
         "@mobily/ts-belt": "^3.13.1",
         "@reduxjs/toolkit": "2.8.2",
         "@suite-common/fiat-services": "workspace:*",
@@ -20,7 +21,6 @@
         "@suite-common/wallet-utils": "workspace:*",
         "@trezor/blockchain-link": "workspace:*",
         "@trezor/connect": "workspace:*",
-        "@trezor/utils": "workspace:*",
         "date-fns": "^4.1.0",
         "react": "19.0.0",
         "react-redux": "9.2.0"

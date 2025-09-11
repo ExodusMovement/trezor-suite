@@ -1,4 +1,4 @@
-import { TypedEmitter } from '@trezor/utils';
+import { TypedEmitter } from '@exodus/trezor-utils';
 
 import { Account } from './Account';
 import { CoinjoinPrison } from './CoinjoinPrison';

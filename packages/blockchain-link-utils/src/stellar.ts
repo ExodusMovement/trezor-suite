@@ -17,8 +17,8 @@ import type {
     TransactionDetail,
 } from '@trezor/blockchain-link-types';
 import { isCodesignBuild } from '@trezor/env-utils';
-import type { StellarAsset } from '@trezor/protobuf/src/messages';
-import { BigNumber } from '@trezor/utils/src/bigNumber';
+import type { StellarAsset } from '@exodus/trezor-protobuf/src/messages';
+import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
 
 export const STELLAR_DECIMALS = 7;
 

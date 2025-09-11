@@ -1,4 +1,4 @@
-import { arrayShuffle, getRandomInt } from '@trezor/utils';
+import { arrayShuffle, getRandomInt } from '@exodus/trezor-utils';
 
 import { convertOutput } from './convertOutput';
 import { SortingStrategy } from './sortingStrategy';

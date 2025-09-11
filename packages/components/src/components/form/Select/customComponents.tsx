@@ -2,7 +2,7 @@ import { useRef } from 'react';
 import { ControlProps, GroupHeadingProps, OptionProps, components } from 'react-select';
 import { useDeepCompareEffect } from 'react-use';
 
-import { deepEqual } from '@trezor/utils';
+import { deepEqual } from '@exodus/trezor-utils';
 
 import type { Option as OptionType } from './Select';
 

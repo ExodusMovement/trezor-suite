@@ -7,7 +7,7 @@ import type {
     TxIn,
     TxOut,
 } from '@trezor/blockchain-link-types/src/electrum';
-import { arrayDistinct, arrayToDictionary } from '@trezor/utils';
+import { arrayDistinct, arrayToDictionary } from '@exodus/trezor-utils';
 
 import { btcToSat } from './transform';
 

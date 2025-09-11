@@ -9,7 +9,7 @@ import { BaseCurrencyAmount, asBaseCurrencyAmount } from '@suite-common/wallet-u
 import { Box, BoxSkeleton, DiscreetTextTrigger, HStack, Text, VStack } from '@suite-native/atoms';
 import { BaseCurrencyAmountLargeFormatter } from '@suite-native/formatters';
 import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
-import { BigNumber } from '@trezor/utils';
+import { BigNumber } from '@exodus/trezor-utils';
 
 import { GraphDateFormatter } from './GraphDateFormatter';
 import { PriceChangeIndicator } from './PriceChangeIndicator';

@@ -5,7 +5,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import { yup } from '@suite-common/validators';
 import { selectSelectedDeviceLabelOrName } from '@suite-common/wallet-core';
 import { EventTypeShared, analytics } from '@trezor/suite-analytics';
-import { isAscii } from '@trezor/utils';
+import { isAscii } from '@exodus/trezor-utils';
 
 import { applySettings } from 'src/actions/settings/deviceSettingsActions';
 import { MAX_LABEL_LENGTH } from 'src/constants/suite/device';

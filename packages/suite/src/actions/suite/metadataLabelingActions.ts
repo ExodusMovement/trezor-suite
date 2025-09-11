@@ -5,7 +5,7 @@ import {
 } from '@suite-common/wallet-core';
 import TrezorConnect, { StaticSessionId } from '@trezor/connect';
 import { EventType, analytics } from '@trezor/suite-analytics';
-import { cloneObject } from '@trezor/utils';
+import { cloneObject } from '@exodus/trezor-utils';
 
 import { METADATA, METADATA_LABELING } from 'src/actions/suite/constants';
 import {

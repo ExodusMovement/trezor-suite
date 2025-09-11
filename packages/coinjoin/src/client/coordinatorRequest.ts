@@ -1,4 +1,4 @@
-import { enumUtils, scheduleAction } from '@trezor/utils';
+import { enumUtils, scheduleAction } from '@exodus/trezor-utils';
 
 import { HTTP_REQUEST_TIMEOUT } from '../constants';
 import { WabiSabiProtocolErrorCode } from '../enums';

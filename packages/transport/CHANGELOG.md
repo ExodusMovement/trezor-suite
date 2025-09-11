@@ -1,14 +1,14 @@
 # 1.5.2
 
-- npm-prerelease: @trezor/transport 1.5.2-beta.2 (9cd10b17a9)
+- npm-prerelease: @exodus/trezor-transport 1.5.2-beta.2 (9cd10b17a9)
 - feat(transport): send message progress (1f9c944825)
 - chore(connect): use Branded type util (ac3c50875f)
 - feat(suite): troubleshooting tips now include bridge toggling (d500afdcb6)
-- npm-prerelease: @trezor/transport 1.5.2-beta.1 (2c70ed0b92)
+- npm-prerelease: @exodus/trezor-transport 1.5.2-beta.1 (2c70ed0b92)
 
 # 1.5.1
 
-- npm-prerelease: @trezor/transport 1.5.1-beta.1 (98a275e65c)
+- npm-prerelease: @exodus/trezor-transport 1.5.1-beta.1 (98a275e65c)
 - chore: update jest to v30 (6d27a2ca35)
 - chore: add missing workspace libs (bc6a681c27)
 - chore(transport): UdpApi compare ping/pong as bytes (fb22a432f5)
@@ -20,12 +20,12 @@
 
 # 1.5.0
 
-- npm-prerelease: @trezor/transport 1.5.0-beta.1 (203205104e)
+- npm-prerelease: @exodus/trezor-transport 1.5.0-beta.1 (203205104e)
 - chore: update babel libs (680cc6ba9d)
 
 # 1.4.5
 
-- npm-prerelease: @trezor/transport 1.4.5-beta.1 (079ee83fc4)
+- npm-prerelease: @exodus/trezor-transport 1.4.5-beta.1 (079ee83fc4)
 - feat(transport-bluetooth): add BluetoothApi and BluetoothTransport (4b55856619)
 - fix(transport): assign logger to AbstractApiTransport super class (f8e40602c4)
 - chore: apply latest prettier (eb758acea9)
@@ -37,7 +37,7 @@
 
 # 1.4.4
 
-- npm-prerelease: @trezor/transport 1.4.4-beta.1 (4088a73073)
+- npm-prerelease: @exodus/trezor-transport 1.4.4-beta.1 (4088a73073)
 - chore(deps): update usb dependency from 2.14.0 to 2.15.0 (7f3f70a55b)
 - fix(transport): reinit sessions background when initing webusb transport (968234bee7)
 - chore(transport): remove unused onClose param from release (64300a51aa)
@@ -45,7 +45,7 @@
 
 # 1.4.3
 
-- npm-prerelease: @trezor/transport 1.4.3-beta.1 (78542f7870)
+- npm-prerelease: @exodus/trezor-transport 1.4.3-beta.1 (78542f7870)
 - chore(transport): usb: rework implementation of device.reset (e75c5b00ea)
 - chore(transport): usb: move selectConfiguration outside of reset block (de8bbf162e)
 - chore(transport): usb rename 'first' param to 'reset' (afb24c461c)
@@ -54,7 +54,7 @@
 
 # 1.4.2
 
-- npm-prerelease: @trezor/transport 1.4.2-beta.2 (8bac92fdc8)
+- npm-prerelease: @exodus/trezor-transport 1.4.2-beta.2 (8bac92fdc8)
 - fix(transport): `UDP` read from buffer or promise (444ace3bb9)
 - npm-release: @trezor/connect 9.5.2-beta.1 (#17529) (3d7542843b)
 - feat(transport): load protobuf definitions (04cc60bd84)
@@ -62,7 +62,7 @@
 
 # 1.4.1
 
-- npm-prerelease: @trezor/transport 1.4.1-beta.1 (31d1473977)
+- npm-prerelease: @exodus/trezor-transport 1.4.1-beta.1 (31d1473977)
 - fix(repo): fix generate package script (#17300) (a13f269b99)
 - feat(connect): add `bluetoothProps` to Device (db9e51ad2a)
 
@@ -74,7 +74,7 @@
 - chore(transport): update long from 4.0.0 to 5.2.0 (241eebcb72)
 - chore(utils): typedObjectKeys (30f8f4fc59)
 - fix(connect): releasing device on browser reload using sendBeacon api (f308e1a42f)
-- npm-prerelease: @trezor/transport 1.4.0-beta.1 (4182c7dcd6)
+- npm-prerelease: @exodus/trezor-transport 1.4.0-beta.1 (4182c7dcd6)
 - chore(transport): remove unused transport-interface-error (c486d86ef3)
 - fix(transport): enumerate when UsbDevice without serialNumber disconnects (3f0f817ffd)
 - fix(transport): close connected UsbDevice if opened (8a1bb83fc0)
@@ -84,7 +84,7 @@
 - chore(transport): remove unused export (a12e98efd3)
 - chore(transport): add another log in usb read error case (9924cb1e40)
 - fix(transport): usb - write timeout (eb781d8c41)
-- npm-prerelease: @trezor/transport 1.3.8-beta.1 (38c249b40a)
+- npm-prerelease: @exodus/trezor-transport 1.3.8-beta.1 (38c249b40a)
 - chore(packages): autofix for sort-imports eslint rule (b96c899ebb)
 - chore(transport): make messages param required in abstract constructor (6c6244475e)
 - fix(transport): synchronize usb.getDevices since it returns wrong results when called simultaneously (571439e5dd)
@@ -95,7 +95,7 @@
 
 # 1.3.6
 
-- npm-prerelease: @trezor/transport 1.3.6-beta.1 (52aae6ddc6)
+- npm-prerelease: @exodus/trezor-transport 1.3.6-beta.1 (52aae6ddc6)
 - chore: unify types for setTimeout return type to address the NodeJS types leak issue (3f34981e5d)
 - chore(transport): reduce verbosity of usb logs by removing device (c4bef18118)
 - fix(transport): propagate libusb_access_error for correct udev rules component rendering (aced3af557)
@@ -105,15 +105,15 @@
 
 # 1.3.5
 
-- npm-prerelease: @trezor/transport 1.3.5-beta.1 (c8c6a8b5c7)
+- npm-prerelease: @exodus/trezor-transport 1.3.5-beta.1 (c8c6a8b5c7)
 
 # 1.3.4
 
-- npm-prerelease: @trezor/transport 1.3.4-beta.1 (29c4ff061f)
+- npm-prerelease: @exodus/trezor-transport 1.3.4-beta.1 (29c4ff061f)
 
 # 1.3.3
 
-- npm-prerelease: @trezor/transport 1.3.3-beta.2 (de2cfbf343)
+- npm-prerelease: @exodus/trezor-transport 1.3.3-beta.2 (de2cfbf343)
 - chore: get rid of '@typescript-eslint/no-unused-vars': 'off', and enforce it everywhere (1ad7b6f9b1)
 - chore: enable import/order rule for whole codebase (e22b683733)
 - chore: add recommanded checks from eslint-plugin-jest (55d663ca2d)
@@ -131,13 +131,13 @@
 - chore(libs): update @types/sharedworker 0.0.124 to 0.0.130 (3ce0e31de7)
 - fix(transport): udp interface-change event (17bac171ec)
 - fix(transport): api.dispose on transport.stop (e79130e88e)
-- npm-prerelease: @trezor/transport 1.3.3-beta.1 (48637b2975)
+- npm-prerelease: @exodus/trezor-transport 1.3.3-beta.1 (48637b2975)
 - chore(transport): passing rest params to parent transport class (f3eff3a302)
 - refactor(transport): background sessions improved (7644107353)
 
 # 1.3.1
 
-- npm-prerelease: @trezor/transport 1.3.1-beta.1 (71a9c73da1)
+- npm-prerelease: @exodus/trezor-transport 1.3.1-beta.1 (71a9c73da1)
 - feat(transport): unify path format for all transports (masked serialNumber) (edc6b6dec1)
 - refactor(transport): don't pass signal to transports (0cb09ab127)
 - refactor(transport): sessions background without abort signal (4f6e8cf370)
@@ -172,7 +172,7 @@
 
 # 1.3.0
 
-- npm-prerelease: @trezor/transport 1.2.1-beta.3 (4cb7f32c21)
+- npm-prerelease: @exodus/trezor-transport 1.2.1-beta.3 (4cb7f32c21)
 - test(transport): add check for unregistered listeners also to udp api (539204f3ed)
 - fix(transport): clear abort listener in UsbApi abortableMethod (f5dfbad901)
 - test(transport): unit tests now fail when eventlisteners memory leak is detected (e602689079)
@@ -181,7 +181,7 @@
 - fix(transport-bridge): cleanup also sessions background on dispose (a68bae8897)
 - chore(transport): descriptor legacy fields and updating local descriptors (460fb75a88)
 - chore(transport): remove unused json-stable-stringify dep (5d5722228b)
-- npm-prerelease: @trezor/transport 1.2.1-beta.2 (b5e8d4e769)
+- npm-prerelease: @exodus/trezor-transport 1.2.1-beta.2 (b5e8d4e769)
 - chore: update @babel/preset-typescript from 7.23.3 to 7.24.7 (22b452d19c)
 - chore: update txs from 4.7.0 to 4.16.2 (59c856fd0f)
 - fix(transport): pass all options to bridgeApiCall (signal, timeout) (96da7b911c)
@@ -190,7 +190,7 @@
 - test(transport): remove misleading comments (be42c1338c)
 - chore(transport): return Buffer from transport api read (2d6744abab)
 - refactor(connect): separate onTransportUpdate (4780c51904)
-- npm-prerelease: @trezor/transport 1.2.1-beta.1 (65046451dd)
+- npm-prerelease: @exodus/trezor-transport 1.2.1-beta.1 (65046451dd)
 - chore(transport): use shared method for sending chunks to api (f8e4ec4565)
 - chore(transport): remove duplicated code (91cf20d007)
 - fix(transport): bridge: handle listen loop correctly when Unable to open device error (eab01684cb)
@@ -264,7 +264,7 @@
 
 - fix: from g:tsx to local tsx in prepublish script (d21d698b2)
 - chore(suite): autofix newlines (c82455e74)
-- chore(utils): remove build step requirement from @trezor/utils (#11176) (6cd3d3c81)
+- chore(utils): remove build step requirement from @exodus/trezor-utils (#11176) (6cd3d3c81)
 - feat(connect): add support for StellarClaimClaimableBalanceOp. (51a3e294d)
 - chore(repo): ESLint refactor + speed up 70% (#11143) (44fa12a79)
 - chore: update various dependencies (no major update) (fecd89f6e)
@@ -398,7 +398,7 @@ chore(transport): update protobufs, update dependencies
 
 # 1.1.0
 
-- Added @trezor/utils dependency.
+- Added @exodus/trezor-utils dependency.
 
 # 1.0.1
 

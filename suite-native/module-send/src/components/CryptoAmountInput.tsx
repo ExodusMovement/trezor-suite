@@ -11,7 +11,7 @@ import { useAmountInputTransformers } from '@suite-native/helpers';
 import { TokensRootState, selectAccountTokenSymbol } from '@suite-native/tokens';
 import { useDebounce } from '@trezor/react-utils';
 import { Color } from '@trezor/theme';
-import { BigNumber } from '@trezor/utils';
+import { BigNumber } from '@exodus/trezor-utils';
 
 import { SendOutputsFormValues } from '../sendOutputsFormSchema';
 import { SendAmountInputProps } from '../types';

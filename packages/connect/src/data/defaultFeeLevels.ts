@@ -1,4 +1,4 @@
-import { BigNumber, typedObjectKeys } from '@trezor/utils';
+import { BigNumber, typedObjectKeys } from '@exodus/trezor-utils';
 
 import { FeeInfo, FeeLevel } from '../types';
 

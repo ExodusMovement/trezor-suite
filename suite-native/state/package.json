@@ -10,6 +10,11 @@
         "type-check": "yarn g:tsc --build"
     },
     "dependencies": {
+        "@exodus/trezor-protobuf": "workspace:^",
+        "@exodus/trezor-transport": "workspace:^",
+        "@exodus/trezor-transport-native-bluetooth": "workspace:*",
+        "@exodus/trezor-transport-native-usb": "workspace:*",
+        "@exodus/trezor-utils": "workspace:*",
         "@reduxjs/toolkit": "2.8.2",
         "@suite-common/analytics": "workspace:*",
         "@suite-common/firmware": "workspace:*",
@@ -37,11 +42,6 @@
         "@suite-native/sentry": "workspace:*",
         "@suite-native/settings": "workspace:*",
         "@suite-native/storage": "workspace:*",
-        "@trezor/protobuf": "workspace:^",
-        "@trezor/transport": "workspace:^",
-        "@trezor/transport-native-bluetooth": "workspace:*",
-        "@trezor/transport-native-usb": "workspace:*",
-        "@trezor/utils": "workspace:*",
         "expo-device": "7.1.4",
         "react": "19.0.0",
         "react-native": "0.79.3",

@@ -3,7 +3,7 @@
 import { Common, Hardfork, Mainnet, createCustomCommon } from '@ethereumjs/common';
 import { FeeMarketEIP1559TxData, LegacyTxData, createTx } from '@ethereumjs/tx';
 
-import { MessagesSchema } from '@trezor/protobuf';
+import { MessagesSchema } from '@exodus/trezor-protobuf';
 
 import { ERRORS, PROTO } from '../../constants';
 import type { TypedCall } from '../../device/DeviceCommands';

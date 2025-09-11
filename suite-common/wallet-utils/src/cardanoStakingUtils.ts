@@ -3,7 +3,7 @@ import {
     SupportedCardanoNetworkSymbols,
     supportedCardanoNetworkSymbols,
 } from '@suite-common/wallet-types';
-import { isArrayMember } from '@trezor/utils';
+import { isArrayMember } from '@exodus/trezor-utils';
 
 export function isSupportedCardanoStakingNetworkSymbol(
     symbol: NetworkSymbol,

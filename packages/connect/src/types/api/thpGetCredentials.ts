@@ -1,4 +1,4 @@
-import type { ThpCredentials } from '@trezor/protocol';
+import type { ThpCredentials } from '@exodus/trezor-protocol';
 
 import type { CommonParams, Response } from '../params';
 

@@ -3,7 +3,7 @@ import { Fragment } from 'react';
 import styled from 'styled-components';
 
 import { Tooltip } from '@trezor/components';
-import { extractUrlsFromText } from '@trezor/utils';
+import { extractUrlsFromText } from '@exodus/trezor-utils';
 
 import { Translation } from 'src/components/suite';
 import { BlurWrapper } from 'src/components/wallet/TransactionItem/TransactionItemBlurWrapper';

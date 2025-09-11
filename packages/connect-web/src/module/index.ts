@@ -14,7 +14,7 @@ import { CoreInModule } from '@trezor/connect/src/impl/core-in-module';
 import { TrezorConnectDynamic } from '@trezor/connect/src/impl/dynamic';
 import type { ConnectSettingsPublic } from '@trezor/connect/src/types';
 import { getInstallerPackage } from '@trezor/connect-common';
-import { cloneObject } from '@trezor/utils';
+import { cloneObject } from '@exodus/trezor-utils';
 
 interface ConnectWebDynamicImplementation
     extends ConnectFactoryDependencies<ConnectSettingsPublic> {

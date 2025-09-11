@@ -46,7 +46,7 @@ import {
     stakeAccountState,
 } from '@trezor/blockchain-link/src/workers/solana/utils/stakingAccounts';
 import { StakeState } from '@trezor/blockchain-link-types/src/solana';
-import { serializeError } from '@trezor/utils';
+import { serializeError } from '@exodus/trezor-utils';
 
 import { selectSolanaWalletSdkNetwork } from '../connection';
 import {

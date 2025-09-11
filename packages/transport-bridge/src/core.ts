@@ -6,20 +6,20 @@ import {
     thp as protocolThp,
     v1 as protocolV1,
     v2 as protocolV2,
-} from '@trezor/protocol';
-import { AbstractApi } from '@trezor/transport/src/api/abstract';
-import { UdpApi } from '@trezor/transport/src/api/udp';
-import { UsbApi } from '@trezor/transport/src/api/usb';
-import { SessionsBackground } from '@trezor/transport/src/sessions/background';
-import { SessionsClient } from '@trezor/transport/src/sessions/client';
-import { callThpMessage, receiveThpMessage, sendThpMessage } from '@trezor/transport/src/thp';
-import { AcquireInput, ReleaseInput } from '@trezor/transport/src/transports/abstract';
-import { BridgeProtocolMessage, PathInternal, Session } from '@trezor/transport/src/types';
-import { createProtocolMessage } from '@trezor/transport/src/utils/bridgeProtocolMessage';
-import { receive as receiveUtil } from '@trezor/transport/src/utils/receive';
-import { error, success, unknownError } from '@trezor/transport/src/utils/result';
-import { createChunks, sendChunks } from '@trezor/transport/src/utils/send';
-import { Log } from '@trezor/utils';
+} from '@exodus/trezor-protocol';
+import { AbstractApi } from '@exodus/trezor-transport/src/api/abstract';
+import { UdpApi } from '@exodus/trezor-transport/src/api/udp';
+import { UsbApi } from '@exodus/trezor-transport/src/api/usb';
+import { SessionsBackground } from '@exodus/trezor-transport/src/sessions/background';
+import { SessionsClient } from '@exodus/trezor-transport/src/sessions/client';
+import { callThpMessage, receiveThpMessage, sendThpMessage } from '@exodus/trezor-transport/src/thp';
+import { AcquireInput, ReleaseInput } from '@exodus/trezor-transport/src/transports/abstract';
+import { BridgeProtocolMessage, PathInternal, Session } from '@exodus/trezor-transport/src/types';
+import { createProtocolMessage } from '@exodus/trezor-transport/src/utils/bridgeProtocolMessage';
+import { receive as receiveUtil } from '@exodus/trezor-transport/src/utils/receive';
+import { error, success, unknownError } from '@exodus/trezor-transport/src/utils/result';
+import { createChunks, sendChunks } from '@exodus/trezor-transport/src/utils/send';
+import { Log } from '@exodus/trezor-utils';
 
 export const createCore = (apiArg: 'usb' | 'udp' | AbstractApi, logger?: Log) => {
     let api: AbstractApi;

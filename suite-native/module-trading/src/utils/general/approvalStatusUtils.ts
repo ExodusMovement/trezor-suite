@@ -1,6 +1,6 @@
 import type { ExchangeTrade } from 'invity-api';
 
-import { BigNumber } from '@trezor/utils';
+import { BigNumber } from '@exodus/trezor-utils';
 
 export type ApprovalStatus = 'approved' | 'needs_approval' | 'not_needed' | null;
 

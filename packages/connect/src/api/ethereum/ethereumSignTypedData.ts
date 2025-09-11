@@ -1,6 +1,6 @@
 // origin: https://github.com/trezor/connect/blob/develop/src/js/core/methods/helpers/ethereumSignTypedData.js
 
-import { BigNumber } from '@trezor/utils/src/bigNumber';
+import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
 
 import { ERRORS, PROTO } from '../../constants';
 import type { EthereumSignTypedDataTypes } from '../../types/api/ethereum';

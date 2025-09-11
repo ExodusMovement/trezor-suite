@@ -1,4 +1,4 @@
-import { arrayPartition, createDeferred, getSynchronize, resolveAfter } from '@trezor/utils';
+import { arrayPartition, createDeferred, getSynchronize, resolveAfter } from '@exodus/trezor-utils';
 
 import { AbstractApi, AbstractApiConstructorParams, DEVICE_TYPE } from './abstract';
 import {
@@ -276,7 +276,7 @@ export class UsbApi extends AbstractApi {
         // is broadcasted to other clients. they are responsible for releasing interface, which takes some time.
         // if there is only one client working with device, this will succeed using only one attempt.
 
-        // note: why for instead of scheduleAction from @trezor/utils with attempts param. this.openInternal does not throw
+        // note: why for instead of scheduleAction from @exodus/trezor-utils with attempts param. this.openInternal does not throw
         // I would need to throw artificially which is not nice.
         for (let i = 0; i < 5; i++) {
             this.logger?.debug(`usb: openDevice attempt ${i}`);

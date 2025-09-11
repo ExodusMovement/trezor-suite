@@ -1,6 +1,6 @@
 import http from 'http';
 
-import { getWeakRandomId, isWhitelistedHost } from '@trezor/utils';
+import { getWeakRandomId, isWhitelistedHost } from '@exodus/trezor-utils';
 
 import { InterceptorContext } from './interceptorTypes';
 

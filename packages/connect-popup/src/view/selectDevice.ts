@@ -11,7 +11,7 @@ import {
     createUiResponse,
 } from '@trezor/connect';
 import { reactEventBus } from '@trezor/connect-ui/src/utils/eventBus';
-import { TREZOR_USB_DESCRIPTORS } from '@trezor/transport/src/constants';
+import { TREZOR_USB_DESCRIPTORS } from '@exodus/trezor-transport/src/constants';
 import { SUITE_UDEV_URL, SUITE_URL, TREZOR_SUPPORT_URL } from '@trezor/urls';
 
 import { container, getState, postMessage, showView } from './common';

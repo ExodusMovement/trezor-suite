@@ -11,6 +11,8 @@
         "test:unit": "yarn g:jest"
     },
     "dependencies": {
+        "@exodus/trezor-transport": "workspace:*",
+        "@exodus/trezor-utils": "workspace:*",
         "@gorhom/bottom-sheet": "5.1.5",
         "@mobily/ts-belt": "^3.13.1",
         "@react-navigation/native": "7.1.17",
@@ -47,9 +49,7 @@
         "@trezor/react-utils": "workspace:*",
         "@trezor/styles": "workspace:*",
         "@trezor/theme": "workspace:*",
-        "@trezor/transport": "workspace:*",
         "@trezor/urls": "workspace:*",
-        "@trezor/utils": "workspace:*",
         "jotai": "2.13.1",
         "react": "19.0.0",
         "react-hook-form": "^7.62.0",

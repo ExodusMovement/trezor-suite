@@ -9,7 +9,7 @@ import { CONTRACT_ADDRESS_FOR_NATIVE_TOKEN } from '@suite-common/trading';
 import { RateTypeWithoutHistoric, TokenAddress } from '@suite-common/wallet-types';
 import { asBaseCurrencyAmount } from '@suite-common/wallet-utils';
 import { SkeletonRectangle } from '@trezor/components';
-import { BigNumber } from '@trezor/utils';
+import { BigNumber } from '@exodus/trezor-utils';
 
 import { HiddenPlaceholder } from 'src/components/suite';
 import { useLoadingSkeleton, useSelector } from 'src/hooks/suite';

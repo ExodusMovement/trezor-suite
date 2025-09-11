@@ -1,7 +1,7 @@
 /* WARNING! This file should be imported ONLY in tests! */
 
 import { DeviceModelInternal, FirmwareRelease } from '@trezor/device-utils';
-import { AbstractApiTransport, UsbApi } from '@trezor/transport';
+import { AbstractApiTransport, UsbApi } from '@exodus/trezor-transport';
 
 import { type Features } from './src/types';
 

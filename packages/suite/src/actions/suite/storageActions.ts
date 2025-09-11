@@ -16,7 +16,7 @@ import {
     isAccountSuccessful,
     selectHistoricRatesByTransactions,
 } from '@suite-common/wallet-utils';
-import { cloneObject } from '@trezor/utils';
+import { cloneObject } from '@exodus/trezor-utils';
 
 import { selectCoinjoinAccountByKey } from 'src/reducers/wallet/coinjoinReducer';
 import { db } from 'src/storage';

@@ -1,6 +1,6 @@
 import { BLUETOOTH_PREFIX, bluetoothActions } from '@suite-common/bluetooth';
 import { createThunk } from '@suite-common/redux-utils';
-import { bluetoothIpc } from '@trezor/transport-bluetooth';
+import { bluetoothIpc } from '@exodus/trezor-transport-bluetooth';
 
 import {
     selectDeviceDefaultConnectionMode,

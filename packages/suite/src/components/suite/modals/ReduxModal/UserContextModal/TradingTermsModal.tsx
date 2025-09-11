@@ -16,7 +16,7 @@ import {
 } from '@trezor/components';
 import { mapTrezorModelToIcon } from '@trezor/product-components';
 import { spacings } from '@trezor/theme';
-import type { Deferred } from '@trezor/utils';
+import type { Deferred } from '@exodus/trezor-utils';
 
 import { setDismissedTradingTerms } from 'src/actions/suite/suiteActions';
 import { Translation } from 'src/components/suite';

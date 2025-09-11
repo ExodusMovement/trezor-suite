@@ -1,4 +1,4 @@
-import { typedObjectKeys } from '@trezor/utils';
+import { typedObjectKeys } from '@exodus/trezor-utils';
 
 export const fiatBaseCurrencies = {
     usd: { code: 'usd', label: 'United States Dollar' },

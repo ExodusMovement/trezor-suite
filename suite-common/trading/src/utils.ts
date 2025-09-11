@@ -21,7 +21,7 @@ import {
 } from '@suite-common/wallet-config';
 import type { Account, FormStateTrading } from '@suite-common/wallet-types';
 import { exhaustive } from '@trezor/type-utils';
-import { BigNumber } from '@trezor/utils';
+import { BigNumber } from '@exodus/trezor-utils';
 
 import { CONTRACT_ADDRESS_FOR_NATIVE_TOKEN, CRYPTO_PLATFORM_SEPARATOR } from './constants';
 import { regional } from './regional';

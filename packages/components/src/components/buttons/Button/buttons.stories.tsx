@@ -1,7 +1,7 @@
 import { Meta, StoryFn } from '@storybook/react';
 import { action } from 'storybook/actions';
 
-import { capitalizeFirstLetter } from '@trezor/utils';
+import { capitalizeFirstLetter } from '@exodus/trezor-utils';
 
 import { Button } from '../../../index';
 import { StoryColumn } from '../../../support/Story';

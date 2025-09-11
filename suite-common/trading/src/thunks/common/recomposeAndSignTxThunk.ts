@@ -16,7 +16,7 @@ import {
     isExchangeTradingForm,
     subunitsToUnits,
 } from '@suite-common/wallet-utils';
-import { BigNumber } from '@trezor/utils';
+import { BigNumber } from '@exodus/trezor-utils';
 
 import { tradingThunks } from '../';
 import { TRADING_THUNK_PREFIX } from '../../constants';

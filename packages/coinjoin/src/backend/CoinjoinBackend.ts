@@ -1,4 +1,4 @@
-import { TypedEmitter } from '@trezor/utils';
+import { TypedEmitter } from '@exodus/trezor-utils';
 
 import { CoinjoinBackendClient } from './CoinjoinBackendClient';
 import { CoinjoinFilterController } from './CoinjoinFilterController';

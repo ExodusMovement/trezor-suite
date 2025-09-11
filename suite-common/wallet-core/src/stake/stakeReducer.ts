@@ -1,7 +1,7 @@
 import { createReducerWithExtraDeps } from '@suite-common/redux-utils';
 import { NetworkSymbol } from '@suite-common/wallet-config';
 import { PrecomposedTransactionFinal, StakeFormState, Timestamp } from '@suite-common/wallet-types';
-import { cloneObject } from '@trezor/utils';
+import { cloneObject } from '@exodus/trezor-utils';
 
 import { stakeActions } from './stakeActions';
 import {

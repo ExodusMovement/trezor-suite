@@ -1,5 +1,5 @@
 {
-    "name": "@trezor/transport-bluetooth",
+    "name": "@exodus/trezor-transport-bluetooth",
     "version": "1.0.0",
     "private": true,
     "license": "See LICENSE.md in repo root",
@@ -35,10 +35,10 @@
         ]
     },
     "dependencies": {
+        "@exodus/trezor-protocol": "workspace:*",
+        "@exodus/trezor-transport": "workspace:*",
+        "@exodus/trezor-utils": "workspace:*",
         "@trezor/ipc-proxy": "workspace:*",
-        "@trezor/protocol": "workspace:*",
-        "@trezor/transport": "workspace:*",
-        "@trezor/utils": "workspace:*",
         "@trezor/websocket-client": "workspace:*"
     },
     "devDependencies": {

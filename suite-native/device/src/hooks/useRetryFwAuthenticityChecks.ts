@@ -5,7 +5,7 @@ import { requestDeviceAccess } from '@suite-native/device-mutex';
 import { deviceAccessMutex } from '@suite-native/device-mutex/src/DeviceAccessMutex';
 import TrezorConnect, { FIRMWARE } from '@trezor/connect';
 import { TimerId } from '@trezor/type-utils';
-import { isArrayMember } from '@trezor/utils';
+import { isArrayMember } from '@exodus/trezor-utils';
 
 import { selectFirmwareRevisionCheckErrorIfEnabled } from '../selectors';
 

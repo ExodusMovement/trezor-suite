@@ -1,5 +1,5 @@
-import { TRANSPORT, Transport } from '@trezor/transport';
-import { TypedEmitter, resolveAfter } from '@trezor/utils';
+import { TRANSPORT, Transport } from '@exodus/trezor-transport';
+import { TypedEmitter, resolveAfter } from '@exodus/trezor-utils';
 
 const createOverrideLock = () => {
     let promise: Promise<void> | undefined;

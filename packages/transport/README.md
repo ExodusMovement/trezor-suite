@@ -1,6 +1,6 @@
-# @trezor/transport
+# @exodus/trezor-transport
 
-[![NPM](https://img.shields.io/npm/v/@trezor/transport.svg)](https://www.npmjs.org/package/@trezor/transport)
+[![NPM](https://img.shields.io/npm/v/@exodus/trezor-transport.svg)](https://www.npmjs.org/package/@exodus/trezor-transport)
 
 Library for low-level communication with Trezor.
 

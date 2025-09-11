@@ -43,7 +43,7 @@ import {
     useFeesFetching,
     useFeesForm,
 } from '@suite-native/transaction-management';
-import { BigNumber } from '@trezor/utils';
+import { BigNumber } from '@exodus/trezor-utils';
 
 import { RecipientsSummary } from './RecipientsSummary';
 import { useCustomFee } from '../hooks/useCustomFee';

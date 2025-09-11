@@ -3,7 +3,7 @@ import { useCallback, useEffect, useReducer, useRef } from 'react';
 import styled, { css } from 'styled-components';
 
 import { ZIndexValues, zIndices } from '@trezor/theme';
-import { createCooldown } from '@trezor/utils';
+import { createCooldown } from '@exodus/trezor-utils';
 
 import {
     FrameProps,

@@ -1,4 +1,4 @@
-import { getWeakRandomNumberInRange } from '@trezor/utils';
+import { getWeakRandomNumberInRange } from '@exodus/trezor-utils';
 
 import { ROUND_REGISTRATION_END_OFFSET } from '../../src/constants';
 import {
@@ -13,8 +13,8 @@ import {
 import { DEFAULT_ROUND, STATUS_EVENT, STATUS_TRANSFORMED } from '../fixtures/round.fixture';
 
 // mock random delay function
-jest.mock('@trezor/utils', () => {
-    const originalModule = jest.requireActual('@trezor/utils');
+jest.mock('@exodus/trezor-utils', () => {
+    const originalModule = jest.requireActual('@exodus/trezor-utils');
 
     return {
         __esModule: true,

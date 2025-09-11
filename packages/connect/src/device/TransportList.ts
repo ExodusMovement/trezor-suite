@@ -5,8 +5,8 @@ import {
     UdpTransport,
     WebUsbTransport,
     isTransportInstance,
-} from '@trezor/transport';
-import type { AbstractTransportParams } from '@trezor/transport/src/transports/abstract';
+} from '@exodus/trezor-transport';
+import type { AbstractTransportParams } from '@exodus/trezor-transport/src/transports/abstract';
 
 import { ERRORS } from '../constants';
 import { ConnectSettingsTransport } from '../types';

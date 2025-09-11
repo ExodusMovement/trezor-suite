@@ -145,7 +145,7 @@ export const config: webpack.Configuration = {
             patterns: [
                 // copy firmware releases, bridge releases from '@trezor/connect-common'
                 { from: COMMON_DATA_SRC, to: `${DIST}/data` },
-                // copy messages.json from '@trezor/transport'
+                // copy messages.json from '@exodus/trezor-transport'
                 { from: MESSAGES_SRC, to: `${DIST}/data/messages`, force: true },
             ],
         }),

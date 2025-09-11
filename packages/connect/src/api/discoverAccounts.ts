@@ -1,6 +1,6 @@
 // origin: https://github.com/trezor/connect/blob/develop/src/js/core/methods/GetAccountInfo.js
 
-import { arrayPartition, getSynchronize, versionUtils } from '@trezor/utils';
+import { arrayPartition, getSynchronize, versionUtils } from '@exodus/trezor-utils';
 
 import { initBlockchain, isBackendSupported } from '../backend/BlockchainLink';
 import { ERRORS } from '../constants';

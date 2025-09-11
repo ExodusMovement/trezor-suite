@@ -10,7 +10,7 @@
         "test:e2e": "ts-node -T -O '{\"module\": \"commonjs\", \"esModuleInterop\": true}' ./e2e/api.test.ts"
     },
     "dependencies": {
-        "@trezor/utils": "workspace:*",
+        "@exodus/trezor-utils": "workspace:*",
         "@trezor/websocket-client": "workspace:*",
         "cross-fetch": "^4.0.0"
     },

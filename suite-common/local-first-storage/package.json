@@ -12,11 +12,11 @@
     },
     "dependencies": {
         "@evolu/common": "^6.0.1-preview.19",
+        "@exodus/trezor-utils": "workspace:*",
         "@reduxjs/toolkit": "2.8.2",
         "@suite-common/metadata-types": "workspace:*",
         "@suite-common/suite-types": "workspace:*",
         "@suite-common/wallet-core": "workspace:*",
-        "@trezor/connect": "workspace:*",
-        "@trezor/utils": "workspace:*"
+        "@trezor/connect": "workspace:*"
     }
 }

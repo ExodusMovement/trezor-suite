@@ -1,7 +1,7 @@
 // origin: https://github.com/trezor/connect/blob/develop/src/js/core/methods/EthereumSignTypedData.js
 
 import { DeviceModelInternal } from '@trezor/device-utils';
-import { MessagesSchema } from '@trezor/protobuf';
+import { MessagesSchema } from '@exodus/trezor-protobuf';
 import { Assert, Type } from '@trezor/schema-utils';
 
 import { ERRORS, PROTO } from '../../../constants';

@@ -1,6 +1,6 @@
-import { loadDefinitions, parseConfigure } from '@trezor/protobuf';
-import { PROTOCOL_MALFORMED, ThpState, TransportProtocol } from '@trezor/protocol';
-import { ScheduleActionParams, ScheduledAction, TypedEmitter, scheduleAction } from '@trezor/utils';
+import { loadDefinitions, parseConfigure } from '@exodus/trezor-protobuf';
+import { PROTOCOL_MALFORMED, ThpState, TransportProtocol } from '@exodus/trezor-protocol';
+import { ScheduleActionParams, ScheduledAction, TypedEmitter, scheduleAction } from '@exodus/trezor-utils';
 
 import type { BridgeCommonErrors } from './bridge';
 import { ACTION_TIMEOUT, TRANSPORT } from '../constants';
@@ -93,8 +93,8 @@ export abstract class AbstractTransport extends TypedEmitter<TransportEvents> {
         | 'NodeUsbTransport'
         | 'WebUsbTransport'
         | 'UdpTransport'
-        | 'NativeUsbTransport' // implementation in @trezor/transport-native
-        | 'BluetoothTransport'; // implementation in @trezor/transport-bluetooth
+        | 'NativeUsbTransport' // implementation in @exodus/trezor-transport-native
+        | 'BluetoothTransport'; // implementation in @exodus/trezor-transport-bluetooth
 
     public abstract readonly apiType: TransportApiType;
     /**

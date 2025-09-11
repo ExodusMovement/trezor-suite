@@ -1,4 +1,4 @@
-import { BigNumber } from '@trezor/utils';
+import { BigNumber } from '@exodus/trezor-utils';
 
 export const BACKUP_SOL_APY = 6.87;
 export const MIN_SOL_AMOUNT_FOR_STAKING = new BigNumber(0.01);

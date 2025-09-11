@@ -2,7 +2,7 @@ import { Locator, Page, test } from '@playwright/test';
 
 import { NetworkSymbol } from '@suite-common/wallet-config';
 import { BaseCurrencyCode } from '@trezor/blockchain-link-types';
-import { capitalizeFirstLetter } from '@trezor/utils';
+import { capitalizeFirstLetter } from '@exodus/trezor-utils';
 
 import { CoinsTab } from './coinsTab';
 import { DeviceTab } from './deviceTab';

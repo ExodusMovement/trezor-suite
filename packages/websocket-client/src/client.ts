@@ -1,6 +1,6 @@
 import WebSocket from 'ws';
 
-import { TypedEmitter, createDeferred, createDeferredManager } from '@trezor/utils';
+import { TypedEmitter, createDeferred, createDeferredManager } from '@exodus/trezor-utils';
 
 type WebsocketOptions = {
     url: string;

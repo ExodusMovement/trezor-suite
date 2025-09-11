@@ -5,7 +5,7 @@ import { bluetoothActions } from '@suite-common/bluetooth';
 import { selectDeviceBluetoothId } from '@suite-common/wallet-core';
 import { requestPrioritizedDeviceAccess } from '@suite-native/device-mutex';
 import TrezorConnect from '@trezor/connect';
-import { bluetoothManager } from '@trezor/transport-native-bluetooth';
+import { bluetoothManager } from '@exodus/trezor-transport-native-bluetooth';
 
 import { BluetoothDevice } from '../types';
 

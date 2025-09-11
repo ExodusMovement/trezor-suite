@@ -13,7 +13,7 @@ import type {
 } from '@trezor/connect/src/types';
 import { InitFullSettings } from '@trezor/connect/src/types/api/init';
 import { Login } from '@trezor/connect/src/types/api/requestLogin';
-import { Deferred, createDeferred, removeTrailingSlashes } from '@trezor/utils';
+import { Deferred, createDeferred, removeTrailingSlashes } from '@exodus/trezor-utils';
 
 export class TrezorConnectDeeplink implements ConnectFactoryDependencies<ConnectSettingsMobile> {
     public eventEmitter = new EventEmitter();

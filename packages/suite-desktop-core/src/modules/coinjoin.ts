@@ -10,7 +10,7 @@ import { CoinjoinBackend, CoinjoinBackendSettings, CoinjoinClient } from '@trezo
 import { IpcProxyHandlerOptions, createIpcProxyHandler } from '@trezor/ipc-proxy';
 import { getFreePort } from '@trezor/node-utils';
 import { InterceptedEvent } from '@trezor/request-manager';
-import { getSynchronize } from '@trezor/utils';
+import { getSynchronize } from '@exodus/trezor-utils';
 
 import { PowerSaveBlocker } from '../libs/power-save-blocker';
 import { CoinjoinProcess } from '../libs/processes/CoinjoinProcess';

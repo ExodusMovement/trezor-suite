@@ -4,7 +4,7 @@ import { Card, Column, Divider, InfoItem, Row, Text } from '@trezor/components';
 import { FeeRate } from '@trezor/product-components';
 import { spacings } from '@trezor/theme';
 import { HELP_CENTER_CANCEL_TRANSACTION } from '@trezor/urls';
-import { BigNumber } from '@trezor/utils';
+import { BigNumber } from '@exodus/trezor-utils';
 
 import { useCancelTxContext } from '../../../../../../../hooks/wallet/useCancelTxContext';
 import { BaseCurrencyValue } from '../../../../../BaseCurrencyValue';

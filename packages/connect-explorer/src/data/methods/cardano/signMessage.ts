@@ -1,4 +1,4 @@
-import { MessagesSchema } from '@trezor/protobuf';
+import { MessagesSchema } from '@exodus/trezor-protobuf';
 
 import { cardanoDerivationType } from './common';
 

@@ -9,7 +9,7 @@ import {
     Model,
     TrezorUserEnvLink,
 } from '@trezor/trezor-user-env-link';
-import { typedObjectKeys } from '@trezor/utils';
+import { typedObjectKeys } from '@exodus/trezor-utils';
 
 import argv from './jest.config';
 

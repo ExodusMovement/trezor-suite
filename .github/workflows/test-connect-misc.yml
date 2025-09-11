@@ -45,5 +45,5 @@ jobs:
           node-version-file: ".nvmrc"
 
       - run: yarn install --immutable
-      - run: yarn workspace @trezor/protobuf update:protobuf
-      - run: yarn workspace @trezor/protobuf update:schema
+      - run: yarn workspace @exodus/trezor-protobuf update:protobuf
+      - run: yarn workspace @exodus/trezor-protobuf update:schema

@@ -1,4 +1,4 @@
-import { v1 as v1Protocol } from '@trezor/protocol';
+import { v1 as v1Protocol } from '@exodus/trezor-protocol';
 
 import {
     AbstractTransport,

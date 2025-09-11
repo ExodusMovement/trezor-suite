@@ -21,7 +21,7 @@ import { DEFAULT_PAYMENT, DEFAULT_VALUES } from '@suite-common/wallet-constants'
 import { selectBaseCurrency } from '@suite-common/wallet-core';
 import { FormState, Output } from '@suite-common/wallet-types';
 import { parseAccountKey } from '@suite-common/wallet-utils';
-import { isArrayMember, typedObjectValues } from '@trezor/utils';
+import { isArrayMember, typedObjectValues } from '@exodus/trezor-utils';
 
 import { useSelector } from 'src/hooks/suite';
 import { useTradingBuildAccountGroups } from 'src/hooks/wallet/trading/form/common/useTradingBuildAccountGroups';

@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 
-import { TypedEmitter } from '@trezor/utils';
+import { TypedEmitter } from '@exodus/trezor-utils';
 
 import { Firmwares, Model } from './types';
 import { WebsocketClient, WebsocketClientEvents } from './websocket-client';

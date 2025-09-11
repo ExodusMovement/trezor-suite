@@ -1,5 +1,5 @@
 {
-    "name": "@trezor/transport-native-bluetooth",
+    "name": "@exodus/trezor-transport-native-bluetooth",
     "version": "1.0.0",
     "private": true,
     "license": "See LICENSE.md in repo root",
@@ -10,7 +10,7 @@
         "type-check": "yarn g:tsc --build"
     },
     "dependencies": {
-        "@trezor/transport": "workspace:*",
+        "@exodus/trezor-transport": "workspace:*",
         "react-native-ble-plx": "3.5.0"
     },
     "devDependencies": {

@@ -9,7 +9,7 @@ import {
     tryGetAccountIdentity,
 } from '@suite-common/wallet-utils';
 import { StaticSessionId, type TrezorConnect } from '@trezor/connect';
-import { arrayToDictionary } from '@trezor/utils';
+import { arrayToDictionary } from '@exodus/trezor-utils';
 
 import { AccountsRootState } from './accounts/accountsReducer';
 import {

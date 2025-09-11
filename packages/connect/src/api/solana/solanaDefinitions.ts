@@ -1,7 +1,7 @@
 import fetch from 'cross-fetch';
 
-import { MessagesSchema, decodeMessage, parseConfigure } from '@trezor/protobuf';
-import { trzd } from '@trezor/protocol';
+import { MessagesSchema, decodeMessage, parseConfigure } from '@exodus/trezor-protobuf';
+import { trzd } from '@exodus/trezor-protocol';
 import { Assert } from '@trezor/schema-utils';
 
 import { DataManager } from '../../data/DataManager';

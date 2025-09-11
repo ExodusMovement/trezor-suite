@@ -65,10 +65,10 @@
         "tsx": "^4.20.3"
     },
     "dependencies": {
+        "@exodus/fetch": "^1.7.5",
         "@exodus/trezor-protobuf": "workspace:*",
         "@exodus/trezor-protocol": "workspace:*",
-        "@trezor/utils": "workspace:*",
-        "@exodus/fetch": "^1.7.5"
+        "@exodus/trezor-utils": "workspace:*"
     },
     "peerDependencies": {
         "tslib": "^2.6.2"

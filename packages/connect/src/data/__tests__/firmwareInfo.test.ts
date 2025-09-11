@@ -1,7 +1,7 @@
 import { firmwareAssets } from '@trezor/connect-common/files/firmware';
 import { FirmwareType } from '@trezor/device-utils';
-import { DeviceModelInternal } from '@trezor/protobuf/src/messages-schema';
-import { versionUtils } from '@trezor/utils';
+import { DeviceModelInternal } from '@exodus/trezor-protobuf/src/messages-schema';
+import { versionUtils } from '@exodus/trezor-utils';
 
 import { getDeviceFeatures } from '../../../setupJest';
 import { DataManager } from '../DataManager';

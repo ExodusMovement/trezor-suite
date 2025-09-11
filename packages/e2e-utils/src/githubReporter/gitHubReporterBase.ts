@@ -1,6 +1,6 @@
 import type { Octokit } from '@octokit/rest';
 
-import { scheduleAction } from '@trezor/utils';
+import { scheduleAction } from '@exodus/trezor-utils';
 
 import { TestReportProviderBase } from './annotationBase';
 import { GitHubProject } from './gitHubProject';

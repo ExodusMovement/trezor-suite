@@ -12,7 +12,7 @@ import {
     selectAccountTransactionsWithNulls,
     selectIsLoadingAccountTransactions,
 } from '@suite-common/wallet-core';
-import { getSynchronize } from '@trezor/utils';
+import { getSynchronize } from '@exodus/trezor-utils';
 
 import { useDiscovery, useDispatch, useSelector } from 'src/hooks/suite';
 import { Account, WalletAccountTransaction } from 'src/types/wallet';

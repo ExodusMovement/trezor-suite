@@ -1,4 +1,4 @@
-import { arrayShuffle, getWeakRandomInt } from '@trezor/utils';
+import { arrayShuffle, getWeakRandomInt } from '@exodus/trezor-utils';
 
 import { TX_SIGNING_DELAY } from '../../constants';
 import { SessionPhase, WabiSabiProtocolErrorCode } from '../../enums';

@@ -16,7 +16,7 @@ import {
 } from '@suite-common/wallet-utils';
 import { BroadcastedTransactionDetails, ScanAccountProgress } from '@trezor/coinjoin';
 import TrezorConnect from '@trezor/connect';
-import { promiseAllSequence } from '@trezor/utils';
+import { promiseAllSequence } from '@exodus/trezor-utils';
 
 import { openModal } from 'src/actions/suite/modalActions';
 import {

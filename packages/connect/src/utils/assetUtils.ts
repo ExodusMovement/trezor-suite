@@ -52,7 +52,7 @@ export const tryLocalAssetRequire = (url: string) => {
         case './data/coins-eth.json':
             return require('@trezor/connect-common/files/coins-eth.json');
         case './data/messages/messages.json':
-            return require('@trezor/protobuf/messages.json');
+            return require('@exodus/trezor-protobuf/messages.json');
     }
 
     return null;

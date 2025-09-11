@@ -15,7 +15,7 @@ import type {
     ServerInfo,
     VinVout,
 } from '@trezor/blockchain-link-types/src/blockbook';
-import { BigNumber } from '@trezor/utils/src/bigNumber';
+import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
 
 import {
     Addresses,

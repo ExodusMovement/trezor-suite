@@ -13,7 +13,7 @@ import useSWR from 'swr';
 import { CollapsibleBox } from '@trezor/components';
 import { useMDXComponents } from '@trezor/connect-explorer-theme';
 import { spacings } from '@trezor/theme';
-import { isNewer } from '@trezor/utils/src/versionUtils';
+import { isNewer } from '@exodus/trezor-utils/src/versionUtils';
 
 export const loadNPMVersions = tag =>
     fetch(`https://registry.npmjs.org/@trezor/connect/${tag}`)

@@ -24,7 +24,7 @@ import {
     selectHasAnyDeviceAccountsWithStaking,
 } from '@suite-native/staking';
 import { TokensRootState, selectHasDeviceAnyTokensForNetwork } from '@suite-native/tokens';
-import { BigNumber } from '@trezor/utils';
+import { BigNumber } from '@exodus/trezor-utils';
 
 import {
     AssetsRootState,

@@ -8,7 +8,7 @@ import { selectSelectedDevice } from '@suite-common/wallet-core';
 import { Button, Checkbox, Input } from '@trezor/components';
 import TrezorConnect from '@trezor/connect';
 import { spacingsPx } from '@trezor/theme';
-import { isUrl } from '@trezor/utils';
+import { isUrl } from '@exodus/trezor-utils';
 
 import { PATH } from 'src/actions/suite/constants/metadataPasswordsConstants';
 import { usePasswords, useSelector } from 'src/hooks/suite';

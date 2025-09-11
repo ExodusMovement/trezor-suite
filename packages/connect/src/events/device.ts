@@ -1,5 +1,5 @@
 import type { VersionArray } from '@trezor/device-utils';
-import type { ThpCredentials, ThpPairingMethod } from '@trezor/protocol';
+import type { ThpCredentials, ThpPairingMethod } from '@exodus/trezor-protocol';
 
 import type { PROTO } from '../constants';
 import type { Device } from '../types/device';

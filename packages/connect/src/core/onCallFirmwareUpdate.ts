@@ -1,5 +1,5 @@
-import { resolveAfter } from '@trezor/utils';
-import { isEqual, isNewer } from '@trezor/utils/src/versionUtils';
+import { resolveAfter } from '@exodus/trezor-utils';
+import { isEqual, isNewer } from '@exodus/trezor-utils/src/versionUtils';
 
 import {
     getBinary,

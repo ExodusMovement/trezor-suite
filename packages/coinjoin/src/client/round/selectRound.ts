@@ -1,4 +1,4 @@
-import { arrayPartition, arrayToDictionary } from '@trezor/utils';
+import { arrayPartition, arrayToDictionary } from '@exodus/trezor-utils';
 
 import { ROUND_SELECTION_MAX_OUTPUTS, ROUND_SELECTION_REGISTRATION_OFFSET } from '../../constants';
 import { RoundPhase, SessionPhase, WabiSabiProtocolErrorCode } from '../../enums';

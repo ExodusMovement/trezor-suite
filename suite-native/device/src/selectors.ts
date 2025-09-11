@@ -54,7 +54,7 @@ import {
 } from '@suite-native/settings';
 import { doesCoinSupportStaking } from '@suite-native/staking';
 import type { BaseCurrencyCode } from '@trezor/blockchain-link-types';
-import { BigNumber } from '@trezor/utils';
+import { BigNumber } from '@exodus/trezor-utils';
 
 import { isDeviceSetupSupported, isFirmwareVersionSupported } from './utils';
 

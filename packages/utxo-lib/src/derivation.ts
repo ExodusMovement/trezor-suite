@@ -1,6 +1,6 @@
 import bs58 from 'bs58';
 
-import { throwError } from '@trezor/utils';
+import { throwError } from '@exodus/trezor-utils';
 
 import { fromBase58 } from './bip32';
 import { Network, bitcoin } from './networks';

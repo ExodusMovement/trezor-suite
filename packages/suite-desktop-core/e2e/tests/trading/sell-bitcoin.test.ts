@@ -1,4 +1,4 @@
-import { capitalizeFirstLetter } from '@trezor/utils';
+import { capitalizeFirstLetter } from '@exodus/trezor-utils';
 
 import {
     getCompanyNameFromList,

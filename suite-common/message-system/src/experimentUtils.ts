@@ -1,4 +1,4 @@
-import { getIntegerInRangeFromString } from '@trezor/utils';
+import { getIntegerInRangeFromString } from '@exodus/trezor-utils';
 
 import { ExperimentId, ExperimentsItemType } from './messageSystemTypes';
 

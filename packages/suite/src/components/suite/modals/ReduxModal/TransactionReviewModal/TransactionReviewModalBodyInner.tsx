@@ -27,7 +27,7 @@ import {
 import { Modal, Row } from '@trezor/components';
 import { EventType, analytics } from '@trezor/suite-analytics';
 import { spacings } from '@trezor/theme';
-import { Deferred } from '@trezor/utils';
+import { Deferred } from '@exodus/trezor-utils';
 
 import * as modalActions from 'src/actions/suite/modalActions';
 import { ConnectModalBackdrop } from 'src/components/suite/ConnectModalBackdrop';

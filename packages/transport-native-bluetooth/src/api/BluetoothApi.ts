@@ -4,13 +4,13 @@ import {
     AbstractApi,
     AbstractApiConstructorParams,
     DEVICE_TYPE,
-} from '@trezor/transport/src/api/abstract';
-import * as ERRORS from '@trezor/transport/src/errors';
+} from '@exodus/trezor-transport/src/api/abstract';
+import * as ERRORS from '@exodus/trezor-transport/src/errors';
 import {
     AsyncResultWithTypedError,
     DescriptorApiLevel,
     PathInternal,
-} from '@trezor/transport/src/types';
+} from '@exodus/trezor-transport/src/types';
 
 import { bluetoothManager } from './bluetoothManager';
 

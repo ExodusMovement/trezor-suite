@@ -9,7 +9,7 @@ import {
     networkAmountToSmallestUnit,
 } from '@suite-common/wallet-utils';
 import type { BaseCurrencyCode } from '@trezor/blockchain-link-types';
-import { BigNumber } from '@trezor/utils/src/bigNumber';
+import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
 
 import { TranslationFunction } from 'src/hooks/suite/useTranslation';
 

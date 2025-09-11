@@ -4,7 +4,7 @@ import net, { Socket } from 'net';
 import path from 'path';
 import util from 'util';
 
-import { promiseAllSequence } from '@trezor/utils';
+import { promiseAllSequence } from '@exodus/trezor-utils';
 
 import { TorCommandResponse, TorConnectionOptions } from './types';
 

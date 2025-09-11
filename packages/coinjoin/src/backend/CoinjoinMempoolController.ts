@@ -1,6 +1,6 @@
 /* eslint no-underscore-dangle: ["error", { "allowAfterThis": true }] */
 
-import { arrayDistinct, createCooldown, promiseAllSequence } from '@trezor/utils';
+import { arrayDistinct, createCooldown, promiseAllSequence } from '@exodus/trezor-utils';
 import type { Network } from '@trezor/utxo-lib';
 
 import type { Logger } from '../types';

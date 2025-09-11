@@ -2,7 +2,7 @@ import { Action, Feature, Message } from '@suite-common/suite-types';
 import { InvityServerEnvironment } from '@suite-common/trading';
 import { AccountsRootState } from '@suite-common/wallet-core';
 import { FeatureFlag, featureFlagsInitialState } from '@suite-native/feature-flags';
-import { BigNumber } from '@trezor/utils';
+import { BigNumber } from '@exodus/trezor-utils';
 
 import { getBtcAccount, getCardanoAccount, getEthAccount } from '../../__fixtures__/account';
 import { btcAsset } from '../../__fixtures__/tradeableAssets';

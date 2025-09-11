@@ -1,4 +1,4 @@
-import { arrayPartition } from '@trezor/utils';
+import { arrayPartition } from '@exodus/trezor-utils';
 
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 // @ts-ignore

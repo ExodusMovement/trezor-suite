@@ -2,7 +2,7 @@ import { ImgHTMLAttributes } from 'react';
 
 import styled from 'styled-components';
 
-import { isArrayMember, typedObjectEntries } from '@trezor/utils';
+import { isArrayMember, typedObjectEntries } from '@exodus/trezor-utils';
 
 import { PNG_IMAGES, PngImage, SVG_IMAGES, SvgImage } from './images';
 import {

@@ -8,7 +8,7 @@ import {
     IntermediaryReleaseConfig,
     VersionArray,
 } from '@trezor/device-utils';
-import { getIntegerInRangeFromString, removeTrailingSlashes, versionUtils } from '@trezor/utils';
+import { getIntegerInRangeFromString, removeTrailingSlashes, versionUtils } from '@exodus/trezor-utils';
 
 import { Features, FirmwareReleaseConfigInfo, FirmwareType } from '../types';
 import { DataManager } from './DataManager';

@@ -7,7 +7,7 @@ import { asBaseCurrencyAmount } from '@suite-common/wallet-utils';
 import { useDiscreetMode } from '@suite-native/atoms';
 import { BaseCurrencyAmountFormatter } from '@suite-native/formatters';
 import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
-import { BigNumber } from '@trezor/utils';
+import { BigNumber } from '@exodus/trezor-utils';
 
 type AxisLabelProps = {
     x: number;

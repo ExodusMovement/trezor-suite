@@ -1,7 +1,7 @@
 import { MiddlewareAPI } from 'redux';
 
 import TrezorConnect, { UI } from '@trezor/connect';
-import { bluetoothIpc } from '@trezor/transport-bluetooth';
+import { bluetoothIpc } from '@exodus/trezor-transport-bluetooth';
 
 import { goto } from 'src/actions/suite/routerActions';
 import { Action, AppState, Dispatch } from 'src/types/suite';

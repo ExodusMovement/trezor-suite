@@ -12,8 +12,8 @@ import { Control, FieldValues, UseControllerProps, useController } from 'react-h
 import { Locale } from '@suite-common/suite-types';
 import { localizeNumber } from '@suite-common/wallet-utils';
 import { Input, InputProps } from '@trezor/components';
-import { getLocaleSeparators } from '@trezor/utils';
-import { BigNumber } from '@trezor/utils/src/bigNumber';
+import { getLocaleSeparators } from '@exodus/trezor-utils';
+import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
 
 const isValidDecimalString = (value: string) => /^([^.]*)\.[^.]+$/.test(value);
 const hasLeadingZeroes = (value: string) => /^0+(\d+\.\d*|\d+)$/.test(value);

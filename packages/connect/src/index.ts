@@ -1,6 +1,6 @@
 import EventEmitter from 'events';
 
-import { createDeferredManager } from '@trezor/utils';
+import { createDeferredManager } from '@exodus/trezor-utils';
 
 import { ERRORS } from './constants';
 import { initCoreState } from './core';

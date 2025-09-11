@@ -1,4 +1,4 @@
-// Decode `trzd` protocol used for decoding of dynamically loaded `@trezor/protobuf` messages
+// Decode `trzd` protocol used for decoding of dynamically loaded `@exodus/trezor-protobuf` messages
 // https://github.com/trezor/trezor-firmware/blob/087becd2caa5618eecab37ac3f2ca51172e52eb9/docs/common/ethereum-definitions.md#definition-format
 
 export const decode = (bytes: ArrayBuffer) => {

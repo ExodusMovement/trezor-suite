@@ -4,8 +4,8 @@
     "version": "3.0.0",
     "license": "See LICENSE.md in repo root",
     "dependencies": {
-        "@trezor/transport": "workspace:*",
-        "@trezor/utils": "workspace:*",
+        "@exodus/trezor-transport": "workspace:*",
+        "@exodus/trezor-utils": "workspace:*",
         "usb": "^2.15.0"
     },
     "pkg": {
@@ -16,6 +16,6 @@
             "node18-linux-x64",
             "node18-linux-arm64"
         ],
-        "assets": ["../../node_modules/usb/**/*", "./dist/ui/**/*"]
+        "assets": [ "../../node_modules/usb/**/*", "./dist/ui/**/*" ]
     }
 }

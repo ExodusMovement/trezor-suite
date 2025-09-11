@@ -6,7 +6,7 @@ import { blockchainActions } from '@suite-common/wallet-core';
 import { BackendSettings } from '@suite-common/wallet-types';
 import { isElectrumUrl } from '@suite-common/wallet-utils';
 import { EventType, analytics } from '@trezor/suite-analytics';
-import { isUrlWithQuery } from '@trezor/utils';
+import { isUrlWithQuery } from '@exodus/trezor-utils';
 
 import { useDispatch, useSelector, useTranslation } from 'src/hooks/suite';
 import { isOnionUrl } from 'src/utils/suite/tor';

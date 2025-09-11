@@ -1,5 +1,5 @@
-import type { Descriptor } from '@trezor/transport';
-import { Log } from '@trezor/utils';
+import type { Descriptor } from '@exodus/trezor-transport';
+import { Log } from '@exodus/trezor-utils';
 
 import type { DeviceUniquePath } from '../../types';
 import { Device } from '../Device';

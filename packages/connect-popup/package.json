@@ -15,6 +15,8 @@
         "test:unit": "yarn g:jest"
     },
     "dependencies": {
+        "@exodus/trezor-transport": "workspace:*",
+        "@exodus/trezor-utils": "workspace:*",
         "@trezor/components": "workspace:*",
         "@trezor/connect": "workspace:*",
         "@trezor/connect-analytics": "workspace:*",
@@ -23,9 +25,7 @@
         "@trezor/connect-ui": "workspace:*",
         "@trezor/crypto-utils": "workspace:*",
         "@trezor/device-utils": "workspace:*",
-        "@trezor/transport": "workspace:*",
         "@trezor/urls": "workspace:*",
-        "@trezor/utils": "workspace:*",
         "eth-phishing-detect": "^1.2.0",
         "react-dom": "19.0.0"
     },

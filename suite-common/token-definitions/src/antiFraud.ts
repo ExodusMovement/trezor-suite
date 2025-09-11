@@ -3,7 +3,7 @@ import { D } from '@mobily/ts-belt';
 import { NetworkSymbol, getNetworkType } from '@suite-common/wallet-config';
 import type { WalletAccountTransaction } from '@suite-common/wallet-types';
 import { isNftTokenTransfer } from '@suite-common/wallet-utils';
-import { BigNumber } from '@trezor/utils/src/bigNumber';
+import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
 
 import type { TokenDefinitions } from './tokenDefinitionsTypes';
 import { isTokenDefinitionKnown } from './tokenDefinitionsUtils';

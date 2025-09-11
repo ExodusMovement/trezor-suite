@@ -24,6 +24,7 @@
     },
     "dependencies": {
         "@exodus/patch-broken-hermes-typed-arrays": "^1.0.0-alpha.1",
+        "@exodus/trezor-utils": "workspace:*",
         "@expo/config-plugins": "10.1.2",
         "@gorhom/bottom-sheet": "5.1.5",
         "@mobily/ts-belt": "^3.13.1",
@@ -92,7 +93,6 @@
         "@trezor/styles": "workspace:*",
         "@trezor/theme": "workspace:*",
         "@trezor/trezor-user-env-link": "workspace:*",
-        "@trezor/utils": "workspace:*",
         "@walletconnect/react-native-compat": "^2.20.3",
         "@whatwg-node/events": "0.1.2",
         "abortcontroller-polyfill": "1.7.8",

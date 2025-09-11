@@ -18,7 +18,7 @@ import { isAndroid } from '@trezor/env-utils';
 import { PasswordStrengthIndicator } from '@trezor/product-components';
 import { useKeyPress } from '@trezor/react-utils';
 import { borders, spacingsPx, typography } from '@trezor/theme';
-import { countBytesInString } from '@trezor/utils';
+import { countBytesInString } from '@exodus/trezor-utils';
 
 import { WalletType } from './types';
 

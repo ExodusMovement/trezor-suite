@@ -17,7 +17,7 @@ import {
 import { Account, AccountKey } from '@suite-common/wallet-types';
 import { RoundPhase, getInputSize, getOutputSize } from '@trezor/coinjoin';
 import { PartialRecord } from '@trezor/type-utils';
-import { BigNumber } from '@trezor/utils/src/bigNumber';
+import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
 
 import { STORAGE } from 'src/actions/suite/constants';
 import { COINJOIN } from 'src/actions/wallet/constants';

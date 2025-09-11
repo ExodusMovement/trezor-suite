@@ -1,4 +1,4 @@
-import { BigNumber } from '@trezor/utils/src/bigNumber';
+import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
 
 // Used when Everstake pool stats are not available from the API.
 export const BACKUP_ETH_APY = 4.13;

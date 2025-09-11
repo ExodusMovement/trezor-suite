@@ -1,5 +1,5 @@
 import { colorVariants } from '@trezor/theme';
-import { hexToRgba } from '@trezor/utils';
+import { hexToRgba } from '@exodus/trezor-utils';
 
 import { expect, test } from '../../support/fixtures';
 import { createTestAnnotation } from '../../support/reporters/annotations';

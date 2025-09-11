@@ -16,7 +16,7 @@ import {
     getAccountSpecific,
 } from '@suite-common/wallet-utils';
 import { AccountInfo, StaticSessionId } from '@trezor/connect';
-import { isArrayMember } from '@trezor/utils';
+import { isArrayMember } from '@exodus/trezor-utils';
 
 import { ACCOUNTS_MODULE_PREFIX } from './accountsConstants';
 

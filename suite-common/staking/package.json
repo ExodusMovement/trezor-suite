@@ -13,9 +13,9 @@
     },
     "dependencies": {
         "@everstake/wallet-sdk-ethereum": "1.0.3",
+        "@exodus/trezor-utils": "workspace:*",
         "@suite-common/wallet-core": "workspace:*",
         "@trezor/connect": "workspace:*",
-        "@trezor/utils": "workspace:*",
         "web3-utils": "^4.3.2"
     }
 }

@@ -14,7 +14,7 @@ import {
     getExternalComposeOutput,
 } from '@suite-common/wallet-utils';
 import { FeeLevel } from '@trezor/connect';
-import { BigNumber } from '@trezor/utils/src/bigNumber';
+import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
 
 type StakingParams = {
     feeInBaseUnits: string;

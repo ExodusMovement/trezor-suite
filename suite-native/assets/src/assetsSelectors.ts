@@ -31,7 +31,7 @@ import {
     doesCoinSupportStaking,
     getAccountCryptoBalanceWithStaking,
 } from '@suite-native/staking';
-import { BigNumber } from '@trezor/utils';
+import { BigNumber } from '@exodus/trezor-utils';
 
 export interface AssetType {
     symbol: NetworkSymbol;

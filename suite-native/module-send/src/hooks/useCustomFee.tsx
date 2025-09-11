@@ -19,7 +19,7 @@ import {
     selectFeeLevelTransactionBytes,
 } from '@suite-native/transaction-management';
 import { useDebounce } from '@trezor/react-utils';
-import { BigNumber } from '@trezor/utils';
+import { BigNumber } from '@exodus/trezor-utils';
 
 import { calculateCustomFeeLevelThunk } from '../sendFormThunks';
 

@@ -1,5 +1,5 @@
 import { DeviceModelInternal } from '@trezor/device-utils';
-import { typedObjectKeys } from '@trezor/utils';
+import { typedObjectKeys } from '@exodus/trezor-utils';
 
 import { FirmwareRange } from '../../../types';
 

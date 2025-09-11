@@ -3,7 +3,7 @@ import { createThunk } from '@suite-common/redux-utils';
 import { notificationsActions } from '@suite-common/toast-notifications';
 import TrezorConnect, { Device } from '@trezor/connect';
 import { desktopApi } from '@trezor/suite-desktop-api';
-import { bluetoothIpc } from '@trezor/transport-bluetooth';
+import { bluetoothIpc } from '@exodus/trezor-transport-bluetooth';
 
 import {
     setBluetoothDeviceNeedsManualOsRemoval,

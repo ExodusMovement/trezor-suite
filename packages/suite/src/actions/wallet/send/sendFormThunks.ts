@@ -24,7 +24,7 @@ import {
 import { isCardanoTx, isRbfBumpFeeTransaction } from '@suite-common/wallet-utils';
 import { PROTO, Unsuccessful } from '@trezor/connect';
 import { EventType, analytics } from '@trezor/suite-analytics';
-import { getSynchronize } from '@trezor/utils';
+import { getSynchronize } from '@exodus/trezor-utils';
 
 import * as metadataLabelingActions from 'src/actions/suite/metadataLabelingActions';
 import * as modalActions from 'src/actions/suite/modalActions';

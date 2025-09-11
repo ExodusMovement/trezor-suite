@@ -43,7 +43,7 @@
         "@trezor/eslint": "workspace:*"
     },
     "dependencies": {
-        "@trezor/utils": "workspace:*"
+        "@exodus/trezor-utils": "workspace:*"
     },
     "scripts": {
         "test:unit": "jest -c ../../jest.config.base.js",

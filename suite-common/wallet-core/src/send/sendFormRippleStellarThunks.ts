@@ -24,8 +24,8 @@ import TrezorConnect, {
     StellarOperation,
     TokenInfo,
 } from '@trezor/connect';
-import { StellarAssetType } from '@trezor/protobuf/src/messages';
-import { BigNumber } from '@trezor/utils/src/bigNumber';
+import { StellarAssetType } from '@exodus/trezor-protobuf/src/messages';
+import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
 
 import { SEND_MODULE_PREFIX } from './sendFormConstants';
 import {

@@ -1,6 +1,6 @@
 import { NetworkSymbol, NetworkType, hasNetworkSettlementLayer } from '@suite-common/wallet-config';
 import { getFeeUnits } from '@suite-common/wallet-utils';
-import { BigNumber } from '@trezor/utils';
+import { BigNumber } from '@exodus/trezor-utils';
 
 type FeeRateProps = {
     feeRate?: string | BigNumber;

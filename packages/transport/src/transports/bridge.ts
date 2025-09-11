@@ -4,7 +4,7 @@ import {
     TransportProtocol,
     bridge as protocolBridge,
     v1 as protocolV1,
-} from '@trezor/protocol';
+} from '@exodus/trezor-protocol';
 
 import {
     AbstractTransport,

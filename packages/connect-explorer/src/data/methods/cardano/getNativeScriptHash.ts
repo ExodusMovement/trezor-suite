@@ -1,4 +1,4 @@
-import { CardanoNativeScriptType } from '@trezor/protobuf/src/messages-schema';
+import { CardanoNativeScriptType } from '@exodus/trezor-protobuf/src/messages-schema';
 
 import { cardanoDerivationType, cardanoNativeScriptHashDisplayFormat } from './common';
 

@@ -1,4 +1,4 @@
-import { throwError } from '@trezor/utils';
+import { throwError } from '@exodus/trezor-utils';
 
 import type { AccountAddresses, Transaction, Utxo, VinVout } from '../types/backend';
 

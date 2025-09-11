@@ -1,7 +1,7 @@
 // receive with ThpAck
 
-import { decodeMessage } from '@trezor/protobuf';
-import { thp as protocolThp, v2 as protocolV2 } from '@trezor/protocol';
+import { decodeMessage } from '@exodus/trezor-protobuf';
+import { thp as protocolThp, v2 as protocolV2 } from '@exodus/trezor-protocol';
 
 import type { AbstractApi } from '../api/abstract';
 import { Logger } from '../types';

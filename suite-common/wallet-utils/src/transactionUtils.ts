@@ -28,8 +28,8 @@ import {
     TokenTransfer,
 } from '@trezor/connect';
 import { Branded } from '@trezor/type-utils';
-import { arrayPartition } from '@trezor/utils';
-import { BigNumber } from '@trezor/utils/src/bigNumber';
+import { arrayPartition } from '@exodus/trezor-utils';
+import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
 
 import {
     convertAmountSubunitsToUnits,

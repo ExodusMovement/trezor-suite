@@ -13,8 +13,8 @@
         "test:stress": "ts-node  -O '{\"module\": \"commonjs\"}' ./e2e/identities-stress.ts"
     },
     "dependencies": {
+        "@exodus/trezor-utils": "workspace:*",
         "@trezor/node-utils": "workspace:^",
-        "@trezor/utils": "workspace:*",
         "node-fetch": "^2.6.4",
         "socks-proxy-agent": "8.0.5"
     },

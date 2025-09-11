@@ -1,4 +1,4 @@
-import { getWeakRandomId } from '@trezor/utils';
+import { getWeakRandomId } from '@exodus/trezor-utils';
 
 import { ExperimentId } from '../messageSystemTypes';
 

@@ -14,7 +14,7 @@ import {
 import { getWindowHeight } from '@trezor/env-utils';
 import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
 import { colorVariants } from '@trezor/theme';
-import { hexToRgba } from '@trezor/utils';
+import { hexToRgba } from '@exodus/trezor-utils';
 
 const GRADIENT_HEIGHT = getWindowHeight() / 3;
 const BLACK_BACKGROUND_COLOR = '#000000';

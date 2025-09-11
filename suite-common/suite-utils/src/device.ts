@@ -2,10 +2,10 @@ import { AnyAction } from '@suite-common/redux-utils';
 import { AcquiredDevice, TrezorDevice } from '@suite-common/suite-types';
 import { DEVICE, Device, DeviceEvent, KnownDevice, UnavailableCapability } from '@trezor/connect';
 import { DeviceModelInternal, getNarrowedDeviceModelInternal } from '@trezor/device-utils';
-import { ThpStateSerialized } from '@trezor/protocol';
+import { ThpStateSerialized } from '@exodus/trezor-protocol';
 import { exhaustive } from '@trezor/type-utils';
 import * as URLS from '@trezor/urls';
-import { isArrayMember } from '@trezor/utils';
+import { isArrayMember } from '@exodus/trezor-utils';
 
 /**
  * Used in the Welcome step in Onboarding

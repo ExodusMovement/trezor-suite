@@ -2,7 +2,7 @@ import { notificationsActions } from '@suite-common/toast-notifications';
 import { Device } from '@trezor/connect';
 import { EventType, analytics } from '@trezor/suite-analytics';
 import { exhaustive } from '@trezor/type-utils';
-import { createDeferred, typedObjectKeys } from '@trezor/utils';
+import { createDeferred, typedObjectKeys } from '@exodus/trezor-utils';
 
 import { METADATA, METADATA_PROVIDER } from 'src/actions/suite/constants';
 import * as modalActions from 'src/actions/suite/modalActions';

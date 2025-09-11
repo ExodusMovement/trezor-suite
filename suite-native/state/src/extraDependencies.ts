@@ -8,11 +8,11 @@ import { selectSelectedDevice } from '@suite-common/wallet-core';
 import { selectTokenDefinitionsEnabledNetworks } from '@suite-native/discovery';
 import { selectTradingEnvironment } from '@suite-native/module-trading';
 import { reportSecurityCheck } from '@suite-native/sentry';
-import messages from '@trezor/protobuf/messages.json';
-import { BridgeTransport } from '@trezor/transport';
-import { NativeBluetoothTransport } from '@trezor/transport-native-bluetooth';
-import { NativeUsbTransport } from '@trezor/transport-native-usb';
-import { mergeDeepObject } from '@trezor/utils';
+import messages from '@exodus/trezor-protobuf/messages.json';
+import { BridgeTransport } from '@exodus/trezor-transport';
+import { NativeBluetoothTransport } from '@exodus/trezor-transport-native-bluetooth';
+import { NativeUsbTransport } from '@exodus/trezor-transport-native-usb';
+import { mergeDeepObject } from '@exodus/trezor-utils';
 
 const deviceType = Device.isDevice ? 'device' : 'emulator';
 

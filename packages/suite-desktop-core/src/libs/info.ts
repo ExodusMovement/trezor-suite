@@ -3,7 +3,7 @@ import { app } from 'electron';
 import os from 'os';
 
 import { isDevEnv } from '@suite-common/suite-utils';
-import { bytesToHumanReadable, capitalizeFirstLetter } from '@trezor/utils';
+import { bytesToHumanReadable, capitalizeFirstLetter } from '@exodus/trezor-utils';
 
 import { b2t } from './utils';
 

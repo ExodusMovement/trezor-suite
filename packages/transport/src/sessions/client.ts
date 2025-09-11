@@ -1,4 +1,4 @@
-import { TypedEmitter, getWeakRandomId } from '@trezor/utils';
+import { TypedEmitter, getWeakRandomId } from '@exodus/trezor-utils';
 
 import { Descriptor } from '../types';
 import {

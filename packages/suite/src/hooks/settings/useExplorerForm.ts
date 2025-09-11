@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form';
 
 import { Explorer, NetworkSymbol } from '@suite-common/wallet-config';
 import { explorerActions } from '@suite-common/wallet-core';
-import { isUrl } from '@trezor/utils';
+import { isUrl } from '@exodus/trezor-utils';
 
 import { useDispatch, useSelector, useTranslation } from '../suite';
 

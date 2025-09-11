@@ -2,10 +2,10 @@
 
 import { WebUSB } from 'usb';
 
-import { BridgeTransport } from '@trezor/transport';
+import { BridgeTransport } from '@exodus/trezor-transport';
 import { TrezordNode } from '@trezor/transport-bridge/src';
 import { TrezorUserEnvLinkClass } from '@trezor/trezor-user-env-link';
-import { Log, scheduleAction } from '@trezor/utils';
+import { Log, scheduleAction } from '@exodus/trezor-utils';
 
 export const env = {
     USE_HW: process.env.USE_HW === 'true',

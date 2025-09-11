@@ -4,7 +4,7 @@
 import { validateIpcMessage } from '@trezor/ipc-proxy';
 import { InvokeResult } from '@trezor/suite-desktop-api';
 import { TrezordNode } from '@trezor/transport-bridge';
-import { scheduleAction } from '@trezor/utils';
+import { scheduleAction } from '@exodus/trezor-utils';
 
 import { hasSwitch } from '../libs/process-switches';
 import { BridgeProcess } from '../libs/processes/BridgeProcess';

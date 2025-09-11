@@ -1,4 +1,4 @@
-import { resolveAfter } from '@trezor/utils';
+import { resolveAfter } from '@exodus/trezor-utils';
 import { WebsocketClient } from '@trezor/websocket-client';
 
 import {

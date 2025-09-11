@@ -10,7 +10,7 @@ import {
     IntermediaryReleaseConfig,
     ReleasesConfig,
 } from '@trezor/device-utils';
-import messages from '@trezor/protobuf/messages.json';
+import messages from '@exodus/trezor-protobuf/messages.json';
 
 import { parseCoinsJson } from './coinInfo';
 import { initializeFirmwareConfig } from './firmwareInfo';

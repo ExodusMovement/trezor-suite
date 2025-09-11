@@ -1,4 +1,4 @@
-import { BackupAvailability } from '@trezor/protobuf/src/messages';
+import { BackupAvailability } from '@exodus/trezor-protobuf/src/messages';
 
 import type { DesktopDeviceRootState } from 'src/actions/device/deviceSlice';
 

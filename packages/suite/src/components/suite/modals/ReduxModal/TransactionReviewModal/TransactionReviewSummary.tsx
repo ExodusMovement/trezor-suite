@@ -13,7 +13,7 @@ import {
 import { Badge, Box, IconButton, Note, Row, Text } from '@trezor/components';
 import { CoinLogo, FeeRate } from '@trezor/product-components';
 import { spacings } from '@trezor/theme';
-import { BigNumber } from '@trezor/utils';
+import { BigNumber } from '@exodus/trezor-utils';
 
 import { AccountLabel, Translation } from 'src/components/suite';
 import { ConnectCallSource } from 'src/components/suite/ConnectCallSource';

@@ -9,7 +9,7 @@ import {
     UiRequestSelectAccount,
     UiRequestSelectFee,
 } from '@trezor/connect';
-import { isArrayMember } from '@trezor/utils';
+import { isArrayMember } from '@exodus/trezor-utils';
 
 import { MODAL } from 'src/actions/suite/constants';
 import type { Action, TrezorDevice } from 'src/types/suite';

@@ -1,5 +1,5 @@
 import { getSuiteVersion } from '@trezor/env-utils';
-import { versionUtils } from '@trezor/utils';
+import { versionUtils } from '@exodus/trezor-utils';
 
 import { UpdateStatus, UpdateStatusDevice, UpdateStatusSuite } from './updateQuickActionTypes';
 import { useDevice, useSelector } from '../../../../../../../hooks/suite';

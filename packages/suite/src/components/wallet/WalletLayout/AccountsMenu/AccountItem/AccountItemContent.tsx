@@ -21,7 +21,7 @@ import {
     TruncateWithTooltip,
 } from '@trezor/components';
 import { spacings } from '@trezor/theme';
-import { isArrayMember } from '@trezor/utils';
+import { isArrayMember } from '@exodus/trezor-utils';
 
 import {
     AccountLabel,

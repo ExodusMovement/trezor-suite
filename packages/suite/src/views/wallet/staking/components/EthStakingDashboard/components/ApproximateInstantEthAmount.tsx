@@ -1,5 +1,5 @@
 import { Tooltip } from '@trezor/components';
-import { BigNumber } from '@trezor/utils/src/bigNumber';
+import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
 
 import { FormattedCryptoAmount } from 'src/components/suite';
 

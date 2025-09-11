@@ -2,7 +2,7 @@ import { G, S } from '@mobily/ts-belt';
 
 import { NetworkSymbol } from '@suite-common/wallet-config';
 import { isDevelopOrDebugEnv } from '@suite-native/config';
-import { isArrayMember } from '@trezor/utils';
+import { isArrayMember } from '@exodus/trezor-utils';
 
 export const getTokenName = (tokenName?: string) => {
     if (G.isNullable(tokenName) || S.isEmpty(tokenName)) return 'Unknown token';

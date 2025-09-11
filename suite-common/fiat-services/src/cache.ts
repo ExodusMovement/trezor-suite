@@ -1,4 +1,4 @@
-import { Deferred, createDeferred } from '@trezor/utils';
+import { Deferred, createDeferred } from '@exodus/trezor-utils';
 
 // Cache for parallel requests
 // It's used to prevent multiple requests for the same data

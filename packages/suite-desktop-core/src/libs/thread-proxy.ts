@@ -2,7 +2,7 @@ import { UtilityProcess, utilityProcess } from 'electron';
 import { EventEmitter } from 'events';
 import path from 'path';
 
-import { Deferred, createDeferred, promiseAllSequence } from '@trezor/utils';
+import { Deferred, createDeferred, promiseAllSequence } from '@exodus/trezor-utils';
 
 import { ThreadRequestType, isValidThreadEvent, isValidThreadResponse } from './thread';
 

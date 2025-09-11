@@ -19,7 +19,7 @@ import {
 } from '@trezor/components';
 import { CoinLogo, FeeRate } from '@trezor/product-components';
 import { Elevation, borders, mapElevationToBorder, spacings, spacingsPx } from '@trezor/theme';
-import { BigNumber } from '@trezor/utils';
+import { BigNumber } from '@exodus/trezor-utils';
 
 import { FormattedDateWithBullet, Translation } from 'src/components/suite';
 import { TxAddress } from 'src/components/suite/copy/TxAddress';

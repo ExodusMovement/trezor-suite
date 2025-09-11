@@ -12,7 +12,7 @@ import {
 } from '@suite-common/wallet-utils';
 import { BaseCurrencyCode } from '@trezor/blockchain-link-types';
 import { PROTO } from '@trezor/connect';
-import { BigNumber } from '@trezor/utils';
+import { BigNumber } from '@exodus/trezor-utils';
 
 import { makeFormatter } from '../makeFormatter';
 import { FormatterConfig } from '../types';

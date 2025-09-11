@@ -5,7 +5,7 @@ use crate::server::{
 use btleplug::api::Peripheral;
 use log::info;
 
-/// this method is just a placeholder to keep @trezor/transport interface
+/// this method is just a placeholder to keep @exodus/trezor-transport interface
 /// read logic is done in `open_device.rs`
 pub async fn read(manager: AdapterManager, id: String) -> MethodResult {
     info!("read: {id}");

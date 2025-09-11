@@ -5,11 +5,11 @@ import {
     thp as protocolThp,
     v1 as protocolV1,
     v2 as protocolV2,
-} from '@trezor/protocol';
-import { Session, TRANSPORT, TRANSPORT_ERROR } from '@trezor/transport';
-import { type Descriptor, type Transport } from '@trezor/transport';
-import { TransportDeviceEvent } from '@trezor/transport/src/transports/abstract';
-import { Deferred, TypedEmitter, createDeferred, isArrayMember, versionUtils } from '@trezor/utils';
+} from '@exodus/trezor-protocol';
+import { Session, TRANSPORT, TRANSPORT_ERROR } from '@exodus/trezor-transport';
+import { type Descriptor, type Transport } from '@exodus/trezor-transport';
+import { TransportDeviceEvent } from '@exodus/trezor-transport/src/transports/abstract';
+import { Deferred, TypedEmitter, createDeferred, isArrayMember, versionUtils } from '@exodus/trezor-utils';
 
 import { DeviceCommands } from './DeviceCommands';
 import { ERRORS, FIRMWARE, PROTO } from '../constants';

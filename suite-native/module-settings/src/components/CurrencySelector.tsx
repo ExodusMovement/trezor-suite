@@ -5,7 +5,7 @@ import { EventType, analytics } from '@suite-native/analytics';
 import { Select } from '@suite-native/atoms';
 import { Translation } from '@suite-native/intl';
 import { BaseCurrency, BaseCurrencyCode, baseCurrencies } from '@trezor/blockchain-link-types';
-import { typedObjectValues } from '@trezor/utils';
+import { typedObjectValues } from '@exodus/trezor-utils';
 
 import { PreferencesSettingsCard } from './PreferencesSettingsCard';
 

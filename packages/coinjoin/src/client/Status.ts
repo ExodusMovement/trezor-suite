@@ -1,5 +1,5 @@
 import type { TimerId } from '@trezor/type-utils';
-import { TypedEmitter } from '@trezor/utils';
+import { TypedEmitter } from '@exodus/trezor-utils';
 
 import * as coordinator from './coordinator';
 import { coordinatorRequest } from './coordinatorRequest';

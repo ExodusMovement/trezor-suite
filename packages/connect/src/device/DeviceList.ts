@@ -1,8 +1,8 @@
 // original file https://github.com/trezor/connect/blob/develop/src/js/device/DeviceList.js
 
-import { TRANSPORT, Transport } from '@trezor/transport';
-import type { TransportApiType } from '@trezor/transport/src/transports/abstract';
-import { Descriptor } from '@trezor/transport/src/types';
+import { TRANSPORT, Transport } from '@exodus/trezor-transport';
+import type { TransportApiType } from '@exodus/trezor-transport/src/transports/abstract';
+import { Descriptor } from '@exodus/trezor-transport/src/types';
 import {
     TypedEmitter,
     arrayDistinct,
@@ -11,7 +11,7 @@ import {
     isNotUndefined,
     resolveAfter,
     typedObjectKeys,
-} from '@trezor/utils';
+} from '@exodus/trezor-utils';
 
 import { ERRORS } from '../constants';
 import { DEVICE, TransportError, TransportInfo } from '../events';
@@ -130,7 +130,7 @@ export class DeviceList extends TypedEmitter<DeviceListEvents> implements IDevic
     constructor({ messages, priority, debug, manifest }: ConstructorParams) {
         super();
 
-        const transportLogger = initLog('@trezor/transport', debug);
+        const transportLogger = initLog('@exodus/trezor-transport', debug);
 
         this.handshakeLock = getSynchronize();
         this.authPenaltyManager = createAuthPenaltyManager(priority);
@@ -210,7 +210,7 @@ export class DeviceList extends TypedEmitter<DeviceListEvents> implements IDevic
         signal: AbortSignal,
     ) {
         /**
-         * listen to change of descriptors reported by @trezor/transport
+         * listen to change of descriptors reported by @exodus/trezor-transport
          * we can say that this part lets connect know about
          * "external activities with trezor devices" such as device was connected/disconnected
          * or it was acquired or released by another application.

@@ -9,7 +9,7 @@ import {
     setBaseCurrency,
 } from '@suite-common/wallet-core';
 import { DEVICE, TRANSPORT } from '@trezor/connect';
-import { redactUserPathFromString } from '@trezor/utils';
+import { redactUserPathFromString } from '@exodus/trezor-utils';
 
 import {
     DESKTOP_UPDATE,

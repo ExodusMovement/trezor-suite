@@ -1,4 +1,4 @@
-import { arrayDistinct } from '@trezor/utils';
+import { arrayDistinct } from '@exodus/trezor-utils';
 import { Network, deriveAddresses as deriveNewAddresses } from '@trezor/utxo-lib';
 import { getAddressType } from '@trezor/utxo-lib/src/address';
 

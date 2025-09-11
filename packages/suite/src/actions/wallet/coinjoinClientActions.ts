@@ -16,7 +16,7 @@ import {
 } from '@trezor/coinjoin';
 import TrezorConnect from '@trezor/connect';
 import { getOsName } from '@trezor/env-utils';
-import { arrayDistinct, arrayToDictionary, promiseAllSequence } from '@trezor/utils';
+import { arrayDistinct, arrayToDictionary, promiseAllSequence } from '@exodus/trezor-utils';
 
 import { onCancel as closeModal, openModal } from 'src/actions/suite/modalActions';
 import {

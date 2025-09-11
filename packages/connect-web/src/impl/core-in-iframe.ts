@@ -29,7 +29,7 @@ import type {
 } from '@trezor/connect/src/types';
 import { InitFullSettings } from '@trezor/connect/src/types/api/init';
 import { Log, initLog } from '@trezor/connect/src/utils/debug';
-import { DeferredManager, createDeferredManager } from '@trezor/utils/src/createDeferredManager';
+import { DeferredManager, createDeferredManager } from '@exodus/trezor-utils/src/createDeferredManager';
 
 import { parseConnectSettings } from '../connectSettings';
 import * as iframe from '../iframe';

@@ -1,4 +1,4 @@
-import { arrayToDictionary, getWeakRandomId } from '@trezor/utils';
+import { arrayToDictionary, getWeakRandomId } from '@exodus/trezor-utils';
 
 import { getExternalOutputSize } from '../../utils/coordinatorUtils';
 import { compareOutpoint, getRoundEvents, sumCredentials } from '../../utils/roundUtils';

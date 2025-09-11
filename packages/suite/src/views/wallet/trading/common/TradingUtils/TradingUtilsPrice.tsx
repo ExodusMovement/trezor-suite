@@ -5,7 +5,7 @@ import { asBaseCurrencyAmount } from '@suite-common/wallet-utils';
 import { Tooltip } from '@trezor/components';
 import { FONT_SIZE, SCREEN_QUERY } from '@trezor/components/src/config/variables';
 import { spacingsPx, typography } from '@trezor/theme';
-import { BigNumber } from '@trezor/utils/src/bigNumber';
+import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
 
 import { Translation } from 'src/components/suite';
 import { useTradingFormContext } from 'src/hooks/wallet/trading/form/useTradingCommonForm';

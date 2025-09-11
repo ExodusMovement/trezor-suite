@@ -1,5 +1,5 @@
-import { parseConfigure } from '@trezor/protobuf';
-import { thp as protocolThp, v2 } from '@trezor/protocol';
+import { parseConfigure } from '@exodus/trezor-protobuf';
+import { thp as protocolThp, v2 } from '@exodus/trezor-protocol';
 
 import { parseThpMessage, receiveThpMessage, sendThpMessage } from '../src/thp';
 

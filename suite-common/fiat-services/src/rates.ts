@@ -14,7 +14,7 @@ import {
     SCHEDULE_ACTION_DEADLINE_ERROR_MESSAGE,
     SCHEDULE_ACTION_TIMEOUT_ERROR_MESSAGE,
     scheduleAction,
-} from '@trezor/utils';
+} from '@exodus/trezor-utils';
 
 import * as blockbookService from './blockbook';
 import { ParallelRequestsCache } from './cache';

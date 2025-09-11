@@ -1,4 +1,4 @@
-import { DEVICE_TYPE } from '@trezor/transport/src/api/abstract';
+import { DEVICE_TYPE } from '@exodus/trezor-transport/src/api/abstract';
 
 import { env } from './controller';
 

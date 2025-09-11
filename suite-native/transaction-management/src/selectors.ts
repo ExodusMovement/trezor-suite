@@ -5,7 +5,7 @@ import {
     TokenAddress,
 } from '@suite-common/wallet-types';
 import { getSendFormDraftKey } from '@suite-common/wallet-utils';
-import { BigNumber } from '@trezor/utils';
+import { BigNumber } from '@exodus/trezor-utils';
 
 import { NativeSendRootState } from './sendFormSlice';
 import { NativeSupportedFeeLevel } from './types';

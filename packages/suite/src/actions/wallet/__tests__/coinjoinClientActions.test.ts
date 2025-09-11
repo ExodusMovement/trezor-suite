@@ -3,7 +3,7 @@ import { combineReducers, createReducer } from '@reduxjs/toolkit';
 import { prepareMessageSystemReducer } from '@suite-common/message-system';
 import { configureMockStore, initPreloadedState, testMocks } from '@suite-common/test-utils';
 import '@suite-common/test-utils/src/globalOverrides';
-import { promiseAllSequence } from '@trezor/utils';
+import { promiseAllSequence } from '@exodus/trezor-utils';
 
 import { coinjoinMiddleware } from 'src/middlewares/wallet/coinjoinMiddleware';
 import modalReducer from 'src/reducers/suite/modalReducer';

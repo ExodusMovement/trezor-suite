@@ -1,5 +1,5 @@
-import * as messages from '@trezor/protobuf/messages.json';
-import { v1 as v1Protocol } from '@trezor/protocol';
+import * as messages from '@exodus/trezor-protobuf/messages.json';
+import { v1 as v1Protocol } from '@exodus/trezor-protocol';
 
 import { UsbApi } from '../src/api/usb';
 import { AbstractApiTransport } from '../src/transports/abstractApi';

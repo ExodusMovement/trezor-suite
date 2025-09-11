@@ -3,7 +3,7 @@
  */
 import { captureMessage } from '@sentry/electron/main';
 
-import { isWhitelistedHost } from '@trezor/utils';
+import { isWhitelistedHost } from '@exodus/trezor-utils';
 
 import { allowedDomains, silentlyBlockedDomains } from '../config';
 

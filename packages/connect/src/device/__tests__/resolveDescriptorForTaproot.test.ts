@@ -1,4 +1,4 @@
-import { MessagesSchema as Messages } from '@trezor/protobuf';
+import { MessagesSchema as Messages } from '@exodus/trezor-protobuf';
 
 import { HDNodeResponse } from '../../types/api/getPublicKey';
 import { resolveDescriptorForTaproot } from '../resolveDescriptorForTaproot';

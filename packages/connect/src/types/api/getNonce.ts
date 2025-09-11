@@ -1,4 +1,4 @@
-import { Nonce } from '@trezor/protobuf/src/messages';
+import { Nonce } from '@exodus/trezor-protobuf/src/messages';
 
 import { CommonParams, Response } from '../params';
 

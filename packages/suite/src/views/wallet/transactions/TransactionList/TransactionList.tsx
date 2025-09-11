@@ -9,7 +9,7 @@ import {
     isPending,
 } from '@suite-common/wallet-utils';
 import { SkeletonStack } from '@trezor/components';
-import { arrayPartition } from '@trezor/utils';
+import { arrayPartition } from '@exodus/trezor-utils';
 
 import { DashboardSection } from 'src/components/dashboard';
 import { Translation } from 'src/components/suite';

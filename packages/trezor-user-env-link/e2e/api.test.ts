@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 
-import { typedObjectKeys } from '@trezor/utils';
+import { typedObjectKeys } from '@exodus/trezor-utils';
 
 import { TrezorUserEnvLink } from '../src';
 

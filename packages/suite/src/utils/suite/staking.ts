@@ -1,4 +1,4 @@
-import { BigNumber } from '@trezor/utils';
+import { BigNumber } from '@exodus/trezor-utils';
 
 import { TranslationFunction } from 'src/hooks/suite/useTranslation';
 

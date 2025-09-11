@@ -1,5 +1,5 @@
-import { MessagesSchema as Messages } from '@trezor/protobuf';
-import { convertTaprootXpub } from '@trezor/utils';
+import { MessagesSchema as Messages } from '@exodus/trezor-protobuf';
+import { convertTaprootXpub } from '@exodus/trezor-utils';
 
 import { HDNodeResponse } from '../types/api/getPublicKey';
 

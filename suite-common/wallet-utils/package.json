@@ -12,6 +12,7 @@
         "test-unit:watch": "yarn g:jest -c ../../jest.config.base.js -o --watch"
     },
     "dependencies": {
+        "@exodus/trezor-utils": "workspace:*",
         "@suite-common/fiat-services": "workspace:*",
         "@suite-common/metadata-types": "workspace:*",
         "@suite-common/suite-constants": "workspace:*",
@@ -28,7 +29,6 @@
         "@trezor/device-utils": "workspace:*",
         "@trezor/env-utils": "workspace:*",
         "@trezor/urls": "workspace:*",
-        "@trezor/utils": "workspace:*",
         "date-fns": "^4.1.0",
         "react": "19.0.0",
         "react-hook-form": "^7.62.0",

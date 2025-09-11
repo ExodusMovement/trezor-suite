@@ -8,7 +8,7 @@ import {
     toFiatCurrency,
 } from '@suite-common/wallet-utils';
 import type { BaseCurrencyCode } from '@trezor/blockchain-link-types';
-import { BigNumber } from '@trezor/utils/src/bigNumber';
+import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
 
 import { FiatRatesItem } from './graphDataFetching';
 import {

@@ -22,7 +22,7 @@ import {
     toFiatCurrency,
     unitsToSubunits,
 } from '@suite-common/wallet-utils';
-import { BigNumber } from '@trezor/utils';
+import { BigNumber } from '@exodus/trezor-utils';
 
 type UseConvertFiatToCryptoParams = {
     symbol: NetworkSymbol | null;

@@ -1,4 +1,4 @@
-import { thp as protocolThp } from '@trezor/protocol';
+import { thp as protocolThp } from '@exodus/trezor-protocol';
 
 import { TypedError } from '../../constants/errors';
 import { DEVICE } from '../../events';

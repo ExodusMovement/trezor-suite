@@ -2,8 +2,8 @@
 import EventEmitter from 'events';
 
 import { storage } from '@trezor/connect-common';
-import { TRANSPORT, TRANSPORT_ERROR } from '@trezor/transport';
-import { createDeferred, createLazy, getSynchronize, throwError } from '@trezor/utils';
+import { TRANSPORT, TRANSPORT_ERROR } from '@exodus/trezor-transport';
+import { createDeferred, createLazy, getSynchronize, throwError } from '@exodus/trezor-utils';
 
 import { ERRORS } from '../constants';
 import { AbstractMethod } from './AbstractMethod';

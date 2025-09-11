@@ -1,4 +1,4 @@
-import { getWeakRandomNumberInRange } from '@trezor/utils';
+import { getWeakRandomNumberInRange } from '@exodus/trezor-utils';
 import { Network, Transaction, bufferutils } from '@trezor/utxo-lib';
 
 import {

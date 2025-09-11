@@ -2,7 +2,7 @@ import { createIntl } from 'react-intl';
 
 import { asBaseCurrencyAmount } from '@suite-common/wallet-utils';
 import { PROTO } from '@trezor/connect';
-import { BigNumber } from '@trezor/utils';
+import { BigNumber } from '@exodus/trezor-utils';
 
 import { prepareBaseCurrencyAmountFormatter } from '../prepareBaseCurrencyAmountFormatter';
 

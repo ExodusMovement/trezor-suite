@@ -4,7 +4,7 @@ import { isEip1559 } from '@suite-common/wallet-utils';
 import TrezorConnect, { FeeLevel } from '@trezor/connect';
 import { BlockchainEstimatedFeeLevel } from '@trezor/connect/src/types/api/blockchainEstimateFee';
 import { isNative } from '@trezor/env-utils';
-import { BigNumber } from '@trezor/utils';
+import { BigNumber } from '@exodus/trezor-utils';
 
 const NETWORK_FEE_OVERRIDES: Record<
     string,

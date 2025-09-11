@@ -34,7 +34,7 @@ import {
     prepareEthereumTransaction,
 } from '@suite-common/wallet-utils';
 import TrezorConnect, { FeeLevel, TokenInfo } from '@trezor/connect';
-import { BigNumber } from '@trezor/utils';
+import { BigNumber } from '@exodus/trezor-utils';
 
 import { SEND_MODULE_PREFIX } from './sendFormConstants';
 import {

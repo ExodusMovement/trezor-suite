@@ -26,7 +26,7 @@ import { BottomText } from '@trezor/components/src/components/form/BottomText';
 import { useAsyncClickHandler } from '@trezor/react-utils';
 import { EventType, analytics } from '@trezor/suite-analytics';
 import { spacings } from '@trezor/theme';
-import { BigNumber } from '@trezor/utils/src/bigNumber';
+import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
 
 import { AccountLabeling, FormattedCryptoAmount, Translation } from 'src/components/suite';
 import { TxAddress } from 'src/components/suite/copy/TxAddress';

@@ -1,4 +1,4 @@
-import { getRandomInt } from '@trezor/utils';
+import { getRandomInt } from '@exodus/trezor-utils';
 
 import { verifyTxBytes } from './compose.utils';
 import { composeTx } from '../src/compose';
@@ -6,8 +6,8 @@ import * as NETWORKS from '../src/networks';
 import { composeTxFixture } from './__fixtures__/compose';
 import { fixturesCrossCheck } from './__fixtures__/compose.crosscheck';
 
-jest.mock('@trezor/utils', () => ({
-    ...jest.requireActual('@trezor/utils'),
+jest.mock('@exodus/trezor-utils', () => ({
+    ...jest.requireActual('@exodus/trezor-utils'),
     getRandomInt: jest.fn(),
 }));
 

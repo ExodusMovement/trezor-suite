@@ -1,4 +1,4 @@
-# @trezor/transport-bluetooth
+# @exodus/trezor-transport-bluetooth
 
 ### `BluetoothIpc` and `bluetoothIpc` proxy
 
@@ -7,7 +7,7 @@
 use `bluetoothIpc` proxy
 
 ```typescript
-import { bluetoothIpc } from '@trezor/transport-bluetooth';
+import { bluetoothIpc } from '@exodus/trezor-transport-bluetooth';
 
 await bluetoothIpc.init();
 ```
@@ -17,7 +17,7 @@ await bluetoothIpc.init();
 implement proxy handler and `BluetoothIpc`
 
 ```typescript
-import { BluetoothIpc } from '@trezor/transport-bluetooth';
+import { BluetoothIpc } from '@exodus/trezor-transport-bluetooth';
 
 createIpcProxyHandler(ipcMain, 'Bluetooth', {
     onCreateInstance: () => {
@@ -40,13 +40,13 @@ createIpcProxyHandler(ipcMain, 'Bluetooth', {
 
 ### Server build:
 
-`yarn workspace @trezor/transport-bluetooth build:server`
+`yarn workspace @exodus/trezor-transport-bluetooth build:server`
 
 ### NAPI build
 
 For MacOS, we use [NAPI](https://napi.rs/) instead of a standalone process due to issues with pairing.
 
-`yarn workspace @trezor/transport-bluetooth build:napi`
+`yarn workspace @exodus/trezor-transport-bluetooth build:napi`
 
 ### Server development
 
@@ -82,7 +82,7 @@ nix-shell ./packages/transport-bluetooth/shell.nix
 
 ```
 
-yarn workspace @trezor/transport-bluetooth dev:server
+yarn workspace @exodus/trezor-transport-bluetooth dev:server
 
 ```
 
@@ -92,7 +92,7 @@ Simple html page to communicate with the server using `TrezorBluetooth` client.
 
 ```
 
-yarn workspace @trezor/transport-bluetooth build:ui
+yarn workspace @exodus/trezor-transport-bluetooth build:ui
 
 ```
 

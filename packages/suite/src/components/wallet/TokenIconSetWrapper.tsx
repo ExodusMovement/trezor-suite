@@ -3,7 +3,7 @@ import { NetworkSymbol } from '@suite-common/wallet-config';
 import { selectBaseCurrency, selectCurrentFiatRates } from '@suite-common/wallet-core';
 import { Account } from '@suite-common/wallet-types';
 import { TokenIconSet } from '@trezor/product-components';
-import { BigNumber } from '@trezor/utils';
+import { BigNumber } from '@exodus/trezor-utils';
 
 import { useSelector } from 'src/hooks/suite';
 import {

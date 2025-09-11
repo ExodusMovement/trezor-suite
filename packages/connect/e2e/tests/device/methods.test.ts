@@ -33,8 +33,8 @@ if (typeof jest === 'undefined') {
 }
 
 // Jest.mock() MUST be called in global scope, if we put it into condition it won't work.
-jest.mock('@trezor/utils', () => ({
-    ...jest.requireActual('@trezor/utils'),
+jest.mock('@exodus/trezor-utils', () => ({
+    ...jest.requireActual('@exodus/trezor-utils'),
     getRandomInt: (min: number, max: number) => min + (4 % max), // 4 is truly random number, I rolled the dice
 }));
 

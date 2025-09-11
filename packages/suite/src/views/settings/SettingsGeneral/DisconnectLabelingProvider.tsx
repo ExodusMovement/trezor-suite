@@ -1,4 +1,4 @@
-import { capitalizeFirstLetter } from '@trezor/utils';
+import { capitalizeFirstLetter } from '@exodus/trezor-utils';
 
 import { disconnectProvider } from 'src/actions/suite/metadataProviderActions';
 import { SettingsSectionItem } from 'src/components/settings';

@@ -1,4 +1,4 @@
-import { isNewerOrEqual } from '@trezor/utils/src/versionUtils';
+import { isNewerOrEqual } from '@exodus/trezor-utils/src/versionUtils';
 
 import { ConnectSettings } from '../types/settings';
 

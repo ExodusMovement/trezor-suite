@@ -21,7 +21,7 @@ import {
     SendStackRoutes,
     StackToStackCompositeNavigationProps,
 } from '@suite-native/navigation';
-import { TRANSPORT_ERROR } from '@trezor/transport';
+import { TRANSPORT_ERROR } from '@exodus/trezor-transport';
 
 import { useShowDeviceDisconnectedAlert } from './useShowDeviceDisconnectedAlert';
 import { selectIsTransactionReviewInProgress } from '../selectors';

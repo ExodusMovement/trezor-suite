@@ -1,4 +1,4 @@
-import { enumUtils, getWeakRandomNumberInRange } from '@trezor/utils';
+import { enumUtils, getWeakRandomNumberInRange } from '@exodus/trezor-utils';
 
 import { EndRoundState, WabiSabiProtocolErrorCode } from '../../enums';
 import { getBroadcastedTxDetails } from '../../utils/roundUtils';

@@ -10,13 +10,13 @@
         "type-check": "yarn g:tsc --build"
     },
     "dependencies": {
+        "@exodus/trezor-protocol": "workspace:*",
+        "@exodus/trezor-utils": "workspace:*",
         "@reduxjs/toolkit": "2.8.2",
         "@suite-common/metadata-types": "workspace:*",
         "@suite-common/suite-config": "workspace:*",
         "@suite-common/wallet-types": "workspace:*",
         "@trezor/connect": "workspace:*",
-        "@trezor/protocol": "workspace:*",
-        "@trezor/type-utils": "workspace:*",
-        "@trezor/utils": "workspace:*"
+        "@trezor/type-utils": "workspace:*"
     }
 }

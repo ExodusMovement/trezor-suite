@@ -80,7 +80,7 @@ export type ThpCredentials = ThpCredentialResponse & { autoconnect?: boolean };
 
 export type ThpMessageSyncBit = 0 | 1;
 
-// same as @trezor/protobuf Messages
+// same as @exodus/trezor-protobuf Messages
 export type ThpMessageKey = keyof ThpMessageType;
 
 export type ThpMessagePayload<T extends ThpMessageKey = ThpMessageKey> = ThpMessageType[T];

@@ -22,7 +22,7 @@ import type {
 import { InitFullSettings } from '@trezor/connect/src/types/api/init';
 import { Login } from '@trezor/connect/src/types/api/requestLogin';
 import { Log, LogMessage, LogWriter, initLog, setLogWriter } from '@trezor/connect/src/utils/debug';
-import { createDeferred } from '@trezor/utils';
+import { createDeferred } from '@exodus/trezor-utils';
 
 import { parseConnectSettings } from '../connectSettings';
 import * as popup from '../popup';

@@ -1,5 +1,5 @@
-import { encodeMessage } from '@trezor/protobuf';
-import { ThpState, TransportProtocol, thp as protocolThp } from '@trezor/protocol';
+import { encodeMessage } from '@exodus/trezor-protobuf';
+import { ThpState, TransportProtocol, thp as protocolThp } from '@exodus/trezor-protocol';
 
 import { AsyncResultWithTypedError } from '../types';
 

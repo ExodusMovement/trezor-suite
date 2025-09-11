@@ -7,7 +7,7 @@ import type * as MessageTypes from '@trezor/blockchain-link-types/src/messages';
 import * as utils from '@trezor/blockchain-link-utils/src/stellar';
 import { getSuiteVersion, isDesktop, isNative } from '@trezor/env-utils';
 import { IntervalId } from '@trezor/type-utils';
-import { BigNumber, createLazy } from '@trezor/utils';
+import { BigNumber, createLazy } from '@exodus/trezor-utils';
 
 import { BaseWorker, CONTEXT, ContextType } from '../baseWorker';
 

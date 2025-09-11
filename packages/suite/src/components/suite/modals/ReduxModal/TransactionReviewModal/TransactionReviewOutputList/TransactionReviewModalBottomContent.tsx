@@ -10,7 +10,7 @@ import { StakeType } from '@trezor/blockchain-link-types';
 import { Modal } from '@trezor/components';
 import { copyToClipboard, download } from '@trezor/dom-utils';
 import { EventType, TransactionCreatedEvent, analytics } from '@trezor/suite-analytics';
-import { Deferred } from '@trezor/utils';
+import { Deferred } from '@exodus/trezor-utils';
 
 import { Translation } from 'src/components/suite/Translation';
 

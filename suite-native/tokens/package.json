@@ -11,6 +11,7 @@
         "test:unit": "yarn g:jest --coverage"
     },
     "dependencies": {
+        "@exodus/trezor-utils": "workspace:*",
         "@mobily/ts-belt": "^3.13.1",
         "@suite-common/redux-utils": "workspace:*",
         "@suite-common/token-definitions": "workspace:*",
@@ -18,7 +19,6 @@
         "@suite-common/wallet-core": "workspace:*",
         "@suite-common/wallet-types": "workspace:*",
         "@trezor/blockchain-link": "workspace:*",
-        "@trezor/utils": "workspace:*",
         "react": "19.0.0"
     }
 }

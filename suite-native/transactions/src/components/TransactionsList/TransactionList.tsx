@@ -25,7 +25,7 @@ import {
     selectAccountTransactionsWithTokenTransfers,
 } from '@suite-native/tokens';
 import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
-import { arrayPartition } from '@trezor/utils';
+import { arrayPartition } from '@exodus/trezor-utils';
 
 import { TransactionsEmptyState } from '../TransactionsEmptyState';
 import { TokenTransferListItem } from './TokenTransferListItem';

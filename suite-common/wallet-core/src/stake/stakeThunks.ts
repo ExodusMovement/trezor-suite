@@ -10,7 +10,7 @@ import {
     isTestnet,
 } from '@suite-common/wallet-utils';
 import { TimerId } from '@trezor/type-utils';
-import { BigNumber } from '@trezor/utils/src/bigNumber';
+import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
 
 import {
     EVERSTAKE_ENDPOINT_PREFIX,

@@ -1,4 +1,4 @@
-import { getWeakRandomId } from '@trezor/utils';
+import { getWeakRandomId } from '@exodus/trezor-utils';
 
 import { experimentTest, getArrayOfInstanceIds } from '../__fixtures__/experimentUtils';
 import {
@@ -9,8 +9,8 @@ import {
 } from '../experimentUtils';
 import { ExperimentId } from '../messageSystemTypes';
 
-jest.mock('@trezor/utils', () => ({
-    ...jest.requireActual('@trezor/utils'),
+jest.mock('@exodus/trezor-utils', () => ({
+    ...jest.requireActual('@exodus/trezor-utils'),
     getWeakRandomId: jest.fn(),
 }));
 

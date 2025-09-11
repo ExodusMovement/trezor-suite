@@ -1,5 +1,5 @@
 import { NetworkSymbol } from '@suite-common/wallet-config';
-import { getRandomInt } from '@trezor/utils';
+import { getRandomInt } from '@exodus/trezor-utils';
 
 import { expect, test } from '../../support/fixtures';
 
