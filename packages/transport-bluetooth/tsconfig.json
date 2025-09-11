@@ -8,7 +8,7 @@
         { "path": "../ipc-proxy" },
         { "path": "../protocol" },
         { "path": "../transport" },
-        { "path": "../utils" },
+        { "path": "../trezor-utils" },
         { "path": "../websocket-client" }
     ]
 }

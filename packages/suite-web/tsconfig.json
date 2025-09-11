@@ -29,6 +29,6 @@
         { "path": "../suite-analytics" },
         { "path": "../transport" },
         { "path": "../trezor-user-env-link" },
-        { "path": "../utils" }
+        { "path": "../trezor-utils" }
     ]
 }

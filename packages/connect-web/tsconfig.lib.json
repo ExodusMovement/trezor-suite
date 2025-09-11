@@ -13,7 +13,7 @@
             "path": "../connect-common"
         },
         {
-            "path": "../utils"
+            "path": "../trezor-utils"
         },
         {
             "path": "../websocket-client"

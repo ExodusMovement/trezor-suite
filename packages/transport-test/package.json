@@ -20,10 +20,10 @@
     "devDependencies": {
         "@exodus/trezor-protobuf": "workspace:*",
         "@exodus/trezor-transport": "workspace:*",
-        "@trezor/transport-bridge": "workspace:*",
         "@exodus/trezor-utils": "workspace:*",
         "@jest/types": "^29.6.3",
         "@trezor/eslint": "workspace:*",
+        "@trezor/transport-bridge": "workspace:*",
         "@trezor/trezor-user-env-link": "workspace:^",
         "buffer": "^6.0.3",
         "esbuild": "^0.25.2",

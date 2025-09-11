@@ -3595,9 +3595,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@exodus/trezor-protobuf@workspace:*, @exodus/trezor-protobuf@workspace:^, @exodus/trezor-protobuf@workspace:packages/protobuf":
+"@exodus/trezor-protobuf@workspace:*, @exodus/trezor-protobuf@workspace:^, @exodus/trezor-protobuf@workspace:packages/trezor-protobuf":
   version: 0.0.0-use.local
-  resolution: "@exodus/trezor-protobuf@workspace:packages/protobuf"
+  resolution: "@exodus/trezor-protobuf@workspace:packages/trezor-protobuf"
   dependencies:
     long: "npm:5.2.5"
     protobufjs: "npm:6.8.8"
@@ -3608,9 +3608,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@exodus/trezor-protocol@workspace:*, @exodus/trezor-protocol@workspace:packages/protocol":
+"@exodus/trezor-protocol@workspace:*, @exodus/trezor-protocol@workspace:packages/trezor-protocol":
   version: 0.0.0-use.local
-  resolution: "@exodus/trezor-protocol@workspace:packages/protocol"
+  resolution: "@exodus/trezor-protocol@workspace:packages/trezor-protocol"
   dependencies:
     "@exodus/crypto": "npm:1.0.0-rc.27"
     tsx: "npm:^4.20.3"
@@ -3629,31 +3629,6 @@ __metadata:
     "@trezor/ipc-proxy": "workspace:*"
     "@trezor/websocket-client": "workspace:*"
     html-webpack-plugin: "npm:^5.6.3"
-    webpack: "npm:5.100.0"
-  languageName: unknown
-  linkType: soft
-
-"@trezor/transport-bridge@workspace:*, @trezor/transport-bridge@workspace:packages/transport-bridge":
-  version: 0.0.0-use.local
-  resolution: "@trezor/transport-bridge@workspace:packages/transport-bridge"
-  dependencies:
-    "@exodus/trezor-protocol": "workspace:*"
-    "@exodus/trezor-transport": "workspace:*"
-    "@exodus/trezor-utils": "workspace:*"
-    "@trezor/components": "workspace:*"
-    "@trezor/eslint": "workspace:*"
-    "@trezor/node-utils": "workspace:*"
-    "@trezor/theme": "workspace:*"
-    "@types/json-stable-stringify": "npm:^1"
-    esbuild: "npm:^0.25.2"
-    html-inline-script-webpack-plugin: "npm:^3.2.1"
-    html-webpack-plugin: "npm:^5.6.3"
-    json-stable-stringify: "npm:^1.2.1"
-    react: "npm:19.0.0"
-    react-dom: "npm:19.0.0"
-    react-intl: "npm:^7.1.11"
-    styled-components: "npm:^6.1.19"
-    usb: "npm:^2.15.0"
     webpack: "npm:5.100.0"
   languageName: unknown
   linkType: soft
@@ -3683,10 +3658,10 @@ __metadata:
   dependencies:
     "@exodus/trezor-protobuf": "workspace:*"
     "@exodus/trezor-transport": "workspace:*"
-    "@trezor/transport-bridge": "workspace:*"
     "@exodus/trezor-utils": "workspace:*"
     "@jest/types": "npm:^29.6.3"
     "@trezor/eslint": "workspace:*"
+    "@trezor/transport-bridge": "workspace:*"
     "@trezor/trezor-user-env-link": "workspace:^"
     buffer: "npm:^6.0.3"
     esbuild: "npm:^0.25.2"
@@ -3697,9 +3672,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@exodus/trezor-transport@workspace:*, @exodus/trezor-transport@workspace:^, @exodus/trezor-transport@workspace:packages/transport":
+"@exodus/trezor-transport@workspace:*, @exodus/trezor-transport@workspace:^, @exodus/trezor-transport@workspace:packages/trezor-transport":
   version: 0.0.0-use.local
-  resolution: "@exodus/trezor-transport@workspace:packages/transport"
+  resolution: "@exodus/trezor-transport@workspace:packages/trezor-transport"
   dependencies:
     "@babel/preset-env": "npm:^7.28.0"
     "@babel/preset-typescript": "npm:^7.27.1"
@@ -3721,9 +3696,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@exodus/trezor-utils@workspace:*, @exodus/trezor-utils@workspace:^, @exodus/trezor-utils@workspace:packages/utils":
+"@exodus/trezor-utils@workspace:*, @exodus/trezor-utils@workspace:^, @exodus/trezor-utils@workspace:packages/trezor-utils":
   version: 0.0.0-use.local
-  resolution: "@exodus/trezor-utils@workspace:packages/utils"
+  resolution: "@exodus/trezor-utils@workspace:packages/trezor-utils"
   dependencies:
     "@trezor/eslint": "workspace:*"
     "@trezor/type-utils": "workspace:*"
@@ -12864,7 +12839,6 @@ __metadata:
     "@exodus/trezor-protobuf": "workspace:*"
     "@exodus/trezor-transport": "workspace:*"
     "@exodus/trezor-transport-bluetooth": "workspace:*"
-    "@trezor/transport-bridge": "workspace:*"
     "@exodus/trezor-utils": "workspace:*"
     "@octokit/rest": "npm:^21.1.1"
     "@playwright/browser-chromium": "npm:^1.52.0"
@@ -12894,6 +12868,7 @@ __metadata:
     "@trezor/suite-desktop-api": "workspace:*"
     "@trezor/suite-desktop-native": "workspace:*"
     "@trezor/theme": "workspace:*"
+    "@trezor/transport-bridge": "workspace:*"
     "@trezor/trezor-user-env-link": "workspace:*"
     "@trezor/type-utils": "workspace:*"
     "@trezor/urls": "workspace:*"
@@ -13168,6 +13143,31 @@ __metadata:
   dependencies:
     "@mobily/ts-belt": "npm:^3.13.1"
     "@suite-common/wallet-config": "workspace:*"
+  languageName: unknown
+  linkType: soft
+
+"@trezor/transport-bridge@workspace:*, @trezor/transport-bridge@workspace:packages/transport-bridge":
+  version: 0.0.0-use.local
+  resolution: "@trezor/transport-bridge@workspace:packages/transport-bridge"
+  dependencies:
+    "@exodus/trezor-protocol": "workspace:*"
+    "@exodus/trezor-transport": "workspace:*"
+    "@exodus/trezor-utils": "workspace:*"
+    "@trezor/components": "workspace:*"
+    "@trezor/eslint": "workspace:*"
+    "@trezor/node-utils": "workspace:*"
+    "@trezor/theme": "workspace:*"
+    "@types/json-stable-stringify": "npm:^1"
+    esbuild: "npm:^0.25.2"
+    html-inline-script-webpack-plugin: "npm:^3.2.1"
+    html-webpack-plugin: "npm:^5.6.3"
+    json-stable-stringify: "npm:^1.2.1"
+    react: "npm:19.0.0"
+    react-dom: "npm:19.0.0"
+    react-intl: "npm:^7.1.11"
+    styled-components: "npm:^6.1.19"
+    usb: "npm:^2.15.0"
+    webpack: "npm:5.100.0"
   languageName: unknown
   linkType: soft
 

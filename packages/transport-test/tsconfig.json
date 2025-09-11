@@ -7,6 +7,6 @@
         { "path": "../transport" },
         { "path": "../transport-bridge" },
         { "path": "../trezor-user-env-link" },
-        { "path": "../utils" }
+        { "path": "../trezor-utils" }
     ]
 }

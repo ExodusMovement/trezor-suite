@@ -4,6 +4,6 @@
     "include": [".", "**/*.json"],
     "references": [
         { "path": "../eslint" },
-        { "path": "../utils" }
+        { "path": "../trezor-utils" }
     ]
 }

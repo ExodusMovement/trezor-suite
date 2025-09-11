@@ -10,7 +10,7 @@
             "path": "../env-utils"
         },
         {
-            "path": "../utils"
+            "path": "../trezor-utils"
         }
     ]
 }

@@ -28,7 +28,7 @@
         { "path": "../styles" },
         { "path": "../theme" },
         { "path": "../type-utils" },
-        { "path": "../utils" },
+        { "path": "../trezor-utils" },
         { "path": "../eslint" }
     ]
 }

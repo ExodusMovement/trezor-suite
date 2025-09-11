@@ -40,7 +40,7 @@
         { "path": "../transport-bluetooth" },
         { "path": "../transport-bridge" },
         { "path": "../urls" },
-        { "path": "../utils" },
+        { "path": "../trezor-utils" },
         { "path": "../blockchain-link-types" },
         { "path": "../device-utils" },
         { "path": "../protobuf" },

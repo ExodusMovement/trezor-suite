@@ -9,7 +9,7 @@
             "path": "../connect"
         },
         {
-            "path": "../utils"
+            "path": "../trezor-utils"
         }
     ]
 }

@@ -7,7 +7,7 @@
     "include": ["."],
     "references": [
         { "path": "../node-utils" },
-        { "path": "../utils" },
+        { "path": "../trezor-utils" },
         { "path": "../eslint" }
     ]
 }

@@ -24,7 +24,7 @@
     "references": [
         { "path": "../connect" },
         { "path": "../connect-common" },
-        { "path": "../utils" },
+        { "path": "../trezor-utils" },
         { "path": "../websocket-client" },
         { "path": "../eslint" },
         { "path": "../type-utils" }

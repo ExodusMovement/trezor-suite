@@ -7,16 +7,13 @@
     "include": ["./src"],
     "references": [
         {
-            "path": "../protobuf"
+            "path": "../trezor-protobuf"
         },
         {
-            "path": "../protocol"
+            "path": "../trezor-protocol"
         },
         {
-            "path": "../type-utils"
-        },
-        {
-            "path": "../utils"
+            "path": "../trezor-utils"
         },
         {
             "path": "../eslint"

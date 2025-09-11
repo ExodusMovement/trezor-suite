@@ -7,6 +7,6 @@
     "include": ["."],
     "references": [
         { "path": "../type-utils" },
-        { "path": "../utils" }
+        { "path": "../trezor-utils" }
     ]
 }

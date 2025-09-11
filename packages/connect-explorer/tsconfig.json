@@ -24,7 +24,7 @@
         { "path": "../protobuf" },
         { "path": "../schema-utils" },
         { "path": "../theme" },
-        { "path": "../utils" },
+        { "path": "../trezor-utils" },
         { "path": "../eslint" }
     ]
 }

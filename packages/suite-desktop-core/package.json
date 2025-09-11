@@ -23,7 +23,6 @@
     "dependencies": {
         "@exodus/trezor-transport": "workspace:*",
         "@exodus/trezor-transport-bluetooth": "workspace:*",
-        "@trezor/transport-bridge": "workspace:*",
         "@exodus/trezor-utils": "workspace:*",
         "@sentry/electron": "^5.12.0",
         "@suite-common/message-system": "workspace:*",
@@ -45,6 +44,7 @@
         "@trezor/suite-desktop-api": "workspace:*",
         "@trezor/suite-desktop-native": "workspace:*",
         "@trezor/theme": "workspace:*",
+        "@trezor/transport-bridge": "workspace:*",
         "@trezor/urls": "workspace:*",
         "chalk": "^4.1.2",
         "electron-localshortcut": "^3.2.1",

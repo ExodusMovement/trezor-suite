@@ -137,7 +137,7 @@
         { "path": "../transport-bluetooth" },
         { "path": "../type-utils" },
         { "path": "../urls" },
-        { "path": "../utils" },
+        { "path": "../trezor-utils" },
         { "path": "../eslint" }
     ]
 }

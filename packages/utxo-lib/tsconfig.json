@@ -3,7 +3,7 @@
     "compilerOptions": { "outDir": "./libDev" },
     "include": ["."],
     "references": [
-        { "path": "../utils" },
+        { "path": "../trezor-utils" },
         { "path": "../eslint" }
     ]
 }

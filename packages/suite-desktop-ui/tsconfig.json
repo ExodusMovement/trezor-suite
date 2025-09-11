@@ -24,6 +24,6 @@
         { "path": "../suite-desktop-api" },
         { "path": "../theme" },
         { "path": "../urls" },
-        { "path": "../utils" }
+        { "path": "../trezor-utils" }
     ]
 }

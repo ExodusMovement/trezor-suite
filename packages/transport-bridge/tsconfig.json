@@ -8,6 +8,6 @@
         { "path": "../protocol" },
         { "path": "../theme" },
         { "path": "../transport" },
-        { "path": "../utils" }
+        { "path": "../trezor-utils" }
     ]
 }

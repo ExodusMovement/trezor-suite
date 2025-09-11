@@ -15,7 +15,7 @@
         { "path": "../schema-utils" },
         { "path": "../transport" },
         { "path": "../type-utils" },
-        { "path": "../utils" },
+        { "path": "../trezor-utils" },
         { "path": "../utxo-lib" },
         { "path": "../eslint" },
         { "path": "../trezor-user-env-link" }

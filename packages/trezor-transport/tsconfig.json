@@ -5,10 +5,9 @@
         "types": ["w3c-web-usb", "jest", "node"]
     },
     "references": [
-        { "path": "../protobuf" },
-        { "path": "../protocol" },
-        { "path": "../type-utils" },
-        { "path": "../utils" },
+        { "path": "../trezor-protobuf" },
+        { "path": "../trezor-protocol" },
+        { "path": "../trezor-utils" },
         { "path": "../eslint" },
         { "path": "../trezor-user-env-link" }
     ]

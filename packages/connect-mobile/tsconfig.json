@@ -3,6 +3,6 @@
     "compilerOptions": { "outDir": "libDev" },
     "references": [
         { "path": "../connect" },
-        { "path": "../utils" }
+        { "path": "../trezor-utils" }
     ]
 }

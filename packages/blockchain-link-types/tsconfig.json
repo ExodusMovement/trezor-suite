@@ -2,7 +2,7 @@
     "extends": "../../tsconfig.base.json",
     "compilerOptions": { "outDir": "libDev" },
     "references": [
-        { "path": "../utils" },
+        { "path": "../trezor-utils" },
         { "path": "../utxo-lib" },
         { "path": "../type-utils" }
     ]
