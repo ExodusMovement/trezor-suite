@@ -1,5 +1,5 @@
 {
-    "name": "@trezor/transport",
+    "name": "@exodus/trezor-transport",
     "version": "1.5.3-beta.1",
     "description": "Low level library facilitating protocol buffers based communication with Trezor devices",
     "npmPublishAccess": "public",
@@ -23,8 +23,8 @@
         "./src/transports/webusb": "./src/transports/webusb.browser.ts"
     },
     "react-native": {
-        "./src/transports/nodeusb": "./src/transports/nodeusb.browser.ts",
-        "./src/transports/webusb": "./src/transports/webusb.ts"
+        "./src/transports/bridge": "./src/transports/bridge.ts",
+        "./src/transports/nodeusb": "./src/transports/nodeusb.browser.ts"
     },
     "publishConfig": {
         "main": "./lib/index.js",
@@ -35,8 +35,8 @@
             "./lib/transports/webusb": "./lib/transports/webusb.browser.ts"
         },
         "react-native": {
-            "./lib/transports/nodeusb": "./lib/transports/nodeusb.browser.js",
-            "./lib/transports/webusb": "./lib/transports/webusb.js"
+            "./lib/transports/bridge": "./lib/transports/bridge.js",
+            "./lib/transports/nodeusb": "./lib/transports/nodeusb.browser.js"
         }
     },
     "files": [
@@ -65,12 +65,10 @@
         "tsx": "^4.20.3"
     },
     "dependencies": {
-        "@trezor/protobuf": "workspace:*",
-        "@trezor/protocol": "workspace:*",
-        "@trezor/type-utils": "workspace:*",
+        "@exodus/trezor-protobuf": "workspace:*",
+        "@exodus/trezor-protocol": "workspace:*",
         "@trezor/utils": "workspace:*",
-        "cross-fetch": "^4.0.0",
-        "usb": "^2.15.0"
+        "@exodus/fetch": "^1.7.5"
     },
     "peerDependencies": {
         "tslib": "^2.6.2"

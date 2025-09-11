@@ -1,6 +1,8 @@
-import { Branded } from '@trezor/type-utils';
-
 import type { DEVICE_TYPE } from '../api/abstract';
+
+export class Branded<T extends string> {
+    __type!: T;
+}
 
 export * from './apiCall';
 

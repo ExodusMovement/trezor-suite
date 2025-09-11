@@ -1,8 +1,8 @@
-import { TimerId } from '@trezor/type-utils';
-
 import { AbstractTransportParams } from './abstract';
 import { AbstractApiTransport } from './abstractApi';
 import { UdpApi } from '../api/udp';
+
+type TimerId = ReturnType<typeof setTimeout>;
 
 export class UdpTransport extends AbstractApiTransport {
     public name = 'UdpTransport' as const;

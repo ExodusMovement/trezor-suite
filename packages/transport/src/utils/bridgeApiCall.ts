@@ -1,4 +1,4 @@
-import fetch from 'cross-fetch';
+import { fetch } from '@exodus/fetch';
 
 import { PROTOCOL_MALFORMED } from '@trezor/protocol/src/errors';
 

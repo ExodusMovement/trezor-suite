@@ -9,7 +9,6 @@
  * - we can say we trust the caller but not really thats why we implement auto-unlock
  */
 
-import { TimerId } from '@trezor/type-utils';
 import { Deferred, TypedEmitter, createDeferred, typedObjectKeys } from '@trezor/utils';
 
 import type {
@@ -28,6 +27,7 @@ import type { Descriptor, PathInternal, Success } from '../types';
 import { PathPublic, Session } from '../types';
 
 type DescriptorsDict = Record<PathInternal, Descriptor>;
+type TimerId = ReturnType<typeof setTimeout>;
 
 // in nodeusb, enumeration operation takes ~3 seconds
 const lockDuration = 1000 * 4;
