@@ -21,7 +21,7 @@ interface ConstructorParams extends AbstractTransportParams {
 }
 
 /**
- * Abstract class for transports with abstract api (webusb, nodeusb, udp, react-native).
+ * Abstract class for transports with abstract api (webusb, udp, react-native).
  */
 export abstract class AbstractApiTransport extends AbstractTransport {
     // sessions client is a standardized interface for communicating with sessions backend

@@ -18,7 +18,6 @@ export { BridgeTransport } from './transports/bridge';
 export { WebUsbTransport } from './transports/webusb';
 
 // node only
-export { NodeUsbTransport } from './transports/nodeusb';
 export { SessionsBackground } from './sessions/background';
 export { SessionsClient } from './sessions/client';
 
