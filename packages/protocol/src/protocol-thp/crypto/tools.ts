@@ -1,23 +1,21 @@
-import * as crypto from 'crypto';
+import { hashSync } from '@exodus/crypto/hash';
+import { hmacSync } from '@exodus/crypto/hmac';
 
-export const hmacSHA256 = (key: Buffer, data: Buffer) =>
-    crypto.createHmac('sha256', key).update(data).digest();
+export const hmacSHA256 = (key: Buffer, data: Buffer) => hmacSync('sha256', key, data);
 
-export const sha256 = (buffer: Buffer) => crypto.createHash('sha256').update(buffer).digest();
+export const sha256 = (buffer: Buffer) => hashSync('sha256', buffer);
 
 export const hkdf = (chainingKey: Buffer, input: Buffer) => {
     const tempKey = hmacSHA256(chainingKey, input);
     const output1 = hmacSHA256(tempKey, Buffer.from([0x01]));
 
-    const ctxOutput2 = crypto.createHmac('sha256', tempKey).update(output1);
-    ctxOutput2.update(Buffer.from([0x02]));
-    const output2 = ctxOutput2.digest();
+    const output2 = hmacSync('sha256', tempKey, Buffer.concat([output1, Buffer.from([0x02])]));
 
     return [output1, output2];
 };
 
 export const hashOfTwo = (hash1: Buffer, hash2: Buffer) =>
-    crypto.createHash('sha256').update(hash1).update(hash2).digest();
+    hashSync('sha256', Buffer.concat([hash1, hash2]));
 
 export const getIvFromNonce = (nonce: number): Buffer => {
     const iv = new Uint8Array(12);

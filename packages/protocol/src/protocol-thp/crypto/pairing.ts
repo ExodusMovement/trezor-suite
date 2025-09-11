@@ -1,4 +1,5 @@
-import { createHash, randomBytes } from 'crypto';
+import { hashSync } from '@exodus/crypto/hash';
+import { randomBytes } from '@exodus/crypto/randomBytes';
 
 import { aesgcm } from './aesgcm';
 import { curve25519, elligator2, getCurve25519KeyPair } from './curve25519';
@@ -173,15 +174,14 @@ export const getCpaceHostKeys = (code: Buffer, handshakeHash: Buffer) => {
     // 5. Set *cpace_host_public_key* = X25519(*cpace_host_private_key*, *generator*).
     // 6. Send the message CodeEntryCpaceHost(*cpace_host_public_key*) to the host.
 
-    const shaCtx = createHash('sha512');
-    shaCtx.update(Buffer.from([0x08, 0x43, 0x50, 0x61, 0x63, 0x65, 0x32, 0x35, 0x35, 0x06]));
-    shaCtx.update(code);
-    shaCtx.update(
+    const inputBuffer = Buffer.concat([
+        Buffer.from([0x08, 0x43, 0x50, 0x61, 0x63, 0x65, 0x32, 0x35, 0x35, 0x06]),
+        code,
         Buffer.concat([Buffer.from([0x6f]), Buffer.alloc(111).fill(0), Buffer.from([0x20])]),
-    );
-    shaCtx.update(handshakeHash);
-    shaCtx.update(Buffer.from([0x00]));
-    const sha = shaCtx.digest().subarray(0, 32);
+        handshakeHash,
+        Buffer.from([0x00]),
+    ]);
+    const sha = hashSync('sha512', inputBuffer).subarray(0, 32);
 
     const generator = elligator2(sha);
 
@@ -206,7 +206,7 @@ export const validateCodeEntryTag = (
     secret: string,
 ) => {
     // 1. Assert that handshake commitment = SHA-256(secret)
-    const sha = createHash('sha256').update(Buffer.from(secret, 'hex')).digest();
+    const sha = hashSync('sha256', Buffer.from(secret, 'hex'));
     const { handshakeHash, handshakeCommitment, codeEntryChallenge } = credentials;
     if (sha.compare(handshakeCommitment) !== 0) {
         throw new Error(
@@ -215,13 +215,13 @@ export const validateCodeEntryTag = (
     }
 
     // 2. Assert that value = SHA-256(ThpPairingMethod.CodeEntry || h || secret || challenge) % 1000000
-    const shaCtx = createHash('sha256');
-    shaCtx.update(Buffer.from([ThpPairingMethod.CodeEntry]));
-    shaCtx.update(handshakeHash);
-    shaCtx.update(Buffer.from(secret, 'hex'));
-    shaCtx.update(codeEntryChallenge);
-
-    const calculatedValue = bigEndianBytesToBigInt(shaCtx.digest()) % 1000000n;
+    const inputBuffer = Buffer.concat([
+        Buffer.from([ThpPairingMethod.CodeEntry]),
+        handshakeHash,
+        Buffer.from(secret, 'hex'),
+        codeEntryChallenge,
+    ]);
+    const calculatedValue = bigEndianBytesToBigInt(hashSync('sha256', inputBuffer)) % 1000000n;
     if (calculatedValue !== BigInt(value)) {
         throw new Error(`HP5: code mismatch ${value} != ${calculatedValue.toString()}`);
     }
@@ -233,12 +233,12 @@ export const validateQrCodeTag = (
     secret: string, // ThpQrCodeSecret.secret
 ) => {
     // Assert that value = SHA-256(ThpPairingMethod.QrCode || h || secret)
-    const shaCtx = createHash('sha256');
-    shaCtx.update(Buffer.from([ThpPairingMethod.QrCode]));
-    shaCtx.update(handshakeHash);
-    shaCtx.update(Buffer.from(secret, 'hex'));
-
-    const calculatedValue = shaCtx.digest().subarray(0, 16);
+    const inputBuffer = Buffer.concat([
+        Buffer.from([ThpPairingMethod.QrCode]),
+        handshakeHash,
+        Buffer.from(secret, 'hex'),
+    ]);
+    const calculatedValue = hashSync('sha256', inputBuffer).subarray(0, 16);
     const expectedValue = Buffer.from(value, 'hex').subarray(0, 16);
     if (calculatedValue.compare(expectedValue) !== 0) {
         throw new Error(
@@ -254,12 +254,8 @@ export const validateNfcTag = (
     secret: Buffer, // ThpState.nfcSecret
 ) => {
     // Assert that value = SHA-256(ThpPairingMethod.NFC || h || secret)
-    const shaCtx = createHash('sha256');
-    shaCtx.update(Buffer.from([ThpPairingMethod.NFC]));
-    shaCtx.update(handshakeHash);
-    shaCtx.update(secret);
-
-    const calculatedValue = shaCtx.digest().subarray(0, 16);
+    const inputBuffer = Buffer.concat([Buffer.from([ThpPairingMethod.NFC]), handshakeHash, secret]);
+    const calculatedValue = hashSync('sha256', inputBuffer).subarray(0, 16);
     const expectedValue = Buffer.from(value, 'hex').subarray(0, 16);
     if (calculatedValue.compare(expectedValue) !== 0) {
         throw new Error(
