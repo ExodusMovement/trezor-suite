@@ -1,5 +1,5 @@
 {
-    "name": "@trezor/protobuf",
+    "name": "@exodus/trezor-protobuf",
     "version": "1.4.3-beta.1",
     "license": "See LICENSE.md in repo root",
     "repository": {
@@ -28,15 +28,13 @@
         "depcheck": "yarn g:depcheck",
         "type-check": "yarn g:tsc --build",
         "build:lib": "yarn g:rimraf ./lib && yarn g:tsc --build tsconfig.lib.json && ../../scripts/replace-imports.sh ./lib",
-        "update:schema": "yarn workspace @trezor/schema-utils codegen $(pwd)/src/messages.ts > src/messages-schema.ts && yarn g:eslint --fix src/messages-schema.ts && yarn g:prettier --write src/messages-schema.ts",
         "update:protobuf": "./scripts/protobuf-build.sh",
         "prepublishOnly": "yarn tsx ../../scripts/prepublishNPM.js",
         "prepublish": "yarn tsx ../../scripts/prepublish.js"
     },
     "dependencies": {
-        "@trezor/schema-utils": "workspace:*",
         "long": "5.2.5",
-        "protobufjs": "7.4.0"
+        "protobufjs": "6.8.8"
     },
     "devDependencies": {
         "protobufjs-cli": "^1.1.3",
