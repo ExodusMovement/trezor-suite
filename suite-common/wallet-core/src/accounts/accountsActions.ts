@@ -1,3 +1,4 @@
+import { isArrayMember } from '@exodus/trezor-utils';
 import { createAction } from '@reduxjs/toolkit';
 
 import { getNetwork } from '@suite-common/wallet-config';
@@ -16,7 +17,6 @@ import {
     getAccountSpecific,
 } from '@suite-common/wallet-utils';
 import { AccountInfo, StaticSessionId } from '@trezor/connect';
-import { isArrayMember } from '@exodus/trezor-utils';
 
 import { ACCOUNTS_MODULE_PREFIX } from './accountsConstants';
 

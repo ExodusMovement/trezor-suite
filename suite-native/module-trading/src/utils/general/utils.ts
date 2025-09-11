@@ -1,3 +1,4 @@
+import { getWeakRandomId } from '@exodus/trezor-utils';
 import { BuyTradeStatus, CryptoId, ExchangeTradeStatus, SellTradeStatus } from 'invity-api';
 
 import {
@@ -10,7 +11,6 @@ import {
 } from '@suite-common/trading';
 import { Translate } from '@suite-native/intl';
 import { exhaustive } from '@trezor/type-utils';
-import { getWeakRandomId } from '@exodus/trezor-utils';
 
 import { INVITY_CALLBACK_TREZOR_BUY_URL, TRADING_URL_DEFAULT_BACK } from './formUtils';
 

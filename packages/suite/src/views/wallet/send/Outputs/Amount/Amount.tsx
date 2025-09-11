@@ -1,3 +1,5 @@
+import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
+
 import { formInputsMaxLength } from '@suite-common/validators';
 import { getNetworkDisplaySymbol } from '@suite-common/wallet-config';
 import { Output, TokenAddress } from '@suite-common/wallet-types';
@@ -13,7 +15,6 @@ import type { BaseCurrencyCode } from '@trezor/blockchain-link-types';
 import { Banner, Flex, Icon, Row, Text } from '@trezor/components';
 import { NumberInput } from '@trezor/product-components';
 import { spacings } from '@trezor/theme';
-import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
 
 import { BaseCurrencyValue, Translation } from 'src/components/suite';
 import { useLayoutSize, useSelector, useTranslation } from 'src/hooks/suite';

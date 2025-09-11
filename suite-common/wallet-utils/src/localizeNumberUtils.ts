@@ -1,6 +1,7 @@
-import { Locale } from '@suite-common/suite-types';
 import { getLocaleSeparators } from '@exodus/trezor-utils';
 import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
+
+import { Locale } from '@suite-common/suite-types';
 
 export const localizeNumber = (
     value: number | string | BigNumber,

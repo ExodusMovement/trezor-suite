@@ -1,3 +1,5 @@
+import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
+
 import { Formatter } from '@suite-common/formatters';
 import { getDisplaySymbol, isNetworkSymbol } from '@suite-common/wallet-config';
 import { Account } from '@suite-common/wallet-types';
@@ -9,7 +11,6 @@ import {
     networkAmountToSmallestUnit,
 } from '@suite-common/wallet-utils';
 import type { BaseCurrencyCode } from '@trezor/blockchain-link-types';
-import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
 
 import { TranslationFunction } from 'src/hooks/suite/useTranslation';
 

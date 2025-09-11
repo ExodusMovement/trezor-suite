@@ -2,6 +2,7 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import { UseFormReturn, useWatch } from 'react-hook-form';
 import { useDebounce } from 'react-use';
 
+import { BigNumber, isChanged } from '@exodus/trezor-utils';
 import { FiatCurrencyCode } from 'invity-api';
 
 import {
@@ -24,7 +25,6 @@ import {
     fromBaseCurrencyToCryptoUnit,
     isZero,
 } from '@suite-common/wallet-utils';
-import { BigNumber, isChanged } from '@exodus/trezor-utils';
 
 import { useDispatch, useSelector } from 'src/hooks/suite';
 import { useTradingFiatValues } from 'src/hooks/wallet/trading/form/common/useTradingFiatValues';

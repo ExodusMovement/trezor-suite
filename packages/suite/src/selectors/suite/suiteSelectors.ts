@@ -1,7 +1,8 @@
+import { versionUtils } from '@exodus/trezor-utils';
+
 import type { TradingType } from '@suite-common/trading';
 import { DeviceRootState, selectSelectedDevice } from '@suite-common/wallet-core';
 import { TransportInfo } from '@trezor/connect';
-import { versionUtils } from '@exodus/trezor-utils';
 
 import { SUITE } from 'src/actions/suite/constants';
 import { ExperimentalFeature } from 'src/constants/suite/experimental';

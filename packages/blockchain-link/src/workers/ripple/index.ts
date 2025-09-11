@@ -1,3 +1,4 @@
+import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
 import {
     Client,
     ClientOptions,
@@ -20,7 +21,6 @@ import type * as MessageTypes from '@trezor/blockchain-link-types/src/messages';
 import * as utils from '@trezor/blockchain-link-utils/src/ripple';
 import { getSuiteVersion } from '@trezor/env-utils';
 import { TimerId } from '@trezor/type-utils';
-import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
 
 import { BaseWorker, CONTEXT, ContextType } from '../baseWorker';
 

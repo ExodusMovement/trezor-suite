@@ -1,5 +1,6 @@
-import { TOR_URLS } from '@trezor/urls';
 import { parseHostname, urlToOnion } from '@exodus/trezor-utils';
+
+import { TOR_URLS } from '@trezor/urls';
 
 import { TorStatus } from 'src/types/suite';
 

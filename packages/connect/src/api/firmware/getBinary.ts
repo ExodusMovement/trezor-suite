@@ -1,5 +1,6 @@
-import { VersionArray } from '@trezor/device-utils';
 import { removeTrailingSlashes } from '@exodus/trezor-utils';
+
+import { VersionArray } from '@trezor/device-utils';
 
 import { parseFirmwareHeaders } from './parseFirmwareHeaders';
 import { ERRORS } from '../../constants';

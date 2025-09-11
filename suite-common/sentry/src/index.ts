@@ -1,8 +1,8 @@
+import { redactUserPathFromString } from '@exodus/trezor-utils';
 import { Options, Event as SentryEvent, captureConsoleIntegration } from '@sentry/core';
 
 import { isDevEnv } from '@suite-common/suite-utils';
 import { isCodesignBuild } from '@trezor/env-utils';
-import { redactUserPathFromString } from '@exodus/trezor-utils';
 
 export const allowReportTag = 'allowReport';
 export const coinjoinReportTag = 'coinjoinReport';

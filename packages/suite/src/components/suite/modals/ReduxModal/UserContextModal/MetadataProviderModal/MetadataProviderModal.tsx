@@ -1,9 +1,10 @@
 import { useState } from 'react';
 
+import type { Deferred } from '@exodus/trezor-utils';
+
 import { isFeatureFlagEnabled } from '@suite-common/suite-utils';
 import { Button, Modal, Paragraph, Row } from '@trezor/components';
 import { spacings } from '@trezor/theme';
-import type { Deferred } from '@exodus/trezor-utils';
 
 import { connectProvider } from 'src/actions/suite/metadataProviderActions';
 import { Translation } from 'src/components/suite';

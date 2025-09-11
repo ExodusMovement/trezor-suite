@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 
+import { Deferred } from '@exodus/trezor-utils';
+
 import { selectTradingComposedTransactionInfo } from '@suite-common/trading';
 import {
     DeviceRootState,
@@ -27,7 +29,6 @@ import {
 import { Modal, Row } from '@trezor/components';
 import { EventType, analytics } from '@trezor/suite-analytics';
 import { spacings } from '@trezor/theme';
-import { Deferred } from '@exodus/trezor-utils';
 
 import * as modalActions from 'src/actions/suite/modalActions';
 import { ConnectModalBackdrop } from 'src/components/suite/ConnectModalBackdrop';

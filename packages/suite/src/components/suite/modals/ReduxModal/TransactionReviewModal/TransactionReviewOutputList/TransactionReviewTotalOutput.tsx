@@ -1,3 +1,5 @@
+import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
+
 import { NetworkType } from '@suite-common/wallet-config';
 import { selectSelectedDevice } from '@suite-common/wallet-core';
 import {
@@ -14,7 +16,6 @@ import {
     isEvmApprovalTx,
     isTestnet,
 } from '@suite-common/wallet-utils';
-import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
 
 import { Translation } from 'src/components/suite/Translation';
 import { useSelector } from 'src/hooks/suite/useSelector';

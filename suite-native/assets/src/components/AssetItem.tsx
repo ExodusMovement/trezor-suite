@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 
+import { BigNumber } from '@exodus/trezor-utils';
 import { useNavigation } from '@react-navigation/native';
 
 import { BASE_CRYPTO_MAX_DISPLAYED_DECIMALS, useFormatters } from '@suite-common/formatters';
@@ -24,7 +25,6 @@ import {
     selectHasAnyDeviceAccountsWithStaking,
 } from '@suite-native/staking';
 import { TokensRootState, selectHasDeviceAnyTokensForNetwork } from '@suite-native/tokens';
-import { BigNumber } from '@exodus/trezor-utils';
 
 import {
     AssetsRootState,

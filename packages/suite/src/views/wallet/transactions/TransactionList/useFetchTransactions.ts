@@ -1,5 +1,7 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
 
+import { getSynchronize } from '@exodus/trezor-utils';
+
 import { getTxsPerPage } from '@suite-common/suite-utils';
 import {
     getIsPhishingTransaction,
@@ -12,7 +14,6 @@ import {
     selectAccountTransactionsWithNulls,
     selectIsLoadingAccountTransactions,
 } from '@suite-common/wallet-core';
-import { getSynchronize } from '@exodus/trezor-utils';
 
 import { useDiscovery, useDispatch, useSelector } from 'src/hooks/suite';
 import { Account, WalletAccountTransaction } from 'src/types/wallet';

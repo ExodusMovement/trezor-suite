@@ -1,9 +1,10 @@
+import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
+
 import { getDisplaySymbol } from '@suite-common/wallet-config';
 import { selectValidatorsQueueData } from '@suite-common/wallet-core';
 import { getStakingDataForNetwork, getUnstakingPeriodInDays } from '@suite-common/wallet-utils';
 import { Banner, Column, InfoItem, Tooltip } from '@trezor/components';
 import { spacings } from '@trezor/theme';
-import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
 
 import { Translation } from 'src/components/suite';
 import { Fees } from 'src/components/wallet/Fees/Fees';

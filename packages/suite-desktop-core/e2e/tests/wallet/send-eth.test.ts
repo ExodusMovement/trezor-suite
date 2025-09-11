@@ -1,5 +1,6 @@
-import { localizeNumber } from '@suite-common/wallet-utils';
 import { BigNumber } from '@exodus/trezor-utils';
+
+import { localizeNumber } from '@suite-common/wallet-utils';
 
 import { formatAddress } from '../../support/common';
 import { expect, test } from '../../support/fixtures';

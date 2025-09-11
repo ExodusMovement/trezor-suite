@@ -1,6 +1,7 @@
+import { BigNumber } from '@exodus/trezor-utils';
+
 import { Account, StakeType } from '@suite-common/wallet-types';
 import { formatNetworkAmount, getStakingDataForNetwork } from '@suite-common/wallet-utils';
-import { BigNumber } from '@exodus/trezor-utils';
 
 import { getEthereumStakingAddressByType } from './ethereumStaking';
 import { StakingTotalRewards } from '../types';

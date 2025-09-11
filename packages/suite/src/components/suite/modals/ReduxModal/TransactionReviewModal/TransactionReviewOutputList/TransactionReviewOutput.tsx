@@ -1,5 +1,7 @@
 import { ReactNode } from 'react';
 
+import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
+
 import { TranslationKey } from '@suite-common/intl-types';
 import { UINT256_MAX } from '@suite-common/suite-constants';
 import { TrezorDevice } from '@suite-common/suite-types';
@@ -13,7 +15,6 @@ import {
     isTestnet,
 } from '@suite-common/wallet-utils';
 import { exhaustive } from '@trezor/type-utils';
-import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
 
 import { Translation } from 'src/components/suite';
 import { TransactionReviewOutputAssets } from 'src/components/suite/modals/ReduxModal/TransactionReviewModal/TransactionReviewOutputList/TransactionReviewOutputAssets';

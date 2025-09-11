@@ -2,6 +2,7 @@ import { JSX, useCallback, useEffect, useMemo, useState } from 'react';
 import { RefreshControl } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
 
+import { arrayPartition } from '@exodus/trezor-utils';
 import { FlashList } from '@shopify/flash-list';
 
 import { getTxsPerPage } from '@suite-common/suite-utils';
@@ -25,7 +26,6 @@ import {
     selectAccountTransactionsWithTokenTransfers,
 } from '@suite-native/tokens';
 import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
-import { arrayPartition } from '@exodus/trezor-utils';
 
 import { TransactionsEmptyState } from '../TransactionsEmptyState';
 import { TokenTransferListItem } from './TokenTransferListItem';

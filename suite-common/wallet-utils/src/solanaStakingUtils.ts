@@ -1,3 +1,5 @@
+import { BigNumber, isArrayMember } from '@exodus/trezor-utils';
+
 import { NetworkSymbol, getNetworkFeatures } from '@suite-common/wallet-config';
 import { SOLANA_EPOCH_DAYS } from '@suite-common/wallet-constants';
 import {
@@ -6,7 +8,6 @@ import {
     supportedSolanaNetworkSymbols,
 } from '@suite-common/wallet-types';
 import { SolanaStakingAccount, StakeState } from '@trezor/blockchain-link-types/src/solana';
-import { BigNumber, isArrayMember } from '@exodus/trezor-utils';
 
 import { formatNetworkAmount } from './accountUtils';
 

@@ -1,3 +1,4 @@
+import { BigNumber } from '@exodus/trezor-utils';
 import { fromWei, toWei } from 'web3-utils';
 
 import { createThunk } from '@suite-common/redux-utils';
@@ -34,7 +35,6 @@ import {
     prepareEthereumTransaction,
 } from '@suite-common/wallet-utils';
 import TrezorConnect, { FeeLevel, TokenInfo } from '@trezor/connect';
-import { BigNumber } from '@exodus/trezor-utils';
 
 import { SEND_MODULE_PREFIX } from './sendFormConstants';
 import {

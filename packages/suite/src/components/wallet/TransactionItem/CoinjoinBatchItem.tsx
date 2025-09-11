@@ -1,3 +1,4 @@
+import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
 import styled from 'styled-components';
 
 import { useFormatters } from '@suite-common/formatters';
@@ -15,7 +16,6 @@ import {
 import type { BaseCurrencyCode } from '@trezor/blockchain-link-types';
 import { Box, CollapsibleBox, Row } from '@trezor/components';
 import { borders, spacings } from '@trezor/theme';
-import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
 
 import { openModal } from 'src/actions/suite/modalActions';
 import { FormattedCryptoAmount, HiddenPlaceholder, Translation } from 'src/components/suite';

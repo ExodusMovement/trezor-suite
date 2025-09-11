@@ -1,11 +1,12 @@
 import { LayoutChangeEvent, View } from 'react-native';
 
+import { BigNumber } from '@exodus/trezor-utils';
+
 import { type NetworkSymbol } from '@suite-common/wallet-config';
 import { TokenAddress } from '@suite-common/wallet-types';
 import { VStack } from '@suite-native/atoms';
 import { useTranslate } from '@suite-native/intl';
 import { isCoinWithTokens } from '@suite-native/tokens';
-import { BigNumber } from '@exodus/trezor-utils';
 
 import { ReviewOutputCard } from './ReviewOutputCard';
 import { ReviewOutputItemValues } from './ReviewOutputItemValues';

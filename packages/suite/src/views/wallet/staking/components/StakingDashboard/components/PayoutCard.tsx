@@ -1,10 +1,11 @@
 import { useMemo } from 'react';
 
+import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
+
 import { BACKUP_REWARD_PAYOUT_DAYS } from '@suite-common/wallet-constants';
 import { getStakingDataForNetwork } from '@suite-common/wallet-utils';
 import { Card, Column, Icon, Paragraph } from '@trezor/components';
 import { spacings } from '@trezor/theme';
-import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
 
 import { Translation } from 'src/components/suite';
 import { useSelector } from 'src/hooks/suite';

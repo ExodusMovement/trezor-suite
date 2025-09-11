@@ -1,3 +1,5 @@
+import { cloneObject } from '@exodus/trezor-utils';
+
 import { createReducerWithExtraDeps } from '@suite-common/redux-utils';
 import {
     FormState,
@@ -6,7 +8,6 @@ import {
 } from '@suite-common/wallet-types';
 import { getSendFormDraftKey } from '@suite-common/wallet-utils';
 import { BlockbookTransaction } from '@trezor/blockchain-link-types';
-import { cloneObject } from '@exodus/trezor-utils';
 
 import { sendFormActions } from './sendFormActions';
 import { SerializedTx } from './sendFormTypes';

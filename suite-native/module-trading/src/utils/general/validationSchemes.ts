@@ -1,7 +1,8 @@
+import { BigNumber } from '@exodus/trezor-utils';
+
 import { yup } from '@suite-common/validators';
 import { NetworkSymbol } from '@suite-common/wallet-config';
 import { asBaseCurrencyAmount } from '@suite-common/wallet-utils';
-import { BigNumber } from '@exodus/trezor-utils';
 
 import { TradingFormContext } from '../../types/general';
 

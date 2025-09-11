@@ -1,6 +1,7 @@
+import { BigNumber } from '@exodus/trezor-utils';
+
 import { UtxoSorting, WalletAccountTransaction } from '@suite-common/wallet-types';
 import type { AccountUtxo } from '@trezor/connect';
-import { BigNumber } from '@exodus/trezor-utils';
 
 type UtxoSortingFunction = (a: AccountUtxo, b: AccountUtxo) => number;
 

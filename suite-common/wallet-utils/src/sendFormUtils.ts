@@ -7,6 +7,8 @@ import {
     Merge,
 } from 'react-hook-form';
 
+import { typedObjectKeys } from '@exodus/trezor-utils';
+import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
 import { fromWei, numberToHex, padLeft, toWei } from 'web3-utils';
 
 import { Network, NetworkSymbol, NetworkType, getNetwork } from '@suite-common/wallet-config';
@@ -43,8 +45,6 @@ import {
     PROTO,
     TokenInfo,
 } from '@trezor/connect';
-import { typedObjectKeys } from '@exodus/trezor-utils';
-import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
 
 import {
     convertAmountUnitsToSubunits,

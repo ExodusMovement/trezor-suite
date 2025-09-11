@@ -1,3 +1,4 @@
+import { Deferred, createDeferred, resolveAfter } from '@exodus/trezor-utils';
 import { ipcMain, nativeImage } from 'electron';
 import { WebSocketServer } from 'ws';
 
@@ -13,7 +14,6 @@ import {
 import { isLinux, isMacOs, isWindows } from '@trezor/env-utils';
 import { ProcessInfo, findProcessFromIncomingPort } from '@trezor/node-utils';
 import { ConnectPopupResponse } from '@trezor/suite-desktop-api/src/messages';
-import { Deferred, createDeferred, resolveAfter } from '@exodus/trezor-utils';
 
 import { createHttpReceiver } from './http-receiver';
 import { Dependencies } from '../modules';

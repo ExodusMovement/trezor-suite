@@ -1,3 +1,6 @@
+import { arrayDistinct, bufferUtils } from '@exodus/trezor-utils';
+import { BigNumber, BigNumberValue } from '@exodus/trezor-utils/src/bigNumber';
+
 import { TrezorDevice } from '@suite-common/suite-types';
 import {
     type AccountType,
@@ -42,8 +45,6 @@ import TrezorConnect, {
 } from '@trezor/connect';
 import { exhaustive } from '@trezor/type-utils';
 import { HELP_CENTER_ADDRESSES_URL, HELP_CENTER_TAPROOT_URL } from '@trezor/urls';
-import { arrayDistinct, bufferUtils } from '@exodus/trezor-utils';
-import { BigNumber, BigNumberValue } from '@exodus/trezor-utils/src/bigNumber';
 
 import { AmountSubunit, AmountUnit, asAmountSubunit, asAmountUnit } from './AmountTypes';
 import { BaseCurrencyAmount, asBaseCurrencyAmount } from './baseCurrency';

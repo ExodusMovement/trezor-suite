@@ -1,9 +1,10 @@
+import { BluetoothDevice } from '@exodus/trezor-transport-bluetooth';
+
 import {
     BluetoothManufacturerData,
     parseManufacturerData,
     serializeManufacturerData,
 } from '@suite-common/bluetooth';
-import { BluetoothDevice } from '@exodus/trezor-transport-bluetooth';
 
 export type DesktopBluetoothDevice = Omit<BluetoothDevice, 'data'> & {
     manufacturerData: BluetoothManufacturerData;

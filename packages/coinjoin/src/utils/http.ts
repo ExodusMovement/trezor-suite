@@ -1,6 +1,6 @@
+import { ScheduleActionParams, getWeakRandomId } from '@exodus/trezor-utils';
 import fetch from 'cross-fetch';
 
-import { ScheduleActionParams, getWeakRandomId } from '@exodus/trezor-utils';
 
 export interface RequestOptions extends ScheduleActionParams {
     method?: 'POST' | 'GET';

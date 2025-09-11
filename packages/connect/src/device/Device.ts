@@ -1,5 +1,4 @@
 // original file https://github.com/trezor/connect/blob/develop/src/js/device/Device.js
-import { DeviceModelInternal, FirmwareRelease, models } from '@trezor/device-utils';
 import {
     TransportProtocol,
     thp as protocolThp,
@@ -10,6 +9,8 @@ import { Session, TRANSPORT, TRANSPORT_ERROR } from '@exodus/trezor-transport';
 import { type Descriptor, type Transport } from '@exodus/trezor-transport';
 import { TransportDeviceEvent } from '@exodus/trezor-transport/src/transports/abstract';
 import { Deferred, TypedEmitter, createDeferred, isArrayMember, versionUtils } from '@exodus/trezor-utils';
+
+import { DeviceModelInternal, FirmwareRelease, models } from '@trezor/device-utils';
 
 import { DeviceCommands } from './DeviceCommands';
 import { ERRORS, FIRMWARE, PROTO } from '../constants';

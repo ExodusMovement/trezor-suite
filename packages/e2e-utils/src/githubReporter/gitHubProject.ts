@@ -1,6 +1,6 @@
+import { scheduleAction } from '@exodus/trezor-utils';
 import type { Octokit } from '@octokit/rest';
 
-import { scheduleAction } from '@exodus/trezor-utils';
 
 import { ProjectRequests } from './projectRequests';
 import { LoggingFunctions } from './types';

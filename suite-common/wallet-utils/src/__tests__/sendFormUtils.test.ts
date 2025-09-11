@@ -1,7 +1,8 @@
+import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
+
 import { testMocks } from '@suite-common/test-utils';
 import { networks } from '@suite-common/wallet-config';
 import { FeeLevel } from '@trezor/connect';
-import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
 
 import * as fixtures from '../__fixtures__/sendFormUtils';
 import { getUtxoOutpoint } from '../accountUtils';

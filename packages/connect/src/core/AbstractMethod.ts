@@ -1,6 +1,7 @@
-import { storage } from '@trezor/connect-common';
 import { Capability } from '@exodus/trezor-protobuf/src/messages';
 import { typedObjectKeys, versionUtils } from '@exodus/trezor-utils';
+
+import { storage } from '@trezor/connect-common';
 
 import { ERRORS, NETWORK } from '../constants';
 import { config } from '../data/config';

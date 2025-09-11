@@ -16,6 +16,7 @@ import Reanimated, {
     withTiming,
 } from 'react-native-reanimated';
 
+import { hexToRgba } from '@exodus/trezor-utils';
 import {
     Canvas,
     Circle,
@@ -30,7 +31,6 @@ import {
     vec,
 } from '@shopify/react-native-skia';
 
-import { hexToRgba } from '@exodus/trezor-utils';
 
 import { BlurOverlay } from './BlurOverlay';
 import {

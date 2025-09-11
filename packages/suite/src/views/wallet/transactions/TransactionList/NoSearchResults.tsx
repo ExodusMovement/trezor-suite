@@ -1,8 +1,9 @@
 import { useRef } from 'react';
 
+import { getWeakRandomInt } from '@exodus/trezor-utils';
+
 import { Card, Column, H4, Paragraph, Text } from '@trezor/components';
 import { spacings } from '@trezor/theme';
-import { getWeakRandomInt } from '@exodus/trezor-utils';
 
 import { Translation } from 'src/components/suite';
 

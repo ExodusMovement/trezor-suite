@@ -1,3 +1,5 @@
+import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
+
 import { SignOperator } from '@suite-common/suite-types';
 import { selectBaseCurrency, selectHistoricFiatRatesByTimestamp } from '@suite-common/wallet-core';
 import { Timestamp } from '@suite-common/wallet-types';
@@ -7,7 +9,6 @@ import {
     formatNetworkAmount,
     getFiatRateKey,
 } from '@suite-common/wallet-utils';
-import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
 
 import { BaseCurrencyValue, FormattedCryptoAmount, Translation } from 'src/components/suite';
 import { useSelector } from 'src/hooks/suite';

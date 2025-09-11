@@ -1,8 +1,9 @@
-import { DeviceModelInternal, FirmwareType } from '@trezor/device-utils';
 import { parseConfigure } from '@exodus/trezor-protobuf';
 import { v1 as protocolV1 } from '@exodus/trezor-protocol';
 import { buildMessage } from '@exodus/trezor-transport/src/utils/send';
 import { Log } from '@exodus/trezor-utils';
+
+import { DeviceModelInternal, FirmwareType } from '@trezor/device-utils';
 
 import * as mockFwHash from '../../api/firmware/calculateFirmwareHash';
 import { DataManager } from '../../data/DataManager';

@@ -1,10 +1,11 @@
+import { BigNumber } from '@exodus/trezor-utils';
+
 import { TrezorDevice } from '@suite-common/suite-types';
 import { Network, NetworkSymbol, getNetwork } from '@suite-common/wallet-config';
 import { isEip1559 } from '@suite-common/wallet-utils';
 import TrezorConnect, { FeeLevel } from '@trezor/connect';
 import { BlockchainEstimatedFeeLevel } from '@trezor/connect/src/types/api/blockchainEstimateFee';
 import { isNative } from '@trezor/env-utils';
-import { BigNumber } from '@exodus/trezor-utils';
 
 const NETWORK_FEE_OVERRIDES: Record<
     string,

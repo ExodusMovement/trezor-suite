@@ -1,6 +1,8 @@
 import { ReactNode, useMemo } from 'react';
 import { useSelector } from 'react-redux';
 
+import { arrayPartition } from '@exodus/trezor-utils';
+
 import { type NetworkSymbol } from '@suite-common/wallet-config';
 import { isTestnet } from '@suite-common/wallet-utils';
 import { SelectableNetworkItem } from '@suite-native/accounts';
@@ -8,7 +10,6 @@ import { HeaderedCard, VStack } from '@suite-native/atoms';
 import { selectDiscoveryNetworkSymbols } from '@suite-native/discovery';
 import { Translation } from '@suite-native/intl';
 import { selectAreTestnetsEnabled } from '@suite-native/settings';
-import { arrayPartition } from '@exodus/trezor-utils';
 
 type SelectableAssetListProps = {
     onSelectItem: (symbol: NetworkSymbol) => void;

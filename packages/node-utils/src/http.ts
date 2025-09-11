@@ -1,10 +1,10 @@
 import { sanitizeUrl } from '@braintree/sanitize-url';
+import { Log, TypedEmitter, arrayPartition } from '@exodus/trezor-utils';
 import * as http from 'http';
 import * as net from 'net';
 import * as url from 'url';
 
 import type { RequiredKey } from '@trezor/type-utils';
-import { Log, TypedEmitter, arrayPartition } from '@exodus/trezor-utils';
 
 import { findProcessFromIncomingPort } from './findProcessFromIncomingPort';
 

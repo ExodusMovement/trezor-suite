@@ -1,3 +1,5 @@
+import { cloneObject } from '@exodus/trezor-utils';
+import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
 import { G } from '@mobily/ts-belt';
 import { isRejected } from '@reduxjs/toolkit';
 
@@ -38,8 +40,6 @@ import TrezorConnect, { PROTO, Success, SuccessWithDevice, Unsuccessful } from '
 import { getSolanaTokenDefinition } from '@trezor/connect/src/api/solana/solanaDefinitions';
 import { PushedTransaction } from '@trezor/connect/src/types/api/pushTransaction';
 import { exhaustive } from '@trezor/type-utils';
-import { cloneObject } from '@exodus/trezor-utils';
-import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
 
 import { sendFormActions } from './sendFormActions';
 import {

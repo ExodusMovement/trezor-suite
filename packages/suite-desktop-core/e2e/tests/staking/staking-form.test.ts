@@ -1,7 +1,8 @@
+import { BigNumber } from '@exodus/trezor-utils';
+
 import { localizeNumber } from '@suite-common/wallet-utils';
 import { TestCategory, TestPriority, TestStream } from '@trezor/e2e-utils';
 import messages from '@trezor/suite/src/support/messages';
-import { BigNumber } from '@exodus/trezor-utils';
 
 import { calculatePercentageOfBalance } from '../../support/common';
 import { expect, test } from '../../support/fixtures';

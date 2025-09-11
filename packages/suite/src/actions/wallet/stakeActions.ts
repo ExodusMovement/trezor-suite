@@ -1,3 +1,5 @@
+import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
+
 import { notificationsActions } from '@suite-common/toast-notifications';
 import {
     ComposeActionContext,
@@ -18,7 +20,6 @@ import {
     tryGetAccountIdentity,
 } from '@suite-common/wallet-utils';
 import TrezorConnect, { Unsuccessful } from '@trezor/connect';
-import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
 
 import { Dispatch, GetState } from 'src/types/suite';
 

@@ -1,4 +1,5 @@
 import { bufferUtils } from '@exodus/trezor-utils';
+
 import {
     Network,
     bufferutils as bUtils,

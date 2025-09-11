@@ -1,3 +1,4 @@
+import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
 import { differenceInMonths, fromUnixTime, isWithinInterval } from 'date-fns';
 
 import { getFiatRatesForTimestamps } from '@suite-common/fiat-services';
@@ -7,7 +8,6 @@ import { Account } from '@suite-common/wallet-types';
 import { formatNetworkAmount } from '@suite-common/wallet-utils';
 import type { BaseCurrencyCode } from '@trezor/blockchain-link-types';
 import type { BlockchainAccountBalanceHistory, StaticSessionId } from '@trezor/connect';
-import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
 
 import { State as GraphState } from 'src/reducers/wallet/graphReducer';
 import { CommonAggregatedHistory, GraphData, GraphRange, GraphScale } from 'src/types/wallet/graph';

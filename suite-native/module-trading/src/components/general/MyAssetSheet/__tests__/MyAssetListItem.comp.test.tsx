@@ -1,10 +1,10 @@
+import { BigNumber } from '@exodus/trezor-utils';
 import { CryptoId } from 'invity-api';
 
 import { NetworkSymbol } from '@suite-common/wallet-config';
 import { TokenAddress, TokenSymbol } from '@suite-common/wallet-types';
 import { asBaseCurrencyAmount } from '@suite-common/wallet-utils';
 import { fireEvent, renderWithStoreProviderAsync } from '@suite-native/test-utils';
-import { BigNumber } from '@exodus/trezor-utils';
 
 import { getBtcAccount, getEthAccount } from '../../../../__fixtures__/account';
 import { MyAsset } from '../../../../types/general';

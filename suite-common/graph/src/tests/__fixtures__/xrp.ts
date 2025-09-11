@@ -1,5 +1,6 @@
-import { WalletAccountTransaction } from '@suite-common/wallet-types';
 import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
+
+import { WalletAccountTransaction } from '@suite-common/wallet-types';
 
 import { AccountHistoryMovementItem } from '../../types';
 

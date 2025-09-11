@@ -1,5 +1,6 @@
-import type { FirmwareType, VersionArray } from '@trezor/device-utils';
 import { serializeError, versionUtils } from '@exodus/trezor-utils';
+
+import type { FirmwareType, VersionArray } from '@trezor/device-utils';
 
 import { PROTO } from '../constants';
 import { calculateRevisionForDevice } from './calculateRevisionForDevice';

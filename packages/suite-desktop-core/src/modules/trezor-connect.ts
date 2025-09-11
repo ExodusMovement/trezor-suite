@@ -1,8 +1,8 @@
+import { parseElectrumUrl } from '@exodus/trezor-utils';
 import { ipcMain } from 'electron';
 
 import TrezorConnect, { ConnectSettings, LocalFirmwares, UI, UI_EVENT } from '@trezor/connect';
 import { IpcProxyHandlerOptions, createIpcProxyHandler } from '@trezor/ipc-proxy';
-import { parseElectrumUrl } from '@exodus/trezor-utils';
 
 import { bluetoothModuleState } from './bluetooth';
 import { getStoredFirmwares } from './firmware';

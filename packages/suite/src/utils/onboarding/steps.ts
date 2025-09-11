@@ -1,5 +1,6 @@
-import { getFirmwareVersion } from '@trezor/device-utils';
 import { versionUtils } from '@exodus/trezor-utils';
+
+import { getFirmwareVersion } from '@trezor/device-utils';
 
 import { ID_AUTHENTICATE_DEVICE_STEP } from 'src/constants/onboarding/steps';
 import { AnyPath, AnyStepId, Step, StepCategory } from 'src/types/onboarding';

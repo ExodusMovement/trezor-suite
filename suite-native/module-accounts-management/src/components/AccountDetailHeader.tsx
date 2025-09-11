@@ -1,5 +1,6 @@
 import { useSelector } from 'react-redux';
 
+import { BigNumber } from '@exodus/trezor-utils';
 import { useAtomValue } from 'jotai';
 
 import { TokenDefinitionsRootState } from '@suite-common/token-definitions';
@@ -23,7 +24,6 @@ import {
     selectAccountTokenBalance,
     selectAccountTokenSymbol,
 } from '@suite-native/tokens';
-import { BigNumber } from '@exodus/trezor-utils';
 
 import { AccountDetailCryptoValue } from './AccountDetailCryptoValue';
 import {

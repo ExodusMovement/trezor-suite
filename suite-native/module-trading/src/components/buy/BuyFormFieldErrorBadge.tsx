@@ -1,12 +1,13 @@
 import { useSelector } from 'react-redux';
 
+import { BigNumber } from '@exodus/trezor-utils';
+
 import { useFormatters } from '@suite-common/formatters';
 import { selectTradingBuyIsLoading } from '@suite-common/trading';
 import { asBaseCurrencyAmount } from '@suite-common/wallet-utils';
 import { Badge } from '@suite-native/atoms';
 import { useField } from '@suite-native/forms';
 import { useTranslate } from '@suite-native/intl';
-import { BigNumber } from '@exodus/trezor-utils';
 
 import { MAX_CRYPTO_DECIMALS, MAX_FIAT_DECIMALS } from '../../consts/general/consts';
 import { useBuyFormContext } from '../../hooks/buy/useBuyFormContext';

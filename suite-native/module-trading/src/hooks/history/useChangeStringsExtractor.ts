@@ -1,3 +1,4 @@
+import { BigNumber } from '@exodus/trezor-utils';
 import { CryptoId } from 'invity-api';
 
 import { useFormatters } from '@suite-common/formatters';
@@ -12,7 +13,6 @@ import {
     convertTokenValueToDecimal,
     formatNumberWithThousandCommas,
 } from '@suite-native/formatters/src/utils';
-import { BigNumber } from '@exodus/trezor-utils';
 
 import { TradeOperationData, getTradeOperationData } from '../../utils/general/utils';
 

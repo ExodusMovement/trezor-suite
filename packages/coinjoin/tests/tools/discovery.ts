@@ -1,7 +1,8 @@
 /* eslint-disable no-console */
 
-import { BITCOIN_ONLY_SYMBOLS, BitcoinOnlySymbolsItemType } from '@suite-common/suite-constants';
 import { isArrayMember } from '@exodus/trezor-utils';
+
+import { BITCOIN_ONLY_SYMBOLS, BitcoinOnlySymbolsItemType } from '@suite-common/suite-constants';
 
 import { CoinjoinBackend } from '../../src/backend/CoinjoinBackend';
 import type { CoinjoinBackendSettings } from '../../src/types';

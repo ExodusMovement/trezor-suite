@@ -1,3 +1,4 @@
+import { BigNumber, splitStringEveryNCharacters } from '@exodus/trezor-utils';
 import test, { Locator, Page, TestInfo } from '@playwright/test';
 import { isEqual, omit } from 'lodash';
 import { readdirSync } from 'node:fs';
@@ -8,7 +9,6 @@ import { Model } from '@suite-common/suite-types';
 import { TradingCountryCode, regional } from '@suite-common/trading';
 import { getAccountDecimals, localizeNumber } from '@suite-common/wallet-utils';
 import { TrezorUserEnvLink } from '@trezor/trezor-user-env-link';
-import { BigNumber, splitStringEveryNCharacters } from '@exodus/trezor-utils';
 
 import releases from '../../../../submodules/trezor-common/releases.json';
 import { PlaywrightProjects } from '../playwright.config';

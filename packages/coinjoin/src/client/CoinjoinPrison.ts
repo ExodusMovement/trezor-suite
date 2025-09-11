@@ -1,5 +1,6 @@
-import type { ImmediateId, TimerId } from '@trezor/type-utils';
 import { TypedEmitter } from '@exodus/trezor-utils';
+
+import type { ImmediateId, TimerId } from '@trezor/type-utils';
 
 import { WabiSabiProtocolErrorCode } from '../enums';
 import { CoinjoinPrisonEvents, CoinjoinPrisonInmate } from '../types/client';

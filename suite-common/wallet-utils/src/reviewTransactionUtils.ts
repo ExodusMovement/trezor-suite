@@ -1,3 +1,4 @@
+import { versionUtils } from '@exodus/trezor-utils';
 import { fromWei, toWei } from 'web3-utils';
 
 import { EVM_SPENDER_LABELS } from '@suite-common/suite-constants';
@@ -14,7 +15,6 @@ import {
 } from '@suite-common/wallet-types';
 import { CardanoOutput } from '@trezor/connect';
 import { getFirmwareVersion } from '@trezor/device-utils';
-import { versionUtils } from '@exodus/trezor-utils';
 
 import { datetimeToLocktime } from './bitcoinUtils';
 import { getShortFingerprint, isCardanoTx } from './cardanoUtils';

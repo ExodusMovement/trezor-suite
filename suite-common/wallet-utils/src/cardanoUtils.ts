@@ -1,3 +1,5 @@
+import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
+
 import { AccountType } from '@suite-common/wallet-config';
 import {
     Account,
@@ -8,7 +10,6 @@ import {
     StakePool,
 } from '@suite-common/wallet-types';
 import { CARDANO, CardanoCertificate, CardanoOutput, PROTO } from '@trezor/connect';
-import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
 
 import {
     convertAmountSubunitsToUnits,

@@ -1,3 +1,5 @@
+import { BigNumber } from '@exodus/trezor-utils';
+
 import { createWeakMapSelector } from '@suite-common/redux-utils';
 import {
     AccountKey,
@@ -5,7 +7,6 @@ import {
     TokenAddress,
 } from '@suite-common/wallet-types';
 import { getSendFormDraftKey } from '@suite-common/wallet-utils';
-import { BigNumber } from '@exodus/trezor-utils';
 
 import { NativeSendRootState } from './sendFormSlice';
 import { NativeSupportedFeeLevel } from './types';

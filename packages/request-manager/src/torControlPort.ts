@@ -1,10 +1,10 @@
+import { promiseAllSequence } from '@exodus/trezor-utils';
 import crypto from 'crypto';
 import fs from 'fs';
 import net, { Socket } from 'net';
 import path from 'path';
 import util from 'util';
 
-import { promiseAllSequence } from '@exodus/trezor-utils';
 
 import { TorCommandResponse, TorConnectionOptions } from './types';
 

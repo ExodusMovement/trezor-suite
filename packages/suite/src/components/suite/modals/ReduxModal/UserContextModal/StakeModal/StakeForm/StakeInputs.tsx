@@ -1,3 +1,5 @@
+import { BigNumber } from '@exodus/trezor-utils';
+
 import { useFormatters } from '@suite-common/formatters';
 import { formInputsMaxLength } from '@suite-common/validators';
 import { getNetworkDisplaySymbol } from '@suite-common/wallet-config';
@@ -6,7 +8,6 @@ import { getInputState, getStakingLimitsByNetwork } from '@suite-common/wallet-u
 import { Banner, Column, Text } from '@trezor/components';
 import { InputWithOptions } from '@trezor/product-components';
 import { spacings } from '@trezor/theme';
-import { BigNumber } from '@exodus/trezor-utils';
 
 import { BaseCurrencyValue, Translation } from 'src/components/suite';
 import { useSelector, useTranslation } from 'src/hooks/suite';

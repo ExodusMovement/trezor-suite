@@ -1,5 +1,10 @@
 import { Platform } from 'react-native';
 
+import messages from '@exodus/trezor-protobuf/messages.json';
+import { BridgeTransport } from '@exodus/trezor-transport';
+import { NativeBluetoothTransport } from '@exodus/trezor-transport-native-bluetooth';
+import { NativeUsbTransport } from '@exodus/trezor-transport-native-usb';
+import { mergeDeepObject } from '@exodus/trezor-utils';
 import * as Device from 'expo-device';
 
 import { ExtraDependencies } from '@suite-common/redux-utils';
@@ -8,11 +13,6 @@ import { selectSelectedDevice } from '@suite-common/wallet-core';
 import { selectTokenDefinitionsEnabledNetworks } from '@suite-native/discovery';
 import { selectTradingEnvironment } from '@suite-native/module-trading';
 import { reportSecurityCheck } from '@suite-native/sentry';
-import messages from '@exodus/trezor-protobuf/messages.json';
-import { BridgeTransport } from '@exodus/trezor-transport';
-import { NativeBluetoothTransport } from '@exodus/trezor-transport-native-bluetooth';
-import { NativeUsbTransport } from '@exodus/trezor-transport-native-usb';
-import { mergeDeepObject } from '@exodus/trezor-utils';
 
 const deviceType = Device.isDevice ? 'device' : 'emulator';
 

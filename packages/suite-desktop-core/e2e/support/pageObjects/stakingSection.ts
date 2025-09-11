@@ -1,7 +1,7 @@
+import { hexToRgba } from '@exodus/trezor-utils';
 import { Locator, Page, expect } from '@playwright/test';
 
 import { paletteV1 } from '@trezor/theme';
-import { hexToRgba } from '@exodus/trezor-utils';
 
 export class StakingSection {
     readonly watchPeriod = '01:00';

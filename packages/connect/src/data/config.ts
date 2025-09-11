@@ -1,7 +1,8 @@
 // origin: https://github.com/trezor/connect/blob/develop/src/data/config.json
 
-import { DeviceModelInternal } from '@trezor/device-utils';
 import { TREZOR_USB_DESCRIPTORS } from '@exodus/trezor-transport/src/constants';
+
+import { DeviceModelInternal } from '@trezor/device-utils';
 
 type Config = {
     webusb: typeof TREZOR_USB_DESCRIPTORS;

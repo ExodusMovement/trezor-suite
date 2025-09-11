@@ -1,11 +1,12 @@
 import { ReactElement } from 'react';
 
+import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
+
 import { BTC_LOCKTIME_VALUE } from '@suite-common/wallet-constants';
 import { selectBlockchainHeightBySymbol } from '@suite-common/wallet-core';
 import { getInputState, isInteger, localizeNumber } from '@suite-common/wallet-utils';
 import { Row, Text } from '@trezor/components';
 import { NumberInput } from '@trezor/product-components';
-import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
 
 import { Translation } from 'src/components/suite';
 import { useSelector, useTranslation } from 'src/hooks/suite';

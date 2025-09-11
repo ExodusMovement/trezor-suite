@@ -2,6 +2,7 @@ import { Dispatch, SetStateAction, useCallback, useEffect, useRef, useState } fr
 import { FieldPath, UseFormReturn } from 'react-hook-form';
 import { useDispatch } from 'react-redux';
 
+import { isChanged } from '@exodus/trezor-utils';
 import { isFulfilled } from '@reduxjs/toolkit';
 
 import { COMPOSE_ERROR_TYPES } from '@suite-common/wallet-constants';
@@ -18,7 +19,6 @@ import {
 import { findComposeErrors } from '@suite-common/wallet-utils';
 import { FeeLevel } from '@trezor/connect';
 import { useDebounce } from '@trezor/react-utils';
-import { isChanged } from '@exodus/trezor-utils';
 
 import { TranslationKey } from 'src/components/suite/Translation';
 import { SendContextValues, UseSendFormState } from 'src/types/wallet/sendForm';

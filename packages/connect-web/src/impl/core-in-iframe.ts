@@ -1,3 +1,4 @@
+import { DeferredManager, createDeferredManager } from '@exodus/trezor-utils/src/createDeferredManager';
 import EventEmitter from 'events';
 
 // NOTE: @trezor/connect part is intentionally not imported from the index due to NormalReplacementPlugin
@@ -29,7 +30,6 @@ import type {
 } from '@trezor/connect/src/types';
 import { InitFullSettings } from '@trezor/connect/src/types/api/init';
 import { Log, initLog } from '@trezor/connect/src/utils/debug';
-import { DeferredManager, createDeferredManager } from '@exodus/trezor-utils/src/createDeferredManager';
 
 import { parseConnectSettings } from '../connectSettings';
 import * as iframe from '../iframe';

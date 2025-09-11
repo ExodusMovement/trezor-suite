@@ -1,6 +1,6 @@
+import { Log } from '@exodus/trezor-utils';
 import url from 'url';
 
-import { Log } from '@exodus/trezor-utils';
 
 import { getFreePort } from '../getFreePort';
 import {

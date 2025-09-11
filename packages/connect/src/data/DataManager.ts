@@ -1,5 +1,7 @@
 // origin: https://github.com/trezor/connect/blob/develop/src/js/data/DataManager.js
 
+import messages from '@exodus/trezor-protobuf/messages.json';
+
 import coinsEth from '@trezor/connect-common/files/coins-eth.json';
 import coins from '@trezor/connect-common/files/coins.json';
 import {
@@ -10,7 +12,6 @@ import {
     IntermediaryReleaseConfig,
     ReleasesConfig,
 } from '@trezor/device-utils';
-import messages from '@exodus/trezor-protobuf/messages.json';
 
 import { parseCoinsJson } from './coinInfo';
 import { initializeFirmwareConfig } from './firmwareInfo';

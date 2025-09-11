@@ -1,6 +1,7 @@
+import { convertTaprootXpub } from '@exodus/trezor-utils';
+
 import { selectConnectPopupCall } from '@suite-common/connect-popup';
 import { selectSelectedDevice } from '@suite-common/wallet-core';
-import { convertTaprootXpub } from '@exodus/trezor-utils';
 
 import { showXpub } from 'src/actions/wallet/publicKeyActions';
 import { Translation } from 'src/components/suite';

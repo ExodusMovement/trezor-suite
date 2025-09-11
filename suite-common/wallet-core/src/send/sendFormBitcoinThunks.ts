@@ -1,3 +1,5 @@
+import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
+
 import { createThunk } from '@suite-common/redux-utils';
 import { BITCOIN_ONLY_SYMBOLS, BitcoinOnlySymbolsItemType } from '@suite-common/suite-constants';
 import { notificationsActions } from '@suite-common/toast-notifications';
@@ -25,7 +27,6 @@ import TrezorConnect, {
     SignTransaction,
     SignedTransaction,
 } from '@trezor/connect';
-import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
 
 import { SEND_MODULE_PREFIX } from './sendFormConstants';
 import {

@@ -3,6 +3,7 @@ import {
     EthNetworkAddresses,
     Ethereum,
 } from '@everstake/wallet-sdk-ethereum';
+import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
 import { fromWei, numberToHex, toWei } from 'web3-utils';
 
 import { type NetworkSymbol, getNetworkDisplaySymbol } from '@suite-common/wallet-config';
@@ -30,7 +31,6 @@ import TrezorConnect, {
 } from '@trezor/connect';
 import { BlockchainEstimatedFee } from '@trezor/connect/src/types/api/blockchainEstimateFee';
 import { PartialRecord } from '@trezor/type-utils';
-import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
 
 import {
     EthNetwork,

@@ -2,11 +2,12 @@ import { useEffect } from 'react';
 import { FieldErrors, UseFormReturn } from 'react-hook-form';
 import { useSelector } from 'react-redux';
 
+import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
+
 import { FormState } from '@suite-common/wallet-types';
 import { getInputState, isEip1559 } from '@suite-common/wallet-utils';
 import { Text } from '@trezor/components';
 import { NumberInput } from '@trezor/product-components';
-import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
 
 import { Translation } from 'src/components/suite';
 import { InputError } from 'src/components/wallet';

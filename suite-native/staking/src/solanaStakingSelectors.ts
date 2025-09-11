@@ -1,3 +1,5 @@
+import { BigNumber } from '@exodus/trezor-utils';
+
 import { createWeakMapSelector } from '@suite-common/redux-utils';
 import type { NetworkSymbol } from '@suite-common/wallet-config';
 import {
@@ -12,7 +14,6 @@ import {
     calculateSolanaStakingReward,
     getSolStakingAccountsInfo,
 } from '@suite-common/wallet-utils';
-import { BigNumber } from '@exodus/trezor-utils';
 
 import { NativeStakingRootState } from './types';
 

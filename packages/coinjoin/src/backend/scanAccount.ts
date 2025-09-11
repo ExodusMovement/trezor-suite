@@ -1,5 +1,6 @@
-import { transformTransaction } from '@trezor/blockchain-link-utils/src/blockbook';
 import { createCooldown } from '@exodus/trezor-utils';
+
+import { transformTransaction } from '@trezor/blockchain-link-utils/src/blockbook';
 
 import { CoinjoinAddressController } from './CoinjoinAddressController';
 import { doesTxContainAddress } from './backendUtils';

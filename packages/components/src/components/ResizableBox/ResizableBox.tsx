@@ -1,9 +1,9 @@
 import { useCallback, useEffect, useReducer, useRef } from 'react';
 
+import { createCooldown } from '@exodus/trezor-utils';
 import styled, { css } from 'styled-components';
 
 import { ZIndexValues, zIndices } from '@trezor/theme';
-import { createCooldown } from '@exodus/trezor-utils';
 
 import {
     FrameProps,

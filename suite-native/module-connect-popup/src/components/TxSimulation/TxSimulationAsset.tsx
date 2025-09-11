@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { BigNumber } from '@exodus/trezor-utils';
+
 import { useFormatters } from '@suite-common/formatters';
 import { AssetDiff, AssetExposure } from '@suite-common/tx-simulation';
 import { Network, isNetworkSymbol } from '@suite-common/wallet-config';
@@ -7,7 +9,6 @@ import { TokenAddress } from '@suite-common/wallet-types';
 import { asBaseCurrencyAmount } from '@suite-common/wallet-utils';
 import { Box, HStack, Text } from '@suite-native/atoms';
 import { CryptoIcon, CryptoIconWithNetwork, Icon } from '@suite-native/icons';
-import { BigNumber } from '@exodus/trezor-utils';
 
 export const TxSimulationAsset = ({
     assetDiff,

@@ -1,5 +1,7 @@
 import { useSelector } from 'react-redux';
 
+import { BigNumber } from '@exodus/trezor-utils';
+
 import { invariant } from '@suite-common/suite-utils';
 import {
     TradingRootState,
@@ -20,7 +22,6 @@ import {
 import { CryptoIcon, Icon, NetworkIcon } from '@suite-native/icons';
 import { Translation } from '@suite-native/intl';
 import { DynamicScreenHeader, Screen } from '@suite-native/navigation';
-import { BigNumber } from '@exodus/trezor-utils';
 
 import { TradeInfoHeader } from '../components/TradeInfo/TradeInfoHeader';
 import { TradeInfoRow } from '../components/TradeInfo/TradeInfoRow';

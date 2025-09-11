@@ -1,4 +1,3 @@
-import type { BlockbookAPI } from '@trezor/blockchain-link/src/workers/blockbook/websocket';
 import {
     TypedEmitter,
     arrayShuffle,
@@ -6,6 +5,8 @@ import {
     scheduleAction,
     urlToOnion,
 } from '@exodus/trezor-utils';
+
+import type { BlockbookAPI } from '@trezor/blockchain-link/src/workers/blockbook/websocket';
 
 import { FILTERS_REQUEST_TIMEOUT, HTTP_REQUEST_GAP, HTTP_REQUEST_TIMEOUT } from '../constants';
 import type { CoinjoinBackendSettings, Logger } from '../types';

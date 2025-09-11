@@ -1,12 +1,12 @@
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
+import { hexToRgba } from '@exodus/trezor-utils';
 import { LinearGradient } from 'expo-linear-gradient';
 
 import { BackupType } from '@suite-common/suite-types';
 import { Box, Button } from '@suite-native/atoms';
 import { Translation } from '@suite-native/intl';
 import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
-import { hexToRgba } from '@exodus/trezor-utils';
 
 import { walletBackupSheetCopyByType } from './presets';
 

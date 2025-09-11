@@ -1,6 +1,7 @@
+import { capitalizeFirstLetter } from '@exodus/trezor-utils';
+
 import { localizeNumber } from '@suite-common/wallet-utils';
 import messages from '@trezor/suite/src/support/messages';
-import { capitalizeFirstLetter } from '@exodus/trezor-utils';
 
 import { buyQuotesEthereum, buyTradeEthereum, invityEndpoint } from '../../fixtures/invity';
 import { formatAddress } from '../../support/common';

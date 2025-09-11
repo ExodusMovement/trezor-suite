@@ -1,5 +1,6 @@
 import { useState } from 'react';
 
+import { getNonAsciiChars } from '@exodus/trezor-utils';
 import { useTheme } from 'styled-components';
 
 import { TrezorDevice } from '@suite-common/suite-types';
@@ -7,7 +8,6 @@ import { selectDeviceModel } from '@suite-common/wallet-core';
 import { Card, Collapsible, Column, H3, H4, Icon, Paragraph, Row, Text } from '@trezor/components';
 import { spacings } from '@trezor/theme';
 import { HELP_CENTER_PASSPHRASE_URL } from '@trezor/urls';
-import { getNonAsciiChars } from '@exodus/trezor-utils';
 
 import { LearnMoreButton } from 'src/components/suite/LearnMoreButton';
 import { TrezorLink } from 'src/components/suite/TrezorLink';

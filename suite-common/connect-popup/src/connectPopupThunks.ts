@@ -1,3 +1,4 @@
+import { resolveAfter } from '@exodus/trezor-utils';
 import { AsyncThunkAction } from '@reduxjs/toolkit';
 
 import { EventType, analytics } from '@suite-common/analytics';
@@ -9,7 +10,6 @@ import TrezorConnect, { CallMethodParams } from '@trezor/connect';
 import { TypedError, serializeError } from '@trezor/connect/src/constants/errors';
 import { MethodInfo, MethodPermission } from '@trezor/connect/src/core/AbstractMethod';
 import { DEEPLINK_VERSION } from '@trezor/connect/src/data/version';
-import { resolveAfter } from '@exodus/trezor-utils';
 
 import { connectPopupActions } from './connectPopupActions';
 import { getPermissionDeferred, getPopupCallDeferred } from './connectPopupPromiseManager';

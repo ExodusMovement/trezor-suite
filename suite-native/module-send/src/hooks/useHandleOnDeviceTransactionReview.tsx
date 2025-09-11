@@ -1,6 +1,7 @@
 import { useCallback, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
+import { TRANSPORT_ERROR } from '@exodus/trezor-transport';
 import { useNavigation } from '@react-navigation/native';
 import { isRejected } from '@reduxjs/toolkit';
 
@@ -21,7 +22,6 @@ import {
     SendStackRoutes,
     StackToStackCompositeNavigationProps,
 } from '@suite-native/navigation';
-import { TRANSPORT_ERROR } from '@exodus/trezor-transport';
 
 import { useShowDeviceDisconnectedAlert } from './useShowDeviceDisconnectedAlert';
 import { selectIsTransactionReviewInProgress } from '../selectors';

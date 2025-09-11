@@ -1,3 +1,4 @@
+import { versionUtils } from '@exodus/trezor-utils';
 import { A, pipe } from '@mobily/ts-belt';
 
 import { createWeakMapSelector, returnStableArrayIfEmpty } from '@suite-common/redux-utils';
@@ -27,7 +28,6 @@ import {
     selectNetworkSymbolsOfAccountsWithTokensAllowed,
 } from '@suite-native/tokens';
 import { getFirmwareVersion } from '@trezor/device-utils';
-import { versionUtils } from '@exodus/trezor-utils';
 
 /**
  * Filter collection of activated networks to only include those supported by device & suite

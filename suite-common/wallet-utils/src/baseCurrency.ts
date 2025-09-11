@@ -1,7 +1,8 @@
+import { BigNumber } from '@exodus/trezor-utils';
+
 import { NetworkSymbol, networks } from '@suite-common/wallet-config';
 import type { BaseCurrencyCode } from '@trezor/blockchain-link-types';
 import { Branded } from '@trezor/type-utils';
-import { BigNumber } from '@exodus/trezor-utils';
 
 import { AMOUNT_UNIT_ZERO, AmountUnit, asAmountSubunit, asAmountUnit } from './AmountTypes';
 import { subunitsToUnits, unitsToSubunits } from './accountUtils';

@@ -1,5 +1,6 @@
-import { TokenAddress, WalletAccountTransaction } from '@suite-common/wallet-types';
 import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
+
+import { TokenAddress, WalletAccountTransaction } from '@suite-common/wallet-types';
 
 import { LocalBalanceHistoryCoin } from './constants';
 import { AccountHistoryMovement, AccountHistoryMovementItem } from './types';

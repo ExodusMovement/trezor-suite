@@ -1,5 +1,7 @@
 import { useCallback, useEffect } from 'react';
 
+import { resolveAfter } from '@exodus/trezor-utils';
+
 import {
     Banner,
     Button,
@@ -13,7 +15,6 @@ import {
 import TrezorConnect, { UI } from '@trezor/connect';
 import { spacings } from '@trezor/theme';
 import { HELP_CENTER_ADVANCED_RECOVERY_URL } from '@trezor/urls';
-import { resolveAfter } from '@exodus/trezor-utils';
 
 import { Translation } from 'src/components/suite';
 import { useExternalLink } from 'src/hooks/suite';

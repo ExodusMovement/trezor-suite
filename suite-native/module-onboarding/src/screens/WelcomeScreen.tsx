@@ -1,5 +1,6 @@
 import { ImageBackground, StyleSheet } from 'react-native';
 
+import { hexToRgba } from '@exodus/trezor-utils';
 import { LinearGradient } from 'expo-linear-gradient';
 
 import { Box, Button, Text, VStack } from '@suite-native/atoms';
@@ -14,7 +15,6 @@ import {
 import { getWindowHeight } from '@trezor/env-utils';
 import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
 import { colorVariants } from '@trezor/theme';
-import { hexToRgba } from '@exodus/trezor-utils';
 
 const GRADIENT_HEIGHT = getWindowHeight() / 3;
 const BLACK_BACKGROUND_COLOR = '#000000';

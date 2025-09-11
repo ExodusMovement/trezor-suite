@@ -1,3 +1,4 @@
+import { Deferred, createDeferred, removeTrailingSlashes } from '@exodus/trezor-utils';
 import EventEmitter from 'events';
 
 import * as ERRORS from '@trezor/connect/src/constants/errors';
@@ -13,7 +14,6 @@ import type {
 } from '@trezor/connect/src/types';
 import { InitFullSettings } from '@trezor/connect/src/types/api/init';
 import { Login } from '@trezor/connect/src/types/api/requestLogin';
-import { Deferred, createDeferred, removeTrailingSlashes } from '@exodus/trezor-utils';
 
 export class TrezorConnectDeeplink implements ConnectFactoryDependencies<ConnectSettingsMobile> {
     public eventEmitter = new EventEmitter();

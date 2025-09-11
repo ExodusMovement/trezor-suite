@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/no-use-before-define */
+import { TRANSPORT, TRANSPORT_ERROR } from '@exodus/trezor-transport';
+import { createDeferred, createLazy, getSynchronize, throwError } from '@exodus/trezor-utils';
 import EventEmitter from 'events';
 
 import { storage } from '@trezor/connect-common';
-import { TRANSPORT, TRANSPORT_ERROR } from '@exodus/trezor-transport';
-import { createDeferred, createLazy, getSynchronize, throwError } from '@exodus/trezor-utils';
 
 import { ERRORS } from '../constants';
 import { AbstractMethod } from './AbstractMethod';

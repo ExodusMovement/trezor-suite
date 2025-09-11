@@ -1,6 +1,7 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState } from 'react';
 import { useForm, useWatch } from 'react-hook-form';
 
+import { BigNumber, isChanged } from '@exodus/trezor-utils';
 import useDebounce from 'react-use/lib/useDebounce';
 
 import {
@@ -23,7 +24,6 @@ import {
     getStakingDataForNetwork,
     toFiatCurrency,
 } from '@suite-common/wallet-utils';
-import { BigNumber, isChanged } from '@exodus/trezor-utils';
 
 import { signTransaction } from 'src/actions/wallet/stakeActions';
 import { useDispatch, useSelector } from 'src/hooks/suite';

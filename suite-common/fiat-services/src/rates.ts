@@ -1,3 +1,9 @@
+import {
+    SCHEDULE_ACTION_ABORTED_ERROR_MESSAGE,
+    SCHEDULE_ACTION_DEADLINE_ERROR_MESSAGE,
+    SCHEDULE_ACTION_TIMEOUT_ERROR_MESSAGE,
+    scheduleAction,
+} from '@exodus/trezor-utils';
 import { getUnixTime, subWeeks } from 'date-fns';
 
 import { isBlockbookBasedNetwork } from '@suite-common/wallet-config';
@@ -9,12 +15,6 @@ import type {
 } from '@suite-common/wallet-types';
 import type { BaseCurrencyCode } from '@trezor/blockchain-link-types';
 import TrezorConnect from '@trezor/connect';
-import {
-    SCHEDULE_ACTION_ABORTED_ERROR_MESSAGE,
-    SCHEDULE_ACTION_DEADLINE_ERROR_MESSAGE,
-    SCHEDULE_ACTION_TIMEOUT_ERROR_MESSAGE,
-    scheduleAction,
-} from '@exodus/trezor-utils';
 
 import * as blockbookService from './blockbook';
 import { ParallelRequestsCache } from './cache';

@@ -1,3 +1,4 @@
+import { BigNumber } from '@exodus/trezor-utils';
 import { CryptoId, FiatCurrencyCode } from 'invity-api';
 
 import { DefinitionType, isTokenDefinitionKnown } from '@suite-common/token-definitions';
@@ -21,7 +22,6 @@ import {
     substituteBip43Path,
 } from '@suite-common/wallet-utils';
 import TrezorConnect from '@trezor/connect';
-import { BigNumber } from '@exodus/trezor-utils';
 
 import { ExtendedMessageDescriptor, Route, TrezorDevice } from 'src/types/suite';
 import {

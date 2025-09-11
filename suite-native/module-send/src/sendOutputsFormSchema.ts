@@ -1,3 +1,4 @@
+import { BigNumber } from '@exodus/trezor-utils';
 import { G } from '@mobily/ts-belt';
 
 import { formInputsMaxLength, yup } from '@suite-common/validators';
@@ -13,7 +14,6 @@ import {
     isTaprootAddress,
 } from '@suite-common/wallet-utils';
 import { FeeLevelsMaxAmount } from '@suite-native/transaction-management';
-import { BigNumber } from '@exodus/trezor-utils';
 
 export type SendFormFormContext = {
     symbol?: NetworkSymbol;

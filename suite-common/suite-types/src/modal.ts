@@ -1,8 +1,9 @@
+import { Deferred } from '@exodus/trezor-utils';
+
 import { RequestEnableTorResponse } from '@suite-common/suite-config';
 import { type NetworkSymbol } from '@suite-common/wallet-config';
 import { Account, AddressType } from '@suite-common/wallet-types';
 import { UI } from '@trezor/connect';
-import { Deferred } from '@exodus/trezor-utils';
 
 import { TrezorDevice } from './device';
 

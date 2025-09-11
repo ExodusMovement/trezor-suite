@@ -1,6 +1,6 @@
+import { getSynchronize } from '@exodus/trezor-utils';
 import EventEmitter from 'events';
 
-import { getSynchronize } from '@exodus/trezor-utils';
 
 import { ERRORS } from '../constants';
 import { CallMethodPayload, createErrorMessage } from '../events';

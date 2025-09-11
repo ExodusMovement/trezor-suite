@@ -1,3 +1,5 @@
+import { arrayPartition } from '@exodus/trezor-utils';
+import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
 import { addDays, startOfMonth } from 'date-fns';
 import { fromWei, toWei } from 'web3-utils';
 
@@ -28,8 +30,6 @@ import {
     TokenTransfer,
 } from '@trezor/connect';
 import { Branded } from '@trezor/type-utils';
-import { arrayPartition } from '@exodus/trezor-utils';
-import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
 
 import {
     convertAmountSubunitsToUnits,

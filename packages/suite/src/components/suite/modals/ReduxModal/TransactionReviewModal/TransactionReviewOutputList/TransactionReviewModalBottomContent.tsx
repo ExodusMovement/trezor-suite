@@ -1,5 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 
+import { Deferred } from '@exodus/trezor-utils';
+
 import { selectConnectPopupCall } from '@suite-common/connect-popup';
 import { ExtendedMessageDescriptor } from '@suite-common/intl-types';
 import { notificationsActions } from '@suite-common/toast-notifications';
@@ -10,7 +12,6 @@ import { StakeType } from '@trezor/blockchain-link-types';
 import { Modal } from '@trezor/components';
 import { copyToClipboard, download } from '@trezor/dom-utils';
 import { EventType, TransactionCreatedEvent, analytics } from '@trezor/suite-analytics';
-import { Deferred } from '@exodus/trezor-utils';
 
 import { Translation } from 'src/components/suite/Translation';
 

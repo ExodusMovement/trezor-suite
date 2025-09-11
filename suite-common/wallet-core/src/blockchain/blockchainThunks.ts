@@ -1,3 +1,5 @@
+import { arrayDistinct, arrayToDictionary } from '@exodus/trezor-utils';
+
 import { createThunk } from '@suite-common/redux-utils';
 import { notificationsActions } from '@suite-common/toast-notifications';
 import {
@@ -28,7 +30,6 @@ import TrezorConnect, {
     BlockchainNotification,
 } from '@trezor/connect';
 import type { TimerId } from '@trezor/type-utils';
-import { arrayDistinct, arrayToDictionary } from '@exodus/trezor-utils';
 
 import { BLOCKCHAIN_MODULE_PREFIX, blockchainActions } from './blockchainActions';
 import { selectBlockchainState, selectNetworkBlockchainInfo } from './blockchainReducer';

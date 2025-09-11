@@ -1,5 +1,7 @@
 import { useSelector } from 'react-redux';
 
+import { BigNumber } from '@exodus/trezor-utils';
+
 import { NetworkSymbol } from '@suite-common/wallet-config';
 import {
     FiatRatesRootState,
@@ -22,7 +24,6 @@ import {
     toFiatCurrency,
     unitsToSubunits,
 } from '@suite-common/wallet-utils';
-import { BigNumber } from '@exodus/trezor-utils';
 
 type UseConvertFiatToCryptoParams = {
     symbol: NetworkSymbol | null;

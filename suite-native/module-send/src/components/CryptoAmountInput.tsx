@@ -1,6 +1,8 @@
 import { ReactNode } from 'react';
 import { useSelector } from 'react-redux';
 
+import { BigNumber } from '@exodus/trezor-utils';
+
 import { useFormatters } from '@suite-common/formatters';
 import { selectBaseCurrency, selectIsBaseCurrencyInSats } from '@suite-common/wallet-core';
 import { getDecimalsForBaseCurrency } from '@suite-common/wallet-utils';
@@ -11,7 +13,6 @@ import { useAmountInputTransformers } from '@suite-native/helpers';
 import { TokensRootState, selectAccountTokenSymbol } from '@suite-native/tokens';
 import { useDebounce } from '@trezor/react-utils';
 import { Color } from '@trezor/theme';
-import { BigNumber } from '@exodus/trezor-utils';
 
 import { SendOutputsFormValues } from '../sendOutputsFormSchema';
 import { SendAmountInputProps } from '../types';

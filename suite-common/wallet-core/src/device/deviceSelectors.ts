@@ -1,3 +1,4 @@
+import { versionUtils } from '@exodus/trezor-utils';
 import { A, pipe } from '@mobily/ts-belt';
 
 import { createWeakMapSelector, returnStableArrayIfEmpty } from '@suite-common/redux-utils';
@@ -18,7 +19,6 @@ import {
     hasBitcoinOnlyFirmware,
 } from '@trezor/device-utils';
 import { getSuiteVersion } from '@trezor/env-utils';
-import { versionUtils } from '@exodus/trezor-utils';
 
 import { PORTFOLIO_TRACKER_DEVICE_ID } from './deviceConstants';
 import { DeviceRootState } from './deviceReducer';

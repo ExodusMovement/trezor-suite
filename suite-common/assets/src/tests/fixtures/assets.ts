@@ -1,5 +1,6 @@
-import { asBaseCurrencyAmount } from '@suite-common/wallet-utils';
 import { BigNumber } from '@exodus/trezor-utils';
+
+import { asBaseCurrencyAmount } from '@suite-common/wallet-utils';
 
 import { AssetFiatBalance } from '../../utils';
 

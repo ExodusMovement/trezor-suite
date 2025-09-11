@@ -1,8 +1,8 @@
+import { xssFilters } from '@exodus/trezor-utils';
 import { BuyTrade, CoinInfo, FormResponse } from 'invity-api';
 
 import { trezorLogo } from '@suite-common/suite-constants';
 import { TradingType, cryptoIdToNetwork } from '@suite-common/trading';
-import { xssFilters } from '@exodus/trezor-utils';
 
 import { coinInfoToTradeableAsset } from './tradeableAssetUtils';
 

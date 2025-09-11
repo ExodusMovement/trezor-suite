@@ -1,5 +1,6 @@
-import { CustomError } from '@trezor/blockchain-link-types/src/constants/errors';
 import { parseElectrumUrl } from '@exodus/trezor-utils';
+
+import { CustomError } from '@trezor/blockchain-link-types/src/constants/errors';
 
 import type { SocketBase, SocketOptions } from './base';
 import { TcpSocket } from './tcp';

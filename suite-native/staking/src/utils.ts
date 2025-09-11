@@ -1,5 +1,6 @@
-import { NetworkSymbol } from '@suite-common/wallet-config';
 import { isArrayMember } from '@exodus/trezor-utils';
+
+import { NetworkSymbol } from '@suite-common/wallet-config';
 
 const stakingCoins = ['eth', 'thol', 'tsep', 'sol', 'dsol'] as const satisfies NetworkSymbol[];
 type NetworkSymbolWithStaking = (typeof stakingCoins)[number];

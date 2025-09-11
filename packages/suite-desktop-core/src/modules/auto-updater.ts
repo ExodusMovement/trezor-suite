@@ -1,3 +1,4 @@
+import { bytesToHumanReadable } from '@exodus/trezor-utils';
 import {
     CancellationToken,
     ProgressInfo,
@@ -9,7 +10,6 @@ import { unlinkSync } from 'fs';
 
 import { isDevEnv, isFeatureFlagEnabled } from '@suite-common/suite-utils';
 import { HandshakeElectron } from '@trezor/suite-desktop-api';
-import { bytesToHumanReadable } from '@exodus/trezor-utils';
 
 import { getSwitchValue, hasSwitch } from '../libs/process-switches';
 import { verifySignature } from '../libs/update-checker';

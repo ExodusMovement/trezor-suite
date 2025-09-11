@@ -1,5 +1,6 @@
 import { useCallback, useState } from 'react';
 
+import { countBytesInString, getNonAsciiChars } from '@exodus/trezor-utils';
 import { AnimatePresence, motion } from 'framer-motion';
 
 import { formInputsMaxLength } from '@suite-common/validators';
@@ -21,7 +22,6 @@ import { DeviceModelInternal } from '@trezor/device-utils';
 import { isAndroid } from '@trezor/env-utils';
 import { PasswordStrengthIndicator } from '@trezor/product-components';
 import { spacings } from '@trezor/theme';
-import { countBytesInString, getNonAsciiChars } from '@exodus/trezor-utils';
 
 import { CONTEXT_DEVICE } from 'src/actions/suite/constants/modalConstants';
 import { Translation } from 'src/components/suite';

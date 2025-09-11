@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { useForm, useWatch } from 'react-hook-form';
 
+import { isChanged } from '@exodus/trezor-utils';
 import type { BuyTrade, BuyTradeResponse, CryptoId, FiatCurrencyCode } from 'invity-api';
 import useDebounce from 'react-use/lib/useDebounce';
 
@@ -24,7 +25,6 @@ import { networks } from '@suite-common/wallet-config';
 import { Account } from '@suite-common/wallet-types';
 import { isDesktop } from '@trezor/env-utils';
 import { EventType, analytics } from '@trezor/suite-analytics';
-import { isChanged } from '@exodus/trezor-utils';
 
 import { openDeferredModal } from 'src/actions/suite/modalActions';
 import * as routerActions from 'src/actions/suite/routerActions';

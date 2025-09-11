@@ -1,3 +1,4 @@
+import { BigNumber } from '@exodus/trezor-utils';
 import { CryptoId } from 'invity-api';
 
 import { ExperimentId } from '@suite-common/message-system';
@@ -11,7 +12,6 @@ import { Account, TokenAddress } from '@suite-common/wallet-types';
 import { asBaseCurrencyAmount } from '@suite-common/wallet-utils';
 import { Box, Column, InfoItem, Row, Text } from '@trezor/components';
 import { borders, spacings } from '@trezor/theme';
-import { BigNumber } from '@exodus/trezor-utils';
 
 import { AccountLabel, BaseCurrencyValue, Translation } from 'src/components/suite';
 import { ExperimentWrapper } from 'src/components/suite/Experiment/ExperimentWrapper';

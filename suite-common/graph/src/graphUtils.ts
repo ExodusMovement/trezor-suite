@@ -1,3 +1,4 @@
+import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
 import { A, D, pipe } from '@mobily/ts-belt';
 import { differenceInMinutes, eachMinuteOfInterval, fromUnixTime, getUnixTime } from 'date-fns';
 
@@ -8,7 +9,6 @@ import {
     toFiatCurrency,
 } from '@suite-common/wallet-utils';
 import type { BaseCurrencyCode } from '@trezor/blockchain-link-types';
-import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
 
 import { FiatRatesItem } from './graphDataFetching';
 import {

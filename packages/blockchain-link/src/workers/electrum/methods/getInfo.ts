@@ -1,6 +1,7 @@
+import { throwError } from '@exodus/trezor-utils';
+
 import type { GetInfo as Req } from '@trezor/blockchain-link-types/src/messages';
 import type { GetInfo as Res } from '@trezor/blockchain-link-types/src/responses';
-import { throwError } from '@exodus/trezor-utils';
 
 import { Api, blockheaderToBlockhash } from '../utils';
 

@@ -1,3 +1,5 @@
+import { typedObjectKeys } from '@exodus/trezor-utils';
+import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
 import styled, { useTheme } from 'styled-components';
 
 import { AssetFiatBalance } from '@suite-common/assets';
@@ -30,8 +32,6 @@ import { TokenInfo } from '@trezor/blockchain-link-types';
 import { Button, Card, Icon, LoadingContent, Row } from '@trezor/components';
 import { spacings, spacingsPx, typography } from '@trezor/theme';
 import { PartialRecord } from '@trezor/type-utils';
-import { typedObjectKeys } from '@exodus/trezor-utils';
-import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
 
 import { goto } from 'src/actions/suite/routerActions';
 import { setFlag } from 'src/actions/suite/suiteActions';

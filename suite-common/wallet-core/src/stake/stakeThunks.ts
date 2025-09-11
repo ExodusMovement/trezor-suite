@@ -1,3 +1,5 @@
+import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
+
 import { createThunk } from '@suite-common/redux-utils';
 import {
     SupportedEthereumNetworkSymbol,
@@ -10,7 +12,6 @@ import {
     isTestnet,
 } from '@suite-common/wallet-utils';
 import { TimerId } from '@trezor/type-utils';
-import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
 
 import {
     EVERSTAKE_ENDPOINT_PREFIX,

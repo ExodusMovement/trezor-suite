@@ -2,6 +2,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { TextInput } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
 
+import { BigNumber } from '@exodus/trezor-utils';
 import { useNavigation } from '@react-navigation/native';
 
 import {
@@ -14,7 +15,6 @@ import { BaseSearchInput, SearchInputWithCancel, Text, VStack } from '@suite-nat
 import { useTranslate } from '@suite-native/intl';
 import { Screen, SendStackParamList, SendStackRoutes, StackProps } from '@suite-native/navigation';
 import { Utxo } from '@trezor/blockchain-link-types';
-import { BigNumber } from '@exodus/trezor-utils';
 
 import { SendUtxoScreenFooter } from '../components/CoinControl/SendUtxoScreenFooter';
 import { SendUtxoScreenHeader } from '../components/CoinControl/SendUtxoScreenHeader';

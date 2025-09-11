@@ -1,4 +1,5 @@
 import { promiseAllSequence } from '@exodus/trezor-utils';
+
 import { networks } from '@trezor/utxo-lib';
 
 import fixtures from '../__fixtures__/signtxVerify';

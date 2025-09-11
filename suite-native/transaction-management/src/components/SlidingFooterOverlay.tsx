@@ -1,11 +1,11 @@
 import { ReactNode } from 'react';
 import Animated, { SlideOutDown, useAnimatedStyle, withTiming } from 'react-native-reanimated';
 
+import { hexToRgba } from '@exodus/trezor-utils';
 import { LinearGradient } from 'expo-linear-gradient';
 
 import { Box } from '@suite-native/atoms';
 import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
-import { hexToRgba } from '@exodus/trezor-utils';
 
 export type SlidingFooterOverlayProps = {
     activeStepOffset: number;

@@ -3,6 +3,7 @@ import { Keyboard } from 'react-native';
 import Animated, { FadeIn } from 'react-native-reanimated';
 import { useDispatch, useSelector } from 'react-redux';
 
+import { BigNumber } from '@exodus/trezor-utils';
 import { isFulfilled } from '@reduxjs/toolkit';
 
 import { getNetwork } from '@suite-common/wallet-config';
@@ -20,7 +21,6 @@ import { useField, useFormContext } from '@suite-native/forms';
 import { Translation } from '@suite-native/intl';
 import { TokensRootState, selectAccountTokenBalance } from '@suite-native/tokens';
 import { useDebounce } from '@trezor/react-utils';
-import { BigNumber } from '@exodus/trezor-utils';
 
 import { useUtxoSelection } from '../hooks/useUtxoSelection';
 import { calculateFeeLevelsMaxAmountThunk } from '../sendFormThunks';

@@ -1,4 +1,5 @@
 import { TypedEmitter, arrayDistinct, arrayPartition, scheduleAction } from '@exodus/trezor-utils';
+
 import { Network } from '@trezor/utxo-lib';
 
 import { ACCOUNT_BUSY_TIMEOUT, ROUND_PHASE_PROCESS_TIMEOUT } from '../constants';

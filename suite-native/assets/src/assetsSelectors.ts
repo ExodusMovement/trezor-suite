@@ -1,3 +1,4 @@
+import { BigNumber } from '@exodus/trezor-utils';
 import { A, F, G, pipe } from '@mobily/ts-belt';
 
 import { calculateAssetsPercentage } from '@suite-common/assets';
@@ -31,7 +32,6 @@ import {
     doesCoinSupportStaking,
     getAccountCryptoBalanceWithStaking,
 } from '@suite-native/staking';
-import { BigNumber } from '@exodus/trezor-utils';
 
 export interface AssetType {
     symbol: NetworkSymbol;

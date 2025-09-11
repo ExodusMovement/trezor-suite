@@ -1,5 +1,7 @@
 import { useMemo } from 'react';
 
+import { BigNumber } from '@exodus/trezor-utils';
+
 import { useFormatters } from '@suite-common/formatters';
 import { NetworkType, getDisplaySymbol } from '@suite-common/wallet-config';
 import {
@@ -25,7 +27,6 @@ import {
 } from '@trezor/components';
 import { EventType, analytics } from '@trezor/suite-analytics';
 import { spacings } from '@trezor/theme';
-import { BigNumber } from '@exodus/trezor-utils';
 
 import { goto } from 'src/actions/suite/routerActions';
 import { setFlag } from 'src/actions/suite/suiteActions';

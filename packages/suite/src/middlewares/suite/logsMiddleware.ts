@@ -1,3 +1,4 @@
+import { redactUserPathFromString } from '@exodus/trezor-utils';
 import { MiddlewareAPI } from 'redux';
 
 import { analyticsActions } from '@suite-common/analytics';
@@ -9,7 +10,6 @@ import {
     setBaseCurrency,
 } from '@suite-common/wallet-core';
 import { DEVICE, TRANSPORT } from '@trezor/connect';
-import { redactUserPathFromString } from '@exodus/trezor-utils';
 
 import {
     DESKTOP_UPDATE,

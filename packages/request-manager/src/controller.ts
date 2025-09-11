@@ -1,7 +1,7 @@
+import { ScheduleActionParams, ScheduledAction, scheduleAction } from '@exodus/trezor-utils';
 import { EventEmitter } from 'events';
 import path from 'path';
 
-import { ScheduleActionParams, ScheduledAction, scheduleAction } from '@exodus/trezor-utils';
 
 import { BOOTSTRAP_EVENT_PROGRESS, bootstrapParser } from './events/bootstrap';
 import { TorControlPort } from './torControlPort';

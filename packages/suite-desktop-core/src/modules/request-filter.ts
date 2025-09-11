@@ -1,9 +1,9 @@
 /**
  * Request Filter feature (blocks non-allowed requests)
  */
+import { isWhitelistedHost } from '@exodus/trezor-utils';
 import { captureMessage } from '@sentry/electron/main';
 
-import { isWhitelistedHost } from '@exodus/trezor-utils';
 
 import { allowedDomains, silentlyBlockedDomains } from '../config';
 

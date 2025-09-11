@@ -1,3 +1,5 @@
+import { BigNumber } from '@exodus/trezor-utils';
+
 import {
     selectBaseCurrency,
     selectHistoricFiatRates,
@@ -16,7 +18,6 @@ import {
     roundTimestampToNearestPastHour,
 } from '@suite-common/wallet-utils';
 import { Table, Text } from '@trezor/components';
-import { BigNumber } from '@exodus/trezor-utils';
 
 import {
     BaseCurrencyValue,

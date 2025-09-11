@@ -1,7 +1,8 @@
+import { bluetoothIpc } from '@exodus/trezor-transport-bluetooth';
+
 import { BLUETOOTH_PREFIX, bluetoothActions } from '@suite-common/bluetooth';
 import { createThunk } from '@suite-common/redux-utils';
 import { notificationsActions } from '@suite-common/toast-notifications';
-import { bluetoothIpc } from '@exodus/trezor-transport-bluetooth';
 
 type BluetoothDisconnectDeviceThunkResult = {
     success: boolean;

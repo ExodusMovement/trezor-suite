@@ -1,5 +1,7 @@
 import { FieldValues } from 'react-hook-form';
 
+import { cloneObject } from '@exodus/trezor-utils';
+
 import { MetadataState } from '@suite-common/metadata-types';
 import { createThunk } from '@suite-common/redux-utils/';
 import { isDeviceAcquired } from '@suite-common/suite-utils';
@@ -16,7 +18,6 @@ import {
     isAccountSuccessful,
     selectHistoricRatesByTransactions,
 } from '@suite-common/wallet-utils';
-import { cloneObject } from '@exodus/trezor-utils';
 
 import { selectCoinjoinAccountByKey } from 'src/reducers/wallet/coinjoinReducer';
 import { db } from 'src/storage';

@@ -1,4 +1,3 @@
-import { WebUSB, usb } from 'usb';
 
 import {
     TransportProtocol,
@@ -20,6 +19,7 @@ import { receive as receiveUtil } from '@exodus/trezor-transport/src/utils/recei
 import { error, success, unknownError } from '@exodus/trezor-transport/src/utils/result';
 import { createChunks, sendChunks } from '@exodus/trezor-transport/src/utils/send';
 import { Log } from '@exodus/trezor-utils';
+import { WebUSB, usb } from 'usb';
 
 export const createCore = (apiArg: 'usb' | 'udp' | AbstractApi, logger?: Log) => {
     let api: AbstractApi;

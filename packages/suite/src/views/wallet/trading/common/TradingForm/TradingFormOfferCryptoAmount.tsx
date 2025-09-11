@@ -1,3 +1,4 @@
+import { BigNumber } from '@exodus/trezor-utils';
 import { CryptoId } from 'invity-api';
 
 import { ExperimentId } from '@suite-common/message-system';
@@ -5,7 +6,6 @@ import { cryptoIdToNetwork, useTradingInfo } from '@suite-common/trading';
 import { TokenAddress } from '@suite-common/wallet-types';
 import { Column, Row, Text } from '@trezor/components';
 import { spacings } from '@trezor/theme';
-import { BigNumber } from '@exodus/trezor-utils';
 
 import { BaseCurrencyValue, FormattedCryptoAmount } from 'src/components/suite';
 import { ExperimentWrapper } from 'src/components/suite/Experiment/ExperimentWrapper';

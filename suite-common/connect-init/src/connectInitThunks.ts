@@ -1,3 +1,5 @@
+import { capitalizeFirstLetter, getSynchronize } from '@exodus/trezor-utils';
+
 import { selectFirmwareUpdateSource } from '@suite-common/firmware/src/firmwareReducer';
 import {
     Feature,
@@ -26,7 +28,6 @@ import TrezorConnect, {
 } from '@trezor/connect';
 import { getBrowserName, isDesktop, isWeb } from '@trezor/env-utils';
 import { DATA_URL } from '@trezor/urls';
-import { capitalizeFirstLetter, getSynchronize } from '@exodus/trezor-utils';
 
 import { blacklist } from './blacklist';
 import { ConnectKey, ConnectWebKey } from './types';

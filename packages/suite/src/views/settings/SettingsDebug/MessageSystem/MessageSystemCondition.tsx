@@ -1,5 +1,6 @@
-import { IconName, InfoItem } from '@trezor/components';
 import { capitalizeFirstLetter } from '@exodus/trezor-utils';
+
+import { IconName, InfoItem } from '@trezor/components';
 
 type MessageSystemConditionProps<T extends Record<string, unknown>> = {
     label: string;

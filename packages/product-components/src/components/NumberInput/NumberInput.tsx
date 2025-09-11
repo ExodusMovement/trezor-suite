@@ -9,11 +9,12 @@ import {
 } from 'react';
 import { Control, FieldValues, UseControllerProps, useController } from 'react-hook-form';
 
+import { getLocaleSeparators } from '@exodus/trezor-utils';
+import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
+
 import { Locale } from '@suite-common/suite-types';
 import { localizeNumber } from '@suite-common/wallet-utils';
 import { Input, InputProps } from '@trezor/components';
-import { getLocaleSeparators } from '@exodus/trezor-utils';
-import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
 
 const isValidDecimalString = (value: string) => /^([^.]*)\.[^.]+$/.test(value);
 const hasLeadingZeroes = (value: string) => /^0+(\d+\.\d*|\d+)$/.test(value);

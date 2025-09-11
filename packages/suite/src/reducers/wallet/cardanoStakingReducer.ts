@@ -1,6 +1,6 @@
+import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
 import { produce } from 'immer';
 
-import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
 
 import { CARDANO_STAKING } from 'src/actions/wallet/constants';
 import { WalletAction } from 'src/types/wallet';

@@ -1,11 +1,12 @@
 import { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 
+import { isArrayMember } from '@exodus/trezor-utils';
+
 import { requestDeviceAccess } from '@suite-native/device-mutex';
 import { deviceAccessMutex } from '@suite-native/device-mutex/src/DeviceAccessMutex';
 import TrezorConnect, { FIRMWARE } from '@trezor/connect';
 import { TimerId } from '@trezor/type-utils';
-import { isArrayMember } from '@exodus/trezor-utils';
 
 import { selectFirmwareRevisionCheckErrorIfEnabled } from '../selectors';
 

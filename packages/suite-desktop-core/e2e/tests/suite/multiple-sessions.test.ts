@@ -1,6 +1,7 @@
-import { TestCategory, TestPriority } from '@trezor/e2e-utils';
 import * as messages from '@exodus/trezor-protobuf/src/messages';
 import { BridgeTransport } from '@exodus/trezor-transport';
+
+import { TestCategory, TestPriority } from '@trezor/e2e-utils';
 
 import { expect, test } from '../../support/fixtures';
 import { AnalyticsSection } from '../../support/pageObjects/analyticsSection';

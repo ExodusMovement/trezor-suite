@@ -1,5 +1,7 @@
 import { useMemo } from 'react';
 
+import { BigNumber } from '@exodus/trezor-utils';
+
 import { useFormatters } from '@suite-common/formatters';
 import { getDisplaySymbol } from '@suite-common/wallet-config';
 import { selectPoolStatsApyData } from '@suite-common/wallet-core';
@@ -11,7 +13,6 @@ import {
 } from '@suite-common/wallet-utils';
 import { Button, Column, H4, Icon, Paragraph, Row, Table } from '@trezor/components';
 import { EventType, analytics } from '@trezor/suite-analytics';
-import { BigNumber } from '@exodus/trezor-utils';
 
 import { goto } from 'src/actions/suite/routerActions';
 import { Translation } from 'src/components/suite';

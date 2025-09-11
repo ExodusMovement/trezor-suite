@@ -1,6 +1,8 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState } from 'react';
 import { useForm, useWatch } from 'react-hook-form';
 
+import { isChanged } from '@exodus/trezor-utils';
+import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
 import useDebounce from 'react-use/lib/useDebounce';
 import { fromWei } from 'web3-utils';
 
@@ -19,8 +21,6 @@ import {
     getStakingLimitsByNetwork,
     toFiatCurrency,
 } from '@suite-common/wallet-utils';
-import { isChanged } from '@exodus/trezor-utils';
-import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
 
 import { signTransaction } from 'src/actions/wallet/stakeActions';
 import { useDispatch, useSelector, useTranslation } from 'src/hooks/suite';

@@ -1,10 +1,10 @@
 import { useMemo } from 'react';
 
+import { BigNumber } from '@exodus/trezor-utils';
 import { useAtom } from 'jotai';
 
 import { isSameUtxo } from '@suite-common/wallet-utils';
 import { Utxo } from '@trezor/blockchain-link-types';
-import { BigNumber } from '@exodus/trezor-utils';
 
 import { selectedUtxosAtom } from '../atoms/coinControlAtoms';
 

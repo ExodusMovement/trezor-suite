@@ -1,5 +1,6 @@
-import type { Environment } from '@trezor/env-utils';
 import { getWeakRandomId } from '@exodus/trezor-utils';
+
+import type { Environment } from '@trezor/env-utils';
 
 import type { Event as AnalyticsEvent, App } from './types';
 

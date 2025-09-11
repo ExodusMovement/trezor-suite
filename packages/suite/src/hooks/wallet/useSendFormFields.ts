@@ -1,6 +1,8 @@
 import { useCallback } from 'react';
 import { FieldPath, UseFormReturn } from 'react-hook-form';
 
+import { BigNumber } from '@exodus/trezor-utils';
+
 import { selectCurrentFiatRates } from '@suite-common/wallet-core';
 import { FormOptions, FormState, Output, Rate, TokenAddress } from '@suite-common/wallet-types';
 import {
@@ -10,7 +12,6 @@ import {
 } from '@suite-common/wallet-utils';
 import type { BaseCurrencyCode } from '@trezor/blockchain-link-types';
 import { TokenInfo } from '@trezor/blockchain-link-types';
-import { BigNumber } from '@exodus/trezor-utils';
 
 import { SendContextValues, UseSendFormState } from 'src/types/wallet/sendForm';
 

@@ -1,7 +1,7 @@
+import { getWeakRandomId } from '@exodus/trezor-utils';
 import { Dropbox, DropboxAuth } from 'dropbox';
 import type { users } from 'dropbox';
 
-import { getWeakRandomId } from '@exodus/trezor-utils';
 
 import { AbstractMetadataProvider } from 'src/types/suite/metadata';
 import {

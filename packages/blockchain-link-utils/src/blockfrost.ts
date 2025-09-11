@@ -1,3 +1,5 @@
+import { BigNumber, BigNumberValue } from '@exodus/trezor-utils/src/bigNumber';
+
 import type { VinVout } from '@trezor/blockchain-link-types/src/blockbook';
 import type {
     AssetBalance,
@@ -15,7 +17,6 @@ import type {
     TransferType,
     Utxo,
 } from '@trezor/blockchain-link-types/src/common';
-import { BigNumber, BigNumberValue } from '@exodus/trezor-utils/src/bigNumber';
 
 import {
     enhanceVinVout,

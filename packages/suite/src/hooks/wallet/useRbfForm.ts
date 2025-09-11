@@ -1,6 +1,8 @@
 import { createContext, useContext, useEffect, useMemo, useState } from 'react';
 import { useForm } from 'react-hook-form';
 
+import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
+
 import {
     DEFAULT_OPRETURN,
     DEFAULT_PAYMENT,
@@ -23,7 +25,6 @@ import {
     getConvertedOrDefaultFeeInfo,
     isEip1559,
 } from '@suite-common/wallet-utils';
-import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
 
 import { useSelector } from 'src/hooks/suite';
 import { useCoinjoinRegisteredUtxos } from 'src/hooks/wallet/form/useCoinjoinRegisteredUtxos';

@@ -1,5 +1,6 @@
-import type { AccountAddresses, SubscriptionAccountInfo } from '@trezor/blockchain-link-types/src';
 import { arrayDistinct, isNotUndefined, objectPartition } from '@exodus/trezor-utils';
+
+import type { AccountAddresses, SubscriptionAccountInfo } from '@trezor/blockchain-link-types/src';
 import type { Network } from '@trezor/utxo-lib';
 
 import { addressToScripthash } from './transform';

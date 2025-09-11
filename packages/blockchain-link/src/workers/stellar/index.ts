@@ -1,3 +1,4 @@
+import { BigNumber, createLazy } from '@exodus/trezor-utils';
 import { Horizon, Networks, Transaction as StellarTransaction } from '@stellar/stellar-sdk';
 
 import type { AccountInfo, Response, TokenDetailByMint } from '@trezor/blockchain-link-types';
@@ -7,7 +8,6 @@ import type * as MessageTypes from '@trezor/blockchain-link-types/src/messages';
 import * as utils from '@trezor/blockchain-link-utils/src/stellar';
 import { getSuiteVersion, isDesktop, isNative } from '@trezor/env-utils';
 import { IntervalId } from '@trezor/type-utils';
-import { BigNumber, createLazy } from '@exodus/trezor-utils';
 
 import { BaseWorker, CONTEXT, ContextType } from '../baseWorker';
 

@@ -1,4 +1,5 @@
 import { arrayDistinct } from '@exodus/trezor-utils';
+
 import { networks } from '@trezor/utxo-lib';
 
 import { CoinjoinFilterController } from '../../src/backend/CoinjoinFilterController';

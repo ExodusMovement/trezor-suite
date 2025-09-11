@@ -1,3 +1,5 @@
+import { BigNumber } from '@exodus/trezor-utils';
+
 import { NetworkSymbol, NetworkType } from '@suite-common/wallet-config';
 import {
     MAX_CARDANO_AMOUNT_FOR_STAKING,
@@ -16,7 +18,6 @@ import {
     UNSTAKING_ETH_PERIOD,
 } from '@suite-common/wallet-constants';
 import { Account, PrecomposedLevels, StakingPoolExtended } from '@suite-common/wallet-types';
-import { BigNumber } from '@exodus/trezor-utils';
 
 import {
     getAccountEverstakeStakingPool,

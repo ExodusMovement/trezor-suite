@@ -2,6 +2,9 @@ import { useMemo } from 'react';
 import { Controller } from 'react-hook-form';
 import { useDispatch, useSelector } from 'react-redux';
 
+import { typedObjectKeys } from '@exodus/trezor-utils';
+import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
+
 import { formInputsMaxLength } from '@suite-common/validators';
 import { updateFiatRatesThunk } from '@suite-common/wallet-core';
 import {
@@ -28,8 +31,6 @@ import {
 } from '@trezor/blockchain-link-types';
 import { Select } from '@trezor/components';
 import { NumberInput } from '@trezor/product-components';
-import { typedObjectKeys } from '@exodus/trezor-utils';
-import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
 
 import { useTranslation } from 'src/hooks/suite';
 import { useSendFormContext } from 'src/hooks/wallet';

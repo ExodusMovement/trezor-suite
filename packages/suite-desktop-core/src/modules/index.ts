@@ -1,10 +1,10 @@
+import { TypedEmitter, isNotUndefined } from '@exodus/trezor-utils';
 import path from 'path';
 
 import { isDevEnv } from '@suite-common/suite-utils';
 import type { DeviceEvent, LocalFirmwares } from '@trezor/connect';
 import { InterceptedEvent } from '@trezor/request-manager';
 import type { HandshakeClient, TorStatus } from '@trezor/suite-desktop-api';
-import { TypedEmitter, isNotUndefined } from '@exodus/trezor-utils';
 
 import * as autoStart from './auto-start';
 import * as autoUpdater from './auto-updater';

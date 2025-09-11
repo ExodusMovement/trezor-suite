@@ -1,8 +1,8 @@
+import { BluetoothIpc, BluetoothIpcApi, BluetoothTransport } from '@exodus/trezor-transport-bluetooth';
 import { ipcMain } from 'electron';
 
 import { IpcProxyHandlerOptions, createIpcProxyHandler } from '@trezor/ipc-proxy';
 import { getFreePort } from '@trezor/node-utils';
-import { BluetoothIpc, BluetoothIpcApi, BluetoothTransport } from '@exodus/trezor-transport-bluetooth';
 
 import { BluetoothProcess } from '../libs/processes/BluetoothProcess';
 

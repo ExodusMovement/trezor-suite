@@ -1,3 +1,4 @@
+import { BigNumber } from '@exodus/trezor-utils';
 import {
     decompileTransactionMessage,
     getBase16Encoder,
@@ -28,7 +29,6 @@ import {
 
 import { TokenInfo } from '@trezor/blockchain-link-types';
 import { AssertWeak } from '@trezor/schema-utils';
-import { BigNumber } from '@exodus/trezor-utils';
 
 import { ERRORS, PROTO } from '../../../constants';
 import { AbstractMethod } from '../../../core/AbstractMethod';

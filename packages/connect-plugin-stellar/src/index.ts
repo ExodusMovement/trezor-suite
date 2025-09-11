@@ -1,3 +1,4 @@
+import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
 import {
     Asset,
     Keypair,
@@ -10,7 +11,6 @@ import {
     Transaction,
 } from '@stellar/stellar-sdk';
 
-import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
 
 /**
  * Transforms Signer to TrezorConnect.StellarTransaction.Signer

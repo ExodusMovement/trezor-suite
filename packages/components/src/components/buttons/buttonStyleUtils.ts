@@ -1,7 +1,7 @@
+import { capitalizeFirstLetter, hexToRgba } from '@exodus/trezor-utils';
 import { DefaultTheme, css, useTheme } from 'styled-components';
 
 import { Color, Colors, Elevation, spacings, spacingsPx } from '@trezor/theme';
-import { capitalizeFirstLetter, hexToRgba } from '@exodus/trezor-utils';
 
 import type { UIAlignment, UISize, UIVariant } from '../../config/types';
 

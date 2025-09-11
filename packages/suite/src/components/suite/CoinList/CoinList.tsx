@@ -1,9 +1,10 @@
+import { versionUtils } from '@exodus/trezor-utils';
+
 import { getCoinUnavailabilityMessage } from '@suite-common/suite-utils';
 import { Network, NetworkSymbol } from '@suite-common/wallet-config';
 import { Row, Tooltip } from '@trezor/components';
 import { getFirmwareVersion, isDeviceInBootloaderMode } from '@trezor/device-utils';
 import { spacings } from '@trezor/theme';
-import { versionUtils } from '@exodus/trezor-utils';
 
 import { Translation } from 'src/components/suite';
 import { useDevice, useDiscovery, useSelector } from 'src/hooks/suite';

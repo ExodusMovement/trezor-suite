@@ -1,7 +1,8 @@
+import { BluetoothDevice, bluetoothIpc } from '@exodus/trezor-transport-bluetooth';
+
 import { BLUETOOTH_PREFIX, bluetoothActions, selectKnownDevices } from '@suite-common/bluetooth';
 import { createThunk } from '@suite-common/redux-utils';
 import { notificationsActions } from '@suite-common/toast-notifications';
-import { BluetoothDevice, bluetoothIpc } from '@exodus/trezor-transport-bluetooth';
 
 import { selectSuiteFlags } from 'src/selectors/suite/suiteSelectors';
 

@@ -1,7 +1,8 @@
+import { BigNumber } from '@exodus/trezor-utils';
+
 import { type NetworkSymbol } from '@suite-common/wallet-config';
 import { AccountKey, TokenAddress } from '@suite-common/wallet-types';
 import { BaseCurrencyAmount } from '@suite-common/wallet-utils';
-import { BigNumber } from '@exodus/trezor-utils';
 
 export type FiatGraphPoint = {
     date: Date;

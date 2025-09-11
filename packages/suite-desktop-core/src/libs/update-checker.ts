@@ -1,8 +1,8 @@
+import { removeTrailingSlashes } from '@exodus/trezor-utils';
 import fs from 'fs';
 import { createMessage, readKey, readSignature, verify } from 'openpgp';
 import path from 'path';
 
-import { removeTrailingSlashes } from '@exodus/trezor-utils';
 
 const signingKey = process.env.APP_PUBKEY;
 

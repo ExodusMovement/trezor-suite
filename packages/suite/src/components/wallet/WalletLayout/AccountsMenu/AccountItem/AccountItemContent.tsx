@@ -1,5 +1,6 @@
 import { JSX } from 'react';
 
+import { isArrayMember } from '@exodus/trezor-utils';
 import styled from 'styled-components';
 
 import { useFormatters } from '@suite-common/formatters';
@@ -21,7 +22,6 @@ import {
     TruncateWithTooltip,
 } from '@trezor/components';
 import { spacings } from '@trezor/theme';
-import { isArrayMember } from '@exodus/trezor-utils';
 
 import {
     AccountLabel,

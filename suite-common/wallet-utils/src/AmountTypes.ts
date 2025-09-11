@@ -1,5 +1,6 @@
-import { Branded } from '@trezor/type-utils';
 import { BigNumber } from '@exodus/trezor-utils';
+
+import { Branded } from '@trezor/type-utils';
 
 /**
  * Bitcoin, Ether, Dogecoin, ...

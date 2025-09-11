@@ -1,3 +1,4 @@
+import { createDeferred } from '@exodus/trezor-utils';
 import EventEmitter from 'events';
 
 // NOTE: @trezor/connect part is intentionally not imported from the index so we do include the whole library.
@@ -22,7 +23,6 @@ import type {
 import { InitFullSettings } from '@trezor/connect/src/types/api/init';
 import { Login } from '@trezor/connect/src/types/api/requestLogin';
 import { Log, LogMessage, LogWriter, initLog, setLogWriter } from '@trezor/connect/src/utils/debug';
-import { createDeferred } from '@exodus/trezor-utils';
 
 import { parseConnectSettings } from '../connectSettings';
 import * as popup from '../popup';

@@ -1,7 +1,7 @@
-import { Horizon } from '@stellar/stellar-sdk';
 
 import type { StellarAsset } from '@exodus/trezor-protobuf/src/messages';
 import { BigNumber } from '@exodus/trezor-utils';
+import { Horizon } from '@stellar/stellar-sdk';
 
 import { buildSendTransaction, toStroops, transformTransaction } from '../stellar';
 import { fixtures } from './fixtures/stellar';

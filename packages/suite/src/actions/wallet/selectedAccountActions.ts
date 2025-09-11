@@ -1,3 +1,5 @@
+import { isChanged } from '@exodus/trezor-utils';
+
 import { networks } from '@suite-common/wallet-config';
 import {
     accountsActions,
@@ -11,7 +13,6 @@ import {
     selectSelectedDevice,
 } from '@suite-common/wallet-core';
 import { SelectedAccountStatus } from '@suite-common/wallet-types';
-import { isChanged } from '@exodus/trezor-utils';
 
 import { ROUTER } from 'src/actions/suite/constants';
 import * as metadataActions from 'src/actions/suite/metadataActions';

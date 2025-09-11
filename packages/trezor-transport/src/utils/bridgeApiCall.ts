@@ -1,5 +1,4 @@
 import { fetch } from '@exodus/fetch';
-
 import { PROTOCOL_MALFORMED } from '@exodus/trezor-protocol/src/errors';
 
 import { error, success, unknownError } from './result';

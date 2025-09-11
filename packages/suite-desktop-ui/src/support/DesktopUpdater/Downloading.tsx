@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react';
 
+import { bytesToHumanReadable } from '@exodus/trezor-utils';
+
 import { Column, H3, Modal, Paragraph, ProgressBar, Text } from '@trezor/components';
 import { UpdateProgress } from '@trezor/suite-desktop-api';
 import { spacings } from '@trezor/theme';
-import { bytesToHumanReadable } from '@exodus/trezor-utils';
 
 import { Translation } from 'src/components/suite';
 

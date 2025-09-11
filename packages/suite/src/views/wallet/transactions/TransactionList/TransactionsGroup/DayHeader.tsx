@@ -1,11 +1,12 @@
 import { FormattedDate } from 'react-intl';
 
+import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
+
 import { useFormatters } from '@suite-common/formatters';
 import type { NetworkSymbol } from '@suite-common/wallet-config';
 import { useDisplayBaseCurrency } from '@suite-common/wallet-core';
 import { BaseCurrencyAmount, parseTransactionDateKey } from '@suite-common/wallet-utils';
 import { Row } from '@trezor/components';
-import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
 
 import { FormattedCryptoAmount, HiddenPlaceholder } from 'src/components/suite';
 

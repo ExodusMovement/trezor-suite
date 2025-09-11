@@ -1,7 +1,8 @@
+import { isApproximatelyEqual } from '@exodus/trezor-utils';
+
 import { NetworkSymbol } from '@suite-common/wallet-config';
 import { selectAreFeesLoading } from '@suite-common/wallet-core';
 import { Note } from '@trezor/components';
-import { isApproximatelyEqual } from '@exodus/trezor-utils';
 
 import { useSelector } from '../../../hooks/suite';
 import { Translation } from '../../suite';

@@ -1,3 +1,4 @@
+import { createLazy } from '@exodus/trezor-utils';
 import {
     IDBPDatabase,
     IDBPTransaction,
@@ -11,7 +12,6 @@ import {
     unwrap,
 } from 'idb';
 
-import { createLazy } from '@exodus/trezor-utils';
 
 export type OnUpgradeFunc<TDBStructure> = (
     db: IDBPDatabase<TDBStructure>,

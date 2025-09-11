@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
+import { BigNumber } from '@exodus/trezor-utils';
 import { G } from '@mobily/ts-belt';
 import { isRejected } from '@reduxjs/toolkit';
 
@@ -19,7 +20,6 @@ import {
     selectFeeLevelTransactionBytes,
 } from '@suite-native/transaction-management';
 import { useDebounce } from '@trezor/react-utils';
-import { BigNumber } from '@exodus/trezor-utils';
 
 import { calculateCustomFeeLevelThunk } from '../sendFormThunks';
 

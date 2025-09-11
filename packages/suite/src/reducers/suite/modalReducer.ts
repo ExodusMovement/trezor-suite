@@ -1,3 +1,5 @@
+import { isArrayMember } from '@exodus/trezor-utils';
+
 import { UserContextPayload } from '@suite-common/suite-types';
 import { THP_BUTTON_REQUESTS_NAMES } from '@suite-common/thp';
 import {
@@ -9,7 +11,6 @@ import {
     UiRequestSelectAccount,
     UiRequestSelectFee,
 } from '@trezor/connect';
-import { isArrayMember } from '@exodus/trezor-utils';
 
 import { MODAL } from 'src/actions/suite/constants';
 import type { Action, TrezorDevice } from 'src/types/suite';

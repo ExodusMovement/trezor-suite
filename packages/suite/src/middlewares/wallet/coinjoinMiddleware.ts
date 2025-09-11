@@ -1,3 +1,4 @@
+import { arrayDistinct } from '@exodus/trezor-utils';
 import { isAnyOf } from '@reduxjs/toolkit';
 import type { MiddlewareAPI } from 'redux';
 
@@ -17,7 +18,6 @@ import {
 } from '@suite-common/wallet-core';
 import { RoundPhase, SessionPhase } from '@trezor/coinjoin';
 import { DEVICE, UI } from '@trezor/connect';
-import { arrayDistinct } from '@exodus/trezor-utils';
 
 import { ROUTER, SUITE } from 'src/actions/suite/constants';
 import * as storageActions from 'src/actions/suite/storageActions';

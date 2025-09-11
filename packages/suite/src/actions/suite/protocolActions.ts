@@ -1,3 +1,5 @@
+import { isArrayMember } from '@exodus/trezor-utils';
+
 import { Protocol } from '@suite-common/suite-constants';
 import { getNetworkSymbolForProtocol } from '@suite-common/suite-utils';
 import { notificationsActions } from '@suite-common/toast-notifications';
@@ -7,7 +9,6 @@ import {
     SUITE_BRIDGE_DEEPLINK,
     SUITE_WALLETCONNECT_DEEPLINK,
 } from '@trezor/urls';
-import { isArrayMember } from '@exodus/trezor-utils';
 
 import * as routerActions from 'src/actions/suite/routerActions';
 import { goto } from 'src/actions/suite/routerActions';

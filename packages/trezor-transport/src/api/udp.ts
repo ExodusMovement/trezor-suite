@@ -1,6 +1,6 @@
+import { arrayPartition, isNotUndefined, resolveAfter } from '@exodus/trezor-utils';
 import UDP from 'dgram';
 
-import { arrayPartition, isNotUndefined, resolveAfter } from '@exodus/trezor-utils';
 
 import {
     AbstractApi,

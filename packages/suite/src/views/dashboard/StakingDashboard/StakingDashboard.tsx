@@ -1,3 +1,5 @@
+import { BigNumber, arrayPartition } from '@exodus/trezor-utils';
+
 import { NetworkSymbol, StakingNetworkSymbol } from '@suite-common/wallet-config';
 import {
     selectBaseCurrency,
@@ -13,7 +15,6 @@ import {
 } from '@suite-common/wallet-utils';
 import { Badge, Card, Table } from '@trezor/components';
 import { spacings } from '@trezor/theme';
-import { BigNumber, arrayPartition } from '@exodus/trezor-utils';
 
 import { setStakingDashboardCollapsed } from 'src/actions/suite/suiteActions';
 import { DashboardSection } from 'src/components/dashboard';

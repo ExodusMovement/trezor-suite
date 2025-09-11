@@ -2,6 +2,7 @@ import React, { useMemo } from 'react';
 import { useWatch } from 'react-hook-form';
 import { useDispatch, useSelector } from 'react-redux';
 
+import { BigNumber } from '@exodus/trezor-utils';
 import { BottomSheetModalProvider } from '@gorhom/bottom-sheet';
 import { useNavigation } from '@react-navigation/native';
 
@@ -43,7 +44,6 @@ import {
     useFeesFetching,
     useFeesForm,
 } from '@suite-native/transaction-management';
-import { BigNumber } from '@exodus/trezor-utils';
 
 import { RecipientsSummary } from './RecipientsSummary';
 import { useCustomFee } from '../hooks/useCustomFee';

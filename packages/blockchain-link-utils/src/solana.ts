@@ -1,3 +1,5 @@
+import { arrayPartition } from '@exodus/trezor-utils';
+import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
 import { A, D, F, pipe } from '@mobily/ts-belt';
 
 import { Target, TokenTransfer, Transaction } from '@trezor/blockchain-link-types/src';
@@ -9,8 +11,6 @@ import type {
 } from '@trezor/blockchain-link-types/src';
 import { SolanaTokenAccountInfo } from '@trezor/blockchain-link-types/src/solana';
 import { isCodesignBuild } from '@trezor/env-utils';
-import { arrayPartition } from '@exodus/trezor-utils';
-import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
 
 import type {
     AccountInfo,

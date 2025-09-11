@@ -1,11 +1,11 @@
 import { useMatch } from 'react-router';
 
+import { capitalizeFirstLetter } from '@exodus/trezor-utils';
 import styled from 'styled-components';
 
 import { getNetworkSymbolForProtocol } from '@suite-common/suite-utils';
 import { NetworkSymbol } from '@suite-common/wallet-config';
 import { CoinLogo } from '@trezor/product-components';
-import { capitalizeFirstLetter } from '@exodus/trezor-utils';
 
 import { fillSendForm, resetProtocol } from 'src/actions/suite/protocolActions';
 import { Translation } from 'src/components/suite';

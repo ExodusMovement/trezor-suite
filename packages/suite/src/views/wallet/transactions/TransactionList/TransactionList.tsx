@@ -1,5 +1,6 @@
 import { ReactNode, useEffect, useMemo, useRef, useState } from 'react';
 
+import { arrayPartition } from '@exodus/trezor-utils';
 import useDebounce from 'react-use/lib/useDebounce';
 
 import { getTxsPerPage } from '@suite-common/suite-utils';
@@ -9,7 +10,6 @@ import {
     isPending,
 } from '@suite-common/wallet-utils';
 import { SkeletonStack } from '@trezor/components';
-import { arrayPartition } from '@exodus/trezor-utils';
 
 import { DashboardSection } from 'src/components/dashboard';
 import { Translation } from 'src/components/suite';

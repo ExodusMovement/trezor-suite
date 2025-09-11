@@ -1,11 +1,11 @@
 import { useMemo } from 'react';
 
+import { typedObjectKeys } from '@exodus/trezor-utils';
 import { AnimatePresence, motion } from 'framer-motion';
 
 import { Banner, Button, Checkbox, Column, Row, Switch } from '@trezor/components';
 import { spacings } from '@trezor/theme';
 import { EXPERIMENTAL_FEATURES_KB_URL } from '@trezor/urls';
-import { typedObjectKeys } from '@exodus/trezor-utils';
 
 import { SUITE } from 'src/actions/suite/constants';
 import { goto } from 'src/actions/suite/routerActions';

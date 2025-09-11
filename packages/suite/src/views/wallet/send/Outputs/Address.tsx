@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 
+import { capitalizeFirstLetter } from '@exodus/trezor-utils';
 import { checkAddressCheckSum, toChecksumAddress } from 'web3-utils';
 
 import { getNetworkSymbolForProtocol } from '@suite-common/suite-utils';
@@ -26,7 +27,6 @@ import {
     HELP_CENTER_EVM_ADDRESS_CHECKSUM,
     HELP_CENTER_EVM_SEND_TO_CONTRACT_URL,
 } from '@trezor/urls';
-import { capitalizeFirstLetter } from '@exodus/trezor-utils';
 
 import { openDeferredModal } from 'src/actions/suite/modalActions';
 import { AddressLabeling, MetadataLabeling } from 'src/components/suite';

@@ -1,5 +1,6 @@
 import { useDispatch } from 'react-redux';
 
+import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
 import { A, D, F, G, O, pipe } from '@mobily/ts-belt';
 import { fromUnixTime, getUnixTime } from 'date-fns';
 
@@ -11,7 +12,6 @@ import { formatNetworkAmount } from '@suite-common/wallet-utils';
 import { AccountBalanceHistory as AccountMovementHistory } from '@trezor/blockchain-link';
 import type { BaseCurrencyCode } from '@trezor/blockchain-link-types';
 import TrezorConnect, { AccountInfo } from '@trezor/connect';
-import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
 
 import { getAccountHistoryMovementFromTransactions } from './balanceHistoryUtils';
 import {

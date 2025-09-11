@@ -1,5 +1,6 @@
 import { ReactNode, useCallback, useEffect, useRef, useState } from 'react';
 
+import { countBytesInString } from '@exodus/trezor-utils';
 import { AnimatePresence } from 'framer-motion';
 import styled, { css } from 'styled-components';
 
@@ -9,7 +10,6 @@ import { DeviceModelInternal } from '@trezor/device-utils';
 import { setCaretPosition } from '@trezor/dom-utils';
 import { useKeyPress } from '@trezor/react-utils';
 import { borders, spacingsPx } from '@trezor/theme';
-import { countBytesInString } from '@exodus/trezor-utils';
 
 import { EnterOnTrezorButton } from './EnterOnTrezorButton';
 import { PassphraseTypeCardContent } from './PassphraseTypeCardContent';

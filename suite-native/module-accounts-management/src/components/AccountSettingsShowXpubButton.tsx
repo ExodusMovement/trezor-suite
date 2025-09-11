@@ -1,6 +1,8 @@
 import { useCallback } from 'react';
 import { useSelector } from 'react-redux';
 
+import { convertTaprootXpub } from '@exodus/trezor-utils';
+
 import {
     AccountsRootState,
     selectAccountByKey,
@@ -16,7 +18,6 @@ import { Translation, useTranslate } from '@suite-native/intl';
 import { SUITE_LITE_SUPPORT_URL, useOpenLink } from '@suite-native/link';
 import { WalletBackupNotSetWarningBottomSheet } from '@suite-native/module-device-onboarding';
 import { XpubQRCodeBottomSheet } from '@suite-native/qr-code';
-import { convertTaprootXpub } from '@exodus/trezor-utils';
 
 export const AccountSettingsShowXpubButton = ({ accountKey }: { accountKey: string }) => {
     const openLink = useOpenLink();

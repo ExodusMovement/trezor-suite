@@ -1,12 +1,13 @@
 import { useState } from 'react';
 
+import { resolveAfter } from '@exodus/trezor-utils';
+
 import { RequestEnableTorResponse } from '@suite-common/suite-config';
 import { isDevEnv } from '@suite-common/suite-utils';
 import { Network, NetworkAccount, NetworkSymbol } from '@suite-common/wallet-config';
 import { selectSelectedDevice } from '@suite-common/wallet-core';
 import { UnavailableCapabilities } from '@trezor/connect';
 import { isDesktop } from '@trezor/env-utils';
-import { resolveAfter } from '@exodus/trezor-utils';
 
 import { openDeferredModal, openModal } from 'src/actions/suite/modalActions';
 import { toggleTor } from 'src/actions/suite/suiteActions';

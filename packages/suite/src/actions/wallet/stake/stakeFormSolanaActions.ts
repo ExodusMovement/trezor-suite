@@ -1,3 +1,4 @@
+import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
 import { address } from '@solana/kit';
 
 import {
@@ -34,7 +35,6 @@ import { networkAmountToSmallestUnit } from '@suite-common/wallet-utils';
 import { Fee } from '@trezor/blockchain-link-types/src/blockbook';
 import TrezorConnect, { FeeLevel } from '@trezor/connect';
 import { EventType, analytics } from '@trezor/suite-analytics';
-import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
 
 import { selectAddressDisplayType } from 'src/selectors/suite/suiteSelectors';
 import { Dispatch, GetState } from 'src/types/suite';

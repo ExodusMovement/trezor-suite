@@ -1,7 +1,7 @@
+import { mergeDeepObject } from '@exodus/trezor-utils';
 import fs from 'fs';
 import path from 'path';
 
-import { mergeDeepObject } from '@exodus/trezor-utils';
 
 import { app } from '../typed-electron';
 

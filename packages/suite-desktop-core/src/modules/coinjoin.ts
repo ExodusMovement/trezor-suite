@@ -2,6 +2,7 @@
  * Uses @trezor/coinjoin package in nodejs context
  */
 
+import { getSynchronize } from '@exodus/trezor-utils';
 import { captureMessage, withScope } from '@sentry/electron/main';
 import { ipcMain } from 'electron';
 
@@ -10,7 +11,6 @@ import { CoinjoinBackend, CoinjoinBackendSettings, CoinjoinClient } from '@trezo
 import { IpcProxyHandlerOptions, createIpcProxyHandler } from '@trezor/ipc-proxy';
 import { getFreePort } from '@trezor/node-utils';
 import { InterceptedEvent } from '@trezor/request-manager';
-import { getSynchronize } from '@exodus/trezor-utils';
 
 import { PowerSaveBlocker } from '../libs/power-save-blocker';
 import { CoinjoinProcess } from '../libs/processes/CoinjoinProcess';

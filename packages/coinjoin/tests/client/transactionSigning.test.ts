@@ -1,4 +1,5 @@
 import { getWeakRandomNumberInRange } from '@exodus/trezor-utils';
+
 import { networks } from '@trezor/utxo-lib';
 
 import { transactionSigning } from '../../src/client/round/transactionSigning';

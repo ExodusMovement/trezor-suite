@@ -1,10 +1,10 @@
+import { createZip } from '@exodus/trezor-utils';
 import { createAction } from '@reduxjs/toolkit';
 
 import { notificationsActions } from '@suite-common/toast-notifications';
 import { selectDevices } from '@suite-common/wallet-core';
 import { Account } from '@suite-common/wallet-types';
 import { StaticSessionId } from '@trezor/connect';
-import { createZip } from '@exodus/trezor-utils';
 
 import { METADATA, METADATA_LABELING } from 'src/actions/suite/constants';
 import { selectSelectedProviderForLabels } from 'src/reducers/suite/metadataReducer';

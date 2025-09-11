@@ -1,3 +1,4 @@
+import { BigNumber } from '@exodus/trezor-utils';
 import { getUnixTime } from 'date-fns';
 import styled from 'styled-components';
 
@@ -5,7 +6,6 @@ import { calcTicks, calcTicksFromData } from '@suite-common/suite-utils';
 import { hasNetworkPotentialFraudTransactions } from '@suite-common/token-definitions';
 import { selectBaseCurrency } from '@suite-common/wallet-core';
 import { Button, Card, Column, Row, variables } from '@trezor/components';
-import { BigNumber } from '@exodus/trezor-utils';
 
 import { updateGraphData } from 'src/actions/wallet/graphActions';
 import {

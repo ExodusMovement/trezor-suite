@@ -1,4 +1,5 @@
 import { arrayPartition } from '@exodus/trezor-utils';
+
 import { Network, address as addressBjs } from '@trezor/utxo-lib';
 
 import type { CoinjoinClient } from './CoinjoinClient';

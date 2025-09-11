@@ -1,10 +1,11 @@
+import { BigNumber } from '@exodus/trezor-utils';
+
 import { SelectedAccountLoaded, WalletAccountTransaction } from '@suite-common/wallet-types';
 import { formatNetworkAmount } from '@suite-common/wallet-utils';
 import { Card, Column, Divider, InfoItem, Row, Text } from '@trezor/components';
 import { FeeRate } from '@trezor/product-components';
 import { spacings } from '@trezor/theme';
 import { HELP_CENTER_CANCEL_TRANSACTION } from '@trezor/urls';
-import { BigNumber } from '@exodus/trezor-utils';
 
 import { useCancelTxContext } from '../../../../../../../hooks/wallet/useCancelTxContext';
 import { BaseCurrencyValue } from '../../../../../BaseCurrencyValue';

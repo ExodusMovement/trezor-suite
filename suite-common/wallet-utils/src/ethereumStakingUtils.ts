@@ -1,3 +1,5 @@
+import { isArrayMember } from '@exodus/trezor-utils';
+import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
 import { fromWei, hexToNumberString } from 'web3-utils';
 
 import { NetworkSymbol, getNetworkFeatures } from '@suite-common/wallet-config';
@@ -11,8 +13,6 @@ import {
     SupportedEthereumNetworkSymbol,
     supportedNetworkSymbols,
 } from '@suite-common/wallet-types';
-import { isArrayMember } from '@exodus/trezor-utils';
-import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
 
 export const getEverstakePool = (account?: Account) => {
     if (account?.networkType !== 'ethereum') {

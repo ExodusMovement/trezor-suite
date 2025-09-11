@@ -1,5 +1,7 @@
 import { FieldErrors, UseControllerProps } from 'react-hook-form';
 
+import { BigNumber } from '@exodus/trezor-utils';
+
 import {
     TRADING_FORM_OUTPUT_AMOUNT,
     TRADING_FORM_OUTPUT_FIAT,
@@ -9,7 +11,6 @@ import { formInputsMaxLength } from '@suite-common/validators';
 import { getInputState } from '@suite-common/wallet-utils';
 import { NumberInput } from '@trezor/product-components';
 import { useDidUpdate } from '@trezor/react-utils';
-import { BigNumber } from '@exodus/trezor-utils';
 
 import { useSelector, useTranslation } from 'src/hooks/suite';
 import { useTradingFormContext } from 'src/hooks/wallet/trading/form/useTradingCommonForm';

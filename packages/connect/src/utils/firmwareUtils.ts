@@ -1,5 +1,6 @@
-import type { DeviceModelInternal, FirmwareRelease } from '@trezor/device-utils';
 import { versionUtils } from '@exodus/trezor-utils';
+
+import type { DeviceModelInternal, FirmwareRelease } from '@trezor/device-utils';
 
 import { CurrentVersion } from '../data/firmwareInfo';
 import { Features, FirmwareType, StrictFeatures, VersionArray } from '../types';

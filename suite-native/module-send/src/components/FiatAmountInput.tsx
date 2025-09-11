@@ -1,5 +1,7 @@
 import { useSelector } from 'react-redux';
 
+import { BigNumber } from '@exodus/trezor-utils';
+
 import { TokenDefinitionsRootState } from '@suite-common/token-definitions';
 import { getNetwork } from '@suite-common/wallet-config';
 import {
@@ -14,7 +16,6 @@ import { useCryptoFiatConverters } from '@suite-native/formatters';
 import { useField, useFormContext } from '@suite-native/forms';
 import { useAmountInputTransformers } from '@suite-native/helpers';
 import { selectAccountTokenDecimals } from '@suite-native/tokens';
-import { BigNumber } from '@exodus/trezor-utils';
 
 import { SendAmountCurrencyLabelWrapper } from './CryptoAmountInput';
 import { SendOutputsFormValues } from '../sendOutputsFormSchema';

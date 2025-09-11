@@ -1,5 +1,6 @@
 import { useState } from 'react';
 
+import { arrayPartition } from '@exodus/trezor-utils';
 import styled from 'styled-components';
 
 import { notificationsActions } from '@suite-common/toast-notifications';
@@ -13,7 +14,6 @@ import { prepareNewAccountPayload } from '@suite-common/wallet-utils';
 import { CollapsibleBox, Modal, Tooltip } from '@trezor/components';
 import { hasBitcoinOnlyFirmware } from '@trezor/device-utils';
 import { spacings, spacingsPx } from '@trezor/theme';
-import { arrayPartition } from '@exodus/trezor-utils';
 
 import { goto } from 'src/actions/suite/routerActions';
 import { CoinList, Translation } from 'src/components/suite';

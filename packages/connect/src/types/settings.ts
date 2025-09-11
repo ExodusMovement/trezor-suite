@@ -1,7 +1,8 @@
-import type { BlockchainSettings } from '@trezor/blockchain-link';
-import type { DeviceModelInternal } from '@trezor/device-utils';
 import type { ThpCredentials, ThpPairingMethod } from '@exodus/trezor-protocol';
 import type { Transport } from '@exodus/trezor-transport';
+
+import type { BlockchainSettings } from '@trezor/blockchain-link';
+import type { DeviceModelInternal } from '@trezor/device-utils';
 import { PartialRecord } from '@trezor/type-utils';
 
 import { FirmwareUpdateSource } from '../data/firmwareInfo';

@@ -1,6 +1,7 @@
+import { typedObjectKeys } from '@exodus/trezor-utils';
+
 import { createMigration } from '@suite/idb-migration-utils';
 import { LANGUAGES } from '@suite-common/suite-types';
-import { typedObjectKeys } from '@exodus/trezor-utils';
 
 import { SuiteDBSchema } from 'src/storage/definitions';
 

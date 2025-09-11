@@ -1,3 +1,6 @@
+import { StellarAssetType } from '@exodus/trezor-protobuf/src/messages';
+import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
+
 import { createThunk } from '@suite-common/redux-utils';
 import { getDisplaySymbol } from '@suite-common/wallet-config';
 import { XRP_FLAG } from '@suite-common/wallet-constants';
@@ -24,8 +27,6 @@ import TrezorConnect, {
     StellarOperation,
     TokenInfo,
 } from '@trezor/connect';
-import { StellarAssetType } from '@exodus/trezor-protobuf/src/messages';
-import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
 
 import { SEND_MODULE_PREFIX } from './sendFormConstants';
 import {

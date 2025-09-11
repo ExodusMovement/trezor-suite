@@ -1,3 +1,4 @@
+import { BigNumber } from '@exodus/trezor-utils';
 import { A, D, F, pipe } from '@mobily/ts-belt';
 
 import {
@@ -24,7 +25,6 @@ import {
     roundTimestampToNearestPastHour,
 } from '@suite-common/wallet-utils';
 import type { BaseCurrencyCode } from '@trezor/blockchain-link-types';
-import { BigNumber } from '@exodus/trezor-utils';
 
 import { MAX_AGE } from './fiatRatesConstants';
 import { FiatRatesRootState } from './fiatRatesTypes';

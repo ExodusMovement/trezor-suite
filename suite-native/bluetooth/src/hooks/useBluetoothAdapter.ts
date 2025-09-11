@@ -2,13 +2,14 @@ import { useEffect } from 'react';
 import { AppState } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { bluetoothActions, parseManufacturerData } from '@suite-common/bluetooth';
-import { FeatureFlag, useFeatureFlag } from '@suite-native/feature-flags';
-import { useTranslate } from '@suite-native/intl';
 import {
     BluetoothDevice as TransportBluetoothDevice,
     bluetoothManager,
 } from '@exodus/trezor-transport-native-bluetooth';
+
+import { bluetoothActions, parseManufacturerData } from '@suite-common/bluetooth';
+import { FeatureFlag, useFeatureFlag } from '@suite-native/feature-flags';
+import { useTranslate } from '@suite-native/intl';
 
 import {
     selectBluetoothAdapterStatus,

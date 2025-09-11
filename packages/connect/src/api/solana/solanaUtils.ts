@@ -1,3 +1,4 @@
+import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
 import { A, F, pipe } from '@mobily/ts-belt';
 import {
     type Blockhash,
@@ -10,7 +11,6 @@ import {
 import type { TokenAccount } from '@trezor/blockchain-link-types';
 import { solanaUtils as SolanaBlockchainLinkUtils } from '@trezor/blockchain-link-utils';
 import type { TokenProgramName } from '@trezor/blockchain-link-utils/src/solana';
-import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
 
 import { Blockchain } from '../../backend/Blockchain';
 

@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { BigNumber } from '@exodus/trezor-utils';
 import { CryptoId } from 'invity-api';
 import styled, { useTheme } from 'styled-components';
 
@@ -7,7 +8,6 @@ import { TradingTradeType, useTradingInfo } from '@suite-common/trading';
 import { asBaseCurrencyAmount } from '@suite-common/wallet-utils';
 import { Icon } from '@trezor/components';
 import { spacingsPx } from '@trezor/theme';
-import { BigNumber } from '@exodus/trezor-utils';
 
 import { FormattedCryptoAmount } from 'src/components/suite';
 import { useTradingFormContext } from 'src/hooks/wallet/trading/form/useTradingCommonForm';

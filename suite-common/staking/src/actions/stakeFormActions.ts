@@ -1,3 +1,5 @@
+import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
+
 import { NetworkSymbol, getNetworkDisplaySymbol } from '@suite-common/wallet-config';
 import { ComposeActionContext } from '@suite-common/wallet-core';
 import {
@@ -14,7 +16,6 @@ import {
     getExternalComposeOutput,
 } from '@suite-common/wallet-utils';
 import { FeeLevel } from '@trezor/connect';
-import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
 
 type StakingParams = {
     feeInBaseUnits: string;

@@ -5,12 +5,12 @@
 // - added `BufferWritter` "writeInt64", "writeUInt16" methods.
 // - `BufferWritter.writeUInt64` is accepting string or number.
 
+import { bufferUtils } from '@exodus/trezor-utils';
 import BN from 'bn.js';
 import { Int64LE } from 'int64-buffer';
 import pushdata from 'pushdata-bitcoin';
 import * as varuint from 'varuint-bitcoin';
 
-import { bufferUtils } from '@exodus/trezor-utils';
 
 import * as types from './types';
 

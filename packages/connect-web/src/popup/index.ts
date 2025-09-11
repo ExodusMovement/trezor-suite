@@ -1,5 +1,6 @@
 // origin: https://github.com/trezor/connect/blob/develop/src/js/popup/PopupManager.js
 
+import { Deferred, createDeferred, scheduleAction } from '@exodus/trezor-utils';
 import EventEmitter from 'events';
 
 import { CONTENT_SCRIPT_VERSION, VERSION } from '@trezor/connect/src/data/version';
@@ -19,7 +20,6 @@ import {
     Message,
 } from '@trezor/connect-common/src/messageChannel/abstract';
 import type { IntervalId, TimerId } from '@trezor/type-utils';
-import { Deferred, createDeferred, scheduleAction } from '@exodus/trezor-utils';
 
 import { showPopupRequest } from './showPopupRequest';
 import { ServiceWorkerWindowChannel } from '../channels/serviceworker-window';

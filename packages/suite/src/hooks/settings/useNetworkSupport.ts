@@ -1,7 +1,8 @@
+import { arrayPartition } from '@exodus/trezor-utils';
+
 import { Network, getMainnets, getTestnets } from '@suite-common/wallet-config';
 import { selectDeviceSupportedNetworks, selectSelectedDevice } from '@suite-common/wallet-core';
 import { DeviceModelInternal, hasBitcoinOnlyFirmware } from '@trezor/device-utils';
-import { arrayPartition } from '@exodus/trezor-utils';
 
 import { useSelector } from 'src/hooks/suite';
 import { selectIsDebugModeActive } from 'src/selectors/suite/suiteSelectors';

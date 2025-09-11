@@ -1,5 +1,6 @@
-import { Locale } from '@suite-common/suite-types';
 import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
+
+import { Locale } from '@suite-common/suite-types';
 
 import { localizeNumber } from './localizeNumberUtils';
 

@@ -1,3 +1,4 @@
+import { bluetoothManager } from '@exodus/trezor-transport-native-bluetooth';
 import { PayloadAction } from '@reduxjs/toolkit';
 
 import {
@@ -7,7 +8,6 @@ import {
 } from '@suite-common/bluetooth';
 import { createSliceWithExtraDeps } from '@suite-common/redux-utils';
 import { FirmwareDisconnect, UI_REQUEST } from '@trezor/connect';
-import { bluetoothManager } from '@exodus/trezor-transport-native-bluetooth';
 
 import { BluetoothDevice, BluetoothPermissionStatus } from './types';
 

@@ -1,7 +1,7 @@
+import { typedObjectKeys } from '@exodus/trezor-utils';
 import { Meta, StoryFn } from '@storybook/react';
 import styled from 'styled-components';
 
-import { typedObjectKeys } from '@exodus/trezor-utils';
 
 import { Flag } from './Flag';
 import { FLAGS } from './flags';

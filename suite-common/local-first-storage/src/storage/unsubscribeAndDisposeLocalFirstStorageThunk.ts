@@ -1,7 +1,8 @@
+import { typedObjectValues } from '@exodus/trezor-utils';
+
 import { createThunk } from '@suite-common/redux-utils';
 import { TrezorDevice } from '@suite-common/suite-types';
 import { parseDeviceStaticSessionId } from '@suite-common/wallet-utils';
-import { typedObjectValues } from '@exodus/trezor-utils';
 
 import { LOCAL_FIRST_STORAGE_PREFIX } from './constants';
 import { localFirstStorageProvider, subscriptionStorage } from './sharedObjects';

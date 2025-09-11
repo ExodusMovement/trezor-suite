@@ -1,3 +1,4 @@
+import { BigNumber, createDeferred, createLazy } from '@exodus/trezor-utils';
 import {
     AccountInfoBase,
     Address,
@@ -61,7 +62,6 @@ import type {
 } from '@trezor/blockchain-link-utils/src/solana-types';
 import { getSuiteVersion } from '@trezor/env-utils';
 import { IntervalId } from '@trezor/type-utils';
-import { BigNumber, createDeferred, createLazy } from '@exodus/trezor-utils';
 
 import { BaseWorker, CONTEXT, ContextType } from '../baseWorker';
 import { getBaseFee, getPriorityFee } from './utils/fee';

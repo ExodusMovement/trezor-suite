@@ -1,3 +1,4 @@
+import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
 import { toWei } from 'web3-utils';
 
 import {
@@ -18,7 +19,6 @@ import { DeviceModelInternal } from '@trezor/device-utils';
 import { isDesktop } from '@trezor/env-utils';
 import type { OnUpgradeFunc } from '@trezor/suite-storage';
 import { PartialRecord } from '@trezor/type-utils';
-import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
 
 import { migrateToV56 } from 'src/storage/migrations/legacyVersions/migrateToV56';
 import { migrationOfBnbNetwork } from 'src/storage/migrations/networks/bnb';

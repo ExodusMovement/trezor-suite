@@ -1,10 +1,11 @@
+import { BigNumber } from '@exodus/trezor-utils';
+
 import { Account, WalletAccountTransaction } from '@suite-common/wallet-types';
 import {
     getStakingDataForNetwork,
     isPending,
     isSupportedStakingNetworkSymbol,
 } from '@suite-common/wallet-utils';
-import { BigNumber } from '@exodus/trezor-utils';
 
 export const isAccountStakingActive = (
     account: Account | null,

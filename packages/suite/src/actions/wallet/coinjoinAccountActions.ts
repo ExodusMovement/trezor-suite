@@ -1,3 +1,5 @@
+import { promiseAllSequence } from '@exodus/trezor-utils';
+
 import { isDevEnv } from '@suite-common/suite-utils';
 import { notificationsActions } from '@suite-common/toast-notifications';
 import type { Network, NetworkAccount, NetworkSymbol } from '@suite-common/wallet-config';
@@ -16,7 +18,6 @@ import {
 } from '@suite-common/wallet-utils';
 import { BroadcastedTransactionDetails, ScanAccountProgress } from '@trezor/coinjoin';
 import TrezorConnect from '@trezor/connect';
-import { promiseAllSequence } from '@exodus/trezor-utils';
 
 import { openModal } from 'src/actions/suite/modalActions';
 import {

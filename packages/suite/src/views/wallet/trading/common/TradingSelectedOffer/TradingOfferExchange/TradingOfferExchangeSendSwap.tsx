@@ -1,6 +1,7 @@
 import { ChangeEvent, useState } from 'react';
 import { FieldError } from 'react-hook-form';
 
+import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
 import useDebounce from 'react-use/lib/useDebounce';
 import styled from 'styled-components';
 
@@ -26,7 +27,6 @@ import { BottomText } from '@trezor/components/src/components/form/BottomText';
 import { useAsyncClickHandler } from '@trezor/react-utils';
 import { EventType, analytics } from '@trezor/suite-analytics';
 import { spacings } from '@trezor/theme';
-import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
 
 import { AccountLabeling, FormattedCryptoAmount, Translation } from 'src/components/suite';
 import { TxAddress } from 'src/components/suite/copy/TxAddress';

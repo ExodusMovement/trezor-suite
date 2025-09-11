@@ -1,13 +1,13 @@
 /**
  * Auto start handler
  */
+import { createDeferred } from '@exodus/trezor-utils';
 import { BrowserWindow } from 'electron';
 import fs from 'fs';
 import os from 'os';
 import path from 'path';
 
 import { validateIpcMessage } from '@trezor/ipc-proxy';
-import { createDeferred } from '@exodus/trezor-utils';
 
 import { Store } from '../libs/store';
 import { app, ipcMain } from '../typed-electron';

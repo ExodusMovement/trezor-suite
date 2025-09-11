@@ -1,10 +1,11 @@
+import { mergeDeepObject } from '@exodus/trezor-utils';
+
 import { connectInitThunk } from '@suite-common/connect-init';
 import { messageSystemInitialState } from '@suite-common/message-system';
 import { testMocks } from '@suite-common/test-utils';
 import { notificationsActions } from '@suite-common/toast-notifications';
 import { CommonParams } from '@trezor/connect';
 import { DeviceModelInternal } from '@trezor/device-utils';
-import { mergeDeepObject } from '@exodus/trezor-utils';
 
 import * as backupActions from 'src/actions/backup/backupActions';
 import { BACKUP } from 'src/actions/backup/constants';

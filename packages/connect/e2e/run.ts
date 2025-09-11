@@ -1,3 +1,4 @@
+import { typedObjectKeys } from '@exodus/trezor-utils';
 import { getVersion as getJestVersion, runCLI } from 'jest';
 import karma from 'karma';
 import path from 'path';
@@ -9,7 +10,6 @@ import {
     Model,
     TrezorUserEnvLink,
 } from '@trezor/trezor-user-env-link';
-import { typedObjectKeys } from '@exodus/trezor-utils';
 
 import argv from './jest.config';
 

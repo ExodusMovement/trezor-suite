@@ -1,5 +1,7 @@
 // origin: https://github.com/trezor/connect/blob/develop/src/js/data/FirmwareInfo.js
 
+import { getIntegerInRangeFromString, removeTrailingSlashes, versionUtils } from '@exodus/trezor-utils';
+
 import {
     ConditionalRelease,
     DeviceModelInternal,
@@ -8,7 +10,6 @@ import {
     IntermediaryReleaseConfig,
     VersionArray,
 } from '@trezor/device-utils';
-import { getIntegerInRangeFromString, removeTrailingSlashes, versionUtils } from '@exodus/trezor-utils';
 
 import { Features, FirmwareReleaseConfigInfo, FirmwareType } from '../types';
 import { DataManager } from './DataManager';

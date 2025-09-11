@@ -1,6 +1,7 @@
 import { useCallback } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
+import { isArrayMember } from '@exodus/trezor-utils';
 import { useNavigation } from '@react-navigation/native';
 
 import {
@@ -15,7 +16,6 @@ import { useTranslate } from '@suite-native/intl';
 import { captureSentryException, withSentryScope } from '@suite-native/sentry';
 import { useToast } from '@suite-native/toasts';
 import TrezorConnect from '@trezor/connect';
-import { isArrayMember } from '@exodus/trezor-utils';
 
 export const useDeviceAuthenticityCheck = () => {
     const navigation = useNavigation();

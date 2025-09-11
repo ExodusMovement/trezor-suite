@@ -1,3 +1,4 @@
+import { BigNumber } from '@exodus/trezor-utils';
 import { isRejectedWithValue } from '@reduxjs/toolkit';
 
 import { createThunk } from '@suite-common/redux-utils';
@@ -16,7 +17,6 @@ import {
     isExchangeTradingForm,
     subunitsToUnits,
 } from '@suite-common/wallet-utils';
-import { BigNumber } from '@exodus/trezor-utils';
 
 import { tradingThunks } from '../';
 import { TRADING_THUNK_PREFIX } from '../../constants';

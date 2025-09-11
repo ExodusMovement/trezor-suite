@@ -1,6 +1,7 @@
 // origin: https://github.com/trezor/connect/blob/develop/src/js/core/methods/EthereumSignMessage.js
 
 import { MessagesSchema } from '@exodus/trezor-protobuf';
+
 import { Assert } from '@trezor/schema-utils';
 
 import type { PROTO } from '../../../constants';

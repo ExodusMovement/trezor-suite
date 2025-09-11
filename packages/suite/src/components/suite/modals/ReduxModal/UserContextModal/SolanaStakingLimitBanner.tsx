@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 
+import { BigNumber } from '@exodus/trezor-utils';
+
 import { MAX_DEACTIVATE_ACCOUNTS_WITH_SPLIT, claim, unstake } from '@suite-common/staking-solana';
 import { getDisplaySymbol } from '@suite-common/wallet-config';
 import { WALLET_SDK_SOURCE } from '@suite-common/wallet-constants';
@@ -13,7 +15,6 @@ import {
 } from '@suite-common/wallet-utils';
 import { StakeState } from '@trezor/blockchain-link-types/src/solana';
 import { Banner } from '@trezor/components';
-import { BigNumber } from '@exodus/trezor-utils';
 
 import { Translation } from 'src/components/suite';
 

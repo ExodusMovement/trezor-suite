@@ -1,10 +1,11 @@
+import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
+
 import { AccountAddresses, Address, Transaction } from '@trezor/blockchain-link-types/src/common';
 import type { HistoryTx } from '@trezor/blockchain-link-types/src/electrum';
 import type { GetAccountBalanceHistory as Req } from '@trezor/blockchain-link-types/src/messages';
 import type { GetAccountBalanceHistory as Res } from '@trezor/blockchain-link-types/src/responses';
 import { sumVinVout } from '@trezor/blockchain-link-utils';
 import { transformTransaction } from '@trezor/blockchain-link-utils/src/blockbook';
-import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
 import { discovery } from '@trezor/utxo-lib';
 
 import { AddressHistory, Api, discoverAddress, getTransactions, tryGetScripthash } from '../utils';

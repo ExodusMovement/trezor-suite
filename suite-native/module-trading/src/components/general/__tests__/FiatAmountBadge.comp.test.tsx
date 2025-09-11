@@ -1,6 +1,7 @@
+import { BigNumber } from '@exodus/trezor-utils';
+
 import { asBaseCurrencyAmount } from '@suite-common/wallet-utils';
 import { renderWithBasicProvider } from '@suite-native/test-utils';
-import { BigNumber } from '@exodus/trezor-utils';
 
 import { FiatAmountBadge, FiatAmountBadgeProps } from '../FiatAmountBadge';
 

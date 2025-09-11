@@ -1,3 +1,4 @@
+import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
 import { isAnyOf } from '@reduxjs/toolkit';
 import { MiddlewareAPI } from 'redux';
 
@@ -24,7 +25,6 @@ import {
     isDeviceInBootloaderMode,
 } from '@trezor/device-utils';
 import { EventType, analytics } from '@trezor/suite-analytics';
-import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
 
 import { ROUTER, SUITE } from 'src/actions/suite/constants';
 import { setFlag } from 'src/actions/suite/suiteActions';

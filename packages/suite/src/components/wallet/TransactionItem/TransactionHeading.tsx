@@ -1,5 +1,6 @@
 import { useState } from 'react';
 
+import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
 import styled, { useTheme } from 'styled-components';
 
 import {
@@ -12,7 +13,6 @@ import {
 import { Icon, Row, variables } from '@trezor/components';
 import { spacings } from '@trezor/theme';
 import { HELP_CENTER_ZERO_VALUE_ATTACKS } from '@trezor/urls';
-import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
 
 import {
     FormattedCryptoAmount,

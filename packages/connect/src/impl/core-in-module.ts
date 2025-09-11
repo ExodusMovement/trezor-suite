@@ -1,6 +1,6 @@
+import { DeferredManager, cloneObject, createDeferredManager } from '@exodus/trezor-utils';
 import EventEmitter from 'events';
 
-import { DeferredManager, cloneObject, createDeferredManager } from '@exodus/trezor-utils';
 
 import * as ERRORS from '../constants/errors';
 import { parseConnectSettings } from '../data/connectSettings';

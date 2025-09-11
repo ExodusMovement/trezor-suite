@@ -1,3 +1,5 @@
+import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
+
 import { getStakingTotalRewards } from '@suite-common/staking';
 import { type NetworkSymbol, getNetworkDisplaySymbol } from '@suite-common/wallet-config';
 import {
@@ -26,7 +28,6 @@ import {
 } from '@trezor/components';
 import { EventType, analytics } from '@trezor/suite-analytics';
 import { spacings } from '@trezor/theme';
-import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
 
 import { openModal } from 'src/actions/suite/modalActions';
 import { BaseCurrencyValue, FormattedCryptoAmount, Translation } from 'src/components/suite';

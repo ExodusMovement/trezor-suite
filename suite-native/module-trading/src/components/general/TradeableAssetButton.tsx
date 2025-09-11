@@ -1,6 +1,7 @@
 import { useMemo } from 'react';
 import { Pressable } from 'react-native';
 
+import { hexToRgba } from '@exodus/trezor-utils';
 import { LinearGradient } from 'expo-linear-gradient';
 
 import { invariant } from '@suite-common/suite-utils';
@@ -9,7 +10,6 @@ import { NetworkDisplaySymbol, getDisplaySymbol } from '@suite-common/wallet-con
 import { Box } from '@suite-native/atoms';
 import { CryptoIcon, Icon } from '@suite-native/icons';
 import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
-import { hexToRgba } from '@exodus/trezor-utils';
 
 import { NetworkSymbolExtendedFormatter } from './NetworkSymbolExtendedFormatter';
 import { useTradeableAssetDominantColor } from '../../hooks/general/useTradeableAssetDominantColor';

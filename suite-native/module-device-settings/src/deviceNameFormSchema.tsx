@@ -1,6 +1,7 @@
+import { isAscii } from '@exodus/trezor-utils';
+
 import { yup } from '@suite-common/validators';
 import { useTranslate } from '@suite-native/intl';
-import { isAscii } from '@exodus/trezor-utils';
 
 const noSpecialCharacter = /^(?!.*[\p{M}\p{Lm}])[\x20-\x7E\p{L}\p{N}'-]+$/u;
 

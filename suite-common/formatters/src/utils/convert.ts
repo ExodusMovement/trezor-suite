@@ -1,3 +1,5 @@
+import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
+
 import { type NetworkSymbol, getNetwork } from '@suite-common/wallet-config';
 import {
     BaseCurrencyAmount,
@@ -6,7 +8,6 @@ import {
     fromBaseCurrencyToCryptoUnit,
     toFiatCurrency,
 } from '@suite-common/wallet-utils';
-import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
 
 type ConvertInput = {
     amount: string | null;

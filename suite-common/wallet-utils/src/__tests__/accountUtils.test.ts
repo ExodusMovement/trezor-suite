@@ -1,6 +1,7 @@
+import { BigNumber } from '@exodus/trezor-utils';
+
 import { testMocks } from '@suite-common/test-utils';
 import { Account } from '@suite-common/wallet-types';
-import { BigNumber } from '@exodus/trezor-utils';
 
 import { asAmountSubunit, asAmountUnit } from '../AmountTypes';
 import * as fixtures from '../__fixtures__/accountUtils';

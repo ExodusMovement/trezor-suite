@@ -1,3 +1,4 @@
+import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
 import { AccountRole } from '@solana/kit';
 
 import {
@@ -5,7 +6,6 @@ import {
     TOKEN_2022_PROGRAM_PUBLIC_KEY,
     TOKEN_PROGRAM_PUBLIC_KEY,
 } from '@trezor/blockchain-link-utils/src/solana';
-import { BigNumber } from '@exodus/trezor-utils/src/bigNumber';
 
 export const fixtures = {
     getMinimumRequiredTokenAccountsForTransfer: [
