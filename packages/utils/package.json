@@ -1,5 +1,5 @@
 {
-    "name": "@trezor/utils",
+    "name": "@exodus/trezor-utils",
     "version": "9.4.3-beta.1",
     "author": "Trezor <info@trezor.io>",
     "homepage": "https://github.com/trezor/trezor-suite/tree/develop/packages/utils",
@@ -39,9 +39,6 @@
         "@trezor/eslint": "workspace:*",
         "@trezor/type-utils": "workspace:*",
         "tsx": "^4.20.3"
-    },
-    "dependencies": {
-        "bignumber.js": "^9.3.1"
     },
     "browser": {
         "crypto": false
