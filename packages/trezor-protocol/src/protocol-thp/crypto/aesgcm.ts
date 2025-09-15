@@ -14,6 +14,7 @@ export const aesgcm = (key: Buffer, iv: Buffer) => {
                 nonce: iv,
                 data: plainText,
                 additionalData,
+                format: 'buffer',
             })) as Buffer;
 
             // Return only the ciphertext part (without the 16-byte auth tag at the end)
@@ -30,6 +31,7 @@ export const aesgcm = (key: Buffer, iv: Buffer) => {
                 nonce: iv,
                 data: combined,
                 additionalData,
+                format: 'buffer',
             });
         },
         finish: async () => {
@@ -41,6 +43,7 @@ export const aesgcm = (key: Buffer, iv: Buffer) => {
                     nonce: iv,
                     data: new Uint8Array(0),
                     additionalData,
+                    format: 'buffer',
                 })) as Buffer;
             }
 
