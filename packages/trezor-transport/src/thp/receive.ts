@@ -71,8 +71,8 @@ export type ParseThpMessageProps = {
     thpState?: protocolThp.ThpState;
 };
 
-export const parseThpMessage = ({ decoded, messages, thpState }: ParseThpMessageProps) => {
-    const message = protocolThp.decode(
+export const parseThpMessage = async ({ decoded, messages, thpState }: ParseThpMessageProps) => {
+    const message = await protocolThp.decode(
         decoded,
         (messageType, data) => decodeMessage(messages, messageType, data),
         thpState,

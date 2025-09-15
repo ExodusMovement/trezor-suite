@@ -35,7 +35,13 @@ interface BuildMessageProps {
 }
 
 // common protobufEncoder for protocol v1 and v2 (THP)
-export const buildMessage = ({ messages, name, data, protocol, thpState }: BuildMessageProps) => {
+export const buildMessage = async ({
+    messages,
+    name,
+    data,
+    protocol,
+    thpState,
+}: BuildMessageProps) => {
     const protobufEncoder = (messageName: string, data: Record<string, unknown>) => {
         const { messageType, message } = encodeMessage(messages, messageName, data);
 
@@ -44,7 +50,7 @@ export const buildMessage = ({ messages, name, data, protocol, thpState }: Build
 
     if (protocol.name === 'v2') {
         // THP encoding requires more data than regular protocol.encode
-        return protocolThp.encode({
+        return await protocolThp.encode({
             messageName: name,
             data,
             thpState,

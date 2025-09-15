@@ -37,11 +37,11 @@ export const findKnownPairingCredentials = (
         }
     });
 
-export const getTrezorState = (credentials: ThpHandshakeCredentials, payload: Buffer) => {
+export const getTrezorState = async (credentials: ThpHandshakeCredentials, payload: Buffer) => {
     // 2. Set trezor_state, success = AES-GCM-DECRYPT(key=key_response, IV=0^96, ad=empty_string, plaintext=trezor_state). Assert that success is True.
     const aes = aesgcm(credentials.trezorKey, Buffer.alloc(12));
     aes.auth(Buffer.alloc(0));
-    const trezorState = aes.decrypt(payload.subarray(0, 1), payload.subarray(1, 17));
+    const trezorState = await aes.decrypt(payload.subarray(0, 1), payload.subarray(1, 17));
 
     return trezorState.readUint8() as 0 | 1;
 };
@@ -51,7 +51,7 @@ type Curve25519KeyPair = ReturnType<typeof getCurve25519KeyPair>;
 // State HH1
 // TODO: link-to-public-docs
 // https://www.notion.so/satoshilabs/THP-Specification-2-0-18fdc5260606806ab573d0a7cba1897a#193dc526060681b4b871e6b761107fba
-export const handleHandshakeInit = ({
+export const handleHandshakeInit = async ({
     handshakeInitResponse,
     thpState,
     knownCredentials,
@@ -96,7 +96,7 @@ export const handleHandshakeInit = ({
     aes.auth(h);
     const trezorStaticPubkey = trezorEncryptedStaticPubkey.subarray(0, 32);
     const trezorStaticPubkeyTag = trezorEncryptedStaticPubkey.subarray(32, 32 + 16);
-    const trezorMaskedStaticPubkey = aes.decrypt(trezorStaticPubkey, trezorStaticPubkeyTag);
+    const trezorMaskedStaticPubkey = await aes.decrypt(trezorStaticPubkey, trezorStaticPubkeyTag);
     // 7. Set h = SHA-256(h || encrypted_trezor_static_pubkey)
     h = hashOfTwo(h, trezorEncryptedStaticPubkey);
     // 8. Set ck, k = HKDF(ck, X25519(host_ephemeral_privkey, trezor_masked_static_pubkey))
@@ -106,7 +106,7 @@ export const handleHandshakeInit = ({
     // 9. Set tag_of_empty_string, success = AES-GCM-DECRYPT(key=k, IV=0^96 (bits, 12 bytes), ad=h, plaintext=empty_string). Assert that success is True.
     aes = aesgcm(k, iv0);
     aes.auth(h);
-    aes.decrypt(Buffer.alloc(0), tag);
+    await aes.decrypt(Buffer.alloc(0), tag);
     // 10. Set h = SHA-256(h || tag)
     h = hashOfTwo(h, tag);
 
@@ -129,8 +129,8 @@ export const handleHandshakeInit = ({
     aes = aesgcm(k, iv1);
     aes.auth(h);
     const hostEncryptedStaticPubkey = Buffer.concat([
-        aes.encrypt(hostTempKeys.publicKey),
-        aes.finish(),
+        await aes.encrypt(hostTempKeys.publicKey),
+        await aes.finish(),
     ]);
     // 13. Set h = SHA-256(h || encrypted_host_static_pubkey).
     h = hashOfTwo(h, hostEncryptedStaticPubkey);
@@ -144,7 +144,7 @@ export const handleHandshakeInit = ({
     // 16. Set *encrypted_payload* = AES-GCM-ENCRYPT(*key*=*k*, *IV*=*0^96*, *ad*=*h*, *plaintext*=*payload_binary*).
     aes = aesgcm(k, iv0);
     aes.auth(h);
-    const encryptedPayload = Buffer.concat([aes.encrypt(message), aes.finish()]);
+    const encryptedPayload = Buffer.concat([await aes.encrypt(message), await aes.finish()]);
     h = hashOfTwo(h, encryptedPayload);
 
     // HH2 and HH3

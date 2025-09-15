@@ -99,7 +99,7 @@ describe('encoding json -> protobuf -> json', () => {
     fixtures.forEach(f => {
         describe(`${f.name} - payload length ${f.in.source_account.length}`, () => {
             test('bridgeProtocol: buildMessage - receiveAndParse', async () => {
-                const result = buildMessage({
+                const result = await buildMessage({
                     messages: parsedMessages,
                     name: f.name,
                     data: f.in,
@@ -124,7 +124,7 @@ describe('encoding json -> protobuf -> json', () => {
             });
 
             test('v1Protocol: buildMessage - createChunks - receiveAndParse', async () => {
-                const result = buildMessage({
+                const result = await buildMessage({
                     messages: parsedMessages,
                     name: f.name,
                     data: f.in,

@@ -1,4 +1,4 @@
-import { gcm } from '@noble/ciphers/aes';
+import { decryptGCM, encryptGCM } from '@exodus/crypto/aes';
 
 export const aesgcm = (key: Buffer, iv: Buffer) => {
     let additionalData: Buffer | undefined;
@@ -8,29 +8,40 @@ export const aesgcm = (key: Buffer, iv: Buffer) => {
         auth: (authData: Buffer) => {
             additionalData = authData;
         },
-        encrypt: (plainText: Buffer) => {
-            const cipher = gcm(key, iv, additionalData);
-            lastEncryptedWithTag = cipher.encrypt(plainText);
+        encrypt: async (plainText: Buffer) => {
+            lastEncryptedWithTag = (await encryptGCM({
+                key,
+                iv,
+                data: plainText,
+                additionalData,
+            })) as Buffer;
 
             // Return only the ciphertext part (without the 16-byte auth tag at the end)
             return Buffer.from(lastEncryptedWithTag.slice(0, -16));
         },
-        decrypt: (cipherText: Buffer, authTag: Buffer) => {
+        decrypt: async (cipherText: Buffer, authTag: Buffer) => {
             // Combine ciphertext and auth tag for noble/ciphers
             const combined = new Uint8Array(cipherText.length + authTag.length);
             combined.set(cipherText);
             combined.set(authTag, cipherText.length);
 
-            const cipher = gcm(key, iv, additionalData);
-
-            return Buffer.from(cipher.decrypt(combined));
+            return await decryptGCM({
+                key,
+                iv,
+                data: combined,
+                additionalData,
+            });
         },
-        finish: () => {
+        finish: async () => {
             // Return the auth tag from the last encryption
             if (!lastEncryptedWithTag) {
                 // If no encryption was done, encrypt empty data to get a tag
-                const cipher = gcm(key, iv, additionalData);
-                lastEncryptedWithTag = cipher.encrypt(new Uint8Array(0));
+                lastEncryptedWithTag = (await encryptGCM({
+                    key,
+                    iv,
+                    data: new Uint8Array(0),
+                    additionalData,
+                })) as Buffer;
             }
 
             return Buffer.from(lastEncryptedWithTag.slice(-16)); // Last 16 bytes are the auth tag

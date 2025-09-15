@@ -34,10 +34,10 @@ type ProtobufDecoder = (
 
 type MessageV2 = ReturnType<TransportProtocolDecode>;
 
-const decipherMessage = (key: Buffer, recvNonce: number, payload: Buffer, tag: Buffer) => {
+const decipherMessage = async (key: Buffer, recvNonce: number, payload: Buffer, tag: Buffer) => {
     const aes = aesgcm(key, getIvFromNonce(recvNonce));
     aes.auth(Buffer.alloc(0));
-    const trezorMaskedStaticPubkey = aes.decrypt(payload, tag);
+    const trezorMaskedStaticPubkey = await aes.decrypt(payload, tag);
 
     return trezorMaskedStaticPubkey.subarray(1); // NOTE: remove session_id (first byte)
 };
@@ -86,11 +86,11 @@ const readHandshakeInitResponse = ({
     };
 };
 
-const readHandshakeCompletionResponse = ({
+const readHandshakeCompletionResponse = async ({
     payload,
     thpState,
-}: ThpMessage): ThpMessageResponse<'ThpHandshakeCompletionResponse'> => {
-    const state = getTrezorState(thpState.handshakeCredentials!, payload);
+}: ThpMessage): Promise<ThpMessageResponse<'ThpHandshakeCompletionResponse'>> => {
+    const state = await getTrezorState(thpState.handshakeCredentials!, payload);
 
     return {
         type: 'ThpHandshakeCompletionResponse',
@@ -100,14 +100,14 @@ const readHandshakeCompletionResponse = ({
     };
 };
 
-const readProtobufMessage = (
+const readProtobufMessage = async (
     { payload, thpState }: ThpMessage,
     protobufDecoder: ProtobufDecoder,
-): ThpMessageResponse => {
+): Promise<ThpMessageResponse> => {
     const tagPos = payload.length - TAG_LENGTH - CRC_LENGTH;
     const cipheredMessage = payload.subarray(0, tagPos);
     const tag = payload.subarray(tagPos, payload.length - CRC_LENGTH);
-    const decipheredMessage = decipherMessage(
+    const decipheredMessage = await decipherMessage(
         thpState.handshakeCredentials!.trezorKey,
         thpState.recvNonce,
         cipheredMessage,
@@ -201,11 +201,11 @@ export const decodeSendAck = (decodedMessage: MessageV2) => {
 };
 
 // Decode protocol-v2 message from thp receive process
-export const decode = (
+export const decode = async (
     decodedMessage: MessageV2,
     protobufDecoder: ProtobufDecoder,
     thpState?: ThpState,
-): ThpMessageResponse => {
+): Promise<ThpMessageResponse> => {
     if (!thpState) {
         throw new Error('ThpStateMissing');
     }
@@ -237,16 +237,16 @@ export const decode = (
     }
 
     if (magic === THP_HANDSHAKE_COMPLETION_RESPONSE) {
-        return readHandshakeCompletionResponse(message);
+        return await readHandshakeCompletionResponse(message);
     }
 
     if (magic === THP_CONTROL_BYTE_ENCRYPTED) {
-        return readProtobufMessage(message, protobufDecoder);
+        return await readProtobufMessage(message, protobufDecoder);
     }
 
     // TODO: decrypted message decoding (not implemented in FW)
     if (magic === THP_CONTROL_BYTE_DECRYPTED) {
-        return readProtobufMessage(message, protobufDecoder);
+        return await readProtobufMessage(message, protobufDecoder);
     }
 
     throw new Error('Unknown message type: ' + magic);

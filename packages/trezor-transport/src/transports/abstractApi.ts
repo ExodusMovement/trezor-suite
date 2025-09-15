@@ -197,7 +197,7 @@ export abstract class AbstractApiTransport extends AbstractTransport {
                 const { path } = getPathBySessionResponse.payload;
 
                 const protocol = customProtocol || v1Protocol;
-                const bytes = buildMessage({
+                const bytes = await buildMessage({
                     messages: this.messages,
                     name,
                     data,
@@ -239,7 +239,7 @@ export abstract class AbstractApiTransport extends AbstractTransport {
                     if (prevNonce === thpState?.sendNonce) {
                         thpState?.sync('send', name);
                     }
-                    const message = parseThpMessage({
+                    const message = await parseThpMessage({
                         messages: this.messages,
                         decoded: callResult.payload,
                         thpState,
@@ -290,7 +290,7 @@ export abstract class AbstractApiTransport extends AbstractTransport {
                 const { path } = getPathBySessionResponse.payload;
 
                 const protocol = customProtocol || v1Protocol;
-                const bytes = buildMessage({
+                const bytes = await buildMessage({
                     messages: this.messages,
                     name,
                     data,
@@ -372,7 +372,7 @@ export abstract class AbstractApiTransport extends AbstractTransport {
                         return decoded;
                     }
 
-                    const message = parseThpMessage({
+                    const message = await parseThpMessage({
                         messages: this.messages,
                         decoded: decoded.payload,
                         thpState,

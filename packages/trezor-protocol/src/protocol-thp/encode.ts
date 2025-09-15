@@ -22,12 +22,17 @@ type ProtobufEncoder = (
     message: Buffer;
 };
 
-const cipherMessage = (key: Buffer, sendNonce: number, handshakeHash: Buffer, payload: Buffer) => {
+const cipherMessage = async (
+    key: Buffer,
+    sendNonce: number,
+    handshakeHash: Buffer,
+    payload: Buffer,
+) => {
     // Set encrypted_payload = AES-GCM-ENCRYPT(key=k, IV=0^96, ad=h, plaintext=payload_binary).
     const aes = aesgcm(key, getIvFromNonce(sendNonce));
     aes.auth(handshakeHash);
-    const encryptedPayload = aes.encrypt(payload);
-    const encryptedPayloadTag = aes.finish();
+    const encryptedPayload = await aes.encrypt(payload);
+    const encryptedPayloadTag = await aes.finish();
 
     return Buffer.concat([encryptedPayload, encryptedPayloadTag]);
 };
@@ -150,7 +155,7 @@ const encodeThpMessage = (
 
 // TODO: link-to-public-docs
 // https://www.notion.so/satoshilabs/THP-Specification-2-0-18fdc5260606806ab573d0a7cba1897a
-export const encodeProtobufMessage = (
+export const encodeProtobufMessage = async (
     messageType: number,
     data: Buffer,
     channel: Buffer,
@@ -169,7 +174,7 @@ export const encodeProtobufMessage = (
 
     const messageTypeBytes = Buffer.alloc(2);
     messageTypeBytes.writeUInt16BE(messageType);
-    const cipheredMessage = cipherMessage(
+    const cipheredMessage = await cipherMessage(
         thpState.handshakeCredentials!.hostKey,
         thpState.sendNonce,
         Buffer.alloc(0),
@@ -215,7 +220,7 @@ export const encodeAck = (bytesOrState: Buffer | ThpState) => {
 };
 
 // Encode protocol-v2 message
-export const encode = (options: {
+export const encode = async (options: {
     messageName: string;
     data: Record<string, unknown>;
     thpState?: ThpState;
@@ -234,7 +239,7 @@ export const encode = (options: {
         result = encodeThpMessage(messageName, payload, channel, options.thpState);
     } else {
         const { messageType, message } = protobufEncoder(messageName, data);
-        result = encodeProtobufMessage(messageType, message, channel, thpState);
+        result = await encodeProtobufMessage(messageType, message, channel, thpState);
     }
 
     return result;

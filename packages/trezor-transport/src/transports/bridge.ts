@@ -225,7 +225,7 @@ export class BridgeTransport extends AbstractTransport {
         return this.scheduleAction(
             async signal => {
                 const protocol = this.getProtocol(customProtocol);
-                const bytes = buildMessage({
+                const bytes = await buildMessage({
                     messages: this.messages,
                     name,
                     data,
@@ -251,8 +251,14 @@ export class BridgeTransport extends AbstractTransport {
                     if (prevNonce === thpState?.sendNonce) {
                         thpState?.sync('send', name);
                     }
-                    const message = parseThpMessage({
-                        decoded: protocol.decode(respBytes),
+                    const decodedResult = protocol.decode(respBytes);
+                    const message = await parseThpMessage({
+                        decoded: {
+                            messageType: decodedResult.messageType,
+                            payload: Buffer.from(decodedResult.payload),
+                            header: decodedResult.header,
+                            length: decodedResult.length,
+                        },
                         messages: this.messages,
                         thpState,
                     });
@@ -283,7 +289,7 @@ export class BridgeTransport extends AbstractTransport {
         return this.scheduleAction(
             async signal => {
                 const protocol = this.getProtocol(customProtocol);
-                const bytes = buildMessage({
+                const bytes = await buildMessage({
                     messages: this.messages,
                     name,
                     data,
@@ -332,8 +338,14 @@ export class BridgeTransport extends AbstractTransport {
                 const respBytes = Buffer.from(response.payload.data, 'hex');
                 if (protocol.name === 'v2') {
                     // see readThpMessage in @trezor/transport-bridge
-                    const message = parseThpMessage({
-                        decoded: protocol.decode(respBytes),
+                    const decodedResult = protocol.decode(respBytes);
+                    const message = await parseThpMessage({
+                        decoded: {
+                            messageType: decodedResult.messageType,
+                            payload: Buffer.from(decodedResult.payload),
+                            header: decodedResult.header,
+                            length: decodedResult.length,
+                        },
                         messages: this.messages,
                         thpState,
                     });

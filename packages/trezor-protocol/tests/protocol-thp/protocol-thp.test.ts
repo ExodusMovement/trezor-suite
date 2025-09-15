@@ -29,11 +29,11 @@ describe('protocol-thp', () => {
         thpState.resetState();
     });
 
-    it('encode ThpCreateChannelRequest, decode ThpCreateChannelResponse', () => {
+    it('encode ThpCreateChannelRequest, decode ThpCreateChannelResponse', async () => {
         thpState.setChannel(Buffer.from('ffff', 'hex'));
         const nonce = Buffer.from('639ba57ff4e0c234', 'hex');
 
-        const encoded = encode({
+        const encoded = await encode({
             messageName: 'ThpCreateChannelRequest',
             data: { nonce },
             protobufEncoder,
@@ -45,7 +45,7 @@ describe('protocol-thp', () => {
             '41ffff0020639ba57ff4e0c2343c830a0454335731180220002802280328042801c0171551',
             'hex',
         );
-        const decoded = decode(decodeV2(response), protobufDecoder, thpState);
+        const decoded = await decode(decodeV2(response), protobufDecoder, thpState);
         expect(decoded.type).toEqual('ThpCreateChannelResponse');
 
         expect(decoded.message).toMatchObject({
@@ -63,7 +63,7 @@ describe('protocol-thp', () => {
         expect(protobuf).toEqual('0a0454335731180220002802280328042801');
     });
 
-    it('encode/decode ThpAck', () => {
+    it('encode/decode ThpAck', async () => {
         thpState.setChannel(Buffer.from('1234', 'hex'));
 
         const encodeAsBytes1 = encodeAck(Buffer.from('201234', 'hex')); // ackByte: 0
@@ -78,17 +78,25 @@ describe('protocol-thp', () => {
         const encodeAsState2 = encodeAck(thpState); // ackByte: 1
         expect(encodeAsState2.toString('hex')).toEqual('2812340004e98c8599');
 
-        expect(decode(decodeV2(encodeAsBytes1), protobufDecoder, thpState).type).toBe('ThpAck');
-        expect(decode(decodeV2(encodeAsBytes2), protobufDecoder, thpState).type).toBe('ThpAck');
-        expect(decode(decodeV2(encodeAsState1), protobufDecoder, thpState).type).toBe('ThpAck');
-        expect(decode(decodeV2(encodeAsState2), protobufDecoder, thpState).type).toBe('ThpAck');
+        expect((await decode(decodeV2(encodeAsBytes1), protobufDecoder, thpState)).type).toBe(
+            'ThpAck',
+        );
+        expect((await decode(decodeV2(encodeAsBytes2), protobufDecoder, thpState)).type).toBe(
+            'ThpAck',
+        );
+        expect((await decode(decodeV2(encodeAsState1), protobufDecoder, thpState)).type).toBe(
+            'ThpAck',
+        );
+        expect((await decode(decodeV2(encodeAsState2), protobufDecoder, thpState)).type).toBe(
+            'ThpAck',
+        );
     });
 
-    it('decode ThpError', () => {
+    it('decode ThpError', async () => {
         thpState.setChannel(Buffer.from('1222', 'hex'));
 
         const data = Buffer.from('42122200050270303cfa', 'hex');
-        const thpError = decode(decodeV2(data), protobufDecoder, thpState);
+        const thpError = await decode(decodeV2(data), protobufDecoder, thpState);
         expect(thpError.type).toBe('ThpError');
         expect(thpError.message).toMatchObject({
             code: 'ThpUnallocatedChannel',

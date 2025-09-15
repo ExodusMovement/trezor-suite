@@ -1,6 +1,6 @@
 import { aesgcm } from '../../src/protocol-thp/crypto/aesgcm';
 
-it('AESGCM encode/decode', () => {
+it('AESGCM encode/decode', async () => {
     const key = Buffer.from(
         'ccbf529fc8dd4662d4d1d1fa66368b8758c0b6673a1bb9d532d95ca607cbf729',
         'hex',
@@ -17,11 +17,11 @@ it('AESGCM encode/decode', () => {
 
     const aesCtx = aesgcm(key, iv1);
     aesCtx.auth(authData);
-    const staticPubKey = aesCtx.encrypt(plaintext);
-    const tag = aesCtx.finish();
+    const staticPubKey = await aesCtx.encrypt(plaintext);
+    const tag = await aesCtx.finish();
 
     const aesCtx2 = aesgcm(key, iv1);
     aesCtx2.auth(authData);
-    const decryptedData = aesCtx2.decrypt(staticPubKey, tag);
+    const decryptedData = await aesCtx2.decrypt(staticPubKey, tag);
     expect(decryptedData.toString('hex')).toEqual(plaintext.toString('hex'));
 });

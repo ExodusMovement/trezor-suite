@@ -1,6 +1,6 @@
 {
     "name": "@exodus/trezor-protocol",
-    "version": "1.2.9-beta.2",
+    "version": "1.2.9-beta.3",
     "license": "See LICENSE.md in repo root",
     "repository": {
         "type": "git",
@@ -28,8 +28,7 @@
         "prepublish": "yarn tsx ../../scripts/prepublish.js"
     },
     "dependencies": {
-        "@exodus/crypto": "1.0.0-rc.27",
-        "@noble/ciphers": "^1.2.1"
+        "@exodus/crypto": "1.0.0-rc.27"
     },
     "peerDependencies": {
         "tslib": "^2.6.2"
