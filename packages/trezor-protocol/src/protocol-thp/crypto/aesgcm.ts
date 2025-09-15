@@ -11,7 +11,7 @@ export const aesgcm = (key: Buffer, iv: Buffer) => {
         encrypt: async (plainText: Buffer) => {
             lastEncryptedWithTag = (await encryptGCM({
                 key,
-                iv,
+                nonce: iv,
                 data: plainText,
                 additionalData,
             })) as Buffer;
@@ -27,7 +27,7 @@ export const aesgcm = (key: Buffer, iv: Buffer) => {
 
             return await decryptGCM({
                 key,
-                iv,
+                nonce: iv,
                 data: combined,
                 additionalData,
             });
@@ -38,7 +38,7 @@ export const aesgcm = (key: Buffer, iv: Buffer) => {
                 // If no encryption was done, encrypt empty data to get a tag
                 lastEncryptedWithTag = (await encryptGCM({
                     key,
-                    iv,
+                    nonce: iv,
                     data: new Uint8Array(0),
                     additionalData,
                 })) as Buffer;
