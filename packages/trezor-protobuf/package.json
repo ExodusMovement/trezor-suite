@@ -1,6 +1,6 @@
 {
     "name": "@exodus/trezor-protobuf",
-    "version": "1.4.3-beta.1",
+    "version": "1.4.3-beta.2",
     "license": "See LICENSE.md in repo root",
     "repository": {
         "type": "git",
@@ -18,9 +18,6 @@
     "files": [
         "lib/",
         "!**/*.map",
-        "scripts/protobuf-build.sh",
-        "scripts/protobuf-patches",
-        "scripts/protobuf-types.js",
         "messages.json"
     ],
     "scripts": {
@@ -33,8 +30,8 @@
         "prepublish": "yarn tsx ../../scripts/prepublish.js"
     },
     "dependencies": {
-        "long": "5.2.5",
-        "protobufjs": "6.8.8"
+        "long": "^4.0.0",
+        "protobufjs": "^6.8.8"
     },
     "devDependencies": {
         "protobufjs-cli": "^1.1.3",
