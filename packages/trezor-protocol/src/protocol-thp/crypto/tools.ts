@@ -42,9 +42,9 @@ export const bigEndianBytesToBigInt = (bytes: Uint8Array): bigint => {
 
 // python int.from_bytes(array, "little")
 export const littleEndianBytesToBigInt = (bytes: Uint8Array): bigint => {
-    let result = 0n;
+    let result = BigInt(0);
     for (let i = 0; i < bytes.length; i++) {
-        result += BigInt(bytes[i]) << (8n * BigInt(i));
+        result += BigInt(bytes[i]) << (BigInt(8) * BigInt(i));
     }
 
     return result;

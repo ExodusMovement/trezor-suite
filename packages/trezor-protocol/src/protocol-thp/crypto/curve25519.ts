@@ -17,15 +17,15 @@ const getConstants = (): {
         throw new Error('curve25519: BigInt not supported');
     }
 
-    const p = 2n ** 255n - 19n;
-    const J = 486662n;
+    const p = BigInt(2) ** BigInt(255) - BigInt(19);
+    const J = BigInt(486662);
 
     const c3 = BigInt(
         '19681161376707505956807079304988542015446066515923890162744021073123829784752',
     ); // sqrt(-1)
 
-    const c4 = (p - 5n) / 8n;
-    const a24 = (J + 2n) / 4n;
+    const c4 = (p - BigInt(5)) / BigInt(8);
+    const a24 = (J + BigInt(2)) / BigInt(4);
 
     const ctx = {
         p,
@@ -42,9 +42,9 @@ const getConstants = (): {
 
 // python int.from_bytes(array, "little")
 function littleEndianBytesToBigInt(bytes: Uint8Array): bigint {
-    let result = 0n;
+    let result = BigInt(0);
     for (let i = 0; i < bytes.length; i++) {
-        result += BigInt(bytes[i]) << (8n * BigInt(i));
+        result += BigInt(bytes[i]) << (BigInt(8) * BigInt(i));
     }
 
     return result;
@@ -54,8 +54,8 @@ function littleEndianBytesToBigInt(bytes: Uint8Array): bigint {
 function bigintToLittleEndianBytes(value: bigint, length: number = 32): Uint8Array {
     const byteArray = new Uint8Array(length);
     for (let i = 0; i < length; i++) {
-        byteArray[i] = Number(value & 0xffn);
-        value >>= 8n;
+        byteArray[i] = Number(value & BigInt(0xff));
+        value >>= BigInt(8);
     }
 
     return byteArray;
@@ -63,13 +63,13 @@ function bigintToLittleEndianBytes(value: bigint, length: number = 32): Uint8Arr
 
 // python pow(a, b, c)
 function pow(base: bigint, exp: bigint, mod: bigint): bigint {
-    let result = 1n;
+    let result = BigInt(1);
     base = base % mod;
     while (exp > 0) {
-        if (exp % 2n === 1n) {
+        if (exp % BigInt(2) === BigInt(1)) {
             result = (result * base) % mod;
         }
-        exp = exp >> 1n;
+        exp = exp >> BigInt(1);
         base = (base * base) % mod;
     }
 
@@ -165,14 +165,14 @@ export function curve25519(privateKey: Uint8Array, publicKey: Uint8Array): Buffe
     const u = decodeCoordinate(publicKey) % p;
 
     const x1 = u;
-    let x2 = 1n;
-    let z2 = 0n;
+    let x2 = BigInt(1);
+    let z2 = BigInt(0);
     let x3 = u;
-    let z3 = 1n;
+    let z3 = BigInt(1);
     let swap = 0;
 
     for (let i = 255; i >= 0; i--) {
-        const bit = Number((k >> BigInt(i)) & 1n);
+        const bit = Number((k >> BigInt(i)) & BigInt(1));
         swap ^= bit;
         [x2, x3] = conditionalSwap(x2, x3, Boolean(swap));
         [z2, z3] = conditionalSwap(z2, z3, Boolean(swap));
@@ -183,7 +183,7 @@ export function curve25519(privateKey: Uint8Array, publicKey: Uint8Array): Buffe
     [x2, x3] = conditionalSwap(x2, x3, Boolean(swap));
     [z2, z3] = conditionalSwap(z2, z3, Boolean(swap));
 
-    const x = (pow(z2, p - 2n, p) * x2) % p;
+    const x = (pow(z2, p - BigInt(2), p) * x2) % p;
 
     return Buffer.from(encodeCoordinate(x));
 }
@@ -208,8 +208,8 @@ export function elligator2(point: Uint8Array): Uint8Array {
     const u = decodeCoordinate(point) % p;
 
     let tv1 = (u * u) % p;
-    tv1 = (2n * tv1) % p;
-    const xd = (tv1 + 1n) % p;
+    tv1 = (BigInt(2) * tv1) % p;
+    const xd = (tv1 + BigInt(1)) % p;
     const x1n = (-J + p) % p;
     let tv2 = (xd * xd) % p;
     const gxd = (tv2 * xd) % p;
@@ -238,7 +238,7 @@ export function elligator2(point: Uint8Array): Uint8Array {
     tv2 = (tv2 * gxd) % p;
     const e3 = tv2 == gx1;
     const xn = conditionalMove(x2n, x1n, e3);
-    const x = (xn * pow(xd, p - 2n, p)) % p;
+    const x = (xn * pow(xd, p - BigInt(2), p)) % p;
 
     return encodeCoordinate(x);
 }

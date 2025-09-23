@@ -221,7 +221,8 @@ export const validateCodeEntryTag = (
         Buffer.from(secret, 'hex'),
         codeEntryChallenge,
     ]);
-    const calculatedValue = bigEndianBytesToBigInt(hashSync('sha256', inputBuffer)) % 1000000n;
+    const calculatedValue =
+        bigEndianBytesToBigInt(hashSync('sha256', inputBuffer)) % BigInt(1000000);
     if (calculatedValue !== BigInt(value)) {
         throw new Error(`HP5: code mismatch ${value} != ${calculatedValue.toString()}`);
     }
