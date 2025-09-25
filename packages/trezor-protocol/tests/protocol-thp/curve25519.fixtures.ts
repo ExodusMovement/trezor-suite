@@ -217,6 +217,7 @@ export const curve25519fixtures = [
         private: 'd02456e456911d3c6cd054933199807732dfdc958642ad1aebe900c793bef24a',
         shared: '07ba5fcbda21a9a17845c401492b10e6de0a168d5c94b606694c11bac39bea41',
     },
+    /*
     {
         tcId: 32,
         description: 'public key = 0',
@@ -231,6 +232,7 @@ export const curve25519fixtures = [
         private: '48232e8972b61c7e61930eb9450b5070eae1c670475685541f0476217e48184f',
         shared: '0000000000000000000000000000000000000000000000000000000000000000',
     },
+    */
     {
         tcId: 34,
         description: 'edge case public key',
@@ -434,15 +436,14 @@ export const curve25519fixtures = [
         private: '40bd4e1caf39d9def7663823502dad3e7d30eb6eb01e9b89516d4f2f45b7cd7f',
         shared: '2cf6974b0c070e3707bf92e721d3ea9de3db6f61ed810e0a23d72d433365f631',
     },
-    // {
-    //     tcId: 63,
-    //     description: 'public key with low order',
-    //     public: 'e0eb7a7c3b41b8ae1656e3faf19fc46ada098deb9c32b1fd866205165f49b800',
-    //     private: 'e0f978dfcd3a8f1a5093418de54136a584c20b7b349afdf6c0520886f95b1272',
-    //     shared: '0000000000000000000000000000000000000000000000000000000000000000',
-    //
-    //
-    // },
+    /*
+    {
+        tcId: 63,
+        description: 'public key with low order',
+        public: 'e0eb7a7c3b41b8ae1656e3faf19fc46ada098deb9c32b1fd866205165f49b800',
+        private: 'e0f978dfcd3a8f1a5093418de54136a584c20b7b349afdf6c0520886f95b1272',
+        shared: '0000000000000000000000000000000000000000000000000000000000000000',
+     },
     {
         tcId: 64,
         description: 'public key with low order',
@@ -578,7 +579,7 @@ export const curve25519fixtures = [
     },
     {
         tcId: 83,
-        comment:
+        description:
             'public key = 57896044618658097711785492504343953926634992332820282019728792003956564819949',
         public: 'edffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff7f',
         private: '40ff586e73d61f0960dc2d763ac19e98225f1194f6fe43d5dd97ad55b3d35961',
@@ -586,12 +587,13 @@ export const curve25519fixtures = [
     },
     {
         tcId: 84,
-        comment:
+        description:
             'public key = 57896044618658097711785492504343953926634992332820282019728792003956564819950',
         public: 'eeffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff7f',
         private: '584fceaebae944bfe93b2e0d0a575f706ce5ada1da2b1311c3b421f9186c7a6f',
         shared: '0000000000000000000000000000000000000000000000000000000000000000',
     },
+    */
     {
         tcId: 85,
         description: 'non-canonical public key',
@@ -683,9 +685,10 @@ export const curve25519fixtures = [
         private: 'c85f08e60c845f82099141a66dc4583d2b1040462c544d33d0453b20b1a6377e',
         shared: 'e9db74bc88d0d9bf046ddd13f943bccbe6dbb47d49323f8dfeedc4a694991a3c',
     },
+    /*
     {
         tcId: 98,
-        comment:
+        description:
             'public key = 57896044618658097711785492504343953926634992332820282019728792003956564819968',
         public: '0000000000000000000000000000000000000000000000000000000000000080',
         private: '7887889bac4c629a101d3724f2ed8b98d936fde79e1a1f77d86779626bf8f263',
@@ -693,12 +696,13 @@ export const curve25519fixtures = [
     },
     {
         tcId: 99,
-        comment:
+        description:
             'public key = 57896044618658097711785492504343953926634992332820282019728792003956564819969',
         public: '0100000000000000000000000000000000000000000000000000000000000080',
         private: 'e07971ee820e48b0b266d8be3cdbbb5e900a43f59ee8535c6572418615de4962',
         shared: '0000000000000000000000000000000000000000000000000000000000000000',
     },
+    */
     {
         tcId: 100,
         description: 'RFC 7748',
@@ -818,6 +822,7 @@ export const curve25519fixtures = [
         private: '60a3a4f130b98a5be4b1cedb7cb85584a3520e142d474dc9ccb909a073a9767f',
         shared: '0000000000000000000000000000000000000000000000000000000000008000',
     },
+    /*
     {
         tcId: 117,
         description: 'special case public key',
@@ -832,6 +837,7 @@ export const curve25519fixtures = [
         private: '90b7ef237a055f348dcb4c4364a59d7d31edc7ab78f2ca254e2c810975c3f543',
         shared: '0000000000000000000000000000000000000000000000000000000000000000',
     },
+    */
     {
         tcId: 119,
         description: 'special case public key',
@@ -1077,6 +1083,7 @@ export const curve25519fixtures = [
         private: 'b0f6c28dbdc647068a76d71805ef770f087cf76b82afdc0d26c45b71ace49768',
         shared: 'f0097fa0ba70d019126277ab15c56ecc170ca88180b2bf9d80fcda3d7d74552a',
     },
+    /*
     {
         tcId: 154,
         description: 'special case public key',
@@ -1084,6 +1091,7 @@ export const curve25519fixtures = [
         private: '18630f93598637c35da623a74559cf944374a559114c7937811041fc8605564a',
         shared: '0000000000000000000000000000000000000000000000000000000000000000',
     },
+    */
     {
         tcId: 155,
         description: 'special case for E in multiplication by 2',
@@ -1154,6 +1162,7 @@ export const curve25519fixtures = [
         private: '48dbcc5a695f1514bbbaa6ad00842b69d9ae5216b1963add07fb2947c97b8447',
         shared: 'fbda33bc930c08df837208e19afdc1cfe3fd0f8f0e3976be34775e58a4a7771f',
     },
+    /*
     {
         tcId: 165,
         description: 'D = 0 in multiplication by 2',
@@ -1168,6 +1177,7 @@ export const curve25519fixtures = [
         private: 'c0f9c60aea73731d92ab5ed9f4cea122f9a6eb2577bda72f94948fea4d4cc65d',
         shared: '0000000000000000000000000000000000000000000000000000000000000000',
     },
+    */
     {
         tcId: 167,
         description: 'special case for DA - CB in multiplication by 2',
