@@ -13,7 +13,6 @@ export type ThpError = {
         | 'ThpTransportBusy'
         | 'ThpUnallocatedChannel'
         | 'ThpDecryptionFailed'
-        | 'ThpInvalidData'
         | 'ThpDeviceLocked'
         | 'ThpUnknownError';
     message: string;
@@ -34,6 +33,7 @@ export type ThpCreateChannelResponse = {
 
 export type ThpHandshakeInitRequest = {
     key: Buffer;
+    tryToUnlock: 0 | 1;
 };
 
 export type ThpHandshakeInitResponse = {
@@ -80,7 +80,7 @@ export type ThpCredentials = ThpCredentialResponse & { autoconnect?: boolean };
 
 export type ThpMessageSyncBit = 0 | 1;
 
-// same as @exodus/trezor-protobuf Messages
+// same as @trezor/protobuf Messages
 export type ThpMessageKey = keyof ThpMessageType;
 
 export type ThpMessagePayload<T extends ThpMessageKey = ThpMessageKey> = ThpMessageType[T];
