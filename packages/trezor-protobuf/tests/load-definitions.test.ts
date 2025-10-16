@@ -1,99 +1,35 @@
-import * as ProtoBuf from 'protobufjs/light';
+import * as ProtoBuf from '@exodus/protobufjs/src/index-minimal';
+import Long from 'long';
 
-import { loadDefinitions } from '../src/load-definitions';
+import { loadDefinitions } from '../src/index-static';
+
+// Configure Long.js for protobuf
+ProtoBuf.util.Long = Long;
+ProtoBuf.configure();
 
 describe('loadDefinitions', () => {
-    const createProtobufRoot = () =>
-        ProtoBuf.Root.fromJSON({
-            nested: {
-                MessageType: {
-                    values: {
-                        Initialize: 0,
-                    },
-                },
-            },
-        });
-
-    it('merge MessageType enum', async () => {
-        const root = createProtobufRoot();
-        await loadDefinitions(root, 'bitcoin', () =>
-            Promise.resolve({
-                MessageType: {
-                    values: {
-                        GetAddress: 29,
-                    },
-                },
-            }),
-        );
-
-        const messageType = root.lookupEnum('MessageType')?.values;
-        expect(messageType).toEqual({
-            Initialize: 0,
-            GetAddress: 29,
-        });
+    it('static loadDefinitions function exists and works', async () => {
+        // In the static implementation, loadDefinitions is a no-op
+        // since all definitions are pre-loaded
+        await expect(loadDefinitions()).resolves.toBeUndefined();
     });
 
-    it('throw on merge MessageType enum', async () => {
-        const root1 = createProtobufRoot();
-        await expect(
-            loadDefinitions(root1, 'bitcoin', () =>
-                Promise.resolve({
-                    MessageType: {
-                        values: {
-                            GetAddress: 0,
-                        },
-                    },
-                }),
-            ),
-        ).rejects.toThrow('duplicate id 0');
-        expect(root1.lookup('bitcoin')).toBe(null);
+    it('static implementation has pre-loaded definitions', () => {
+        // Test that we can use various message types without loading definitions
+        const { encodeMessage, decodeMessage } = require('../src/index-static');
 
-        await expect(
-            loadDefinitions(createProtobufRoot(), 'bitcoin', () =>
-                Promise.resolve({
-                    MessageType: {
-                        values: {
-                            Initialize: 1,
-                        },
-                    },
-                }),
-            ),
-        ).rejects.toThrow('duplicate name');
-    });
+        // Test Initialize message
+        expect(() => {
+            const encoded = encodeMessage(null, 'Initialize', {});
+            const decoded = decodeMessage(null, encoded.messageType, encoded.message);
+            expect(decoded.type).toEqual('Initialize');
+        }).not.toThrow();
 
-    it('create MessageType enum', async () => {
-        const root = createProtobufRoot();
-        root.remove(root.lookupEnum('MessageType'));
-
-        await loadDefinitions(root, 'bitcoin', () =>
-            Promise.resolve({
-                MessageType: {
-                    values: {
-                        GetAddress: 29,
-                    },
-                },
-            }),
-        );
-
-        const messageType = root.lookupEnum('MessageType')?.values;
-        expect(messageType).toEqual({
-            GetAddress: 29,
-        });
-    });
-
-    it('already loaded', async () => {
-        const root = createProtobufRoot();
-        root.define('bitcoin', {
-            MessageType: {
-                values: {
-                    GetAddress: 29,
-                },
-            },
-        });
-
-        const spy = jest.fn();
-        await loadDefinitions(root, 'bitcoin', spy);
-
-        expect(spy).toHaveBeenCalledTimes(0);
+        // Test Ping message
+        expect(() => {
+            const encoded = encodeMessage(null, 'Ping', { message: 'test' });
+            const decoded = decodeMessage(null, encoded.messageType, encoded.message);
+            expect(decoded.type).toEqual('Ping');
+        }).not.toThrow();
     });
 });
