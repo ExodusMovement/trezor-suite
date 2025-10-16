@@ -2309,6 +2309,94 @@ export type TezosSignedTx = {
     operation_hash: string;
 };
 
+export enum Enum_ThpPairingMethod {
+    SkipPairing = 1,
+    CodeEntry = 2,
+    QrCode = 3,
+    NFC = 4,
+}
+
+export type ThpPairingMethod = keyof typeof Enum_ThpPairingMethod;
+
+export type ThpDeviceProperties = {
+    internal_model: string;
+    model_variant?: number;
+    protocol_version_major: number;
+    protocol_version_minor: number;
+    pairing_methods?: ThpPairingMethod[];
+};
+
+export type ThpCreateNewSession = {
+    passphrase?: string;
+    on_device?: boolean;
+    derive_cardano?: boolean;
+};
+
+export type ThpPairingRequest = {
+    host_name?: string;
+    app_name?: string;
+};
+
+export type ThpPairingRequestApproved = {};
+
+export type ThpSelectMethod = {
+    selected_pairing_method: ThpPairingMethod;
+};
+
+export type ThpPairingPreparationsFinished = {};
+
+export type ThpCodeEntryCommitment = {
+    commitment: string;
+};
+
+export type ThpCodeEntryChallenge = {
+    challenge: string;
+};
+
+export type ThpCodeEntryCpaceTrezor = {
+    cpace_trezor_public_key: string;
+};
+
+export type ThpCodeEntryCpaceHostTag = {
+    cpace_host_public_key: string;
+    tag: string;
+};
+
+export type ThpCodeEntrySecret = {
+    secret: string;
+};
+
+export type ThpQrCodeTag = {
+    tag: string;
+};
+
+export type ThpQrCodeSecret = {
+    secret: string;
+};
+
+export type ThpNfcTagHost = {
+    tag: string;
+};
+
+export type ThpNfcTagTrezor = {
+    tag: string;
+};
+
+export type ThpCredentialRequest = {
+    host_static_public_key: string;
+    autoconnect?: boolean;
+    credential?: string;
+};
+
+export type ThpCredentialResponse = {
+    trezor_static_public_key: string;
+    credential: string;
+};
+
+export type ThpEndRequest = {};
+
+export type ThpEndResponse = {};
+
 // custom connect definitions
 export type MessageType = {
     TextMemo: TextMemo;
@@ -2594,6 +2682,25 @@ export type MessageType = {
     TezosBallotOp: TezosBallotOp;
     TezosSignTx: TezosSignTx;
     TezosSignedTx: TezosSignedTx;
+    ThpDeviceProperties: ThpDeviceProperties;
+    ThpCreateNewSession: ThpCreateNewSession;
+    ThpPairingRequest: ThpPairingRequest;
+    ThpPairingRequestApproved: ThpPairingRequestApproved;
+    ThpSelectMethod: ThpSelectMethod;
+    ThpPairingPreparationsFinished: ThpPairingPreparationsFinished;
+    ThpCodeEntryCommitment: ThpCodeEntryCommitment;
+    ThpCodeEntryChallenge: ThpCodeEntryChallenge;
+    ThpCodeEntryCpaceTrezor: ThpCodeEntryCpaceTrezor;
+    ThpCodeEntryCpaceHostTag: ThpCodeEntryCpaceHostTag;
+    ThpCodeEntrySecret: ThpCodeEntrySecret;
+    ThpQrCodeTag: ThpQrCodeTag;
+    ThpQrCodeSecret: ThpQrCodeSecret;
+    ThpNfcTagHost: ThpNfcTagHost;
+    ThpNfcTagTrezor: ThpNfcTagTrezor;
+    ThpCredentialRequest: ThpCredentialRequest;
+    ThpCredentialResponse: ThpCredentialResponse;
+    ThpEndRequest: ThpEndRequest;
+    ThpEndResponse: ThpEndResponse;
 };
 
 // @COPY from this marker to the EOF, types are copied into messages-schema
