@@ -34,24 +34,25 @@ export const loadDefinitions = async () => {
 export { Messages };
 
 /**
- * Check if a field is a bytes field based on known protobuf schema
- * This is a hardcoded mapping for critical bytes fields that need proper encoding
+ * Check if a field is a bytes field that needs hex-to-buffer conversion
+ * This is specifically for THP messages that require proper bytes encoding
  */
 function isBytesField(messageName: string, fieldName: string): boolean {
-    // Known bytes fields that need proper hex-to-buffer conversion
-    const bytesFields: Record<string, string[]> = {
+    // THP-specific bytes fields that need proper hex-to-buffer conversion
+    const thpBytesFields: Record<string, string[]> = {
         ThpHandshakeCompletionReqNoisePayload: ['host_pairing_credential'],
         ThpHandshakeCompletionResponse: ['trezor_state'],
         ThpHandshakeCompletionReq: ['noise_payload'],
-        // Add other known bytes fields as needed
+        // Add other THP bytes fields as needed
     };
 
-    const messageFields = bytesFields[messageName];
+    const messageFields = thpBytesFields[messageName];
     if (messageFields && messageFields.includes(fieldName)) {
         return true;
     }
 
-    // Fallback to the old behavior for other fields
+    // For non-THP messages, only convert fields that explicitly contain 'bytes' in the name
+    // This preserves the original behavior for protocol v1 fields like session_id
     return fieldName.includes('bytes');
 }
 
