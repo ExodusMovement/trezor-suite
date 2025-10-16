@@ -34,9 +34,34 @@ export const loadDefinitions = async () => {
 export { Messages };
 
 /**
+ * Check if a field is a bytes field based on known protobuf schema
+ * This is a hardcoded mapping for critical bytes fields that need proper encoding
+ */
+function isBytesField(messageName: string, fieldName: string): boolean {
+    // Known bytes fields that need proper hex-to-buffer conversion
+    const bytesFields: Record<string, string[]> = {
+        ThpHandshakeCompletionReqNoisePayload: ['host_pairing_credential'],
+        ThpHandshakeCompletionResponse: ['trezor_state'],
+        ThpHandshakeCompletionReq: ['noise_payload'],
+        // Add other known bytes fields as needed
+    };
+
+    const messageFields = bytesFields[messageName];
+    if (messageFields && messageFields.includes(fieldName)) {
+        return true;
+    }
+
+    // Fallback to the old behavior for other fields
+    return fieldName.includes('bytes');
+}
+
+/**
  * Transform data for encoding (same logic as the original encode.ts)
  */
-function transformForEncoding(data: Record<string, unknown>): Record<string, unknown> {
+function transformForEncoding(
+    data: Record<string, unknown>,
+    messageName: string,
+): Record<string, unknown> {
     const transformed: Record<string, unknown> = {};
 
     Object.keys(data).forEach(key => {
@@ -47,7 +72,7 @@ function transformForEncoding(data: Record<string, unknown>): Record<string, unk
         }
 
         // Handle bytes fields
-        if (typeof value === 'string' && key.includes('bytes')) {
+        if (typeof value === 'string' && isBytesField(messageName, key)) {
             // Special edge case for empty strings
             if (!value) {
                 transformed[key] = value;
@@ -63,7 +88,9 @@ function transformForEncoding(data: Record<string, unknown>): Record<string, unk
         else if (Array.isArray(value)) {
             transformed[key] = value.map(item => {
                 if (typeof item === 'object' && item !== null) {
-                    return transformForEncoding(item as Record<string, unknown>);
+                    // For nested objects in arrays, we can't determine the exact message type
+                    // so we'll use a generic approach or the field name as a hint
+                    return transformForEncoding(item as Record<string, unknown>, key);
                 }
 
                 return item;
@@ -71,7 +98,9 @@ function transformForEncoding(data: Record<string, unknown>): Record<string, unk
         }
         // Handle nested objects
         else if (typeof value === 'object' && value !== null) {
-            transformed[key] = transformForEncoding(value as Record<string, unknown>);
+            // For nested objects, we can't determine the exact message type
+            // so we'll use the field name as a hint
+            transformed[key] = transformForEncoding(value as Record<string, unknown>, key);
         } else {
             transformed[key] = value;
         }
@@ -140,7 +169,7 @@ export const encodeMessage = (
     }
 
     // Apply Trezor-specific transformations
-    const transformedData = transformForEncoding(data);
+    const transformedData = transformForEncoding(data, messageName);
 
     // Create and encode the message using static methods
     const message = MessageClass.create(transformedData);

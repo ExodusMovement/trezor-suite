@@ -216,6 +216,7 @@ $root.MessageType = {
     SolanaTxSignature: 905,
     EvoluGetNode: 2100,
     EvoluNode: 2101,
+    ThpHandshakeCompletionReqNoisePayload: 2102,
 };
 
 $root.MessageType.valuesById = {};
@@ -424,6 +425,7 @@ $root.MessageType.valuesById[904] = "SolanaSignTx";
 $root.MessageType.valuesById[905] = "SolanaTxSignature";
 $root.MessageType.valuesById[2100] = "EvoluGetNode";
 $root.MessageType.valuesById[2101] = "EvoluNode";
+$root.MessageType.valuesById[2102] = "ThpHandshakeCompletionReqNoisePayload";
 
 // MultisigRedeemScriptType message
 $root.MultisigRedeemScriptType = (function() {
@@ -11598,6 +11600,60 @@ $root.EvoluNode = (function() {
     };
 
     return EvoluNode;
+})();
+
+// ThpHandshakeCompletionReqNoisePayload message
+$root.ThpHandshakeCompletionReqNoisePayload = (function() {
+    function ThpHandshakeCompletionReqNoisePayload(properties) {
+        if (properties) {
+            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i) {
+                if (properties[keys[i]] != null) {
+                    this[keys[i]] = properties[keys[i]];
+                }
+            }
+        }
+    }
+
+    ThpHandshakeCompletionReqNoisePayload.create = function create(properties) {
+        return new ThpHandshakeCompletionReqNoisePayload(properties);
+    };
+
+    ThpHandshakeCompletionReqNoisePayload.encode = function encode(message, writer) {
+        if (!writer) writer = $Writer.create();
+        if (message.host_pairing_credential != null && Object.hasOwnProperty.call(message, "host_pairing_credential")) {
+            writer.uint32(10).bytes(message.host_pairing_credential);
+        }
+        return writer;
+    };
+
+    ThpHandshakeCompletionReqNoisePayload.decode = function decode(reader, length) {
+        if (!(reader instanceof $Reader)) reader = $Reader.create(reader);
+        var end = length === undefined ? reader.len : reader.pos + length;
+        var message = new $root.ThpHandshakeCompletionReqNoisePayload();
+        while (reader.pos < end) {
+            var tag = reader.uint32();
+            switch (tag >>> 3) {
+            case 1:
+                message.host_pairing_credential = reader.bytes();
+                break;
+            default:
+                reader.skipType(tag & 7);
+                break;
+            }
+        }
+        return message;
+    };
+
+    ThpHandshakeCompletionReqNoisePayload.toObject = function toObject(message, options) {
+        if (!options) options = {};
+        var object = {};
+        if (message.host_pairing_credential != null && message.hasOwnProperty("host_pairing_credential")) {
+            object.host_pairing_credential = $util.base64.encode(message.host_pairing_credential, 0, message.host_pairing_credential.length);
+        }
+        return object;
+    };
+
+    return ThpHandshakeCompletionReqNoisePayload;
 })();
 
 // Initialize message

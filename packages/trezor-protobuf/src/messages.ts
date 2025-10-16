@@ -1420,6 +1420,10 @@ export type EvoluNode = {
     data: string;
 };
 
+export type ThpHandshakeCompletionReqNoisePayload = {
+    host_pairing_credential?: string;
+};
+
 export enum Enum_BackupType {
     Bip39 = 0,
     Slip39_Basic = 1,
@@ -2477,6 +2481,7 @@ export type MessageType = {
     EthereumTypedDataSignature: EthereumTypedDataSignature;
     EvoluGetNode: EvoluGetNode;
     EvoluNode: EvoluNode;
+    ThpHandshakeCompletionReqNoisePayload: ThpHandshakeCompletionReqNoisePayload;
     Initialize: Initialize;
     GetFeatures: GetFeatures;
     RecoveryDevice: RecoveryDevice;

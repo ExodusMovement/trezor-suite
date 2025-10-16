@@ -4291,6 +4291,14 @@
                 }
             }
         },
+        "ThpHandshakeCompletionReqNoisePayload": {
+            "fields": {
+                "host_pairing_credential": {
+                    "type": "bytes",
+                    "id": 1
+                }
+            }
+        },
         "BackupType": {
             "values": {
                 "Bip39": 0,
@@ -7015,7 +7023,8 @@
                 "SolanaSignTx": 904,
                 "SolanaTxSignature": 905,
                 "EvoluGetNode": 2100,
-                "EvoluNode": 2101
+                "EvoluNode": 2101,
+                "ThpHandshakeCompletionReqNoisePayload": 2102
             }
         }
     }
