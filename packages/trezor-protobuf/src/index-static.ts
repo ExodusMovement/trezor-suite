@@ -4,7 +4,9 @@
 import * as protobuf from '@exodus/protobufjs/src/index-minimal'; // minimal API only
 import Long from 'long';
 
-import type { EncodeResult, MessageResponse } from './generated-messages';
+import type { EncodeResult } from './generated-messages';
+
+export { protobuf };
 
 const Messages = require('../generated-messages');
 const messagesJson = require('../messages.json');
@@ -238,10 +240,44 @@ const THP_MESSAGE_TYPES: Record<string, number> = {
 };
 
 /**
- * Parse/configure function - now a no-op since we use static code
- * Kept for API compatibility
+ * Parse/configure function - creates a mock protobuf.Root for API compatibility
+ * The transport layer expects a protobuf.Root object with .get() method
  */
-export const parseConfigure = (data: any) => data;
+export const parseConfigure = (data: any) => {
+    // Create a mock protobuf.Root object that provides the expected API
+    return {
+        // Mock the .get() method that transport uses to check if a message exists
+        get: (messageName: string) => {
+            // Check if the message exists in our static Messages or in the data
+            if (Messages[messageName]) {
+                return Messages[messageName];
+            }
+
+            // Check in the provided data (for THP messages)
+            if (data && data[messageName]) {
+                return data[messageName];
+            }
+
+            // Check in messages.json definitions
+            if (messagesJson.nested?.[messageName]) {
+                return { name: messageName };
+            }
+
+            return null;
+        },
+
+        // Store the original data for loadDefinitions
+        _data: data || {},
+
+        // Mock other methods that might be used
+        lookup: function (path: string) {
+            return this.get(path);
+        },
+
+        // Make it look like a protobuf.Root
+        constructor: { name: 'Root' },
+    };
+};
 
 /**
  * Load definitions - merge additional package definitions into messages
@@ -256,8 +292,13 @@ export const loadDefinitions = async (
         try {
             const thpDefinitions = packageLoader();
             if (thpDefinitions && typeof thpDefinitions === 'object') {
-                // Merge THP definitions into the messages object
-                Object.assign(messages, thpDefinitions);
+                // If messages is our mock Root object, merge into its _data
+                if (messages && messages._data) {
+                    Object.assign(messages._data, thpDefinitions);
+                } else {
+                    // Fallback: merge directly
+                    Object.assign(messages, thpDefinitions);
+                }
             }
         } catch (error) {
             console.error('Failed to load THP definitions:', error);
@@ -1201,11 +1242,7 @@ function readFieldValue(reader: any, fieldType: string, wireType: number): any {
 /**
  * Decode a message using static code generation
  */
-export const decodeMessage = (
-    _: any,
-    messageType: number | string,
-    data: Buffer,
-): MessageResponse => {
+export const decodeMessage = (_: any, messageType: number | string, data: Buffer): any => {
     let messageName: string;
 
     if (typeof messageType === 'string') {

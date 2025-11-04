@@ -2716,6 +2716,8 @@ export type MessageResponse<T extends MessageKey = MessageKey> = T extends any
       }
     : never;
 
+export type MessageResponseUnion = MessageResponse<MessageKey>;
+
 export type TypedCall = {
     <T extends MessageKey, R extends MessageKey[]>(
         type: T,

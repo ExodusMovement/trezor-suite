@@ -1,4 +1,4 @@
-import { Messages } from '@exodus/trezor-protobuf';
+import { MessageResponseUnion } from '@exodus/trezor-protobuf';
 import {
     PROTOCOL_MALFORMED,
     ThpStateSerialized,
@@ -32,4 +32,4 @@ export type BridgeProtocolMessage = {
     thpState?: ThpStateSerialized;
 };
 
-export type MessageResponse = Messages.MessageResponse | protocolThp.ThpMessageResponse;
+export type MessageResponse = MessageResponseUnion | protocolThp.ThpMessageResponse;

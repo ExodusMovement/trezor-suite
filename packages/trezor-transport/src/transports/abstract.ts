@@ -1,4 +1,4 @@
-import { loadDefinitions, parseConfigure } from '@exodus/trezor-protobuf';
+import { loadDefinitions, parseConfigure, protobuf } from '@exodus/trezor-protobuf';
 import { PROTOCOL_MALFORMED, ThpState, TransportProtocol } from '@exodus/trezor-protocol';
 import {
     ScheduleActionParams,
