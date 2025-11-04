@@ -208,5 +208,3 @@ export interface EncodeResult {
     messageType: number;
     message: Buffer;
 }
-
-
