@@ -1,0 +1,16 @@
+{
+    "extends": "../../tsconfig.lib.json",
+    "compilerOptions": {
+        "outDir": "./lib"
+    },
+    "include": ["./src"],
+    "references": [
+        {
+            "path": "../trezor-transport"
+        },
+        {
+            "path": "../type-utils"
+        }
+    ]
+}
+

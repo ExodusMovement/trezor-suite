@@ -13,7 +13,10 @@ import { error, success, unknownError } from '../utils/result';
 
 export interface AbstractApiConstructorParams {
     logger?: Logger;
+    type?: string;
 }
+
+export type OpenDeviceChannel = 'read' | 'trezor-push-notification' | 'battery-level';
 
 // https://github.dev/trezor/trezord-go/blob/db03d99230f5b609a354e3586f1dfc0ad6da16f7/core/core.go#L46-L47
 export enum DEVICE_TYPE {
@@ -40,13 +43,17 @@ type AccessLock = {
 export abstract class AbstractApi extends TypedEmitter<{
     'transport-interface-change': DescriptorApiLevel[];
     'transport-interface-error': { error: typeof ERRORS.API_DISCONNECTED };
+    'trezor-push-notification': { id: string; data: number[] };
+    'battery-level': { id: string; data: number[] };
 }> {
     protected logger?: Logger;
     protected listening: boolean = false;
     protected lock: Record<string, AccessLock> = {};
-    constructor({ logger }: AbstractApiConstructorParams) {
+    public type?: string;
+    constructor({ logger, type }: AbstractApiConstructorParams) {
         super();
 
+        this.type = type;
         this.logger = logger;
     }
     /**

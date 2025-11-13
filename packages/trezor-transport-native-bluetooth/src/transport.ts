@@ -3,17 +3,19 @@ import { AbstractApiTransport, Transport as AbstractTransport } from '@exodus/tr
 import { BluetoothApi } from './api/BluetoothApi';
 
 export class NativeBluetoothTransport extends AbstractApiTransport {
-    public name = 'NativeBluetoothTransport' as any;
+    public name = 'BluetoothTransport' as const;
     public apiType = 'bluetooth' as const;
 
     constructor(params: ConstructorParameters<typeof AbstractTransport>[0]) {
         const { logger, ...rest } = params;
 
-        super({
-            api: new BluetoothApi({
-                logger,
-            }),
-            ...rest,
+        const api = new BluetoothApi({
+            logger:
+                process.env.EXPO_PUBLIC_IS_NATIVE_BLUETOOTH_LOGGER_ENABLED === 'true'
+                    ? console
+                    : logger,
         });
+
+        super({ api, ...rest });
     }
 }

@@ -4,13 +4,11 @@ import {
     AbstractApi,
     AbstractApiConstructorParams,
     DEVICE_TYPE,
-} from '@exodus/trezor-transport/src/api/abstract';
-import * as ERRORS from '@exodus/trezor-transport/src/errors';
-import {
+    ERRORS,
     AsyncResultWithTypedError,
     DescriptorApiLevel,
     PathInternal,
-} from '@exodus/trezor-transport/src/types';
+} from '@exodus/trezor-transport';
 
 import { bluetoothManager } from './bluetoothManager';
 
@@ -18,14 +16,30 @@ import { bluetoothManager } from './bluetoothManager';
 export class BluetoothApi extends AbstractApi {
     chunkSize = 244;
 
-    private subscription: Subscription;
+    private subscriptions: Subscription[];
+    private pushNotificationSubscribedDevices = new Set<string>();
+    private batteryLevelChangeSubscribedDevices = new Set<string>();
 
-    constructor(params: AbstractApiConstructorParams) {
-        super(params);
-        this.subscription = bluetoothManager.onDeviceConnectionStatusChange(event => {
-            this.logger?.debug('onDeviceConnectionStatusChange', event);
-            this.emit('transport-interface-change', this.getDescriptors());
-        });
+    constructor(params: Omit<AbstractApiConstructorParams, 'type'>) {
+        super({ ...params, type: 'bluetooth' });
+        this.subscriptions = [
+            bluetoothManager.onDeviceConnectionStatusChange(event => {
+                this.logger?.debug('onDeviceConnectionStatusChange', event);
+                this.emit('transport-interface-change', this.getDescriptors());
+            }),
+            bluetoothManager.onDevicePushNotification(({ deviceId, data }) => {
+                this.logger?.debug('onDevicePushNotificationEvent', { deviceId, data });
+                if (this.pushNotificationSubscribedDevices.has(deviceId)) {
+                    this.emit('trezor-push-notification', { id: deviceId, data });
+                }
+            }),
+            bluetoothManager.onDeviceBatteryLevelChange(({ deviceId, data }) => {
+                this.logger?.debug('onDeviceBatteryLevelChange', { deviceId, data });
+                if (this.batteryLevelChangeSubscribedDevices.has(deviceId)) {
+                    this.emit('battery-level', { id: deviceId, data });
+                }
+            }),
+        ];
     }
 
     public async enumerate() {
@@ -45,6 +59,7 @@ export class BluetoothApi extends AbstractApi {
             path: deviceId as PathInternal,
             type: DEVICE_TYPE.TypeBluetooth,
             id: deviceId,
+            apiType: this.type,
         }));
 
         return descriptors;
@@ -108,15 +123,20 @@ export class BluetoothApi extends AbstractApi {
         }
     }
 
-    public async openDevice(path: string, _first: boolean) {
-        this.logger?.debug('openDevice', path);
+    public async openDevice(path: string, reset: boolean, signal?: AbortSignal) {
+        this.logger?.debug('openDevice', path, reset, signal);
 
         // BT does not need to be opened, it is opened when connected
+        // The reset and signal parameters are not used for Bluetooth
         return this.success(undefined);
     }
 
     public async closeDevice(path: string) {
         this.logger?.debug('closeDevice', path);
+
+        // Clean up subscriptions for this device
+        this.pushNotificationSubscribedDevices.delete(path);
+        this.batteryLevelChangeSubscribedDevices.delete(path);
         bluetoothManager.cancelRead(path);
 
         return this.success(undefined);
@@ -124,7 +144,6 @@ export class BluetoothApi extends AbstractApi {
 
     public async dispose(): Promise<void> {
         this.logger?.debug('dispose');
-        // Clean up any resources or listeners here
-        this.subscription?.remove();
+        this.subscriptions.forEach(s => s.remove());
     }
 }

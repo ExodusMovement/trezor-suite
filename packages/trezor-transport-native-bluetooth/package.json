@@ -1,0 +1,45 @@
+{
+    "name": "@exodus/trezor-transport-native-bluetooth",
+    "version": "1.0.5",
+    "description": "Bluetooth transport for Trezor devices in React Native",
+    "npmPublishAccess": "public",
+    "license": "SEE LICENSE IN LICENSE.md",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/trezor/trezor-suite.git"
+    },
+    "bugs": {
+        "url": "https://github.com/trezor/trezor-suite/issues"
+    },
+    "keywords": [
+        "Trezor",
+        "transport",
+        "bluetooth",
+        "react-native"
+    ],
+    "main": "./lib/index.js",
+    "publishConfig": {
+        "main": "./lib/index.js"
+    },
+    "files": [
+        "lib/",
+        "!**/*.map"
+    ],
+    "sideEffects": false,
+    "scripts": {
+        "depcheck": "yarn g:depcheck",
+        "type-check": "yarn g:tsc --build tsconfig.json",
+        "build:lib": "yarn g:rimraf -rf lib && yarn g:tsc --build tsconfig.lib.json && ../../scripts/replace-imports.sh ./lib",
+        "prepublishOnly": "yarn build:lib"
+    },
+    "dependencies": {
+        "@exodus/trezor-transport": "1.5.3-beta.13",
+        "react-native-ble-plx": "^2.0.3"
+    },
+    "devDependencies": {
+        "@trezor/type-utils": "workspace:*"
+    },
+    "peerDependencies": {
+        "tslib": "^2.6.2"
+    }
+}

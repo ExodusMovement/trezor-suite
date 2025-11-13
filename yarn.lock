@@ -3654,13 +3654,15 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@exodus/trezor-transport-native-bluetooth@workspace:*, @exodus/trezor-transport-native-bluetooth@workspace:packages/transport-native-bluetooth":
+"@exodus/trezor-transport-native-bluetooth@workspace:*, @exodus/trezor-transport-native-bluetooth@workspace:packages/trezor-transport-native-bluetooth":
   version: 0.0.0-use.local
-  resolution: "@exodus/trezor-transport-native-bluetooth@workspace:packages/transport-native-bluetooth"
+  resolution: "@exodus/trezor-transport-native-bluetooth@workspace:packages/trezor-transport-native-bluetooth"
   dependencies:
     "@exodus/trezor-transport": "workspace:*"
     "@trezor/type-utils": "workspace:*"
     react-native-ble-plx: "npm:3.5.0"
+  peerDependencies:
+    tslib: ^2.6.2
   languageName: unknown
   linkType: soft
 
