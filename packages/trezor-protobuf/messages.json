@@ -4366,10 +4366,12 @@
         "ThpPairingRequest": {
             "fields": {
                 "host_name": {
+                    "rule": "required",
                     "type": "string",
                     "id": 1
                 },
                 "app_name": {
+                    "rule": "required",
                     "type": "string",
                     "id": 2
                 }
@@ -7258,8 +7260,7 @@
                 "ThpNfcTagHost": 1040,
                 "ThpNfcTagTrezor": 1041,
                 "EvoluGetNode": 2100,
-                "EvoluNode": 2101,
-                "ThpHandshakeCompletionReqNoisePayload": 2102
+                "EvoluNode": 2101
             }
         }
     }

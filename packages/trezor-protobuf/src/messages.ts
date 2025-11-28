@@ -2333,8 +2333,8 @@ export type ThpCreateNewSession = {
 };
 
 export type ThpPairingRequest = {
-    host_name?: string;
-    app_name?: string;
+    host_name: string;
+    app_name: string;
 };
 
 export type ThpPairingRequestApproved = {};
