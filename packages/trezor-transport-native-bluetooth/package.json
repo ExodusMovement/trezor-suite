@@ -1,6 +1,6 @@
 {
     "name": "@exodus/trezor-transport-native-bluetooth",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "description": "Bluetooth transport for Trezor devices in React Native",
     "npmPublishAccess": "public",
     "license": "SEE LICENSE IN LICENSE.md",
