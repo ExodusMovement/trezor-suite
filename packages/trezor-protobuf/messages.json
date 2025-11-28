@@ -7260,7 +7260,8 @@
                 "ThpNfcTagHost": 1040,
                 "ThpNfcTagTrezor": 1041,
                 "EvoluGetNode": 2100,
-                "EvoluNode": 2101
+                "EvoluNode": 2101,
+                "ThpHandshakeCompletionReqNoisePayload": 2106
             }
         }
     }

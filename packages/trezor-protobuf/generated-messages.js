@@ -215,6 +215,8 @@ $root.MessageType = {
     SolanaSignTx: 904,
     SolanaTxSignature: 905,
     EvoluGetNode: 2100,
+    EvoluNode: 2101,
+    ThpHandshakeCompletionReqNoisePayload: 2106,
 };
 
 $root.MessageType.valuesById = {};
@@ -423,6 +425,7 @@ $root.MessageType.valuesById[904] = "SolanaSignTx";
 $root.MessageType.valuesById[905] = "SolanaTxSignature";
 $root.MessageType.valuesById[2100] = "EvoluGetNode";
 $root.MessageType.valuesById[2101] = "EvoluNode";
+$root.MessageType.valuesById[2106] = "ThpHandshakeCompletionReqNoisePayload";
 
 // MultisigRedeemScriptType message
 $root.MultisigRedeemScriptType = (function() {
