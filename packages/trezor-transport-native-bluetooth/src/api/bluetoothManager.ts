@@ -181,6 +181,8 @@ class BluetoothManager {
 
     public stopDeviceScan = () => {
         this.stopStaleNearbyDevicesRemoval();
+        this.nearbyDevices = [];
+        this.emitNearbyDevicesChange();
         this.getBleManager().stopDeviceScan();
     };
 
