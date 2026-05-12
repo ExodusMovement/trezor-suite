@@ -22,6 +22,7 @@
         "./src/transports/webusb": "./src/transports/webusb.browser.ts"
     },
     "react-native": {
+        "./lib/transports/webusb": "./lib/transports/webusb.js",
         "./src/transports/udp": "./src/transports/udp.native.ts"
     },
     "publishConfig": {
@@ -32,6 +33,7 @@
             "./lib/transports/webusb": "./lib/transports/webusb.browser.js"
         },
         "react-native": {
+            "./lib/transports/webusb": "./lib/transports/webusb.js",
             "./lib/transports/udp": "./lib/transports/udp.native.js"
         }
     },
